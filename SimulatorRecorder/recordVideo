@@ -1,0 +1,26 @@
+#! /bin/sh -xe
+
+bn=$(basename "$0")
+wd=$(dirname "$0")
+
+PATH="$PATH":~/homebrew/bin:"${wd:?}"
+
+#
+
+recordingsDir="${HOME:?}/var/Simulator Recordings"
+videoName="$(timestamp) $(simulatorName)"
+
+#
+
+tmpdir=$(mktemp -d "${TMPDIR:?}"/"${bn:?}".XXXXX)
+
+rawVideo="${TMPDIR:?}/simvideo.mov"
+convertedVideo="${recordingsDir:?}/${videoName:?}.m4v"
+
+xcrun simctl io booted recordVideo "${rawVideo:?}"
+ffmpeg -v -8 -i "${rawVideo:?}" "${convertedVideo:?}"
+
+open -R "${convertedVideo:?}"
+
+rm "${rawVideo:?}"
+rmdir "${tmpdir:?}"

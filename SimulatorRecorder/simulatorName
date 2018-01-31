@@ -1,0 +1,4 @@
+#! /bin/sh -xe
+
+xcrun simctl list -j |
+    jq -r '[.devices|to_entries|.[]|{os_ver: .key, device_name: (.value|to_entries|.[]|.value|select(.state == "Booted")|.name)}]|.[0]|.device_name + " - " + .os_ver'

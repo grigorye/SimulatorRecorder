@@ -13,6 +13,9 @@
 		C479DDA9202266BF00E0A11D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C479DDA7202266BF00E0A11D /* Main.storyboard */; };
 		C479DDB5202266C000E0A11D /* SimulatorRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */; };
 		C479DDC0202266C000E0A11D /* SimulatorRecorderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */; };
+		C479DDD720226D8200E0A11D /* simulatorName in Resources */ = {isa = PBXBuildFile; fileRef = C479DDCE20226B2300E0A11D /* simulatorName */; };
+		C479DDD820226D8200E0A11D /* recordVideo in Resources */ = {isa = PBXBuildFile; fileRef = C479DDCF20226B2400E0A11D /* recordVideo */; };
+		C479DDDB20227A7900E0A11D /* timestamp in Resources */ = {isa = PBXBuildFile; fileRef = C479DDDA20227A7900E0A11D /* timestamp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		C479DDBB202266C000E0A11D /* SimulatorRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorRecorderUITests.swift; sourceTree = "<group>"; };
 		C479DDC1202266C000E0A11D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C479DDCE20226B2300E0A11D /* simulatorName */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = simulatorName; sourceTree = "<group>"; };
+		C479DDCF20226B2400E0A11D /* recordVideo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = recordVideo; sourceTree = "<group>"; };
+		C479DDDA20227A7900E0A11D /* timestamp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = timestamp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				C479DDA3202266BF00E0A11D /* ViewController.swift */,
 				C479DDA5202266BF00E0A11D /* Assets.xcassets */,
 				C479DDA7202266BF00E0A11D /* Main.storyboard */,
+				C479DDCE20226B2300E0A11D /* simulatorName */,
+				C479DDCF20226B2400E0A11D /* recordVideo */,
+				C479DDDA20227A7900E0A11D /* timestamp */,
 				C479DDAA202266BF00E0A11D /* Info.plist */,
 				C479DDAB202266BF00E0A11D /* SimulatorRecorder.entitlements */,
 			);
@@ -193,6 +202,11 @@
 					C479DD9D202266BF00E0A11D = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					C479DDAF202266C000E0A11D = {
 						CreatedOnToolsVersion = 9.2;
@@ -233,6 +247,9 @@
 			files = (
 				C479DDA6202266BF00E0A11D /* Assets.xcassets in Resources */,
 				C479DDA9202266BF00E0A11D /* Main.storyboard in Resources */,
+				C479DDDB20227A7900E0A11D /* timestamp in Resources */,
+				C479DDD720226D8200E0A11D /* simulatorName in Resources */,
+				C479DDD820226D8200E0A11D /* recordVideo in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +432,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SimulatorRecorder/SimulatorRecorder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 465NA5BW7E;
@@ -431,7 +447,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = SimulatorRecorder/SimulatorRecorder.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 465NA5BW7E;
