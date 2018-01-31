@@ -17,6 +17,8 @@ tmpdir=$(mktemp -d "${TMPDIR:?}"/"${bn:?}".XXXXX)
 rawVideo="${TMPDIR:?}/simvideo.mov"
 convertedVideo="${recordingsDir:?}/${videoName:?}.m4v"
 
+mkdir -p "${recordingsDir:?}"
+
 xcrun simctl io booted recordVideo "${rawVideo:?}"
 ffmpeg -v -8 -i "${rawVideo:?}" "${convertedVideo:?}"
 
