@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, GlobalActionResponder {
 	
 	@objc dynamic var process: Process?
 	
@@ -33,6 +33,21 @@ class ViewController: NSViewController {
 			return true
 		}
 	}
+	
+	var recording: Bool {
+		
+		return process != nil
+	}
+	
+	@IBAction func toggleRecording(_ sender: Any) {
+		
+		if recording {
+			stopRecording(sender)
+		} else {
+			newScreenRecording(sender)
+		}
+	}
+	
 	@IBAction func stopRecording(_ sender: Any) {
 		
 		guard let process = process else {
