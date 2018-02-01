@@ -21,13 +21,16 @@ These are limitations of the current version.
 ## Defaults
  
 ### Recordings directory
- 
- ```
- defaults write com.grigorye.SimulatorRecorder customRecordingsDir ~/var/"Simulator Recordings"
- ```
- 
-### File names
+
 
 ```
-defaults write com.grigorye.SimulatorRecorder videoNameCommand 'date +%Y-%m-%d'
+defaults write com.grigorye.SimulatorRecorder customRecordingsDir ~/var/"Simulator Recordings"
+```
+ 
+### Naming
+
+Set the recording names to something like "Screen Recording 2018-02-01 at 01.37.10.m4v":
+
+```
+defaults write com.grigorye.SimulatorRecorder videoNameCommand 'echo Screen Recording $(date +"%Y-%m-%d at %H.%M.%S")'
 ```
