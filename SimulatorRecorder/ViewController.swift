@@ -17,6 +17,22 @@ class ViewController: NSViewController {
 		case badProcessTerminationStatus(Int32)
 	}
 	
+	override func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
+		
+		switch menuItem.action {
+			
+		case #selector(stopRecording(_:))?:
+			
+			return self.process != nil
+			
+		case #selector(newScreenRecording(_:))?:
+			
+			return self.process == nil
+			
+		default:
+			return true
+		}
+	}
 	@IBAction func stopRecording(_ sender: Any) {
 		
 		guard let process = process else {
@@ -63,7 +79,7 @@ class ViewController: NSViewController {
 		let process = try Process.run(recorderExecutableURL, arguments: []) {
 			
 			assert(self.process == $0)
-
+			
 			DispatchQueue.main.async {
 				
 				self.completeRecording()
@@ -78,7 +94,7 @@ class ViewController: NSViewController {
 		do {
 			
 			try startRecording()
-		
+			
 		} catch {
 			
 			guard let window = view.window else {
