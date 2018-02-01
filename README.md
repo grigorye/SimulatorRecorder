@@ -24,7 +24,7 @@ These are limitations of the current version.
 
 
 ```
-defaults write com.grigorye.SimulatorRecorder customRecordingsDir ~/var/"Simulator Recordings"
+defaults write com.grigorye.SimulatorRecorder recordingsDir ~/var/"Simulator Recordings"
 ```
  
 ### Naming
