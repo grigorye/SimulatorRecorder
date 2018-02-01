@@ -32,5 +32,5 @@ defaults write com.grigorye.SimulatorRecorder customRecordingsDir ~/var/"Simulat
 Set the recording names to something like "Screen Recording 2018-02-01 at 01.37.10.m4v":
 
 ```
-defaults write com.grigorye.SimulatorRecorder videoNameCommand 'echo Screen Recording $(date +"%Y-%m-%d at %H.%M.%S")'
+defaults write com.grigorye.SimulatorRecorder videoNameFormat -string 'Screen Recording $(date +"%Y-%m-%d at %H.%M.%S")'
 ```

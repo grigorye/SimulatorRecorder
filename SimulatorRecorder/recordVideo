@@ -11,8 +11,13 @@ domain="com.grigorye.SimulatorRecorder"
 customRecordingsDir=$(defaults read "${domain:?}" recordingsDir || true)
 recordingsDir=${customRecordingsDir:-"${HOME:?}/Simulator Recordings"}
 
-customVideoNameCommand=$(defaults read "${domain:?}" videoNameCommand || echo "false")
-videoName=$((eval ${customVideoNameCommand:?}) || echo "$(timestamp) $(simulatorName)")
+customVideoNameFormat=$(defaults read "${domain:?}" videoNameFormat || true)
+if [ z"${customVideoNameFormat}" == "z" ]
+then
+	videoName="$(timestamp) $(simulatorName)"
+else
+	videoName=$(eval echo ${customVideoNameFormat:?})
+fi
 
 #
 
