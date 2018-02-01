@@ -1,3 +1,5 @@
+[![](https://travis-ci.org/grigorye/SimulatorRecorder.svg?branch=master)](https://travis-ci.org/grigorye/SimulatorRecorder)
+
 # SimulatorRecorder
 
 Record (compressed) Simulator video with a keypress.
