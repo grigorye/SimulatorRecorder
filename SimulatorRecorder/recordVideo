@@ -12,7 +12,7 @@ customRecordingsDir=$(defaults read "${domain:?}" recordingsDir || true)
 recordingsDir=${customRecordingsDir:-"${HOME:?}/Simulator Recordings"}
 
 customVideoNameCommand=$(defaults read "${domain:?}" videoNameCommand || echo "false")
-videoName=$((${customVideoNameCommand:?}) || echo "$(timestamp) $(simulatorName)")
+videoName=$((eval ${customVideoNameCommand:?}) || echo "$(timestamp) $(simulatorName)")
 
 #
 
