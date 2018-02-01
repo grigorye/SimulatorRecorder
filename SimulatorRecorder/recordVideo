@@ -4,11 +4,15 @@ bn=$(basename "$0")
 wd=$(dirname "$0")
 
 PATH="$PATH":~/homebrew/bin:"${wd:?}"
+domain="com.grigorye.SimulatorRecorder"
 
 #
 
-recordingsDir="${HOME:?}/var/Simulator Recordings"
-videoName="$(timestamp) $(simulatorName)"
+customRecordingsDir=$(defaults read "${domain:?}" recordingsDir || true)
+recordingsDir=${customRecordingsDir:-"${HOME:?}/Simulator Recordings"}
+
+customVideoNameCommand=$(defaults read "${domain:?}" videoNameCommand || echo "false")
+videoName=$((${customVideoNameCommand:?}) || echo "$(timestamp) $(simulatorName)")
 
 #
 
