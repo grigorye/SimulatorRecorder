@@ -152,6 +152,7 @@
 				C479DD9A202266BF00E0A11D /* Sources */,
 				C479DD9B202266BF00E0A11D /* Frameworks */,
 				C479DD9C202266BF00E0A11D /* Resources */,
+				C479DDE620241D9100E0A11D /* Embed Source Version into Bundle */,
 			);
 			buildRules = (
 			);
@@ -278,6 +279,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C479DDE620241D9100E0A11D /* Embed Source Version into Bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Source Version into Bundle";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/bin/sh -ex";
+			shellScript = "\"${GE_XCODE_BUILD_PHASES:?}\"/EmbedSourceVersionIntoBundle\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C479DD9A202266BF00E0A11D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -382,6 +401,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GE_XCODE_BUILD_PHASES = "$(SRCROOT)/XcodeBuildPhases";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -433,6 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GE_XCODE_BUILD_PHASES = "$(SRCROOT)/XcodeBuildPhases";
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
