@@ -1,0 +1,10 @@
+osx_image: xcode9.2
+language: swift
+env:
+  matrix:
+    - sdk=iphonesimulator destination='platform=iOS Simulator,name=iPhone X,OS=11.2'
+    - sdk=macosx destination='platform=macOS'
+script:
+  - xcodebuild -sdk "${sdk:?}" -project GETracing.xcodeproj -scheme GETracing -destination "${destination:?}" test CODE_SIGNING_REQUIRED=NO TEST_HOST= SWIFT_VERSION=4.1 LD_RUNPATH_SEARCH_PATHS='@loader_path/../Frameworks @executable_path/../Frameworks @executable_path/Frameworks @loader_path/Frameworks' SWIFT_ACTIVE_COMPILATION_CONDITIONS=GE_TRACE_ENABLED
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

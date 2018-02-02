@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		24AC5850ADFC8E89201EDA7A /* Tracing.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4D6F4191C73CCC000A7E2ED /* Tracing.swift */; };
+		3BC2E42470F353F1B96DD1DE /* SourceLocation.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4CB38851CDBA78D00562665 /* SourceLocation.swift */; };
+		4CA40499795B5F4E7029B87E /* Conveniences.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4E5DB841DBEAD8900170422 /* Conveniences.swift */; };
+		5913560DB62291711AD47BD5 /* BundleForSymbolAddress.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4FEBB1C1BF960A300A5709B /* BundleForSymbolAddress.swift */; };
+		8E5D91D430CC334A0C958EC6 /* SourceLabels.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C49FF0E91DBAF94200A86CC0 /* SourceLabels.swift */; };
+		A2C5893EF85B785AE9D9CCE7 /* Labeling.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4E5DB861DBEAFB900170422 /* Labeling.swift */; };
+		B0685BADD896C42E61A4E11A /* BundleForSymbolAddressTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C48CAA171DBBE59000D6F40E /* BundleForSymbolAddressTests.swift */; };
+		B9F7485EC19F879024ABA8C7 /* Logging.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4E5DB881DBEB01A00170422 /* Logging.swift */; };
+		C418186B1B6A65B100872EB3 /* GETracing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C41818601B6A65B100872EB3 /* GETracing.framework */; };
+		C41F40501DBE94E3006EA6CD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41F404F1DBE94E3006EA6CD /* Configuration.swift */; };
+		C479DD922021550A00E0A11D /* LoggingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DD912021550A00E0A11D /* LoggingTests.swift */; };
+		C479DD942021572900E0A11D /* PlaygroundSupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DD932021572900E0A11D /* PlaygroundSupportTests.swift */; };
+		C48CAA181DBBE59000D6F40E /* BundleForSymbolAddressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48CAA171DBBE59000D6F40E /* BundleForSymbolAddressTests.swift */; };
+		C495D8991C02592100A7F7D5 /* TracingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C495D8981C02592100A7F7D5 /* TracingTests.swift */; };
+		C495D89B1C025A0800A7F7D5 /* TracingTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C495D8981C02592100A7F7D5 /* TracingTests.swift */; };
+		C49FF0E61DBAF7D800A86CC0 /* NestedBrackets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FF0E51DBAF7D800A86CC0 /* NestedBrackets.swift */; };
+		C49FF0E81DBAF80200A86CC0 /* NestedBracketsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FF0E71DBAF80200A86CC0 /* NestedBracketsTests.swift */; };
+		C49FF0EA1DBAF94200A86CC0 /* SourceLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49FF0E91DBAF94200A86CC0 /* SourceLabels.swift */; };
+		C4CB38861CDBA78D00562665 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CB38851CDBA78D00562665 /* SourceLocation.swift */; };
+		C4D6F41A1C73CCC000A7E2ED /* Tracing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D6F4191C73CCC000A7E2ED /* Tracing.swift */; };
+		C4DB6A6C1D25C4E300E8516D /* GETracing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C41818601B6A65B100872EB3 /* GETracing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C4E5DB851DBEAD8900170422 /* Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5DB841DBEAD8900170422 /* Conveniences.swift */; };
+		C4E5DB871DBEAFB900170422 /* Labeling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5DB861DBEAFB900170422 /* Labeling.swift */; };
+		C4E5DB891DBEB01A00170422 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5DB881DBEB01A00170422 /* Logging.swift */; };
+		C4FEBB1D1BF960A300A5709B /* BundleForSymbolAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FEBB1C1BF960A300A5709B /* BundleForSymbolAddress.swift */; };
+		D1FE325B8435F6D7C1399D19 /* NestedBrackets.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C49FF0E51DBAF7D800A86CC0 /* NestedBrackets.swift */; };
+		D8D156E9B2C78D958459B0D9 /* Configuration.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C41F404F1DBE94E3006EA6CD /* Configuration.swift */; };
+		E0475618BA2C6E7169F0C172 /* NestedBracketsTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C49FF0E71DBAF80200A86CC0 /* NestedBracketsTests.swift */; };
+		F7D1B3B165FFC3913B666379 /* PlaygroundSupportTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DD932021572900E0A11D /* PlaygroundSupportTests.swift */; };
+		FC179CB4CC4359116653AD28 /* LoggingTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DD912021550A00E0A11D /* LoggingTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C418186C1B6A65B100872EB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C41818571B6A65B100872EB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C418185F1B6A65B100872EB3;
+			remoteInfo = GEBase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C495D89A1C0259F900A7F7D5 /* Embed Sources */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "Sources/$(TARGET_NAME)";
+			dstSubfolderSpec = 7;
+			files = (
+				C495D89B1C025A0800A7F7D5 /* TracingTests.swift in Embed Sources */,
+				B0685BADD896C42E61A4E11A /* BundleForSymbolAddressTests.swift in Embed Sources */,
+				E0475618BA2C6E7169F0C172 /* NestedBracketsTests.swift in Embed Sources */,
+				FC179CB4CC4359116653AD28 /* LoggingTests.swift in Embed Sources */,
+				F7D1B3B165FFC3913B666379 /* PlaygroundSupportTests.swift in Embed Sources */,
+			);
+			name = "Embed Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4DB6A6B1D25C4D600E8516D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C4DB6A6C1D25C4E300E8516D /* GETracing.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB8520C4D53BC0001AD8FD6B /* Embed Sources */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "Sources/$(TARGET_NAME)";
+			dstSubfolderSpec = 7;
+			files = (
+				5913560DB62291711AD47BD5 /* BundleForSymbolAddress.swift in Embed Sources */,
+				B9F7485EC19F879024ABA8C7 /* Logging.swift in Embed Sources */,
+				D1FE325B8435F6D7C1399D19 /* NestedBrackets.swift in Embed Sources */,
+				24AC5850ADFC8E89201EDA7A /* Tracing.swift in Embed Sources */,
+				3BC2E42470F353F1B96DD1DE /* SourceLocation.swift in Embed Sources */,
+				A2C5893EF85B785AE9D9CCE7 /* Labeling.swift in Embed Sources */,
+				D8D156E9B2C78D958459B0D9 /* Configuration.swift in Embed Sources */,
+				4CA40499795B5F4E7029B87E /* Conveniences.swift in Embed Sources */,
+				8E5D91D430CC334A0C958EC6 /* SourceLabels.swift in Embed Sources */,
+			);
+			name = "Embed Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C4049DE6201FC1A100A296C3 /* GETracing.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GETracing.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		C41818601B6A65B100872EB3 /* GETracing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GETracing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C41818651B6A65B100872EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C418186A1B6A65B100872EB3 /* GETracingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GETracingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C41818711B6A65B100872EB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C41F404F1DBE94E3006EA6CD /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		C459879B1CDE087200B8E9E4 /* GEShared.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = GEShared.xcconfig; path = ../XcodeConfiguration/GEShared.xcconfig; sourceTree = "<group>"; };
+		C479DD912021550A00E0A11D /* LoggingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingTests.swift; sourceTree = "<group>"; };
+		C479DD932021572900E0A11D /* PlaygroundSupportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundSupportTests.swift; sourceTree = "<group>"; };
+		C48CAA171DBBE59000D6F40E /* BundleForSymbolAddressTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleForSymbolAddressTests.swift; sourceTree = "<group>"; };
+		C48CEECB201FF1BC0088E490 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C495D8981C02592100A7F7D5 /* TracingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracingTests.swift; sourceTree = "<group>"; };
+		C49FF0E51DBAF7D800A86CC0 /* NestedBrackets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedBrackets.swift; sourceTree = "<group>"; };
+		C49FF0E71DBAF80200A86CC0 /* NestedBracketsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NestedBracketsTests.swift; sourceTree = "<group>"; };
+		C49FF0E91DBAF94200A86CC0 /* SourceLabels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceLabels.swift; sourceTree = "<group>"; };
+		C4CB38851CDBA78D00562665 /* SourceLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceLocation.swift; sourceTree = "<group>"; };
+		C4D6F4191C73CCC000A7E2ED /* Tracing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracing.swift; sourceTree = "<group>"; };
+		C4E5DB841DBEAD8900170422 /* Conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conveniences.swift; sourceTree = "<group>"; };
+		C4E5DB861DBEAFB900170422 /* Labeling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labeling.swift; sourceTree = "<group>"; };
+		C4E5DB881DBEB01A00170422 /* Logging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
+		C4EB27E81DFA30D100BF0843 /* ModuleExports-GETracing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ModuleExports-GETracing.swift"; sourceTree = "<group>"; };
+		C4FEBB1C1BF960A300A5709B /* BundleForSymbolAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleForSymbolAddress.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C418185C1B6A65B100872EB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C41818671B6A65B100872EB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C418186B1B6A65B100872EB3 /* GETracing.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C41818561B6A65B100872EB3 = {
+			isa = PBXGroup;
+			children = (
+				C48CEECB201FF1BC0088E490 /* README.md */,
+				C4049DE6201FC1A100A296C3 /* GETracing.playground */,
+				C41818621B6A65B100872EB3 /* GETracing */,
+				C418186E1B6A65B100872EB3 /* GETracingTests */,
+				C424B8DF1C6FC332008AD647 /* Frameworks */,
+				C41818611B6A65B100872EB3 /* Products */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		C41818611B6A65B100872EB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C41818601B6A65B100872EB3 /* GETracing.framework */,
+				C418186A1B6A65B100872EB3 /* GETracingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C41818621B6A65B100872EB3 /* GETracing */ = {
+			isa = PBXGroup;
+			children = (
+				C41F404F1DBE94E3006EA6CD /* Configuration.swift */,
+				C4D6F4191C73CCC000A7E2ED /* Tracing.swift */,
+				C4E5DB861DBEAFB900170422 /* Labeling.swift */,
+				C4E5DB841DBEAD8900170422 /* Conveniences.swift */,
+				C4E5DB881DBEB01A00170422 /* Logging.swift */,
+				C49FF0E91DBAF94200A86CC0 /* SourceLabels.swift */,
+				C49FF0E51DBAF7D800A86CC0 /* NestedBrackets.swift */,
+				C4CB38851CDBA78D00562665 /* SourceLocation.swift */,
+				C4FEBB1C1BF960A300A5709B /* BundleForSymbolAddress.swift */,
+				C41818651B6A65B100872EB3 /* Info.plist */,
+				C4EB27E81DFA30D100BF0843 /* ModuleExports-GETracing.swift */,
+			);
+			path = GETracing;
+			sourceTree = "<group>";
+		};
+		C418186E1B6A65B100872EB3 /* GETracingTests */ = {
+			isa = PBXGroup;
+			children = (
+				C495D8981C02592100A7F7D5 /* TracingTests.swift */,
+				C479DD912021550A00E0A11D /* LoggingTests.swift */,
+				C49FF0E71DBAF80200A86CC0 /* NestedBracketsTests.swift */,
+				C48CAA171DBBE59000D6F40E /* BundleForSymbolAddressTests.swift */,
+				C479DD932021572900E0A11D /* PlaygroundSupportTests.swift */,
+				C41818711B6A65B100872EB3 /* Info.plist */,
+			);
+			path = GETracingTests;
+			sourceTree = "<group>";
+		};
+		C424B8DF1C6FC332008AD647 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C459879B1CDE087200B8E9E4 /* GEShared.xcconfig */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C418185D1B6A65B100872EB3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C418185F1B6A65B100872EB3 /* GETracing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C41818741B6A65B100872EB3 /* Build configuration list for PBXNativeTarget "GETracing" */;
+			buildPhases = (
+				C418185B1B6A65B100872EB3 /* Sources */,
+				C418185C1B6A65B100872EB3 /* Frameworks */,
+				C418185D1B6A65B100872EB3 /* Headers */,
+				C418185E1B6A65B100872EB3 /* Resources */,
+				DB8520C4D53BC0001AD8FD6B /* Embed Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GETracing;
+			productName = GEBase;
+			productReference = C41818601B6A65B100872EB3 /* GETracing.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C41818691B6A65B100872EB3 /* GETracingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C41818771B6A65B100872EB3 /* Build configuration list for PBXNativeTarget "GETracingTests" */;
+			buildPhases = (
+				C41818661B6A65B100872EB3 /* Sources */,
+				C41818671B6A65B100872EB3 /* Frameworks */,
+				C41818681B6A65B100872EB3 /* Resources */,
+				C495D89A1C0259F900A7F7D5 /* Embed Sources */,
+				C4DB6A6B1D25C4D600E8516D /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C418186D1B6A65B100872EB3 /* PBXTargetDependency */,
+			);
+			name = GETracingTests;
+			productName = GEBaseTests;
+			productReference = C418186A1B6A65B100872EB3 /* GETracingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C41818571B6A65B100872EB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Grigory Entin";
+				TargetAttributes = {
+					C418185F1B6A65B100872EB3 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 465NA5BW7E;
+						DevelopmentTeamName = "Grigorii Entin";
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					C41818691B6A65B100872EB3 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 465NA5BW7E;
+						DevelopmentTeamName = "Grigorii Entin";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C418185A1B6A65B100872EB3 /* Build configuration list for PBXProject "GETracing" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C41818561B6A65B100872EB3;
+			productRefGroup = C41818611B6A65B100872EB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C418185F1B6A65B100872EB3 /* GETracing */,
+				C41818691B6A65B100872EB3 /* GETracingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C418185E1B6A65B100872EB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C41818681B6A65B100872EB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C418185B1B6A65B100872EB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4FEBB1D1BF960A300A5709B /* BundleForSymbolAddress.swift in Sources */,
+				C4E5DB891DBEB01A00170422 /* Logging.swift in Sources */,
+				C49FF0E61DBAF7D800A86CC0 /* NestedBrackets.swift in Sources */,
+				C4D6F41A1C73CCC000A7E2ED /* Tracing.swift in Sources */,
+				C4CB38861CDBA78D00562665 /* SourceLocation.swift in Sources */,
+				C4E5DB871DBEAFB900170422 /* Labeling.swift in Sources */,
+				C41F40501DBE94E3006EA6CD /* Configuration.swift in Sources */,
+				C4E5DB851DBEAD8900170422 /* Conveniences.swift in Sources */,
+				C49FF0EA1DBAF94200A86CC0 /* SourceLabels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C41818661B6A65B100872EB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C479DD942021572900E0A11D /* PlaygroundSupportTests.swift in Sources */,
+				C48CAA181DBBE59000D6F40E /* BundleForSymbolAddressTests.swift in Sources */,
+				C495D8991C02592100A7F7D5 /* TracingTests.swift in Sources */,
+				C49FF0E81DBAF80200A86CC0 /* NestedBracketsTests.swift in Sources */,
+				C479DD922021550A00E0A11D /* LoggingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C418186D1B6A65B100872EB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C418185F1B6A65B100872EB3 /* GETracing */;
+			targetProxy = C418186C1B6A65B100872EB3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C41818721B6A65B100872EB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C459879B1CDE087200B8E9E4 /* GEShared.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C41818731B6A65B100872EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C459879B1CDE087200B8E9E4 /* GEShared.xcconfig */;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C41818751B6A65B100872EB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = 465NA5BW7E;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.grigorye.$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C41818761B6A65B100872EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEVELOPMENT_TEAM = 465NA5BW7E;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.grigorye.$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C41818781B6A65B100872EB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grigoryentin.GEBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C41818791B6A65B100872EB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.grigoryentin.GEBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C418185A1B6A65B100872EB3 /* Build configuration list for PBXProject "GETracing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C41818721B6A65B100872EB3 /* Debug */,
+				C41818731B6A65B100872EB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C41818741B6A65B100872EB3 /* Build configuration list for PBXNativeTarget "GETracing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C41818751B6A65B100872EB3 /* Debug */,
+				C41818761B6A65B100872EB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C41818771B6A65B100872EB3 /* Build configuration list for PBXNativeTarget "GETracingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C41818781B6A65B100872EB3 /* Debug */,
+				C41818791B6A65B100872EB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C41818571B6A65B100872EB3 /* Project object */;
+}
