@@ -16,24 +16,24 @@ infix operator ≈
 infix operator …
 
 @discardableResult
-public func with<T: AnyObject>(_ obj: T, _ initialize: (T) throws -> Void) rethrows -> T {
-	try initialize(obj)
+public func with<T: AnyObject>(_ obj: T, _ body: (T) throws -> Void) rethrows -> T {
+	try body(obj)
 	return obj
 }
-public func with<T: Any>(_ value: T, _ initialize: (inout T) throws -> Void) rethrows -> T {
+public func with<T>(_ value: T, _ body: (inout T) throws -> Void) rethrows -> T {
 	var valueCopy = value
-	try initialize(&valueCopy)
+	try body(&valueCopy)
 	return valueCopy
 }
 
-public func ≈<T>(value: T, initialize: (inout T) throws -> Void) rethrows -> T where T: AnyObject {
+public func ≈<T>(value: T, body: (inout T) throws -> Void) rethrows -> T {
 	// swiftlint:disable:previous identifier_name
-	return try with(value, initialize)
+	return try with(value, body)
 }
 @discardableResult
-public func …<T: AnyObject>(obj: T, initialize: (T) throws -> Void) rethrows -> T {
+public func …<T: AnyObject>(obj: T, body: (T) throws -> Void) rethrows -> T {
 	// swiftlint:disable:previous identifier_name
-	return try with(obj, initialize)
+	return try with(obj, body)
 }
 
 /**

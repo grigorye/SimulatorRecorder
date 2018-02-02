@@ -27,6 +27,7 @@
 		A1839A181FD880B7003313D6 /* ErrorTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1839A171FD880B7003313D6 /* ErrorTracking.swift */; };
 		AECED27BE3073050A4249E13 /* ObjCPropertyInfo.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C48CAA251DBD33BE00D6F40E /* ObjCPropertyInfo.swift */; };
 		B046F9701389DBD95BA01406 /* ModuleExports-GETracing.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4EB27F01DFA32D900BF0843 /* ModuleExports-GETracing.swift */; };
+		B87E59C171E5A45FF550CF6C /* SwiftBackwardCompatibility.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C429597520193C61006244E1 /* SwiftBackwardCompatibility.swift */; };
 		C408C6631DFC9C5C00AAA8FF /* ErrorRecovery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C408C6621DFC9C5C00AAA8FF /* ErrorRecovery.swift */; };
 		C4270BF81DBD4FBD00FA3A0A /* GETracing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4270BF71DBD4FBD00FA3A0A /* GETracing.framework */; };
 		C429597620193C61006244E1 /* SwiftBackwardCompatibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429597520193C61006244E1 /* SwiftBackwardCompatibility.swift */; };
@@ -103,6 +104,7 @@
 				3AD059FD0E849A5BCC264C44 /* ProgressEnabledURLSessionTaskGenerator.swift in Embed Sources */,
 				5AB616599914D3443E358BEB /* EncodedUserDefaults.swift in Embed Sources */,
 				E13274374119666E9885669E /* ErrorRecovery.swift in Embed Sources */,
+				B87E59C171E5A45FF550CF6C /* SwiftBackwardCompatibility.swift in Embed Sources */,
 			);
 			name = "Embed Sources";
 			runOnlyForDeploymentPostprocessing = 0;
