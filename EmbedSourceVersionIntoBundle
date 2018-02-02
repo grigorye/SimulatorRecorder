@@ -1,0 +1,22 @@
+#! /bin/sh -e
+
+#  EmbedSourceVersionIntoBundle
+#  GEXcodeBuildPhases
+#
+#  Created by Grigory Entin on 04.01.15.
+#  Copyright (c) 2015 Grigory Entin. All rights reserved.
+
+commitNumber=$(git rev-list --abbrev-commit HEAD | wc -l | awk '{print $1}')
+status=$(git status -s | sed 's/^ //' | cut -d ' ' -f 1 | uniq | tr -d '\n')
+version="${commitNumber:?}${status}"
+
+infoPlistWOExt=$(echo "${INFOPLIST_PATH:?}" | sed 's/.plist$//')
+infoPlistDefaultsDomain="${CONFIGURATION_BUILD_DIR:?}/${infoPlistWOExt:?}"
+defaults write "${infoPlistDefaultsDomain:?}" CFBundleVersion -string "${version:?}"
+
+settingsPlist="${TARGET_BUILD_DIR:?}/${FULL_PRODUCT_NAME:?}/Settings.bundle/Root.plist"
+if [ -f "${settingsPlist:?}" ]
+then
+	versionIndex=0
+	/usr/libexec/PlistBuddy "${settingsPlist:?}" -c "set PreferenceSpecifiers:${versionIndex:?}:DefaultValue ${version:?}"
+fi
