@@ -1,0 +1,12 @@
+//
+//  GEShared-SDKRoot.xcconfig
+//  
+//
+//  Created by Grigory Entin on 29.11.16.
+//
+//
+
+//
+// iphoneos, macosx
+//
+SDKROOT = iphoneos
