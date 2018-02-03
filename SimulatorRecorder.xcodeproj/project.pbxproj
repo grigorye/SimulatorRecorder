@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1410D8B496F95FDEB502E7 /* ModuleExports-GEFoundation.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */; };
+		220EE71EFD4F0E4ADE2CA9DC /* PreferencesViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */; };
+		3CB6CCC64CA5B5ECF55E93F1 /* FilenameTokenObject.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */; };
+		4495DD2877227BF72EAB6DD8 /* ModuleExports-GETracing.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A249202529C100320E48 /* ModuleExports-GETracing.swift */; };
+		58C6B781EF6D53352436AE4A /* SimulatorRecorderUITests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */; };
+		6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
+		75058297C89597B48E8DAAEF /* main.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
+		A4F9C272AE48785F5EF9B662 /* ViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
+		C213E69B8F1854FD7CC988D2 /* FilenamePaletteTokenFieldDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift */; };
+		C424A2442025254500320E48 /* GEFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2432025254500320E48 /* GEFoundation.framework */; };
+		C424A2452025254500320E48 /* GEFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2432025254500320E48 /* GEFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C424A2472025255E00320E48 /* GETracing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2462025255E00320E48 /* GETracing.framework */; };
+		C424A2482025255E00320E48 /* GETracing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2462025255E00320E48 /* GETracing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C424A24B202529C100320E48 /* ModuleExports-GETracing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A249202529C100320E48 /* ModuleExports-GETracing.swift */; };
+		C424A24C202529C100320E48 /* ModuleExports-GEFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */; };
+		C424A24E2025A88B00320E48 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
 		C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
 		C479DDA4202266BF00E0A11D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
 		C479DDA6202266BF00E0A11D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479DDA5202266BF00E0A11D /* Assets.xcassets */; };
@@ -19,6 +35,7 @@
 		C479DDE12023EA8E00E0A11D /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */; };
 		C479DDE32023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift */; };
 		C479DDE52023FEE800E0A11D /* FilenameTokenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */; };
+		D0CF358CD14989AB3C40FC0B /* SimulatorRecorderTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +55,67 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5035D22810B4C0D71550C940 /* Embed Sources */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "Sources/$(TARGET_NAME)";
+			dstSubfolderSpec = 7;
+			files = (
+				A4F9C272AE48785F5EF9B662 /* ViewController.swift in Embed Sources */,
+				6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */,
+				75058297C89597B48E8DAAEF /* main.swift in Embed Sources */,
+				4495DD2877227BF72EAB6DD8 /* ModuleExports-GETracing.swift in Embed Sources */,
+				C213E69B8F1854FD7CC988D2 /* FilenamePaletteTokenFieldDelegate.swift in Embed Sources */,
+				220EE71EFD4F0E4ADE2CA9DC /* PreferencesViewController.swift in Embed Sources */,
+				3CB6CCC64CA5B5ECF55E93F1 /* FilenameTokenObject.swift in Embed Sources */,
+				0A1410D8B496F95FDEB502E7 /* ModuleExports-GEFoundation.swift in Embed Sources */,
+			);
+			name = "Embed Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78D777791D9839579BD31EC4 /* Embed Sources */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "Sources/$(TARGET_NAME)";
+			dstSubfolderSpec = 7;
+			files = (
+				D0CF358CD14989AB3C40FC0B /* SimulatorRecorderTests.swift in Embed Sources */,
+			);
+			name = "Embed Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4FDFCB6202522710017DF19 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C424A2452025254500320E48 /* GEFoundation.framework in Embed Frameworks */,
+				C424A2482025255E00320E48 /* GETracing.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E48B8222079AB804F68CD8A3 /* Embed Sources */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "Sources/$(TARGET_NAME)";
+			dstSubfolderSpec = 7;
+			files = (
+				58C6B781EF6D53352436AE4A /* SimulatorRecorderUITests.swift in Embed Sources */,
+			);
+			name = "Embed Sources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C424A2432025254500320E48 /* GEFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GEFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C424A2462025255E00320E48 /* GETracing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GETracing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C424A249202529C100320E48 /* ModuleExports-GETracing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ModuleExports-GETracing.swift"; path = "GETracing/GETracing/ModuleExports-GETracing.swift"; sourceTree = "<group>"; };
+		C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ModuleExports-GEFoundation.swift"; path = "GEFoundation/GEFoundation/ModuleExports-GEFoundation.swift"; sourceTree = "<group>"; };
+		C424A24D2025A88B00320E48 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C479DD9E202266BF00E0A11D /* SimulatorRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C479DDA1202266BF00E0A11D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C479DDA3202266BF00E0A11D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +142,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C424A2442025254500320E48 /* GEFoundation.framework in Frameworks */,
+				C424A2472025255E00320E48 /* GETracing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,12 +164,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C424A2372025244600320E48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */,
+				C424A249202529C100320E48 /* ModuleExports-GETracing.swift */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C479DD95202266BF00E0A11D = {
 			isa = PBXGroup;
 			children = (
+				C424A2462025255E00320E48 /* GETracing.framework */,
+				C424A2432025254500320E48 /* GEFoundation.framework */,
 				C479DDA0202266BF00E0A11D /* SimulatorRecorder */,
 				C479DDB3202266C000E0A11D /* SimulatorRecorderTests */,
 				C479DDBE202266C000E0A11D /* SimulatorRecorderUITests */,
+				C424A2372025244600320E48 /* Frameworks */,
 				C479DD9F202266BF00E0A11D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				C479DDA1202266BF00E0A11D /* AppDelegate.swift */,
+				C424A24D2025A88B00320E48 /* main.swift */,
 				C479DDA3202266BF00E0A11D /* ViewController.swift */,
 				C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */,
 				C479DDE22023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift */,
@@ -153,6 +245,8 @@
 				C479DD9B202266BF00E0A11D /* Frameworks */,
 				C479DD9C202266BF00E0A11D /* Resources */,
 				C479DDE620241D9100E0A11D /* Embed Source Version into Bundle */,
+				C4FDFCB6202522710017DF19 /* Embed Frameworks */,
+				5035D22810B4C0D71550C940 /* Embed Sources */,
 			);
 			buildRules = (
 			);
@@ -170,6 +264,7 @@
 				C479DDAC202266C000E0A11D /* Sources */,
 				C479DDAD202266C000E0A11D /* Frameworks */,
 				C479DDAE202266C000E0A11D /* Resources */,
+				78D777791D9839579BD31EC4 /* Embed Sources */,
 			);
 			buildRules = (
 			);
@@ -188,6 +283,7 @@
 				C479DDB7202266C000E0A11D /* Sources */,
 				C479DDB8202266C000E0A11D /* Frameworks */,
 				C479DDB9202266C000E0A11D /* Resources */,
+				E48B8222079AB804F68CD8A3 /* Embed Sources */,
 			);
 			buildRules = (
 			);
@@ -304,9 +400,12 @@
 			files = (
 				C479DDA4202266BF00E0A11D /* ViewController.swift in Sources */,
 				C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */,
+				C424A24E2025A88B00320E48 /* main.swift in Sources */,
+				C424A24B202529C100320E48 /* ModuleExports-GETracing.swift in Sources */,
 				C479DDE32023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift in Sources */,
 				C479DDE12023EA8E00E0A11D /* PreferencesViewController.swift in Sources */,
 				C479DDE52023FEE800E0A11D /* FilenameTokenObject.swift in Sources */,
+				C424A24C202529C100320E48 /* ModuleExports-GEFoundation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
