@@ -14,8 +14,6 @@ import Carbon.HIToolbox
 	func toggleRecording(_ sender: Any)
 }
 
-
-@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	func keyDown(_ event: NSEvent) {
@@ -37,12 +35,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			return
 		}
 		
-		viewController.toggleRecording(self)
+		x$(viewController).toggleRecording(self)
+	}
+	
+	func verifyTrustedAccessibility() {
+		
+		let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() : true] as CFDictionary
+		_ = x$(AXIsProcessTrustedWithOptions(options))
 	}
 	
 	func applicationDidFinishLaunching(_ notification: Notification) {
 		
-		AXIsProcessTrustedWithOptions([kAXTrustedCheckOptionPrompt.takeUnretainedValue() : true] as CFDictionary)
+		verifyTrustedAccessibility()
 		
 		NSEvent.addGlobalMonitorForEvents(matching: .keyDown) {
 			
