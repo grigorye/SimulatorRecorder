@@ -6,7 +6,7 @@
 //
 //
 
-#include "GEShared-SDKRoot.xcconfig"
+#include "../GEShared-SDKRoot.xcconfig"
 #include "GEShared-CodeGeneration.xcconfig"
 #include "GEShared-FrameworkLinking.xcconfig"
 
