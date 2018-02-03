@@ -9,4 +9,4 @@
 //
 // iphoneos, macosx
 //
-SDKROOT = iphoneos
+SDKROOT = macosx
