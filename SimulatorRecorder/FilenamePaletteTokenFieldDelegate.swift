@@ -25,25 +25,11 @@ class FilenamePaletteTokenFieldDelegate : NSObject, NSTokenFieldDelegate {
 		
 		switch representedObject {
 			
-		case (let string as String):
+		case let string as String:
 			return string
 			
-		case (let filenameTokenObject as FilenameTokenObject):
-			
-			let now = Date()
-			
-			switch filenameTokenObject.value {
-				
-			case .date:
-				return DateFormatter.localizedString(from: now, dateStyle: .short, timeStyle: .none)
-			case .device:
-				return "iPhone SE"
-			case .version:
-				return "11.2"
-			case .time:
-				return DateFormatter.localizedString(from: now, dateStyle: .none, timeStyle: .short)
-				
-			}
+		case let filenameTokenObject as FilenameTokenObject:
+			return filenameTokenObject.value.sampleString
 			
 		default:
 			assert(false)
