@@ -805,11 +805,11 @@
             <objects>
                 <viewController id="Z4z-sx-17O" customClass="PreferencesViewController" customModule="SimulatorRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="4xn-Ba-fwh">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="279"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <tokenField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="GGZ-hW-Huk">
-                                <rect key="frame" x="20" y="204" width="440" height="21"/>
+                                <rect key="frame" x="20" y="213" width="440" height="21"/>
                                 <tokenFieldCell key="cell" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" drawsBackground="YES" allowsEditingTextAttributes="YES" id="rec-i8-Dal">
                                     <font key="font" metaFont="cellTitle"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -820,33 +820,25 @@
                                 </connections>
                             </tokenField>
                             <box title="Name Elements" translatesAutoresizingMaskIntoConstraints="NO" id="H4b-dd-7aN">
-                                <rect key="frame" x="17" y="16" width="446" height="168"/>
+                                <rect key="frame" x="17" y="16" width="446" height="177"/>
                                 <view key="contentView" id="h9i-yi-72C">
-                                    <rect key="frame" x="2" y="2" width="442" height="151"/>
+                                    <rect key="frame" x="2" y="2" width="442" height="160"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tokenField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DKB-Wg-Njc">
-                                            <rect key="frame" x="18" y="115" width="69" height="16"/>
-                                            <tokenFieldCell key="cell" selectable="YES" alignment="left" title="Date" allowsEditingTextAttributes="YES" id="5QK-t5-ZvG">
-                                                <font key="font" metaFont="cellTitle"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </tokenFieldCell>
-                                            <connections>
-                                                <outlet property="delegate" destination="wcP-gA-FOc" id="Asc-Jt-QAZ"/>
-                                            </connections>
-                                        </tokenField>
+                                        <customView verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TwV-w6-8we" customClass="NSGridView">
+                                            <rect key="frame" x="20" y="20" width="402" height="120"/>
+                                        </customView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="DKB-Wg-Njc" firstAttribute="leading" secondItem="h9i-yi-72C" secondAttribute="leading" constant="20" symbolic="YES" id="7eL-wA-GQk"/>
-                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="DKB-Wg-Njc" secondAttribute="bottom" constant="20" symbolic="YES" id="Bqo-2j-uXA"/>
-                                        <constraint firstItem="DKB-Wg-Njc" firstAttribute="top" secondItem="h9i-yi-72C" secondAttribute="top" constant="20" symbolic="YES" id="MeX-AW-F6Q"/>
-                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="DKB-Wg-Njc" secondAttribute="trailing" constant="20" symbolic="YES" id="wKf-NP-Sek"/>
+                                        <constraint firstAttribute="trailing" secondItem="TwV-w6-8we" secondAttribute="trailing" constant="20" symbolic="YES" id="Plp-8h-4FV"/>
+                                        <constraint firstAttribute="bottom" secondItem="TwV-w6-8we" secondAttribute="bottom" constant="20" symbolic="YES" id="Q0O-VL-pgW"/>
+                                        <constraint firstItem="TwV-w6-8we" firstAttribute="leading" secondItem="h9i-yi-72C" secondAttribute="leading" constant="20" symbolic="YES" id="aRP-Kb-A0V"/>
+                                        <constraint firstItem="TwV-w6-8we" firstAttribute="top" secondItem="h9i-yi-72C" secondAttribute="top" constant="20" symbolic="YES" id="fW0-nx-iDi"/>
                                     </constraints>
                                 </view>
                             </box>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BFP-oj-2Pu">
-                                <rect key="frame" x="18" y="233" width="444" height="17"/>
+                                <rect key="frame" x="18" y="242" width="444" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Type text and drag name elements to create a custom format:" id="ghB-Ff-xOX">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -868,14 +860,14 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="filenamePaletteTokenField" destination="DKB-Wg-Njc" id="C42-me-1aw"/>
                         <outlet property="filenameTokenField" destination="GGZ-hW-Huk" id="3N4-5Y-JVS"/>
+                        <outlet property="filenameTokenGridView" destination="TwV-w6-8we" id="ycw-2f-YCJ"/>
                     </connections>
                 </viewController>
                 <customObject id="XTq-Y8-yIu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <customObject id="wcP-gA-FOc" customClass="FilenamePaletteTokenFieldDelegate" customModule="SimulatorRecorder" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="785" y="655"/>
+            <point key="canvasLocation" x="785" y="659.5"/>
         </scene>
     </scenes>
 </document>
