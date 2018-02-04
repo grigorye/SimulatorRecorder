@@ -8,14 +8,6 @@
 
 import AppKit
 
-enum FilenameToken : String, RawRepresentable {
-	
-	case date
-	case time
-	case version
-	case device
-}
-
 class FilenameTokenObject : NSObject {
 	
 	let value: FilenameToken
@@ -40,7 +32,7 @@ class FilenameTokenObject : NSObject {
 		self.value = value
 	}
 	
-	init(value: FilenameToken) {
+	init(_ value: FilenameToken) {
 		self.value = value
 		super.init()
 	}
