@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A1410D8B496F95FDEB502E7 /* ModuleExports-GEFoundation.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */; };
+		136DD1FF16F2CE76F88D74A7 /* FilenameToken.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* FilenameToken.swift */; };
 		220EE71EFD4F0E4ADE2CA9DC /* PreferencesViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */; };
 		3CB6CCC64CA5B5ECF55E93F1 /* FilenameTokenObject.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */; };
 		4495DD2877227BF72EAB6DD8 /* ModuleExports-GETracing.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A249202529C100320E48 /* ModuleExports-GETracing.swift */; };
@@ -35,6 +36,7 @@
 		C479DDE12023EA8E00E0A11D /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */; };
 		C479DDE32023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift */; };
 		C479DDE52023FEE800E0A11D /* FilenameTokenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */; };
+		C4AC52F8202662C2005A0FCD /* FilenameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* FilenameToken.swift */; };
 		D0CF358CD14989AB3C40FC0B /* SimulatorRecorderTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +72,7 @@
 				220EE71EFD4F0E4ADE2CA9DC /* PreferencesViewController.swift in Embed Sources */,
 				3CB6CCC64CA5B5ECF55E93F1 /* FilenameTokenObject.swift in Embed Sources */,
 				0A1410D8B496F95FDEB502E7 /* ModuleExports-GEFoundation.swift in Embed Sources */,
+				136DD1FF16F2CE76F88D74A7 /* FilenameToken.swift in Embed Sources */,
 			);
 			name = "Embed Sources";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +138,7 @@
 		C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		C479DDE22023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenamePaletteTokenFieldDelegate.swift; sourceTree = "<group>"; };
 		C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameTokenObject.swift; sourceTree = "<group>"; };
+		C4AC52F7202662C2005A0FCD /* FilenameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +209,7 @@
 				C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */,
 				C479DDE22023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift */,
 				C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */,
+				C4AC52F7202662C2005A0FCD /* FilenameToken.swift */,
 				C479DDA5202266BF00E0A11D /* Assets.xcassets */,
 				C479DDA7202266BF00E0A11D /* Main.storyboard */,
 				C479DDCE20226B2300E0A11D /* simulatorName */,
@@ -405,6 +410,7 @@
 				C479DDE32023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift in Sources */,
 				C479DDE12023EA8E00E0A11D /* PreferencesViewController.swift in Sources */,
 				C479DDE52023FEE800E0A11D /* FilenameTokenObject.swift in Sources */,
+				C4AC52F8202662C2005A0FCD /* FilenameToken.swift in Sources */,
 				C424A24C202529C100320E48 /* ModuleExports-GEFoundation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
