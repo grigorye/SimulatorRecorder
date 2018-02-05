@@ -1,5 +1,5 @@
 //
-//  FilenameTokenFieldDelegate.swift
+//  RecordingNameFieldDelegate.swift
 //  SimulatorRecorder
 //
 //  Created by Grigory Entin on 02.02.2018.
@@ -9,7 +9,7 @@
 import Cocoa
 
 // Delegate for both (editable) filename field and filename token  palette.
-class FilenameTokenFieldDelegate : NSObject, NSTokenFieldDelegate {
+class RecordingNameFieldDelegate : NSObject, NSTokenFieldDelegate {
 	
 	func tokenField(_ tokenField: NSTokenField, writeRepresentedObjects objects: [Any], to pboard: NSPasteboard) -> Bool {
 		
@@ -19,7 +19,7 @@ class FilenameTokenFieldDelegate : NSObject, NSTokenFieldDelegate {
 	
 	func tokenField(_ tokenField: NSTokenField, readFrom pboard: NSPasteboard) -> [Any]? {
 		
-		return pboard.readObjects(forClasses: [FilenameTokenObject.self, NSString.self])
+		return pboard.readObjects(forClasses: [RecordingNameTokenObject.self, NSString.self])
 	}
 	
 	func tokenField(_ tokenField: NSTokenField, displayStringForRepresentedObject representedObject: Any) -> String? {
@@ -29,7 +29,7 @@ class FilenameTokenFieldDelegate : NSObject, NSTokenFieldDelegate {
 		case let string as String:
 			return string
 			
-		case let filenameTokenObject as FilenameTokenObject:
+		case let filenameTokenObject as RecordingNameTokenObject:
 			return filenameTokenObject.value.sampleString
 			
 		default:
@@ -44,7 +44,7 @@ class FilenameTokenFieldDelegate : NSObject, NSTokenFieldDelegate {
 			
 		case is String:
 			return .none
-		case is FilenameTokenObject:
+		case is RecordingNameTokenObject:
 			return .default
 		default:
 			assert(false)

@@ -1,5 +1,5 @@
 //
-//  FilenameToken.swift
+//  RecordingNameToken.swift
 //  SimulatorRecorder
 //
 //  Created by Grigory Entin on 03.02.2018.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum FilenameToken : String, RawRepresentable {
+enum RecordingNameToken : String, RawRepresentable {
 	
 	case date
 	case time
@@ -18,7 +18,7 @@ enum FilenameToken : String, RawRepresentable {
 
 private let now = Date()
 
-extension FilenameToken {
+extension RecordingNameToken {
 	
 	var title : String {
 		

@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0A1410D8B496F95FDEB502E7 /* ModuleExports-GEFoundation.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */; };
-		136DD1FF16F2CE76F88D74A7 /* FilenameToken.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* FilenameToken.swift */; };
-		220EE71EFD4F0E4ADE2CA9DC /* PreferencesViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */; };
-		3CB6CCC64CA5B5ECF55E93F1 /* FilenameTokenObject.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */; };
+		136DD1FF16F2CE76F88D74A7 /* RecordingNameToken.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
+		220EE71EFD4F0E4ADE2CA9DC /* RecordingNamingPreferencesViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */; };
+		3CB6CCC64CA5B5ECF55E93F1 /* RecordingNameTokenObject.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */; };
 		4495DD2877227BF72EAB6DD8 /* ModuleExports-GETracing.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A249202529C100320E48 /* ModuleExports-GETracing.swift */; };
 		58C6B781EF6D53352436AE4A /* SimulatorRecorderUITests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */; };
 		6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
 		75058297C89597B48E8DAAEF /* main.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
 		A4F9C272AE48785F5EF9B662 /* ViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
-		C213E69B8F1854FD7CC988D2 /* FilenameTokenFieldDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* FilenameTokenFieldDelegate.swift */; };
+		C213E69B8F1854FD7CC988D2 /* RecordingNameFieldDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */; };
 		C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */; };
 		C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */; };
 		C41F4C362028B3200090E79B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41F4C352028B3200090E79B /* Defaults.plist */; };
@@ -36,10 +36,10 @@
 		C479DDD720226D8200E0A11D /* simulatorName in Resources */ = {isa = PBXBuildFile; fileRef = C479DDCE20226B2300E0A11D /* simulatorName */; };
 		C479DDD820226D8200E0A11D /* recordVideo in Resources */ = {isa = PBXBuildFile; fileRef = C479DDCF20226B2400E0A11D /* recordVideo */; };
 		C479DDDB20227A7900E0A11D /* timestamp in Resources */ = {isa = PBXBuildFile; fileRef = C479DDDA20227A7900E0A11D /* timestamp */; };
-		C479DDE12023EA8E00E0A11D /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */; };
-		C479DDE32023ECE100E0A11D /* FilenameTokenFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* FilenameTokenFieldDelegate.swift */; };
-		C479DDE52023FEE800E0A11D /* FilenameTokenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */; };
-		C4AC52F8202662C2005A0FCD /* FilenameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* FilenameToken.swift */; };
+		C479DDE12023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */; };
+		C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */; };
+		C479DDE52023FEE800E0A11D /* RecordingNameTokenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */; };
+		C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
 		D0CF358CD14989AB3C40FC0B /* SimulatorRecorderTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,11 +71,11 @@
 				6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */,
 				75058297C89597B48E8DAAEF /* main.swift in Embed Sources */,
 				4495DD2877227BF72EAB6DD8 /* ModuleExports-GETracing.swift in Embed Sources */,
-				C213E69B8F1854FD7CC988D2 /* FilenameTokenFieldDelegate.swift in Embed Sources */,
-				220EE71EFD4F0E4ADE2CA9DC /* PreferencesViewController.swift in Embed Sources */,
-				3CB6CCC64CA5B5ECF55E93F1 /* FilenameTokenObject.swift in Embed Sources */,
+				C213E69B8F1854FD7CC988D2 /* RecordingNameFieldDelegate.swift in Embed Sources */,
+				220EE71EFD4F0E4ADE2CA9DC /* RecordingNamingPreferencesViewController.swift in Embed Sources */,
+				3CB6CCC64CA5B5ECF55E93F1 /* RecordingNameTokenObject.swift in Embed Sources */,
 				0A1410D8B496F95FDEB502E7 /* ModuleExports-GEFoundation.swift in Embed Sources */,
-				136DD1FF16F2CE76F88D74A7 /* FilenameToken.swift in Embed Sources */,
+				136DD1FF16F2CE76F88D74A7 /* RecordingNameToken.swift in Embed Sources */,
 			);
 			name = "Embed Sources";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,10 +141,10 @@
 		C479DDCE20226B2300E0A11D /* simulatorName */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = simulatorName; sourceTree = "<group>"; };
 		C479DDCF20226B2400E0A11D /* recordVideo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = recordVideo; sourceTree = "<group>"; };
 		C479DDDA20227A7900E0A11D /* timestamp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = timestamp; sourceTree = "<group>"; };
-		C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
-		C479DDE22023ECE100E0A11D /* FilenameTokenFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameTokenFieldDelegate.swift; sourceTree = "<group>"; };
-		C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameTokenObject.swift; sourceTree = "<group>"; };
-		C4AC52F7202662C2005A0FCD /* FilenameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameToken.swift; sourceTree = "<group>"; };
+		C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNamingPreferencesViewController.swift; sourceTree = "<group>"; };
+		C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameFieldDelegate.swift; sourceTree = "<group>"; };
+		C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameTokenObject.swift; sourceTree = "<group>"; };
+		C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,10 +214,10 @@
 				C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */,
 				C479DDA3202266BF00E0A11D /* ViewController.swift */,
 				C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */,
-				C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */,
-				C479DDE22023ECE100E0A11D /* FilenameTokenFieldDelegate.swift */,
-				C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */,
-				C4AC52F7202662C2005A0FCD /* FilenameToken.swift */,
+				C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */,
+				C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */,
+				C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */,
+				C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */,
 				C479DDA5202266BF00E0A11D /* Assets.xcassets */,
 				C479DDA7202266BF00E0A11D /* Main.storyboard */,
 				C479DDCE20226B2300E0A11D /* simulatorName */,
@@ -418,10 +418,10 @@
 				C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */,
 				C424A24E2025A88B00320E48 /* main.swift in Sources */,
 				C424A24B202529C100320E48 /* ModuleExports-GETracing.swift in Sources */,
-				C479DDE32023ECE100E0A11D /* FilenameTokenFieldDelegate.swift in Sources */,
-				C479DDE12023EA8E00E0A11D /* PreferencesViewController.swift in Sources */,
-				C479DDE52023FEE800E0A11D /* FilenameTokenObject.swift in Sources */,
-				C4AC52F8202662C2005A0FCD /* FilenameToken.swift in Sources */,
+				C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */,
+				C479DDE12023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift in Sources */,
+				C479DDE52023FEE800E0A11D /* RecordingNameTokenObject.swift in Sources */,
+				C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */,
 				C424A24C202529C100320E48 /* ModuleExports-GEFoundation.swift in Sources */,
 				C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */,
 			);

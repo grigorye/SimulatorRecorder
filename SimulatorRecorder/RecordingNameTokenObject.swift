@@ -1,5 +1,5 @@
 //
-//  FilenameTokenObject.swift
+//  RecordingNameTokenObject.swift
 //  SimulatorRecorder
 //
 //  Created by Grigory Entin on 02.02.2018.
@@ -8,9 +8,9 @@
 
 import AppKit
 
-class FilenameTokenObject : NSObject {
+class RecordingNameTokenObject : NSObject {
 	
-	let value: FilenameToken
+	let value: RecordingNameToken
 	
 	public required init?(pasteboardPropertyList propertyList: Any, ofType type: NSPasteboard.PasteboardType) {
 		
@@ -26,13 +26,13 @@ class FilenameTokenObject : NSObject {
 			assert(false)
 			return nil
 		}
-		guard let value = FilenameToken(rawValue: string) else {
+		guard let value = RecordingNameToken(rawValue: string) else {
 			return nil
 		}
 		self.value = value
 	}
 	
-	init(_ value: FilenameToken) {
+	init(_ value: RecordingNameToken) {
 		self.value = value
 		super.init()
 	}
@@ -45,7 +45,7 @@ extension NSPasteboard.PasteboardType {
 	}
 }
 
-extension FilenameTokenObject : NSPasteboardReading {
+extension RecordingNameTokenObject : NSPasteboardReading {
 	
 	static func readableTypes(for pasteboard: NSPasteboard) -> [NSPasteboard.PasteboardType] {
 		
@@ -53,7 +53,7 @@ extension FilenameTokenObject : NSPasteboardReading {
 	}
 }
 
-extension FilenameTokenObject : NSPasteboardWriting {
+extension RecordingNameTokenObject : NSPasteboardWriting {
 	
 	func writableTypes(for pasteboard: NSPasteboard) -> [NSPasteboard.PasteboardType] {
 		

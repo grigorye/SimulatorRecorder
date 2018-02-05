@@ -803,7 +803,7 @@
         <!--Naming-->
         <scene sceneID="Jn5-Dq-JYC">
             <objects>
-                <viewController title="Naming" id="Z4z-sx-17O" customClass="PreferencesViewController" customModule="SimulatorRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Naming" id="Z4z-sx-17O" customClass="RecordingNamingPreferencesViewController" customModule="SimulatorRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="4xn-Ba-fwh">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="279"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -857,8 +857,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="filenameTokenField" destination="GGZ-hW-Huk" id="3N4-5Y-JVS"/>
-                        <outlet property="filenameTokenGridView" destination="TwV-w6-8we" id="ycw-2f-YCJ"/>
+                        <outlet property="recordingNameField" destination="GGZ-hW-Huk" id="3N4-5Y-JVS"/>
+                        <outlet property="recordingNameTokenGridView" destination="TwV-w6-8we" id="ycw-2f-YCJ"/>
                     </connections>
                 </viewController>
                 <customObject id="XTq-Y8-yIu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
