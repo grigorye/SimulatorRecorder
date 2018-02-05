@@ -5,24 +5,31 @@ wd=$(dirname "$0")
 
 PATH="$PATH":~/homebrew/bin:"${wd:?}"
 domain="com.grigorye.SimulatorRecorder"
+registrationDomain="${wd:?}/Defaults"
 
 #
 
-customRecordingsDir=$(defaults read "${domain:?}" recordingsDir || true)
-recordingsDir=${customRecordingsDir:-"${HOME:?}/Simulator Recordings"}
+defaultFor() {
+	type="${1:?}"; shift
+	key="${1:?}"; shift
+	customValue=$(defaults read "${domain:?}" "${key:?}" || true)
+	readType=$(defaults read-type "${registrationDomain:?}" "${key:?}")
+	[ "Type is ${type:?}" = "${readType:?}" ]
+	value=${customValue:-$(defaults read "${registrationDomain:?}" "${key:?}")}
+	echo "${value:?}"
+}
 
-customVideoNameFormat=$(defaults read "${domain:?}" videoNameFormat || true)
-if [ z"${customVideoNameFormat}" == "z" ]
-then
-	videoName="$(timestamp) $(simulatorName)"
-else
-	videoName=$(eval echo ${customVideoNameFormat:?})
-fi
+#
+
+recordingsDir=$(eval echo "$(defaultFor string "recordingsDir")")
+revealInFinder=$(defaultFor boolean "revealInFinder")
+videoNameFormat=$(defaultFor string "videoNameFormat")
 
 #
 
 tmpdir=$(mktemp -d "${TMPDIR:?}"/"${bn:?}".XXXXX)
 
+videoName=$(eval echo "${videoNameFormat:?}")
 rawVideo="${TMPDIR:?}/simvideo.mov"
 convertedVideo="${recordingsDir:?}/${videoName:?}.m4v"
 
@@ -31,7 +38,10 @@ mkdir -p "${recordingsDir:?}"
 xcrun simctl io booted recordVideo "${rawVideo:?}"
 ffmpeg -v -8 -i "${rawVideo:?}" "${convertedVideo:?}"
 
-open -R "${convertedVideo:?}"
+if [ "${revealInFinder:?}" = 1 ]
+then
+	open -R "${convertedVideo:?}"
+fi
 
 rm "${rawVideo:?}"
 rmdir "${tmpdir:?}"
