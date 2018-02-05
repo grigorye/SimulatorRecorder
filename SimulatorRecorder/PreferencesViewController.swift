@@ -20,27 +20,32 @@ class PreferencesViewController : NSViewController {
 	@IBOutlet var filenameTokenField: NSTokenField!
 	@IBOutlet var filenameTokenGridView: NSGridView!
 	
-	let filenamePaletteTokenFieldDelegate = FilenamePaletteTokenFieldDelegate()
-	
+	let filenameTokenFieldDelegate = FilenameTokenFieldDelegate()
+
 	override func viewDidLoad() {
 		
 		super.viewDidLoad()
 		
-		filenameTokenField.objectValue = [
-			"Recording",
-			FilenameTokenObject(.date),
-			"at",
-			FilenameTokenObject(.time),
-			"for",
-			FilenameTokenObject(.device),
-			"-",
-			FilenameTokenObject(.version)
-		]
+		filenameTokenField … {
+			
+			$0.objectValue = [
+				"Recording",
+				FilenameTokenObject(.date),
+				"at",
+				FilenameTokenObject(.time),
+				"for",
+				FilenameTokenObject(.device),
+				"-",
+				FilenameTokenObject(.version)
+			]
+			$0.delegate = filenameTokenFieldDelegate
+		}
 
 		filenameTokenGridView … {
 			$0.rowSpacing = 10
 			$0.columnSpacing = 10
 		}
+		
 		for token in tokensInPalette {
 			filenameTokenGridView.addRow(with: [
 				NSTextField(labelWithString: token.title),
@@ -50,7 +55,7 @@ class PreferencesViewController : NSViewController {
 					$0.isEditable = false
 					$0.drawsBackground = false
 					$0.objectValue = [token].map(FilenameTokenObject.init)
-					$0.delegate = filenamePaletteTokenFieldDelegate
+					$0.delegate = filenameTokenFieldDelegate
 				}
 			])
 		}
