@@ -16,7 +16,10 @@
 		6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
 		75058297C89597B48E8DAAEF /* main.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
 		A4F9C272AE48785F5EF9B662 /* ViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
-		C213E69B8F1854FD7CC988D2 /* FilenamePaletteTokenFieldDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift */; };
+		C213E69B8F1854FD7CC988D2 /* FilenameTokenFieldDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* FilenameTokenFieldDelegate.swift */; };
+		C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */; };
+		C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */; };
+		C41F4C362028B3200090E79B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41F4C352028B3200090E79B /* Defaults.plist */; };
 		C424A2442025254500320E48 /* GEFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2432025254500320E48 /* GEFoundation.framework */; };
 		C424A2452025254500320E48 /* GEFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2432025254500320E48 /* GEFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C424A2472025255E00320E48 /* GETracing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2462025255E00320E48 /* GETracing.framework */; };
@@ -34,7 +37,7 @@
 		C479DDD820226D8200E0A11D /* recordVideo in Resources */ = {isa = PBXBuildFile; fileRef = C479DDCF20226B2400E0A11D /* recordVideo */; };
 		C479DDDB20227A7900E0A11D /* timestamp in Resources */ = {isa = PBXBuildFile; fileRef = C479DDDA20227A7900E0A11D /* timestamp */; };
 		C479DDE12023EA8E00E0A11D /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */; };
-		C479DDE32023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift */; };
+		C479DDE32023ECE100E0A11D /* FilenameTokenFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* FilenameTokenFieldDelegate.swift */; };
 		C479DDE52023FEE800E0A11D /* FilenameTokenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */; };
 		C4AC52F8202662C2005A0FCD /* FilenameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* FilenameToken.swift */; };
 		D0CF358CD14989AB3C40FC0B /* SimulatorRecorderTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */; };
@@ -68,7 +71,7 @@
 				6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */,
 				75058297C89597B48E8DAAEF /* main.swift in Embed Sources */,
 				4495DD2877227BF72EAB6DD8 /* ModuleExports-GETracing.swift in Embed Sources */,
-				C213E69B8F1854FD7CC988D2 /* FilenamePaletteTokenFieldDelegate.swift in Embed Sources */,
+				C213E69B8F1854FD7CC988D2 /* FilenameTokenFieldDelegate.swift in Embed Sources */,
 				220EE71EFD4F0E4ADE2CA9DC /* PreferencesViewController.swift in Embed Sources */,
 				3CB6CCC64CA5B5ECF55E93F1 /* FilenameTokenObject.swift in Embed Sources */,
 				0A1410D8B496F95FDEB502E7 /* ModuleExports-GEFoundation.swift in Embed Sources */,
@@ -114,6 +117,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathFromFilePathOrURLTransformer.swift; sourceTree = "<group>"; };
+		C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsRegistration.swift; sourceTree = "<group>"; };
+		C41F4C352028B3200090E79B /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		C424A2432025254500320E48 /* GEFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GEFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C424A2462025255E00320E48 /* GETracing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GETracing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C424A249202529C100320E48 /* ModuleExports-GETracing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ModuleExports-GETracing.swift"; path = "GETracing/GETracing/ModuleExports-GETracing.swift"; sourceTree = "<group>"; };
@@ -136,7 +142,7 @@
 		C479DDCF20226B2400E0A11D /* recordVideo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = recordVideo; sourceTree = "<group>"; };
 		C479DDDA20227A7900E0A11D /* timestamp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = timestamp; sourceTree = "<group>"; };
 		C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
-		C479DDE22023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenamePaletteTokenFieldDelegate.swift; sourceTree = "<group>"; };
+		C479DDE22023ECE100E0A11D /* FilenameTokenFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameTokenFieldDelegate.swift; sourceTree = "<group>"; };
 		C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameTokenObject.swift; sourceTree = "<group>"; };
 		C4AC52F7202662C2005A0FCD /* FilenameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilenameToken.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,9 +211,11 @@
 			children = (
 				C479DDA1202266BF00E0A11D /* AppDelegate.swift */,
 				C424A24D2025A88B00320E48 /* main.swift */,
+				C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */,
 				C479DDA3202266BF00E0A11D /* ViewController.swift */,
+				C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */,
 				C479DDE02023EA8E00E0A11D /* PreferencesViewController.swift */,
-				C479DDE22023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift */,
+				C479DDE22023ECE100E0A11D /* FilenameTokenFieldDelegate.swift */,
 				C479DDE42023FEE800E0A11D /* FilenameTokenObject.swift */,
 				C4AC52F7202662C2005A0FCD /* FilenameToken.swift */,
 				C479DDA5202266BF00E0A11D /* Assets.xcassets */,
@@ -217,6 +225,7 @@
 				C479DDDA20227A7900E0A11D /* timestamp */,
 				C479DDAA202266BF00E0A11D /* Info.plist */,
 				C479DDAB202266BF00E0A11D /* SimulatorRecorder.entitlements */,
+				C41F4C352028B3200090E79B /* Defaults.plist */,
 			);
 			path = SimulatorRecorder;
 			sourceTree = "<group>";
@@ -358,6 +367,7 @@
 			files = (
 				C479DDA6202266BF00E0A11D /* Assets.xcassets in Resources */,
 				C479DDA9202266BF00E0A11D /* Main.storyboard in Resources */,
+				C41F4C362028B3200090E79B /* Defaults.plist in Resources */,
 				C479DDDB20227A7900E0A11D /* timestamp in Resources */,
 				C479DDD720226D8200E0A11D /* simulatorName in Resources */,
 				C479DDD820226D8200E0A11D /* recordVideo in Resources */,
@@ -404,14 +414,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C479DDA4202266BF00E0A11D /* ViewController.swift in Sources */,
+				C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */,
 				C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */,
 				C424A24E2025A88B00320E48 /* main.swift in Sources */,
 				C424A24B202529C100320E48 /* ModuleExports-GETracing.swift in Sources */,
-				C479DDE32023ECE100E0A11D /* FilenamePaletteTokenFieldDelegate.swift in Sources */,
+				C479DDE32023ECE100E0A11D /* FilenameTokenFieldDelegate.swift in Sources */,
 				C479DDE12023EA8E00E0A11D /* PreferencesViewController.swift in Sources */,
 				C479DDE52023FEE800E0A11D /* FilenameTokenObject.swift in Sources */,
 				C4AC52F8202662C2005A0FCD /* FilenameToken.swift in Sources */,
 				C424A24C202529C100320E48 /* ModuleExports-GEFoundation.swift in Sources */,
+				C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
