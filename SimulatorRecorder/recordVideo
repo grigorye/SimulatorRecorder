@@ -30,7 +30,7 @@ videoNameFormat=$(defaultFor string "videoNameFormat")
 tmpdir=$(mktemp -d "${TMPDIR:?}"/"${bn:?}".XXXXX)
 
 videoName=$(eval echo "${videoNameFormat:?}")
-rawVideo="${TMPDIR:?}/simvideo.mov"
+rawVideo="${tmpdir:?}/simvideo.mov"
 convertedVideo="${recordingsDir:?}/${videoName:?}.m4v"
 
 mkdir -p "${recordingsDir:?}"
