@@ -1,5 +1,5 @@
 //
-//  FilenamePaletteTokenFieldDelegate.swift
+//  FilenameTokenFieldDelegate.swift
 //  SimulatorRecorder
 //
 //  Created by Grigory Entin on 02.02.2018.
@@ -8,7 +8,8 @@
 
 import Cocoa
 
-class FilenamePaletteTokenFieldDelegate : NSObject, NSTokenFieldDelegate {
+// Delegate for both (editable) filename field and filename token  palette.
+class FilenameTokenFieldDelegate : NSObject, NSTokenFieldDelegate {
 	
 	func tokenField(_ tokenField: NSTokenField, writeRepresentedObjects objects: [Any], to pboard: NSPasteboard) -> Bool {
 		
