@@ -953,6 +953,9 @@
                                 <pathCell key="cell" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="b0C-ih-hyb">
                                     <font key="font" metaFont="system"/>
                                     <url key="url" string="file://localhost/Applications/"/>
+                                    <allowedTypes>
+                                        <string>public.folder</string>
+                                    </allowedTypes>
                                 </pathCell>
                                 <connections>
                                     <binding destination="0Aq-8m-Erw" name="value" keyPath="values.recordingsDir" id="T1F-82-Tfk">
