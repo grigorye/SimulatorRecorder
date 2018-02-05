@@ -28,10 +28,11 @@ class PathFromFilePathOrURLTransformer : ValueTransformer {
 	
 	override func transformedValue(_ value: Any?) -> Any? {
 		
-		guard let path = value as? String else {
+		guard let pathWithTilde = value as? String else {
 			
 			return value
 		}
+		let path = (pathWithTilde as NSString).expandingTildeInPath
 		let url = URL(fileURLWithPath: path)
 		return url
 	}
