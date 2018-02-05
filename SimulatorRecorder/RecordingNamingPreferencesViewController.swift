@@ -8,7 +8,7 @@
 
 import Cocoa
 
-private let tokensInPalette: [RecordingNameToken] = [
+private let tokensInGrid: [RecordingNameToken] = [
 	.date,
 	.time,
 	.version,
@@ -46,8 +46,9 @@ class RecordingNamingPreferencesViewController : NSViewController {
 			$0.columnSpacing = 10
 		}
 		
-		for token in tokensInPalette {
+		for token in tokensInGrid {
 			recordingNameTokenGridView.addRow(with: [
+				
 				NSTextField(labelWithString: token.title),
 				NSTokenField() … {
 					$0.isBordered = false
