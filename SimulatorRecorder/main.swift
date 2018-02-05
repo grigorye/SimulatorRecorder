@@ -14,6 +14,16 @@ loggers += [
 
 x$(CommandLine.arguments)
 
+ValueTransformer.setValueTransformer(
+	PathFromFilePathOrURLTransformer(),
+	forName: .pathFromFilePathOrURLTransformerName
+)
+
+if let defaultsRegistrationDictionary = defaultsRegistrationDictionary {
+	
+	UserDefaults.standard.register(defaults: defaultsRegistrationDictionary)
+}
+
 _ = NSApplicationMain(
 	CommandLine.argc,
 	CommandLine.unsafeArgv
