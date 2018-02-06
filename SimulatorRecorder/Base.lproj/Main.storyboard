@@ -782,7 +782,7 @@
         <!--Preferences-->
         <scene sceneID="dWS-0C-FBk">
             <objects>
-                <windowController showSeguePresentationStyle="single" id="9r9-Gc-sZF" userLabel="Preferences" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="Preferences" showSeguePresentationStyle="single" id="9r9-Gc-sZF" userLabel="Preferences" customClass="PreferencesWindowController" customModule="SimulatorRecorder" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ig3-EG-hKL">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
