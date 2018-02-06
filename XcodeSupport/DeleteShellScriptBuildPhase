@@ -1,0 +1,20 @@
+#! /usr/bin/ruby
+
+require 'xcodeproj'
+
+project_path = ARGV[0]
+targetName = ARGV[1]
+phaseName = ARGV[2]
+
+project = Xcodeproj::Project.open(project_path)
+
+target = project.targets.find { |t| t.name == targetName }
+puts phaseName
+puts target.shell_script_build_phases
+build_phases = target.shell_script_build_phases.to_a.select { |x| puts x; x.name == phaseName }
+puts build_phases
+build_phases.map do |phase|
+  phase.remove_from_project
+end
+
+project.save()
