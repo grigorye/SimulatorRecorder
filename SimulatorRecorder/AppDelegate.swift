@@ -16,6 +16,20 @@ import Carbon.HIToolbox
 
 class AppDelegate: NSObject, NSApplicationDelegate {
 	
+	func instantiatePreferensesWindowController() -> NSWindowController {
+		
+		let windowController = NSStoryboard.main!.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Preferences")) as! NSWindowController
+		
+		return windowController
+	}
+	
+	@IBAction func showPreferences(_ sender: Any) {
+		
+		let preferencesWindowController = currentPreferencesWindowController ?? instantiatePreferensesWindowController()
+		
+		preferencesWindowController.showWindow(sender)
+	}
+	
 	func keyDown(_ event: NSEvent) {
 		
 		guard event.modifierFlags.intersection([.command, .shift, .option, .control]) == [.command, .shift] else {
@@ -52,5 +66,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			
 			self.keyDown($0)
 		}
+		
+		statusItemController.activate()
 	}
 }
