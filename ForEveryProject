@@ -1,0 +1,5 @@
+#! /bin/sh -xe
+
+srcRootDir="${1:?}"; shift
+
+find "${srcRootDir:?}" -name '*.xcodeproj' -not \( -path "${srcRootDir:?}"'/Pods/*' -o -path "${srcRootDir:?}"'/vendor/*' -o -path "${srcRootDir:?}"'/GitSubtrees/*' \) -exec "${@}"

@@ -1,0 +1,8 @@
+#! /bin/sh -xe
+
+xcodeproj="${1:?}"; shift
+
+wd=$(dirname "$0")
+
+target=$(basename ${xcodeproj:?}|sed 's/.xcodeproj//')
+"${wd:?}"/DeleteBuildPhase "${xcodeproj:?}" "${target:?}" "${@}"

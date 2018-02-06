@@ -1,0 +1,39 @@
+#!/usr/bin/ruby
+
+require 'xcodeproj'
+
+project_path = ARGV[0]
+subpath = ARGV[1]
+
+embed_sources_phase_name = 'Embed Sources' # Used for lookup of an existing phase
+
+project = Xcodeproj::Project.open(project_path)
+
+project.targets.select {|t| t.kind_of? Xcodeproj::Project::Object::PBXNativeTarget }.map do |target|
+  source_build_phase = target.source_build_phase
+
+  pbx_build_files = source_build_phase.files.to_a.select do |pbx_build_file|
+   file_ref = pbx_build_file.file_ref
+   file_ref.source_tree != "BUILT_PRODUCTS_DIR" && (File.extname(file_ref.path) == ".swift")
+  end
+
+  unless embed_sources_phase = target.copy_files_build_phases.find { |phase| phase.name == embed_sources_phase_name }
+    embed_sources_phase = target.new_copy_files_build_phase(embed_sources_phase_name)
+  end
+  embed_sources_phase.symbol_dst_subfolder_spec = :resources
+  embed_sources_phase.dst_path = subpath
+
+  new_pbx_build_files_for_embed_sources = pbx_build_files.map do |pbx_build_file|
+    new_pbx_build_file = embed_sources_phase.add_file_reference(pbx_build_file.file_ref, avoid_duplicates: true)
+    # This should not be new pbx_build_file, but one of Sources.
+    fail if pbx_build_file != new_pbx_build_file
+    new_pbx_build_file
+  end
+
+  pbx_build_files_for_removed_sources = embed_sources_phase.files - new_pbx_build_files_for_embed_sources
+  pbx_build_files_for_removed_sources.map do |pbx_build_file|
+    embed_sources_phase.remove_build_file(pbx_build_file)
+  end
+end
+
+project.save()
