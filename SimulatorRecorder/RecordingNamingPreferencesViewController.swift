@@ -8,16 +8,10 @@
 
 import Cocoa
 
-private let tokensInGrid: [RecordingNameToken] = [
-	.date,
-	.time,
-	.version,
-	.device
-]
-
 class RecordingNamingPreferencesViewController : NSViewController {
 	
-	@IBOutlet var recordingNameField: NSTokenField!
+    @IBOutlet var userDefaultsController: NSUserDefaultsController!
+    @IBOutlet var recordingNameField: NSTokenField!
 	@IBOutlet var recordingNameTokenGridView: NSGridView!
 	
 	let recordingNameFieldDelegate = RecordingNameFieldDelegate()
@@ -28,16 +22,6 @@ class RecordingNamingPreferencesViewController : NSViewController {
 		
 		recordingNameField … {
 			
-			$0.objectValue = [
-				"Recording",
-				RecordingNameTokenObject(.date),
-				"at",
-				RecordingNameTokenObject(.time),
-				"for",
-				RecordingNameTokenObject(.device),
-				"-",
-				RecordingNameTokenObject(.version)
-			]
 			$0.delegate = recordingNameFieldDelegate
 		}
 
@@ -46,7 +30,7 @@ class RecordingNamingPreferencesViewController : NSViewController {
 			$0.columnSpacing = 10
 		}
 		
-		for token in tokensInGrid {
+		for token in knownRecordingNameTokens {
 			recordingNameTokenGridView.addRow(with: [
 				
 				NSTextField(labelWithString: token.title),
