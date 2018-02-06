@@ -23,7 +23,18 @@ defaultFor() {
 
 recordingsDir=$(eval echo "$(defaultFor string "recordingsDir")")
 revealInFinder=$(defaultFor boolean "revealInFinder")
-videoNameFormat=$(defaultFor string "videoNameFormat")
+videoNameFormatEscaped=$(defaultFor string "videoNameFormat")
+videoNameFormat=$(echo "[\"${videoNameFormatEscaped:?}\"]" | python -c 'import json, sys; sys.stdout.write(json.load(sys.stdin)[0].encode("utf-8"))')
+
+timestamp=$(timestamp)
+simulatorName=$(simulatorName)
+timestampFormat="%Y-%m-%d_%H%M%S"
+timestamp=$(date +"${timestampFormat:?}")
+
+date=$(date -j -f "${timestampFormat:?}" "${timestamp:?}" +"%Y-%m-%d")
+time=$(date -j -f "${timestampFormat:?}" "${timestamp:?}" +"%H.%M.%S")
+device=$(echo ${simulatorName:?} | sed 's/^\(.*\) - \(.*\)$/\1/')
+version=$(echo ${simulatorName:?} | sed 's/^\(.*\) - \(.*\)$/\2/')
 
 #
 
