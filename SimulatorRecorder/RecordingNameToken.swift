@@ -8,6 +8,14 @@
 
 import Foundation
 
+let knownRecordingNameTokens: [RecordingNameToken] = [
+    
+    .date,
+    .time,
+    .version,
+    .device
+]
+
 enum RecordingNameToken : String, RawRepresentable {
 	
 	case date
@@ -20,6 +28,21 @@ private let now = Date()
 
 extension RecordingNameToken {
 	
+    var shellComponent: String {
+        
+        switch self {
+            
+        case .date:
+            return "${date:?}"
+        case .time:
+            return "${time:?}"
+        case .device:
+            return "${device:?}"
+        case .version:
+            return "${version:?}"
+        }
+    }
+    
 	var title : String {
 		
 		switch self {
@@ -41,12 +64,12 @@ extension RecordingNameToken {
 			
 		case .date:
 			return DateFormatter.localizedString(from: now, dateStyle: .short, timeStyle: .none)
+        case .time:
+            return DateFormatter.localizedString(from: now, dateStyle: .none, timeStyle: .medium)
 		case .device:
 			return "iPhone SE"
 		case .version:
 			return "11.2"
-		case .time:
-			return DateFormatter.localizedString(from: now, dateStyle: .none, timeStyle: .short)
 		}
 	}
 }
