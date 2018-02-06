@@ -19,6 +19,9 @@
 		C213E69B8F1854FD7CC988D2 /* RecordingNameFieldDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */; };
 		C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */; };
 		C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */; };
+		C41152AA20291E8C00DDB293 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A920291E8C00DDB293 /* StatusItemController.swift */; };
+		C41152AC2029224000DDB293 /* StatusItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41152AB2029224000DDB293 /* StatusItem.xib */; };
+		C41152AE20292F7D00DDB293 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */; };
 		C41F4C362028B3200090E79B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41F4C352028B3200090E79B /* Defaults.plist */; };
 		C424A2442025254500320E48 /* GEFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2432025254500320E48 /* GEFoundation.framework */; };
 		C424A2452025254500320E48 /* GEFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2432025254500320E48 /* GEFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -119,6 +122,9 @@
 /* Begin PBXFileReference section */
 		C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathFromFilePathOrURLTransformer.swift; sourceTree = "<group>"; };
 		C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsRegistration.swift; sourceTree = "<group>"; };
+		C41152A920291E8C00DDB293 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		C41152AB2029224000DDB293 /* StatusItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusItem.xib; sourceTree = "<group>"; };
+		C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		C41F4C352028B3200090E79B /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		C424A2432025254500320E48 /* GEFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GEFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C424A2462025255E00320E48 /* GETracing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GETracing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				C479DDA1202266BF00E0A11D /* AppDelegate.swift */,
+				C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */,
 				C424A24D2025A88B00320E48 /* main.swift */,
 				C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */,
 				C479DDA3202266BF00E0A11D /* ViewController.swift */,
@@ -219,6 +226,8 @@
 				C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */,
 				C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */,
 				C479DDA5202266BF00E0A11D /* Assets.xcassets */,
+				C41152A920291E8C00DDB293 /* StatusItemController.swift */,
+				C41152AB2029224000DDB293 /* StatusItem.xib */,
 				C479DDA7202266BF00E0A11D /* Main.storyboard */,
 				C479DDCE20226B2300E0A11D /* simulatorName */,
 				C479DDCF20226B2400E0A11D /* recordVideo */,
@@ -368,6 +377,7 @@
 				C479DDA6202266BF00E0A11D /* Assets.xcassets in Resources */,
 				C479DDA9202266BF00E0A11D /* Main.storyboard in Resources */,
 				C41F4C362028B3200090E79B /* Defaults.plist in Resources */,
+				C41152AC2029224000DDB293 /* StatusItem.xib in Resources */,
 				C479DDDB20227A7900E0A11D /* timestamp in Resources */,
 				C479DDD720226D8200E0A11D /* simulatorName in Resources */,
 				C479DDD820226D8200E0A11D /* recordVideo in Resources */,
@@ -421,6 +431,8 @@
 				C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */,
 				C479DDE12023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift in Sources */,
 				C479DDE52023FEE800E0A11D /* RecordingNameTokenObject.swift in Sources */,
+				C41152AA20291E8C00DDB293 /* StatusItemController.swift in Sources */,
+				C41152AE20292F7D00DDB293 /* PreferencesWindowController.swift in Sources */,
 				C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */,
 				C424A24C202529C100320E48 /* ModuleExports-GEFoundation.swift in Sources */,
 				C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */,
