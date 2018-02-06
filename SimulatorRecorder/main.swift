@@ -15,8 +15,13 @@ loggers += [
 x$(CommandLine.arguments)
 
 ValueTransformer.setValueTransformer(
-	PathFromFilePathOrURLTransformer(),
-	forName: .pathFromFilePathOrURLTransformerName
+    PathFromFilePathOrURLTransformer(),
+    forName: .pathFromFilePathOrURLTransformerName
+)
+
+ValueTransformer.setValueTransformer(
+    RecordingNameFormatTransformer(),
+    forName: .recordingNameFormatTransformerName
 )
 
 if let defaultsRegistrationDictionary = defaultsRegistrationDictionary {
