@@ -7,6 +7,6 @@
 	<key>revealInFinder</key>
 	<true/>
 	<key>videoNameFormat</key>
-	<string>$(timestamp) $(simulatorName)</string>
+	<string>Recording ${date:?} at ${time:?} for ${device:?} - ${version:?}</string>
 </dict>
 </plist>
