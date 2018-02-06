@@ -815,6 +815,15 @@
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </tokenFieldCell>
+                                <connections>
+                                    <binding destination="EAe-fP-j28" name="value" keyPath="values.videoNameFormat" id="smO-rT-TE8">
+                                        <dictionary key="options">
+                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                            <bool key="NSConditionallySetsEditable" value="NO"/>
+                                            <string key="NSValueTransformerName">RecordingNameFormat</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
                             </tokenField>
                             <box title="Name Elements" translatesAutoresizingMaskIntoConstraints="NO" id="H4b-dd-7aN">
                                 <rect key="frame" x="17" y="16" width="446" height="177"/>
@@ -859,16 +868,18 @@
                     <connections>
                         <outlet property="recordingNameField" destination="GGZ-hW-Huk" id="3N4-5Y-JVS"/>
                         <outlet property="recordingNameTokenGridView" destination="TwV-w6-8we" id="ycw-2f-YCJ"/>
+                        <outlet property="userDefaultsController" destination="EAe-fP-j28" id="ZiS-mm-DmT"/>
                     </connections>
                 </viewController>
                 <customObject id="XTq-Y8-yIu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="EAe-fP-j28"/>
             </objects>
             <point key="canvasLocation" x="1341" y="1111"/>
         </scene>
-        <!--View Controller-->
+        <!--Container-->
         <scene sceneID="dj9-jS-Hvg">
             <objects>
-                <viewController id="XW2-qP-D31" sceneMemberID="viewController">
+                <viewController id="XW2-qP-D31" userLabel="Container" sceneMemberID="viewController">
                     <view key="view" id="pa7-dO-WCv">
                         <rect key="frame" x="0.0" y="0.0" width="460" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -902,10 +913,10 @@
             </objects>
             <point key="canvasLocation" x="785" y="644"/>
         </scene>
-        <!--Tab View Controller-->
+        <!--Tabs-->
         <scene sceneID="Cck-ob-AKf">
             <objects>
-                <tabViewController selectedTabViewItemIndex="0" tabStyle="unspecified" id="WE4-ve-D5h" sceneMemberID="viewController">
+                <tabViewController selectedTabViewItemIndex="0" tabStyle="unspecified" id="WE4-ve-D5h" userLabel="Tabs" sceneMemberID="viewController">
                     <tabViewItems>
                         <tabViewItem identifier="" id="WfF-N2-33X"/>
                         <tabViewItem id="8Z1-Qw-bxi"/>
@@ -939,7 +950,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="68h-71-fti">
-                                <rect key="frame" x="148" y="18" width="284" height="18"/>
+                                <rect key="frame" x="154" y="18" width="278" height="18"/>
                                 <buttonCell key="cell" type="check" title="Reveal in Finder" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="k0g-Je-t6s">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -949,7 +960,7 @@
                                 </connections>
                             </button>
                             <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHD-sJ-Gjw">
-                                <rect key="frame" x="139" y="46" width="294" height="26"/>
+                                <rect key="frame" x="145" y="46" width="288" height="26"/>
                                 <pathCell key="cell" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="b0C-ih-hyb">
                                     <font key="font" metaFont="system"/>
                                     <url key="url" string="file://localhost/Applications/"/>
@@ -967,18 +978,18 @@
                                 </connections>
                             </pathControl>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QBz-fO-cmM">
-                                <rect key="frame" x="18" y="51" width="126" height="17"/>
+                                <rect key="frame" x="18" y="51" width="132" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="NNa-RU-XLG"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Screenshots Folder:" id="tUm-I1-QEv">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Recordings Location:" id="tUm-I1-QEv">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oMb-GS-5xM">
-                                <rect key="frame" x="18" y="19" width="126" height="17"/>
+                                <rect key="frame" x="18" y="19" width="132" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="J1U-PF-WJS"/>
                                 </constraints>
