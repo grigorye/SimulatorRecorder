@@ -15,6 +15,7 @@
 		58C6B781EF6D53352436AE4A /* SimulatorRecorderUITests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */; };
 		6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
 		75058297C89597B48E8DAAEF /* main.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
+		A1A19F5C202A2498004170D8 /* RecordingNameFormatTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */; };
 		A4F9C272AE48785F5EF9B662 /* ViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
 		C213E69B8F1854FD7CC988D2 /* RecordingNameFieldDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */; };
 		C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */; };
@@ -120,6 +121,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameFormatTransformer.swift; sourceTree = "<group>"; };
 		C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathFromFilePathOrURLTransformer.swift; sourceTree = "<group>"; };
 		C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsRegistration.swift; sourceTree = "<group>"; };
 		C41152A920291E8C00DDB293 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */,
 				C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */,
 				C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */,
+				A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */,
 				C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */,
 				C479DDA5202266BF00E0A11D /* Assets.xcassets */,
 				C41152A920291E8C00DDB293 /* StatusItemController.swift */,
@@ -430,6 +433,7 @@
 				C424A24B202529C100320E48 /* ModuleExports-GETracing.swift in Sources */,
 				C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */,
 				C479DDE12023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift in Sources */,
+				A1A19F5C202A2498004170D8 /* RecordingNameFormatTransformer.swift in Sources */,
 				C479DDE52023FEE800E0A11D /* RecordingNameTokenObject.swift in Sources */,
 				C41152AA20291E8C00DDB293 /* StatusItemController.swift in Sources */,
 				C41152AE20292F7D00DDB293 /* PreferencesWindowController.swift in Sources */,
