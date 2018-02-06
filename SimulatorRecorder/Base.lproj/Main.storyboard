@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13771"/>
-        <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
@@ -26,7 +25,7 @@
                                         <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
                                         <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                             <connections>
-                                                <segue destination="9r9-Gc-sZF" kind="show" id="kVG-0X-MoN"/>
+                                                <segue destination="3dr-Mc-xFd" kind="show" id="bfs-Tl-cix"/>
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
@@ -691,6 +690,14 @@
             </objects>
             <point key="canvasLocation" x="785" y="-92"/>
         </scene>
+        <!--Preferences-->
+        <scene sceneID="FrS-S3-6hh">
+            <objects>
+                <controllerPlaceholder storyboardName="Preferences" id="3dr-Mc-xFd" sceneMemberID="viewController"/>
+                <customObject id="Fo4-ef-MdA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="896" y="163"/>
+        </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
@@ -778,249 +785,6 @@
                 <userDefaultsController representsSharedInstance="YES" id="90A-3D-SVU"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
-        </scene>
-        <!--Preferences-->
-        <scene sceneID="dWS-0C-FBk">
-            <objects>
-                <windowController storyboardIdentifier="Preferences" showSeguePresentationStyle="single" id="9r9-Gc-sZF" userLabel="Preferences" customClass="PreferencesWindowController" customModule="SimulatorRecorder" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ig3-EG-hKL">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="163" y="175" width="480" height="270"/>
-                        <rect key="screenRect" x="0.0" y="0.0" width="1280" height="720"/>
-                        <connections>
-                            <outlet property="delegate" destination="9r9-Gc-sZF" id="LIQ-uN-Oc0"/>
-                        </connections>
-                    </window>
-                    <connections>
-                        <segue destination="XW2-qP-D31" kind="relationship" relationship="window.shadowedContentViewController" id="kYz-Y2-PVd"/>
-                    </connections>
-                </windowController>
-                <customObject id="ENS-Eo-7sA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="785" y="209"/>
-        </scene>
-        <!--Naming-->
-        <scene sceneID="Jn5-Dq-JYC">
-            <objects>
-                <viewController title="Naming" id="Z4z-sx-17O" customClass="RecordingNamingPreferencesViewController" customModule="SimulatorRecorder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="4xn-Ba-fwh">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="279"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <tokenField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="GGZ-hW-Huk">
-                                <rect key="frame" x="20" y="213" width="440" height="21"/>
-                                <tokenFieldCell key="cell" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" drawsBackground="YES" allowsEditingTextAttributes="YES" id="rec-i8-Dal">
-                                    <font key="font" metaFont="cellTitle"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </tokenFieldCell>
-                                <connections>
-                                    <binding destination="EAe-fP-j28" name="value" keyPath="values.videoNameFormat" id="smO-rT-TE8">
-                                        <dictionary key="options">
-                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
-                                            <bool key="NSConditionallySetsEditable" value="NO"/>
-                                            <string key="NSValueTransformerName">RecordingNameFormat</string>
-                                        </dictionary>
-                                    </binding>
-                                </connections>
-                            </tokenField>
-                            <box title="Name Elements" translatesAutoresizingMaskIntoConstraints="NO" id="H4b-dd-7aN">
-                                <rect key="frame" x="17" y="16" width="446" height="177"/>
-                                <view key="contentView" id="h9i-yi-72C">
-                                    <rect key="frame" x="2" y="2" width="442" height="160"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <customView verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TwV-w6-8we" customClass="NSGridView">
-                                            <rect key="frame" x="20" y="20" width="402" height="120"/>
-                                        </customView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="TwV-w6-8we" secondAttribute="trailing" constant="20" symbolic="YES" id="Plp-8h-4FV"/>
-                                        <constraint firstAttribute="bottom" secondItem="TwV-w6-8we" secondAttribute="bottom" constant="20" symbolic="YES" id="Q0O-VL-pgW"/>
-                                        <constraint firstItem="TwV-w6-8we" firstAttribute="leading" secondItem="h9i-yi-72C" secondAttribute="leading" constant="20" symbolic="YES" id="aRP-Kb-A0V"/>
-                                        <constraint firstItem="TwV-w6-8we" firstAttribute="top" secondItem="h9i-yi-72C" secondAttribute="top" constant="20" symbolic="YES" id="fW0-nx-iDi"/>
-                                    </constraints>
-                                </view>
-                            </box>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BFP-oj-2Pu">
-                                <rect key="frame" x="18" y="242" width="444" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Type text and drag name elements to create a custom format:" id="ghB-Ff-xOX">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="GGZ-hW-Huk" firstAttribute="leading" secondItem="4xn-Ba-fwh" secondAttribute="leading" constant="20" id="18b-5N-Jej"/>
-                            <constraint firstAttribute="bottom" secondItem="H4b-dd-7aN" secondAttribute="bottom" constant="20" symbolic="YES" id="E53-w4-fDi"/>
-                            <constraint firstAttribute="trailing" secondItem="H4b-dd-7aN" secondAttribute="trailing" constant="20" symbolic="YES" id="JC1-4V-XLg"/>
-                            <constraint firstItem="GGZ-hW-Huk" firstAttribute="trailing" secondItem="BFP-oj-2Pu" secondAttribute="trailing" id="NFl-NG-8nA"/>
-                            <constraint firstItem="GGZ-hW-Huk" firstAttribute="leading" secondItem="BFP-oj-2Pu" secondAttribute="leading" id="TQT-0P-nDi"/>
-                            <constraint firstItem="GGZ-hW-Huk" firstAttribute="top" secondItem="BFP-oj-2Pu" secondAttribute="bottom" constant="8" symbolic="YES" id="Zb5-6v-FnJ"/>
-                            <constraint firstItem="BFP-oj-2Pu" firstAttribute="top" secondItem="4xn-Ba-fwh" secondAttribute="top" constant="20" symbolic="YES" id="bTR-eA-wmb"/>
-                            <constraint firstAttribute="trailing" secondItem="GGZ-hW-Huk" secondAttribute="trailing" constant="20" id="hTR-2d-wfg"/>
-                            <constraint firstItem="H4b-dd-7aN" firstAttribute="top" secondItem="GGZ-hW-Huk" secondAttribute="bottom" constant="20" id="o7y-7n-eIG"/>
-                            <constraint firstItem="H4b-dd-7aN" firstAttribute="leading" secondItem="4xn-Ba-fwh" secondAttribute="leading" constant="20" symbolic="YES" id="oF1-iy-umB"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="recordingNameField" destination="GGZ-hW-Huk" id="3N4-5Y-JVS"/>
-                        <outlet property="recordingNameTokenGridView" destination="TwV-w6-8we" id="ycw-2f-YCJ"/>
-                        <outlet property="userDefaultsController" destination="EAe-fP-j28" id="ZiS-mm-DmT"/>
-                    </connections>
-                </viewController>
-                <customObject id="XTq-Y8-yIu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <userDefaultsController id="EAe-fP-j28"/>
-            </objects>
-            <point key="canvasLocation" x="1341" y="1111"/>
-        </scene>
-        <!--Container-->
-        <scene sceneID="dj9-jS-Hvg">
-            <objects>
-                <viewController id="XW2-qP-D31" userLabel="Container" sceneMemberID="viewController">
-                    <view key="view" id="pa7-dO-WCv">
-                        <rect key="frame" x="0.0" y="0.0" width="460" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="Wqf-ea-ypU">
-                                <rect key="frame" x="20" y="61" width="420" height="219"/>
-                                <connections>
-                                    <segue destination="WE4-ve-D5h" kind="embed" id="vCx-CK-9Em"/>
-                                </connections>
-                            </containerView>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1BC-rD-HIc">
-                                <rect key="frame" x="14" y="13" width="141" height="32"/>
-                                <buttonCell key="cell" type="push" title="Restore Defaults" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uMr-ZI-2f0">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="1BC-rD-HIc" firstAttribute="top" secondItem="Wqf-ea-ypU" secondAttribute="bottom" constant="20" symbolic="YES" id="H7U-Bh-16S"/>
-                            <constraint firstItem="Wqf-ea-ypU" firstAttribute="top" secondItem="pa7-dO-WCv" secondAttribute="top" constant="20" symbolic="YES" id="H8E-WP-3Q1"/>
-                            <constraint firstItem="Wqf-ea-ypU" firstAttribute="leading" secondItem="pa7-dO-WCv" secondAttribute="leading" constant="20" symbolic="YES" id="T17-kL-x1R"/>
-                            <constraint firstAttribute="bottom" secondItem="1BC-rD-HIc" secondAttribute="bottom" constant="20" symbolic="YES" id="WD5-Bq-eMR"/>
-                            <constraint firstItem="1BC-rD-HIc" firstAttribute="leading" secondItem="pa7-dO-WCv" secondAttribute="leading" constant="20" symbolic="YES" id="dDQ-8r-pdJ"/>
-                            <constraint firstAttribute="trailing" secondItem="Wqf-ea-ypU" secondAttribute="trailing" constant="20" symbolic="YES" id="jux-6E-Cvh"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1BC-rD-HIc" secondAttribute="trailing" constant="20" symbolic="YES" id="oJX-03-4f8"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <customObject id="jPB-Sh-ikz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="785" y="644"/>
-        </scene>
-        <!--Tabs-->
-        <scene sceneID="Cck-ob-AKf">
-            <objects>
-                <tabViewController selectedTabViewItemIndex="0" tabStyle="unspecified" id="WE4-ve-D5h" userLabel="Tabs" sceneMemberID="viewController">
-                    <tabViewItems>
-                        <tabViewItem identifier="" id="WfF-N2-33X"/>
-                        <tabViewItem id="8Z1-Qw-bxi"/>
-                    </tabViewItems>
-                    <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
-                    <tabView key="tabView" id="hDK-4o-0io">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <font key="font" metaFont="message"/>
-                        <tabViewItems/>
-                        <connections>
-                            <outlet property="delegate" destination="WE4-ve-D5h" id="5BI-U4-2Zg"/>
-                        </connections>
-                    </tabView>
-                    <connections>
-                        <outlet property="tabView" destination="hDK-4o-0io" id="UQW-ZN-5zJ"/>
-                        <segue destination="9sZ-wq-ac3" kind="relationship" relationship="tabItems" id="Ws0-qm-9EL"/>
-                        <segue destination="Z4z-sx-17O" kind="relationship" relationship="tabItems" id="HvB-Ej-MML"/>
-                    </connections>
-                </tabViewController>
-                <customObject id="0qS-2k-AgH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1341" y="644"/>
-        </scene>
-        <!--General-->
-        <scene sceneID="JAt-aB-scl">
-            <objects>
-                <viewController title="General" id="9sZ-wq-ac3" sceneMemberID="viewController">
-                    <view key="view" id="PVQ-LF-ko9">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="90"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="68h-71-fti">
-                                <rect key="frame" x="154" y="18" width="278" height="18"/>
-                                <buttonCell key="cell" type="check" title="Reveal in Finder" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="k0g-Je-t6s">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <binding destination="0Aq-8m-Erw" name="value" keyPath="values.revealInFinder" id="LQz-Pt-Bee"/>
-                                </connections>
-                            </button>
-                            <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHD-sJ-Gjw">
-                                <rect key="frame" x="145" y="46" width="288" height="26"/>
-                                <pathCell key="cell" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="b0C-ih-hyb">
-                                    <font key="font" metaFont="system"/>
-                                    <url key="url" string="file://localhost/Applications/"/>
-                                    <allowedTypes>
-                                        <string>public.folder</string>
-                                    </allowedTypes>
-                                </pathCell>
-                                <connections>
-                                    <binding destination="0Aq-8m-Erw" name="value" keyPath="values.recordingsDir" id="T1F-82-Tfk">
-                                        <dictionary key="options">
-                                            <bool key="NSConditionallySetsEnabled" value="NO"/>
-                                            <string key="NSValueTransformerName">PathFromFilePathOrURL</string>
-                                        </dictionary>
-                                    </binding>
-                                </connections>
-                            </pathControl>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QBz-fO-cmM">
-                                <rect key="frame" x="18" y="51" width="132" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="NNa-RU-XLG"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Recordings Location:" id="tUm-I1-QEv">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oMb-GS-5xM">
-                                <rect key="frame" x="18" y="19" width="132" height="17"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="J1U-PF-WJS"/>
-                                </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="After Taking:" id="uxF-c5-dgc">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="oMb-GS-5xM" firstAttribute="leading" secondItem="PVQ-LF-ko9" secondAttribute="leading" constant="20" symbolic="YES" id="3XM-DB-JVm"/>
-                            <constraint firstItem="68h-71-fti" firstAttribute="baseline" secondItem="oMb-GS-5xM" secondAttribute="baseline" id="5Ub-Pg-IXr"/>
-                            <constraint firstItem="QBz-fO-cmM" firstAttribute="leading" secondItem="PVQ-LF-ko9" secondAttribute="leading" constant="20" symbolic="YES" id="8Ji-1l-T5H"/>
-                            <constraint firstItem="pHD-sJ-Gjw" firstAttribute="baseline" secondItem="QBz-fO-cmM" secondAttribute="baseline" id="APY-i9-n0r"/>
-                            <constraint firstItem="pHD-sJ-Gjw" firstAttribute="top" secondItem="PVQ-LF-ko9" secondAttribute="top" constant="20" symbolic="YES" id="FMi-F2-uXc"/>
-                            <constraint firstItem="68h-71-fti" firstAttribute="top" secondItem="pHD-sJ-Gjw" secondAttribute="bottom" constant="16" id="Lem-aE-S0A"/>
-                            <constraint firstAttribute="bottom" secondItem="68h-71-fti" secondAttribute="bottom" constant="20" symbolic="YES" id="MN1-mS-CYR"/>
-                            <constraint firstAttribute="trailing" secondItem="68h-71-fti" secondAttribute="trailing" constant="20" symbolic="YES" id="Nva-MI-eng"/>
-                            <constraint firstItem="68h-71-fti" firstAttribute="leading" secondItem="pHD-sJ-Gjw" secondAttribute="leading" constant="8" id="WWT-VT-lyr"/>
-                            <constraint firstItem="68h-71-fti" firstAttribute="leading" secondItem="oMb-GS-5xM" secondAttribute="trailing" constant="8" id="dJW-er-2qs"/>
-                            <constraint firstAttribute="trailing" secondItem="pHD-sJ-Gjw" secondAttribute="trailing" constant="20" symbolic="YES" id="gGg-6U-d0E"/>
-                            <constraint firstItem="pHD-sJ-Gjw" firstAttribute="leading" secondItem="QBz-fO-cmM" secondAttribute="trailing" id="prY-jX-uDM"/>
-                            <constraint firstItem="QBz-fO-cmM" firstAttribute="centerY" secondItem="pHD-sJ-Gjw" secondAttribute="centerY" id="sj8-xk-mfQ"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <customObject id="gbw-oy-3cY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <userDefaultsController id="0Aq-8m-Erw"/>
-            </objects>
-            <point key="canvasLocation" x="1922" y="644"/>
         </scene>
     </scenes>
 </document>

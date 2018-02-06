@@ -14,11 +14,16 @@ import Carbon.HIToolbox
 	func toggleRecording(_ sender: Any)
 }
 
+extension NSStoryboard.Name {
+
+	static let preferences = NSStoryboard.Name(rawValue: "Preferences")
+}
+
 class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	func instantiatePreferensesWindowController() -> NSWindowController {
 		
-		let windowController = NSStoryboard.main!.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Preferences")) as! NSWindowController
+		let windowController = NSStoryboard(name: .preferences, bundle: nil).instantiateInitialController() as! NSWindowController
 		
 		return windowController
 	}
