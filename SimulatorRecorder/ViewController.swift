@@ -23,22 +23,42 @@ class ViewController: NSViewController, GlobalActionResponder {
 			
 		case #selector(stopRecording(_:))?:
 			
-			return self.process != nil
+			return recording
 			
 		case #selector(newScreenRecording(_:))?:
 			
-			return self.process == nil
+			return readyToRecord
 			
 		default:
 			return true
 		}
 	}
 	
-	var recording: Bool {
+    @objc dynamic var readyToRecord: Bool {
+        
+        return process == nil
+    }
+    @objc dynamic class var keyPathsForValuesAffectingReadyToRecord: Set<String> {
+        
+        return [
+            #keyPath(process)
+        ]
+    }
+
+	@objc dynamic var recording: Bool {
 		
-		return process != nil
+		return !readyToRecord && !interrupting
 	}
-	
+    @objc dynamic class var keyPathsForValuesAffectingRecording: Set<String> {
+        
+        return [
+            #keyPath(readyToRecord),
+            #keyPath(interrupting)
+        ]
+    }
+
+    @objc dynamic var interrupting: Bool = false
+    
 	@IBAction func toggleRecording(_ sender: Any) {
 		
 		if recording {
@@ -56,6 +76,8 @@ class ViewController: NSViewController, GlobalActionResponder {
 			return
 		}
 		
+        assert(!interrupting)
+        interrupting = true
 		process.interrupt()
 	}
 	
@@ -68,6 +90,7 @@ class ViewController: NSViewController, GlobalActionResponder {
 		
 		defer {
 			self.process = nil
+            interrupting = false
 		}
 		
 		let terminationStatus = process.terminationStatus
