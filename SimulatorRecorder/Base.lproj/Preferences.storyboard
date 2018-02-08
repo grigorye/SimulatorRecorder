@@ -110,9 +110,9 @@
                                     <binding destination="0Aq-8m-Erw" name="value" keyPath="values.revealInFinder" id="LQz-Pt-Bee"/>
                                 </connections>
                             </button>
-                            <pathControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHD-sJ-Gjw">
-                                <rect key="frame" x="145" y="46" width="288" height="26"/>
-                                <pathCell key="cell" selectable="YES" editable="YES" alignment="left" pathStyle="popUp" id="b0C-ih-hyb">
+                            <pathControl focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHD-sJ-Gjw" customClass="PopUpButtonLikePathControl" customModule="SimulatorRecorder" customModuleProvider="target">
+                                <rect key="frame" x="153" y="46" width="280" height="26"/>
+                                <pathCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" pathStyle="popUp" id="b0C-ih-hyb">
                                     <font key="font" metaFont="system"/>
                                     <url key="url" string="file://localhost/Applications/"/>
                                     <allowedTypes>
@@ -160,10 +160,10 @@
                             <constraint firstItem="68h-71-fti" firstAttribute="top" secondItem="pHD-sJ-Gjw" secondAttribute="bottom" constant="16" id="Lem-aE-S0A"/>
                             <constraint firstAttribute="bottom" secondItem="68h-71-fti" secondAttribute="bottom" constant="20" symbolic="YES" id="MN1-mS-CYR"/>
                             <constraint firstAttribute="trailing" secondItem="68h-71-fti" secondAttribute="trailing" constant="20" symbolic="YES" id="Nva-MI-eng"/>
-                            <constraint firstItem="68h-71-fti" firstAttribute="leading" secondItem="pHD-sJ-Gjw" secondAttribute="leading" constant="8" id="WWT-VT-lyr"/>
+                            <constraint firstItem="68h-71-fti" firstAttribute="leading" secondItem="pHD-sJ-Gjw" secondAttribute="leading" id="WWT-VT-lyr"/>
                             <constraint firstItem="68h-71-fti" firstAttribute="leading" secondItem="oMb-GS-5xM" secondAttribute="trailing" constant="8" id="dJW-er-2qs"/>
                             <constraint firstAttribute="trailing" secondItem="pHD-sJ-Gjw" secondAttribute="trailing" constant="20" symbolic="YES" id="gGg-6U-d0E"/>
-                            <constraint firstItem="pHD-sJ-Gjw" firstAttribute="leading" secondItem="QBz-fO-cmM" secondAttribute="trailing" id="prY-jX-uDM"/>
+                            <constraint firstItem="pHD-sJ-Gjw" firstAttribute="leading" secondItem="QBz-fO-cmM" secondAttribute="trailing" constant="8" id="prY-jX-uDM"/>
                             <constraint firstItem="QBz-fO-cmM" firstAttribute="centerY" secondItem="pHD-sJ-Gjw" secondAttribute="centerY" id="sj8-xk-mfQ"/>
                         </constraints>
                     </view>
