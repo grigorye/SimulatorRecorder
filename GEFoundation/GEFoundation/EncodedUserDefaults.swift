@@ -9,19 +9,20 @@
 import Foundation
 
 extension UserDefaults {
-	public func decodeObject<T>(forKey key: String) -> T? {
+	public func decodeObject<T: Decodable>(forKey key: String) throws -> T? {
 		guard let data = self.data(forKey: key) else {
 			return nil
 		}
-		let unarchivedObject = NSKeyedUnarchiver.unarchiveObject(with: data) as! T
-		return Optional(unarchivedObject)
+		
+		let unarchivedObject = try JSONDecoder().decode(T.self, from: data)
+		return unarchivedObject
 	}
-	public func encode<T>(_ object: T?, forKey key: String) {
-		let encodedObjectData: Data? = {
+	public func encode<T: Encodable>(_ object: T?, forKey key: String) throws {
+		let encodedObjectData: Data? = try {
 			guard let object = object else {
 				return nil
 			}
-			return NSKeyedArchiver.archivedData(withRootObject: object as! NSObject)
+			return try JSONEncoder().encode(object)
 		}()
 		self.set(encodedObjectData, forKey: key)
 	}
@@ -35,10 +36,10 @@ func keyForSetter(_ function: String) -> String {
 }
 
 extension UserDefaults {
-	public func decodeInGetter<T>(function: String = #function) -> T? {
-		return decodeObject(forKey: keyForGetter(function))
+	public func decodeInGetter<T: Decodable>(function: String = #function) -> T? {
+		return try! decodeObject(forKey: keyForGetter(function))
 	}
-	public func encodeInSetter<T>(_ object: T?, function: String = #function) {
-		encode(object, forKey: keyForSetter(function))
+	public func encodeInSetter<T: Encodable>(_ object: T?, function: String = #function) {
+		try! encode(object, forKey: keyForSetter(function))
 	}
 }
