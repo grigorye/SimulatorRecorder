@@ -41,12 +41,13 @@ version=$(echo ${simulatorName:?} | sed 's/^\(.*\) - \(.*\)$/\2/')
 tmpdir=$(mktemp -d "${TMPDIR:?}"/"${bn:?}".XXXXX)
 
 videoName=$(eval echo "${videoNameFormat:?}")
-rawVideo="${tmpdir:?}/simvideo.mov"
+rawVideo="${tmpdir:?}/simvideo.264"
 convertedVideo="${recordingsDir:?}/${videoName:?}.m4v"
 
 mkdir -p "${recordingsDir:?}"
 
-xcrun simctl io booted recordVideo "${rawVideo:?}"
+xcrun simctl io booted recordVideo --type='h264' "${rawVideo:?}"
+ls -l "${rawVideo:?}"
 ffmpeg -v -8 -i "${rawVideo:?}" "${convertedVideo:?}"
 
 if [ "${revealInFinder:?}" = 1 ]
