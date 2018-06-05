@@ -31,6 +31,7 @@
 		C424A24B202529C100320E48 /* ModuleExports-GETracing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A249202529C100320E48 /* ModuleExports-GETracing.swift */; };
 		C424A24C202529C100320E48 /* ModuleExports-GEFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */; };
 		C424A24E2025A88B00320E48 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
+		C461E54C2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461E54B2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift */; };
 		C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
 		C479DDA4202266BF00E0A11D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
 		C479DDA6202266BF00E0A11D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479DDA5202266BF00E0A11D /* Assets.xcassets */; };
@@ -135,6 +136,7 @@
 		C424A249202529C100320E48 /* ModuleExports-GETracing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ModuleExports-GETracing.swift"; path = "GETracing/GETracing/ModuleExports-GETracing.swift"; sourceTree = "<group>"; };
 		C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ModuleExports-GEFoundation.swift"; path = "GEFoundation/GEFoundation/ModuleExports-GEFoundation.swift"; sourceTree = "<group>"; };
 		C424A24D2025A88B00320E48 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C461E54B2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalKeyboardShortcutMonitor.swift; sourceTree = "<group>"; };
 		C479DD9E202266BF00E0A11D /* SimulatorRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C479DDA1202266BF00E0A11D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C479DDA3202266BF00E0A11D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				C479DDA1202266BF00E0A11D /* AppDelegate.swift */,
+				C461E54B2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift */,
 				C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */,
 				C424A24D2025A88B00320E48 /* main.swift */,
 				C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */,
@@ -438,6 +441,7 @@
 				C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */,
 				C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */,
 				C424A24E2025A88B00320E48 /* main.swift in Sources */,
+				C461E54C2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift in Sources */,
 				C424A24B202529C100320E48 /* ModuleExports-GETracing.swift in Sources */,
 				C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */,
 				C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */,
