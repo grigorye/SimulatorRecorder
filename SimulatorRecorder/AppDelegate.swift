@@ -35,16 +35,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		preferencesWindowController.showWindow(sender)
 	}
 	
-	func keyDown(_ event: NSEvent) {
+	func verifyTrustedAccessibility() {
 		
-		guard event.modifierFlags.intersection([.command, .shift, .option, .control]) == [.command, .shift] else {
-			
-			return
-		}
-		guard event.keyCode == kVK_ANSI_6 else {
-			
-			return
-		}
+		let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() : true] as CFDictionary
+		_ = x$(AXIsProcessTrustedWithOptions(options))
+	}
+	
+	func globalKeyboardShortcutReceived() {
 		
 		let application = NSApplication.shared
 		
@@ -57,20 +54,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		x$(viewController).toggleRecording(self)
 	}
 	
-	func verifyTrustedAccessibility() {
-		
-		let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() : true] as CFDictionary
-		_ = x$(AXIsProcessTrustedWithOptions(options))
-	}
-	
 	func applicationDidFinishLaunching(_ notification: Notification) {
 		
 		verifyTrustedAccessibility()
 		
-		NSEvent.addGlobalMonitorForEvents(matching: .keyDown) {
-			
-			self.keyDown($0)
+		let keyboardShortcutMonitor = GlobalKeyboardShortcutMonitor() … {
+			$0.modifierFlags = [.command, .shift]
+			$0.keyCode = UInt16(kVK_ANSI_6)
+			$0.shortcutHandler = {
+				x$(self.globalKeyboardShortcutReceived())
+			}
 		}
+		keyboardShortcutMonitor.activate()
 		
 		statusItemController.activate()
 	}
