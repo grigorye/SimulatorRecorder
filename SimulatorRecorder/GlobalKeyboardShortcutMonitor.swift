@@ -8,24 +8,49 @@
 
 import AppKit
 
+extension NSEvent {
+    
+    func matches(_ shortcut: KeyboardShortcut) -> Bool {
+        guard dump(modifierFlags).intersection([.command, .shift, .option, .control]) == shortcut.modifierFlags else {
+            return false
+        }
+        guard keyCode == shortcut.keyCode else {
+            return false
+        }
+        return true
+    }
+}
+
+struct KeyboardShortcut {
+    
+    let modifierFlags: NSEvent.ModifierFlags
+    let keyCode: Int
+}
+
 class GlobalKeyboardShortcutMonitor {
-	var modifierFlags: NSEvent.ModifierFlags = []
-	var keyCode: UInt16? /* device-independent key number */
-	var shortcutHandler: (() -> Void)?
+    
+    let shortcut: KeyboardShortcut
+    typealias ShortcutHandler = () -> Void
+	let shortcutHandler: ShortcutHandler
+    
+    init(_ shortcut: KeyboardShortcut, handler: @escaping ShortcutHandler) {
+        self.shortcut = shortcut
+        self.shortcutHandler = handler
+    }
 
 	func activate() {
+        dump(shortcut)
 		NSEvent.addGlobalMonitorForEvents(matching: .keyDown) {
 			self.keyDown($0)
 		}
 	}
 	
 	private func keyDown(_ event: NSEvent) {
-		guard event.modifierFlags.intersection([.command, .shift, .option, .control]) == modifierFlags else {
-			return
-		}
-		guard event.keyCode == keyCode else {
-			return
-		}
-		shortcutHandler?()
+        dump(event.keyCode)
+        dump(event.modifierFlags)
+        guard event.matches(shortcut) else {
+            return
+        }
+		shortcutHandler()
 	}
 }
