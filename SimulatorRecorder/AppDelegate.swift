@@ -57,13 +57,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	func applicationDidFinishLaunching(_ notification: Notification) {
 		
 		verifyTrustedAccessibility()
-		
-		let keyboardShortcutMonitor = GlobalKeyboardShortcutMonitor() … {
-			$0.modifierFlags = [.command, .shift]
-			$0.keyCode = UInt16(kVK_ANSI_6)
-			$0.shortcutHandler = {
-				x$(self.globalKeyboardShortcutReceived())
-			}
+
+        let shortcut = KeyboardShortcut(modifierFlags: [.command, .shift], keyCode: kVK_ANSI_7)
+        
+		let keyboardShortcutMonitor = GlobalKeyboardShortcutMonitor(shortcut) {
+            x$(self.globalKeyboardShortcutReceived())
 		}
 		keyboardShortcutMonitor.activate()
 		
