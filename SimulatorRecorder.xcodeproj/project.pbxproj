@@ -15,6 +15,7 @@
 		58C6B781EF6D53352436AE4A /* SimulatorRecorderUITests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */; };
 		6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
 		75058297C89597B48E8DAAEF /* main.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
+		A181382B20FF221A002CCD7C /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A181382A20FF221A002CCD7C /* RecordingController.swift */; };
 		A1A19F5C202A2498004170D8 /* RecordingNameFormatTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */; };
 		A4F9C272AE48785F5EF9B662 /* ViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
 		C213E69B8F1854FD7CC988D2 /* RecordingNameFieldDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */; };
@@ -124,6 +125,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A181382A20FF221A002CCD7C /* RecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingController.swift; sourceTree = "<group>"; };
 		A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameFormatTransformer.swift; sourceTree = "<group>"; };
 		C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathFromFilePathOrURLTransformer.swift; sourceTree = "<group>"; };
 		C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsRegistration.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				C479DD9F202266BF00E0A11D /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		C479DD9F202266BF00E0A11D /* Products */ = {
 			isa = PBXGroup;
@@ -229,6 +232,7 @@
 				C424A24D2025A88B00320E48 /* main.swift */,
 				C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */,
 				C479DDA3202266BF00E0A11D /* ViewController.swift */,
+				A181382A20FF221A002CCD7C /* RecordingController.swift */,
 				C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */,
 				C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */,
 				C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */,
@@ -337,7 +341,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Grigory Entin";
 				TargetAttributes = {
 					C479DD9D202266BF00E0A11D = {
@@ -441,6 +445,7 @@
 				C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */,
 				C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */,
 				C424A24E2025A88B00320E48 /* main.swift in Sources */,
+				A181382B20FF221A002CCD7C /* RecordingController.swift in Sources */,
 				C461E54C2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift in Sources */,
 				C424A24B202529C100320E48 /* ModuleExports-GETracing.swift in Sources */,
 				C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */,
@@ -521,6 +526,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -528,6 +534,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -579,6 +586,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -586,6 +594,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
