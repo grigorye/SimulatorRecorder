@@ -1,4 +1,4 @@
-#! /bin/sh -xe
+#! /bin/sh -e
 
 bn=$(basename "$0")
 wd=$(dirname "$0")
