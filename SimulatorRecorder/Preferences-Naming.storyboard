@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Z4z-sx-17O">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14306.4"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Naming-->
+        <scene sceneID="Jn5-Dq-JYC">
+            <objects>
+                <viewController title="Naming" id="Z4z-sx-17O" customClass="RecordingNamingPreferencesViewController" customModule="SimulatorRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="4xn-Ba-fwh">
+                        <rect key="frame" x="0.0" y="0.0" width="520" height="279"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <tokenField verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="GGZ-hW-Huk">
+                                <rect key="frame" x="20" y="213" width="480" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="440" id="Kht-bH-Enz"/>
+                                </constraints>
+                                <tokenFieldCell key="cell" selectable="YES" editable="YES" borderStyle="bezel" alignment="left" drawsBackground="YES" allowsEditingTextAttributes="YES" id="rec-i8-Dal">
+                                    <font key="font" metaFont="cellTitle"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </tokenFieldCell>
+                                <connections>
+                                    <binding destination="EAe-fP-j28" name="value" keyPath="values.videoNameFormat" id="smO-rT-TE8">
+                                        <dictionary key="options">
+                                            <bool key="NSAllowsEditingMultipleValuesSelection" value="NO"/>
+                                            <bool key="NSConditionallySetsEditable" value="NO"/>
+                                            <string key="NSValueTransformerName">RecordingNameFormat</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </tokenField>
+                            <box title="Name Elements" translatesAutoresizingMaskIntoConstraints="NO" id="H4b-dd-7aN">
+                                <rect key="frame" x="17" y="16" width="486" height="177"/>
+                                <view key="contentView" id="h9i-yi-72C">
+                                    <rect key="frame" x="2" y="2" width="482" height="160"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <customView verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TwV-w6-8we" customClass="NSGridView">
+                                            <rect key="frame" x="20" y="20" width="442" height="120"/>
+                                        </customView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="TwV-w6-8we" secondAttribute="trailing" constant="20" symbolic="YES" id="Plp-8h-4FV"/>
+                                        <constraint firstAttribute="bottom" secondItem="TwV-w6-8we" secondAttribute="bottom" constant="20" symbolic="YES" id="Q0O-VL-pgW"/>
+                                        <constraint firstItem="TwV-w6-8we" firstAttribute="leading" secondItem="h9i-yi-72C" secondAttribute="leading" constant="20" symbolic="YES" id="aRP-Kb-A0V"/>
+                                        <constraint firstItem="TwV-w6-8we" firstAttribute="top" secondItem="h9i-yi-72C" secondAttribute="top" constant="20" symbolic="YES" id="fW0-nx-iDi"/>
+                                    </constraints>
+                                </view>
+                            </box>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BFP-oj-2Pu">
+                                <rect key="frame" x="18" y="242" width="484" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Type text and drag name elements to create a custom format:" id="ghB-Ff-xOX">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="GGZ-hW-Huk" firstAttribute="leading" secondItem="4xn-Ba-fwh" secondAttribute="leading" constant="20" symbolic="YES" id="18b-5N-Jej"/>
+                            <constraint firstAttribute="bottom" secondItem="H4b-dd-7aN" secondAttribute="bottom" constant="20" symbolic="YES" id="E53-w4-fDi"/>
+                            <constraint firstAttribute="trailing" secondItem="H4b-dd-7aN" secondAttribute="trailing" constant="20" symbolic="YES" id="JC1-4V-XLg"/>
+                            <constraint firstItem="GGZ-hW-Huk" firstAttribute="trailing" secondItem="BFP-oj-2Pu" secondAttribute="trailing" id="NFl-NG-8nA"/>
+                            <constraint firstItem="GGZ-hW-Huk" firstAttribute="leading" secondItem="BFP-oj-2Pu" secondAttribute="leading" id="TQT-0P-nDi"/>
+                            <constraint firstItem="GGZ-hW-Huk" firstAttribute="top" secondItem="BFP-oj-2Pu" secondAttribute="bottom" constant="8" symbolic="YES" id="Zb5-6v-FnJ"/>
+                            <constraint firstItem="BFP-oj-2Pu" firstAttribute="top" secondItem="4xn-Ba-fwh" secondAttribute="top" constant="20" symbolic="YES" id="bTR-eA-wmb"/>
+                            <constraint firstAttribute="trailing" secondItem="GGZ-hW-Huk" secondAttribute="trailing" constant="20" symbolic="YES" id="hTR-2d-wfg"/>
+                            <constraint firstItem="H4b-dd-7aN" firstAttribute="top" secondItem="GGZ-hW-Huk" secondAttribute="bottom" constant="20" id="o7y-7n-eIG"/>
+                            <constraint firstItem="H4b-dd-7aN" firstAttribute="leading" secondItem="4xn-Ba-fwh" secondAttribute="leading" constant="20" symbolic="YES" id="oF1-iy-umB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordingNameField" destination="GGZ-hW-Huk" id="3N4-5Y-JVS"/>
+                        <outlet property="recordingNameTokenGridView" destination="TwV-w6-8we" id="ycw-2f-YCJ"/>
+                        <outlet property="userDefaultsController" destination="EAe-fP-j28" id="ZiS-mm-DmT"/>
+                    </connections>
+                </viewController>
+                <customObject id="XTq-Y8-yIu" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="EAe-fP-j28"/>
+            </objects>
+            <point key="canvasLocation" x="1341" y="1111"/>
+        </scene>
+    </scenes>
+</document>
