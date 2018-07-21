@@ -8,6 +8,7 @@
 
 import Cocoa
 import Carbon.HIToolbox
+import MASShortcut
 
 @objc protocol GlobalActionResponder {
 	
@@ -58,12 +59,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		
 		verifyTrustedAccessibility()
 
+		#if false
         let shortcut = KeyboardShortcut(modifierFlags: [.command, .shift], keyCode: kVK_ANSI_7)
         
 		let keyboardShortcutMonitor = GlobalKeyboardShortcutMonitor(shortcut) {
             x$(self.globalKeyboardShortcutReceived())
 		}
 		keyboardShortcutMonitor.activate()
+		#else
+		let defaultsKey = "globalShortcut"
+		MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: defaultsKey, toAction: {
+			x$(self.globalKeyboardShortcutReceived())
+		})
+		#endif
 		
 		statusItemController.activate()
 	}
