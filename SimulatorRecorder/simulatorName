@@ -1,4 +1,6 @@
-#! /bin/sh -xe
+#! /bin/sh -e
+
+export DEVELOPER_DIR=$(dirname $(dirname $(dirname $(dirname $(dirname $(ps -o comm $(pgrep -f '/MacOS/Simulator ') | tail -1 | head -1))))))
 
 xcrun simctl list -j |
-    jq -r '[.devices|to_entries|.[]|{os_ver: .key, device_name: (.value|to_entries|.[]|.value|select(.state == "Booted")|.name)}]|.[0]|.device_name + " - " + .os_ver'
+    jq -r '[.devices|to_entries|.[]|{os_ver: .key, device_name: (.value|to_entries|.[]|.value|select(.state == "Booted")|.name)}]|.[0]|(.device_name // error("no-Booted")) + " - " + .os_ver'
