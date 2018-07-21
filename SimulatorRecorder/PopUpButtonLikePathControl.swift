@@ -12,6 +12,21 @@ import AppKit
 
 class PopUpButtonLikePathControl : NSPathControl {
 	
+	override var alignmentRectInsets: NSEdgeInsets {
+		
+		return super.alignmentRectInsets ≈ {
+			$0.left -= 3
+			$0.right -= 3
+		}
+	}
+	
+	override var intrinsicContentSize: NSSize {
+		
+		return super.intrinsicContentSize ≈ {
+			$0.height += 1
+		}
+	}
+	
 	override func draw(_ dirtyRect: NSRect) {
 		
 		drawBackground(bounds)
@@ -32,7 +47,7 @@ class PopUpButtonLikePathControl : NSPathControl {
 			$0.state = ThemeDrawState(kThemeStateActive + (isHighlighted ? kThemeStatePressed : 0))
 			$0.kind = ThemeButtonKind(kThemePopupButtonNormal)
 		}
-		var boundsCGRect = CGRect(x: bounds.minX, y: bounds.minY + 1, width: bounds.width - 1, height: bounds.height)
+		var boundsCGRect = CGRect(x: bounds.minX, y: bounds.minY + 2, width: bounds.width, height: bounds.height)
 		var labelCGRect = boundsCGRect
 		HIThemeDrawButton(&boundsCGRect, &drawInfo, cgContext, HIThemeOrientation(kHIThemeOrientationNormal), &labelCGRect)
 	}
