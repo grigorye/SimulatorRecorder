@@ -52,7 +52,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 			return
 		}
 		
-		x$(viewController).toggleRecording(self)
+		viewController.toggleRecording(self)
 	}
 	
 	func applicationDidFinishLaunching(_ notification: Notification) {
@@ -69,7 +69,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		#else
 		let defaultsKey = "globalShortcut"
 		MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: defaultsKey, toAction: {
-			x$(self.globalKeyboardShortcutReceived())
+			self.globalKeyboardShortcutReceived()
 		})
 		#endif
 		
