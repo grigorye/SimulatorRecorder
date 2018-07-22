@@ -3,7 +3,9 @@
 bn=$(basename "$0")
 wd=$(dirname "$0")
 
-PATH="$PATH":~/homebrew/bin:"${wd:?}"
+. "${wd:?}"/prepareBrew
+
+PATH="$PATH":"${wd:?}"
 domain="com.grigorye.SimulatorRecorder"
 registrationDomain="${wd:?}/Defaults"
 
