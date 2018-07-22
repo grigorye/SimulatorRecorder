@@ -38,7 +38,9 @@ class ViewController : NSViewController, GlobalActionResponder {
 	}
 	
 	@IBAction func newScreenRecording(_ sender: Any) {
+		sendUserNotification(for: .startedRecording)
 		recordingController.startRecording { (error) in
+			sendUserNotification(for: .recordingCompleted)
 			self.completeRecording(error)
 		}
 	}

@@ -51,6 +51,7 @@
 		C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */; };
 		C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
 		C4E43E9821039C96007A6FAC /* Preferences-Naming.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */; };
+		C4E43E9A2103CCD4007A6FAC /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E43E992103CCD4007A6FAC /* UserNotifications.swift */; };
 		D0CF358CD14989AB3C40FC0B /* SimulatorRecorderTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */; };
 		DFFB3B3589AB7D8B5AF3E76B /* Pods_SimulatorRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922034985B052AD0AC145592 /* Pods_SimulatorRecorder.framework */; };
 /* End PBXBuildFile section */
@@ -174,6 +175,7 @@
 		C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpButtonLikePathControl.swift; sourceTree = "<group>"; };
 		C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameToken.swift; sourceTree = "<group>"; };
 		C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "Preferences-Naming.storyboard"; path = "/Volumes/Ginger/Users/eg/Workbench/SimulatorRecorder/SimulatorRecorder/Preferences-Naming.storyboard"; sourceTree = "<absolute>"; };
+		C4E43E992103CCD4007A6FAC /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		E19E267D03B721D6BA1FB690 /* Pods-SimulatorRecorderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				C479DDA1202266BF00E0A11D /* AppDelegate.swift */,
+				C4E43E992103CCD4007A6FAC /* UserNotifications.swift */,
 				C461E54B2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift */,
 				C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */,
 				C424A24D2025A88B00320E48 /* main.swift */,
@@ -564,6 +567,7 @@
 				C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */,
 				C479DDE12023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift in Sources */,
 				A1A19F5C202A2498004170D8 /* RecordingNameFormatTransformer.swift in Sources */,
+				C4E43E9A2103CCD4007A6FAC /* UserNotifications.swift in Sources */,
 				C479DDE52023FEE800E0A11D /* RecordingNameTokenObject.swift in Sources */,
 				C41152AA20291E8C00DDB293 /* StatusItemController.swift in Sources */,
 				C41152AE20292F7D00DDB293 /* PreferencesWindowController.swift in Sources */,
