@@ -88,14 +88,23 @@ import Foundation
 		do {
 			let recorderExecutableURL = try self.recorderExecutableURL()
 			
-			let process = try Process.run(recorderExecutableURL, arguments: []) { (process) in
+			let process = Process() ≈ {
+				$0.executableURL = recorderExecutableURL
+				let extraEnvironment = [
+					"APP_BUNDLE": Bundle.main.bundlePath
+				]
+				$0.environment = ProcessInfo().environment.merging(extraEnvironment, uniquingKeysWith: { $1 })
+			}
+			process.terminationHandler = { (process) in
 				DispatchQueue.main.async {
 					assert(self.process == process)
 					self.completeRecording(completionHandler: terminationHandler)
 				}
 			}
-
+			
         	self.process = process
+			
+			try process.run()
 		} catch {
 			terminationHandler(error)
 		}
