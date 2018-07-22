@@ -1,0 +1,40 @@
+#! /bin/bash -e
+
+#  XCBundleBrewPackages
+#  SimulatorRecorder
+#
+#  Created by Grigory Entin on 22/07/2018.
+#  Copyright © 2018 Grigory Entin. All rights reserved.
+
+homebrewDir="${CONFIGURATION_BUILD_DIR:?}/${TARGET_NAME:?}-homebrew"
+bundledHomebrewDir="${CONFIGURATION_BUILD_DIR:?}"/"${CONTENTS_FOLDER_PATH:?}"/homebrew
+
+(test -d "${homebrewDir:?}" || mkdir "${homebrewDir:?}") && curl -s -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C "${homebrewDir:?}"
+
+export PATH="${PATH+${PATH:?}:}${homebrewDir:?}/bin"
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+packages=(
+    ffmpeg
+    jq
+)
+
+brew ls "${packages[@]}" > /dev/null || brew install --force-bottle "${packages[@]}"
+
+test -d "${bundledHomebrewDir:?}" || mkdir "${bundledHomebrewDir:?}"
+
+for i in bin lib opt Cellar
+do
+     rsync \
+        -rtl \
+        --exclude '**/man/' \
+        --exclude '**/doc/' \
+        --exclude '**/include/' \
+        --include '**/' \
+        --include '**/*.dylib' \
+        --include '**/bin/*' \
+        --exclude='**/*' \
+        --delete \
+        "${homebrewDir:?}/${i:?}" \
+        "${bundledHomebrewDir:?}"/
+done
