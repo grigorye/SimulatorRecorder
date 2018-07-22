@@ -21,12 +21,21 @@ defaultFor() {
 
 #
 
+tmpdir=$(mktemp -d "${TMPDIR:?}"/"${bn:?}".XXXXX)
+
+rawVideo="${tmpdir:?}/simvideo.264"
+timestamp=$(timestamp)
+
+xcrun simctl io booted recordVideo --type='h264' "${rawVideo:?}"
+ls -l "${rawVideo:?}"
+
+#
+
 recordingsDir=$(eval echo "$(defaultFor string "recordingsDir")")
 revealInFinder=$(defaultFor boolean "revealInFinder")
 videoNameFormatEscaped=$(defaultFor string "videoNameFormat")
 videoNameFormat=$(echo "[\"${videoNameFormatEscaped:?}\"]" | python -c 'import json, sys; sys.stdout.write(json.load(sys.stdin)[0].encode("utf-8"))')
 
-timestamp=$(timestamp)
 simulatorName=$(simulatorName)
 timestampFormat="%Y-%m-%d_%H%M%S"
 timestamp=$(date +"${timestampFormat:?}")
@@ -36,18 +45,13 @@ time=$(date -j -f "${timestampFormat:?}" "${timestamp:?}" +"%H.%M.%S")
 device=$(echo ${simulatorName:?} | sed 's/^\(.*\) - \(.*\)$/\1/')
 version=$(echo ${simulatorName:?} | sed 's/^\(.*\) - \(.*\)$/\2/')
 
-#
-
-tmpdir=$(mktemp -d "${TMPDIR:?}"/"${bn:?}".XXXXX)
-
 videoName=$(eval echo "${videoNameFormat:?}")
-rawVideo="${tmpdir:?}/simvideo.264"
 convertedVideo="${recordingsDir:?}/${videoName:?}.m4v"
+
+#
 
 mkdir -p "${recordingsDir:?}"
 
-xcrun simctl io booted recordVideo --type='h264' "${rawVideo:?}"
-ls -l "${rawVideo:?}"
 ffmpeg -v -8 -i "${rawVideo:?}" "${convertedVideo:?}"
 
 if [ "${revealInFinder:?}" = 1 ]
