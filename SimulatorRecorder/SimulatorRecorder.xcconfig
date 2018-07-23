@@ -1,0 +1,12 @@
+//
+//  SimulatorRecorder.xcconfig
+//  SimulatorRecorder
+//
+//  Created by Grigory Entin on 23/07/2018.
+//  Copyright © 2018 Grigory Entin. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+GE_HOMEBREW_FOLDER_PATH = $(CONTENTS_FOLDER_PATH)/homebrew
