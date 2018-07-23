@@ -16,6 +16,7 @@
 		58C6B781EF6D53352436AE4A /* SimulatorRecorderUITests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */; };
 		6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
 		75058297C89597B48E8DAAEF /* main.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
+		A15646672104A64F00AC9CF1 /* prepareBrew in Resources */ = {isa = PBXBuildFile; fileRef = A15646662104A64F00AC9CF1 /* prepareBrew */; };
 		A181382B20FF221A002CCD7C /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A181382A20FF221A002CCD7C /* RecordingController.swift */; };
 		A1A19F5C202A2498004170D8 /* RecordingNameFormatTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */; };
 		A4F9C272AE48785F5EF9B662 /* ViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
@@ -137,6 +138,8 @@
 		922034985B052AD0AC145592 /* Pods_SimulatorRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimulatorRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F9D9920FB0F54C94E57ACE /* Pods-SimulatorRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		9BB91CEE95052C35C796F0CF /* Pods-SimulatorRecorderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimulatorRecorderUITests/Pods-SimulatorRecorderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A15646662104A64F00AC9CF1 /* prepareBrew */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = prepareBrew; sourceTree = "<group>"; };
+		A156466C2104C53A00AC9CF1 /* XCBundleBrewPackages */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCBundleBrewPackages; sourceTree = "<group>"; };
 		A181382A20FF221A002CCD7C /* RecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingController.swift; sourceTree = "<group>"; };
 		A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameFormatTransformer.swift; sourceTree = "<group>"; };
 		A92173DE8BF3C468D4C35C47 /* Pods_SimulatorRecorderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimulatorRecorderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,9 +286,11 @@
 				C479DDA7202266BF00E0A11D /* Main.storyboard */,
 				C4844F19202A5B7500FFB5BA /* Preferences.storyboard */,
 				C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */,
+				A15646662104A64F00AC9CF1 /* prepareBrew */,
 				C479DDCE20226B2300E0A11D /* simulatorName */,
 				C479DDCF20226B2400E0A11D /* recordVideo */,
 				C479DDDA20227A7900E0A11D /* timestamp */,
+				A156466C2104C53A00AC9CF1 /* XCBundleBrewPackages */,
 				C479DDAA202266BF00E0A11D /* Info.plist */,
 				C479DDAB202266BF00E0A11D /* SimulatorRecorder.entitlements */,
 				C41F4C352028B3200090E79B /* Defaults.plist */,
@@ -326,6 +331,7 @@
 				C4FDFCB6202522710017DF19 /* Embed Frameworks */,
 				5035D22810B4C0D71550C940 /* Embed Sources */,
 				6515056E9486FABD06960DAA /* [CP] Embed Pods Frameworks */,
+				A156466B2104C4F300AC9CF1 /* Bundle Brew Packages */,
 			);
 			buildRules = (
 			);
@@ -398,11 +404,13 @@
 					};
 					C479DDAF202266C000E0A11D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C479DD9D202266BF00E0A11D;
 					};
 					C479DDBA202266C000E0A11D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						TestTargetID = C479DD9D202266BF00E0A11D;
 					};
@@ -441,6 +449,7 @@
 				C479DDD720226D8200E0A11D /* simulatorName in Resources */,
 				C4E43E9821039C96007A6FAC /* Preferences-Naming.storyboard in Resources */,
 				C479DDD820226D8200E0A11D /* recordVideo in Resources */,
+				A15646672104A64F00AC9CF1 /* prepareBrew in Resources */,
 				C4844F1B202A5BA100FFB5BA /* Preferences.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +523,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A156466B2104C4F300AC9CF1 /* Bundle Brew Packages */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/$(TARGET_NAME)/XCBundleBrewPackages",
+			);
+			name = "Bundle Brew Packages";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(CONFIGURATION_BUILD_DIR)/$(CONTENTS_FOLDER_PATH)/homebrew",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh -e";
+			shellScript = "\"${SRCROOT:?}\"/\"${TARGET_NAME:?}\"/XCBundleBrewPackages\n";
 			showEnvVarsInLog = 0;
 		};
 		C479DDE620241D9100E0A11D /* Embed Source Version into Bundle */ = {

@@ -7,7 +7,7 @@
 #  Copyright © 2018 Grigory Entin. All rights reserved.
 
 homebrewDir="${CONFIGURATION_BUILD_DIR:?}/${TARGET_NAME:?}-homebrew"
-bundledHomebrewDir="${CONFIGURATION_BUILD_DIR:?}"/"${CONTENTS_FOLDER_PATH:?}"/homebrew
+bundledHomebrewDir="${CONFIGURATION_BUILD_DIR:?}"/"${GE_HOMEBREW_FOLDER_PATH:?}"
 
 (test -d "${homebrewDir:?}" || mkdir "${homebrewDir:?}") && curl -s -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C "${homebrewDir:?}"
 
@@ -25,7 +25,8 @@ test -d "${bundledHomebrewDir:?}" || mkdir "${bundledHomebrewDir:?}"
 
 for i in bin lib opt Cellar
 do
-     rsync \
+	src="${homebrewDir:?}/${i:?}"
+    rsync \
         -rtl \
         --exclude '**/man/' \
         --exclude '**/doc/' \
