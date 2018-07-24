@@ -1,4 +1,4 @@
-osx_image: xcode9.2
+osx_image: xcode10
 language: swift
 script:
-- xcodebuild -workspace SimulatorRecorder.xcworkspace -scheme SimulatorRecorder CODE_SIGN_IDENTITY=
+- ./build-gitlab
