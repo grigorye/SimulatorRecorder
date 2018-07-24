@@ -1,4 +1,4 @@
-#! /bin/bash -e
+#! /bin/bash -ex
 
 #  XCBundleBrewPackages
 #  SimulatorRecorder
@@ -14,12 +14,18 @@ bundledHomebrewDir="${CONFIGURATION_BUILD_DIR:?}"/"${GE_HOMEBREW_FOLDER_PATH:?}"
 export PATH="${PATH+${PATH:?}:}${homebrewDir:?}/bin"
 export HOMEBREW_NO_AUTO_UPDATE=1
 
+# Workaround for
+# - "HOMEBREW_PREFIX is in the Homebrew temporary directory"
+# - Homebrew postinstall failing due to "too long unix socket path (xxx given but 104bytes max)"
+homebrewTempDir="${TMPDIR:-/tmp}/$(echo ${CONFIGURATION_BUILD_DIR:?}/${TARGET_NAME:?}-homebrew-tmp|md5)"
+export HOMEBREW_TEMP="${homebrewTempDir:?}"
+
 packages=(
     ffmpeg
     jq
 )
 
-brew ls "${packages[@]}" > /dev/null || brew install --force-bottle "${packages[@]}"
+brew ls "${packages[@]}" >& /dev/null || brew install --force-bottle "${packages[@]}"
 
 test -d "${bundledHomebrewDir:?}" || mkdir "${bundledHomebrewDir:?}"
 
