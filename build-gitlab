@@ -1,5 +1,7 @@
 #! /bin/sh -xe
 
+set -o pipefail
+
 tmpdir=$(mktemp -d "${TMPDIR:-/tmp}/${CI_PROJECT_NAME:-gitlab}.XXXXX")
 packageName="${CI_PROJECT_NAME:-package}"
 
