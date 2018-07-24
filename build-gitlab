@@ -1,0 +1,13 @@
+#! /bin/sh -xe
+
+tmpdir=$(mktemp -d "${TMPDIR:-/tmp}/${CI_PROJECT_NAME:-gitlab}.XXXXX")
+packageName="${CI_PROJECT_NAME:-package}"
+
+bundle install
+bundle exec pod repo update
+bundle exec pod install
+
+./build-pkg \
+    "${tmpdir:?}/${packageName:?}".pkg \
+    "${@}"  \
+    | bundle exec xcpretty
