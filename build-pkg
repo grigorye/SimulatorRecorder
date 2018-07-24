@@ -1,0 +1,28 @@
+#! /usr/bin/env -i /bin/sh -ex
+
+pkg="${1:?}"; shift
+
+export "${@}"
+
+bn=$(basename "$0")
+
+eval "$(/usr/libexec/path_helper)"
+
+workspaces=(*.xcworkspace)
+workspace="${workspaces[0]}"
+projectName="${workspace%.*}"
+
+tmpdir=$(mktemp -d "${TMPDIR:-/tmp}/${bn:?}.XXXXX")
+
+installDir="${DSTROOT:-${tmpdir:?}}"
+derivedDataPath="${GE_DERIVED_DATA_PATH:-${tmpdir:?}/DerivedData}"
+
+xcodebuild \
+    -derivedDataPath "${derivedDataPath:?}" \
+    -workspace "${workspace:?}" \
+    -scheme "${projectName:?}" \
+    install \
+    DSTROOT="${installDir:?}" \
+    "${@}"
+
+pkgbuild --root "${installDir:?}" "${pkg:?}"
