@@ -6,6 +6,5 @@ build_project:
   script:
      - ./build-gitlab
   tags:
-    - ios
     - xcode-10
     - macos
