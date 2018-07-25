@@ -17,7 +17,7 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 # Workaround for
 # - "HOMEBREW_PREFIX is in the Homebrew temporary directory"
 # - Homebrew postinstall failing due to "too long unix socket path (xxx given but 104bytes max)"
-homebrewTempDir="${TMPDIR:-/tmp}/$(echo ${CONFIGURATION_BUILD_DIR:?}/${TARGET_NAME:?}-homebrew-tmp|md5)"
+homebrewTempDir="${TMPDIR:-/tmp}/homebrew"
 export HOMEBREW_TEMP="${homebrewTempDir:?}"
 
 packages=(
