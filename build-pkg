@@ -14,7 +14,7 @@ projectName="${workspace%.*}"
 
 tmpdir=$(mktemp -d "${TMPDIR:-/tmp}/${bn:?}.XXXXX")
 
-installDir="${DSTROOT:-${tmpdir:?}}"
+installDir="${DSTROOT:-${tmpdir:?}/Install}"
 derivedDataPath="${GE_DERIVED_DATA_PATH:-${tmpdir:?}/DerivedData}"
 
 xcodebuild \
