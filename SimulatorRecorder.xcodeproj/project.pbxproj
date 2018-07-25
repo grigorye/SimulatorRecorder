@@ -180,6 +180,7 @@
 		C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Preferences-Naming.storyboard"; sourceTree = "<group>"; };
 		C4E43E992103CCD4007A6FAC /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimulatorRecorder.xcconfig; sourceTree = "<group>"; };
+		C4FF30212107FDBA00999603 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E19E267D03B721D6BA1FB690 /* Pods-SimulatorRecorderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,6 +242,7 @@
 		C479DD95202266BF00E0A11D = {
 			isa = PBXGroup;
 			children = (
+				C4FF30212107FDBA00999603 /* README.md */,
 				C424A2462025255E00320E48 /* GETracing.framework */,
 				C424A2432025254500320E48 /* GEFoundation.framework */,
 				C479DDA0202266BF00E0A11D /* SimulatorRecorder */,
