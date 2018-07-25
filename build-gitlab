@@ -11,5 +11,6 @@ bundle exec pod install
 
 ./build-pkg \
     "${tmpdir:?}/${packageName:?}".pkg \
-    "${@}"  \
+    ${DEVELOPER_DIR:+DEVELOPER_DIR="${DEVELOPER_DIR}"} \
+    "${@}" \
     | bundle exec xcpretty
