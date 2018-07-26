@@ -181,6 +181,7 @@
 		C4E43E992103CCD4007A6FAC /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimulatorRecorder.xcconfig; sourceTree = "<group>"; };
 		C4FF30212107FDBA00999603 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C4FF3022210A68F200999603 /* ProductDefinition.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.info; path = ProductDefinition.plist; sourceTree = "<group>"; };
 		E19E267D03B721D6BA1FB690 /* Pods-SimulatorRecorderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -296,6 +297,7 @@
 				A156466C2104C53A00AC9CF1 /* XCBundleBrewPackages */,
 				C479DDAA202266BF00E0A11D /* Info.plist */,
 				C479DDAB202266BF00E0A11D /* SimulatorRecorder.entitlements */,
+				C4FF3022210A68F200999603 /* ProductDefinition.plist */,
 				C41F4C352028B3200090E79B /* Defaults.plist */,
 				C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */,
 			);
@@ -789,6 +791,7 @@
 				INFOPLIST_FILE = SimulatorRecorder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorder;
+				PRODUCT_DEFINITION_PLIST = "$(SRCROOT)/$(TARGET_NAME)/ProductDefinition.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -809,6 +812,7 @@
 				INFOPLIST_FILE = SimulatorRecorder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorder;
+				PRODUCT_DEFINITION_PLIST = "$(SRCROOT)/$(TARGET_NAME)/ProductDefinition.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
