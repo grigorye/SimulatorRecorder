@@ -1,5 +1,3 @@
-
-[//]: # ([![](https://travis-ci.org/grigorye/SimulatorRecorder.svg?branch=master)](https://travis-ci.org/grigorye/SimulatorRecorder))
 [![](https://gitlab.com/grigorye/SimulatorRecorder/badges/master/pipeline.svg)](https://gitlab.com/grigorye/SimulatorRecorder/commits/master)
 
 # SimulatorRecorder
