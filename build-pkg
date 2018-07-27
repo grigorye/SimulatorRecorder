@@ -25,4 +25,4 @@ xcodebuild \
     DSTROOT="${installDir:?}" \
     "${@}"
 
-pkgbuild --root "${installDir:?}" "${pkg:?}"
+productbuild --product "${projectName:?}"/ProductDefinition.plist --root "${installDir:?}" "${pkg:?}"
