@@ -1,5 +1,7 @@
 platform :osx, '10.9'
 
+project "SimulatorRecorder/SimulatorRecorder.xcodeproj"
+
 target 'SimulatorRecorder' do
   use_frameworks!
 
