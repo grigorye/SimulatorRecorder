@@ -2,15 +2,14 @@
 
 set -o pipefail
 
-tmpdir=$(mktemp -d "${TMPDIR:-/tmp}/${CI_PROJECT_NAME:-gitlab}.XXXXX")
-packageName="${CI_PROJECT_NAME:-package}"
+pkg="${1:?}"; shift
 
 bundle install
 bundle exec pod repo update
 bundle exec pod install
 
 ./build-pkg \
-    "${tmpdir:?}/${packageName:?}".pkg \
+    "${pkg:?}" \
     ${DEVELOPER_DIR:+DEVELOPER_DIR="${DEVELOPER_DIR}"} \
     "${@}" \
     | bundle exec xcpretty
