@@ -8,7 +8,7 @@ build_project:
     - ./build-gitlab "$PWD/build/${packageName:?}.pkg" GE_DERIVED_DATA_PATH="$PWD"/build/DerivedData DSTROOT="$PWD"/build/"${packageName:?}".dst
   artifacts:
     paths:
-      - build/DerivedData/*.pkg
+      - build/*.pkg
   tags:
     - xcode-10
     - macos
