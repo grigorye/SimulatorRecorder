@@ -7,7 +7,7 @@ Record (compressed) Simulator video with a keypress.
 
 ## HOWTO
 
-1. Install the [latest build of the app]('https://gitlab.com/grigorye/SimulatorRecorder/-/jobs/artifacts/master/raw/build/SimulatorRecorder.pkg?job=build_project')
+1. Install the [latest build of the app](https://gitlab.com/grigorye/SimulatorRecorder/-/jobs/artifacts/master/raw/build/SimulatorRecorder.pkg?job=build_project)
 2. Launch the app
 3. Press Command-Shift-5 to start recording
 4. Press Command-Shift-5 to stop recording
