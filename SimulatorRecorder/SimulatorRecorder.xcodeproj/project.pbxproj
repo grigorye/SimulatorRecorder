@@ -53,6 +53,8 @@
 		C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */; };
 		C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
 		C4D56E8F210CA477003404FC /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E8E210CA476003404FC /* MainView.storyboard */; };
+		C4D56E94210CFA30003404FC /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */; };
+		C4D56E96210CFADF003404FC /* GeneralPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */; };
 		C4E43E9821039C96007A6FAC /* Preferences-Naming.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */; };
 		C4E43E9A2103CCD4007A6FAC /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E43E992103CCD4007A6FAC /* UserNotifications.swift */; };
 		D0CF358CD14989AB3C40FC0B /* SimulatorRecorderTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */; };
@@ -180,6 +182,8 @@
 		C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpButtonLikePathControl.swift; sourceTree = "<group>"; };
 		C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameToken.swift; sourceTree = "<group>"; };
 		C4D56E8E210CA476003404FC /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
+		C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
+		C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = GeneralPreferences.storyboard; path = /Volumes/Ginger/Users/eg/Workbench/SimulatorRecorder/SimulatorRecorder/SimulatorRecorder/Preferences/General/GeneralPreferences.storyboard; sourceTree = "<absolute>"; };
 		C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Preferences-Naming.storyboard"; sourceTree = "<group>"; };
 		C4E43E992103CCD4007A6FAC /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimulatorRecorder.xcconfig; sourceTree = "<group>"; };
@@ -303,8 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */,
-				C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */,
 				C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */,
+				C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */,
 				C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */,
 				C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */,
 				A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */,
@@ -378,6 +382,7 @@
 			children = (
 				C4844F19202A5B7500FFB5BA /* Preferences.storyboard */,
 				C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */,
+				C4D56E92210CDBC7003404FC /* General */,
 				C46049D2210C6FC900AED3FA /* Naming */,
 			);
 			path = Preferences;
@@ -419,6 +424,15 @@
 				C4E43E992103CCD4007A6FAC /* UserNotifications.swift */,
 			);
 			path = UserNotifications;
+			sourceTree = "<group>";
+		};
+		C4D56E92210CDBC7003404FC /* General */ = {
+			isa = PBXGroup;
+			children = (
+				C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */,
+				C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -546,6 +560,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D56E96210CFADF003404FC /* GeneralPreferences.storyboard in Resources */,
 				C479DDA6202266BF00E0A11D /* Assets.xcassets in Resources */,
 				C479DDA9202266BF00E0A11D /* Main.storyboard in Resources */,
 				C41F4C362028B3200090E79B /* Defaults.plist in Resources */,
@@ -704,6 +719,7 @@
 				C41152AA20291E8C00DDB293 /* StatusItemController.swift in Sources */,
 				C41152AE20292F7D00DDB293 /* PreferencesWindowController.swift in Sources */,
 				C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */,
+				C4D56E94210CFA30003404FC /* GeneralPreferencesViewController.swift in Sources */,
 				C424A24C202529C100320E48 /* ModuleExports-GEFoundation.swift in Sources */,
 				C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */,
 			);
