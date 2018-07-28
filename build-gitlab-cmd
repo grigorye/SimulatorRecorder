@@ -1,0 +1,9 @@
+#! /bin/sh -xe
+
+buildDir="${1:?}"; shift
+packageName="${1:?}"; shift
+
+./build-gitlab \
+    "${buildDir:?}/${packageName:?}.pkg" \
+    GE_DERIVED_DATA_PATH="${buildDir:?}"/DerivedData \
+    DSTROOT="${buildDir:?}/${packageName:?}".dst
