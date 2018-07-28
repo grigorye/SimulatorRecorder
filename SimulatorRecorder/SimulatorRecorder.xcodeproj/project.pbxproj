@@ -240,6 +240,75 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C46049CC210C6E7200AED3FA /* MainWindow */ = {
+			isa = PBXGroup;
+			children = (
+				C479DDA3202266BF00E0A11D /* ViewController.swift */,
+			);
+			path = MainWindow;
+			sourceTree = "<group>";
+		};
+		C46049CD210C6E8600AED3FA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C41F4C352028B3200090E79B /* Defaults.plist */,
+				C479DDA5202266BF00E0A11D /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C46049CE210C6E9900AED3FA /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				A15646662104A64F00AC9CF1 /* prepareBrew */,
+				C479DDCE20226B2300E0A11D /* simulatorName */,
+				C479DDCF20226B2400E0A11D /* recordVideo */,
+				C479DDDA20227A7900E0A11D /* timestamp */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		C46049CF210C6EBC00AED3FA /* Distribution */ = {
+			isa = PBXGroup;
+			children = (
+				C4FF3022210A68F200999603 /* ProductDefinition.plist */,
+			);
+			path = Distribution;
+			sourceTree = "<group>";
+		};
+		C46049D0210C6ED000AED3FA /* XcodeBuild */ = {
+			isa = PBXGroup;
+			children = (
+				C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */,
+				A156466C2104C53A00AC9CF1 /* XCBundleBrewPackages */,
+			);
+			path = XcodeBuild;
+			sourceTree = "<group>";
+		};
+		C46049D1210C6F8B00AED3FA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */,
+				C461E54B2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift */,
+				C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */,
+				C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		C46049D2210C6FC900AED3FA /* Naming */ = {
+			isa = PBXGroup;
+			children = (
+				C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */,
+				C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */,
+				C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */,
+				C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */,
+				C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */,
+				A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */,
+			);
+			path = Naming;
+			sourceTree = "<group>";
+		};
 		C479DD95202266BF00E0A11D = {
 			isa = PBXGroup;
 			children = (
@@ -269,37 +338,16 @@
 		C479DDA0202266BF00E0A11D /* SimulatorRecorder */ = {
 			isa = PBXGroup;
 			children = (
-				C479DDA1202266BF00E0A11D /* AppDelegate.swift */,
-				C4E43E992103CCD4007A6FAC /* UserNotifications.swift */,
-				C461E54B2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift */,
-				C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */,
-				C424A24D2025A88B00320E48 /* main.swift */,
-				C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */,
-				C479DDA3202266BF00E0A11D /* ViewController.swift */,
-				A181382A20FF221A002CCD7C /* RecordingController.swift */,
-				C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */,
-				C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */,
-				C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */,
-				C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */,
-				C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */,
-				A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */,
-				C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */,
-				C479DDA5202266BF00E0A11D /* Assets.xcassets */,
-				C41152A920291E8C00DDB293 /* StatusItemController.swift */,
-				C41152AB2029224000DDB293 /* StatusItem.xib */,
-				C479DDA7202266BF00E0A11D /* Main.storyboard */,
-				C4844F19202A5B7500FFB5BA /* Preferences.storyboard */,
-				C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */,
-				A15646662104A64F00AC9CF1 /* prepareBrew */,
-				C479DDCE20226B2300E0A11D /* simulatorName */,
-				C479DDCF20226B2400E0A11D /* recordVideo */,
-				C479DDDA20227A7900E0A11D /* timestamp */,
-				A156466C2104C53A00AC9CF1 /* XCBundleBrewPackages */,
-				C479DDAA202266BF00E0A11D /* Info.plist */,
-				C479DDAB202266BF00E0A11D /* SimulatorRecorder.entitlements */,
-				C4FF3022210A68F200999603 /* ProductDefinition.plist */,
-				C41F4C352028B3200090E79B /* Defaults.plist */,
-				C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */,
+				C49AAE24210C717C00E6867C /* App */,
+				C46049CC210C6E7200AED3FA /* MainWindow */,
+				C49AAE22210C70D200E6867C /* Preferences */,
+				C49AAE26210C71F000E6867C /* UserNotifications */,
+				C49AAE25210C719500E6867C /* Recording */,
+				C49AAE23210C710E00E6867C /* StatusItem */,
+				C46049D1210C6F8B00AED3FA /* Shared */,
+				C46049CD210C6E8600AED3FA /* Resources */,
+				C46049D0210C6ED000AED3FA /* XcodeBuild */,
+				C46049CF210C6EBC00AED3FA /* Distribution */,
 			);
 			path = SimulatorRecorder;
 			sourceTree = "<group>";
@@ -320,6 +368,54 @@
 				C479DDC1202266C000E0A11D /* Info.plist */,
 			);
 			path = SimulatorRecorderUITests;
+			sourceTree = "<group>";
+		};
+		C49AAE22210C70D200E6867C /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				C4844F19202A5B7500FFB5BA /* Preferences.storyboard */,
+				C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */,
+				C46049D2210C6FC900AED3FA /* Naming */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		C49AAE23210C710E00E6867C /* StatusItem */ = {
+			isa = PBXGroup;
+			children = (
+				C41152A920291E8C00DDB293 /* StatusItemController.swift */,
+				C41152AB2029224000DDB293 /* StatusItem.xib */,
+			);
+			path = StatusItem;
+			sourceTree = "<group>";
+		};
+		C49AAE24210C717C00E6867C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C479DDA1202266BF00E0A11D /* AppDelegate.swift */,
+				C424A24D2025A88B00320E48 /* main.swift */,
+				C479DDA7202266BF00E0A11D /* Main.storyboard */,
+				C479DDAB202266BF00E0A11D /* SimulatorRecorder.entitlements */,
+				C479DDAA202266BF00E0A11D /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C49AAE25210C719500E6867C /* Recording */ = {
+			isa = PBXGroup;
+			children = (
+				C46049CE210C6E9900AED3FA /* Scripts */,
+				A181382A20FF221A002CCD7C /* RecordingController.swift */,
+			);
+			path = Recording;
+			sourceTree = "<group>";
+		};
+		C49AAE26210C71F000E6867C /* UserNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				C4E43E992103CCD4007A6FAC /* UserNotifications.swift */,
+			);
+			path = UserNotifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -545,7 +641,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/sh -e";
-			shellScript = "\"${SRCROOT:?}\"/\"${TARGET_NAME:?}\"/XCBundleBrewPackages\n";
+			shellScript = "\"${SRCROOT:?}\"/\"${TARGET_NAME:?}\"/XcodeBuild/XCBundleBrewPackages\n";
 			showEnvVarsInLog = 0;
 		};
 		B45A96996E87D8C860B48DE9 /* [CP] Check Pods Manifest.lock */ = {
@@ -784,10 +880,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 465NA5BW7E;
-				INFOPLIST_FILE = SimulatorRecorder/Info.plist;
+				INFOPLIST_FILE = SimulatorRecorder/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorder;
-				PRODUCT_DEFINITION_PLIST = "$(TARGET_NAME)/ProductDefinition.plist";
+				PRODUCT_DEFINITION_PLIST = "$(TARGET_NAME)/Distribution/ProductDefinition.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -805,10 +901,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 465NA5BW7E;
-				INFOPLIST_FILE = SimulatorRecorder/Info.plist;
+				INFOPLIST_FILE = SimulatorRecorder/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorder;
-				PRODUCT_DEFINITION_PLIST = "$(TARGET_NAME)/ProductDefinition.plist";
+				PRODUCT_DEFINITION_PLIST = "$(TARGET_NAME)/Distribution/ProductDefinition.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
