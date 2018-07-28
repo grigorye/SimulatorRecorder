@@ -17,15 +17,22 @@ tmpdir=$(mktemp -d "${TMPDIR:-/tmp}/${bn:?}.XXXXX")
 installDir="${DSTROOT:-${tmpdir:?}/Install}"
 derivedDataPath="${GE_DERIVED_DATA_PATH:-${tmpdir:?}/DerivedData}"
 
-xcodebuild \
+buildProject() {
+    xcodebuild \
+        -workspace "${workspace:?}" \
+        -scheme "${projectName:?}" \
+        "${@}"
+}
+
+buildProject \
     -derivedDataPath "${derivedDataPath:?}" \
-    -workspace "${workspace:?}" \
-    -scheme "${projectName:?}" \
     install \
     DSTROOT="${installDir:?}" \
     "${@}"
 
+productDefinitionPlist=$(buildProject -showBuildSettings | awk '/.* PRODUCT_DEFINITION_PLIST = (.*)/ {print $3}')
+
 productbuild \
-    --product "${projectName:?}"/"${projectName:?}"/ProductDefinition.plist \
+    --product "${projectName:?}"/"${productDefinitionPlist:?}" \
     --root "${installDir:?}" \
     "${pkg:?}"
