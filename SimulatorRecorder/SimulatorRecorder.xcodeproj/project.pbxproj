@@ -52,6 +52,7 @@
 		C4844F1B202A5BA100FFB5BA /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4844F19202A5B7500FFB5BA /* Preferences.storyboard */; };
 		C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */; };
 		C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
+		C4D56E8F210CA477003404FC /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E8E210CA476003404FC /* MainView.storyboard */; };
 		C4E43E9821039C96007A6FAC /* Preferences-Naming.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */; };
 		C4E43E9A2103CCD4007A6FAC /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E43E992103CCD4007A6FAC /* UserNotifications.swift */; };
 		D0CF358CD14989AB3C40FC0B /* SimulatorRecorderTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */; };
@@ -178,6 +179,7 @@
 		C4844F1A202A5B7600FFB5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
 		C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpButtonLikePathControl.swift; sourceTree = "<group>"; };
 		C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameToken.swift; sourceTree = "<group>"; };
+		C4D56E8E210CA476003404FC /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Preferences-Naming.storyboard"; sourceTree = "<group>"; };
 		C4E43E992103CCD4007A6FAC /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimulatorRecorder.xcconfig; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 		C46049CC210C6E7200AED3FA /* MainWindow */ = {
 			isa = PBXGroup;
 			children = (
+				C4D56E8E210CA476003404FC /* MainView.storyboard */,
 				C479DDA3202266BF00E0A11D /* ViewController.swift */,
 			);
 			path = MainWindow;
@@ -548,6 +551,7 @@
 				C41F4C362028B3200090E79B /* Defaults.plist in Resources */,
 				C41152AC2029224000DDB293 /* StatusItem.xib in Resources */,
 				C479DDDB20227A7900E0A11D /* timestamp in Resources */,
+				C4D56E8F210CA477003404FC /* MainView.storyboard in Resources */,
 				C479DDD720226D8200E0A11D /* simulatorName in Resources */,
 				C4E43E9821039C96007A6FAC /* Preferences-Naming.storyboard in Resources */,
 				C479DDD820226D8200E0A11D /* recordVideo in Resources */,
