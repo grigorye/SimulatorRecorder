@@ -5,7 +5,7 @@ build_project:
   stage: build
   script:
     - packageName="${CI_PROJECT_NAME:?}"
-    - ./build-gitlab "$PWD/build/${packageName:?}.pkg" GE_DERIVED_DATA_PATH="$PWD"/build/DerivedData DSTROOT="$PWD"/build/"${packageName:?}".dst
+    - ./build-gitlab-cmd "$PWD/build" "${packageName:?}.pkg"
   artifacts:
     paths:
       - build/*.pkg
