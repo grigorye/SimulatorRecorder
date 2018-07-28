@@ -5,7 +5,7 @@ build_project:
   stage: build
   script:
     - packageName="${CI_PROJECT_NAME:?}"
-    - ./build-gitlab-cmd "$PWD/build" "${packageName:?}.pkg"
+    - ./build-gitlab-cmd "$PWD/build" "${packageName:?}"
   artifacts:
     paths:
       - build/*.pkg
