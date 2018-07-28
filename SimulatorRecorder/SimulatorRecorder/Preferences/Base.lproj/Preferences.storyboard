@@ -69,8 +69,8 @@
             <objects>
                 <tabViewController selectedTabViewItemIndex="0" tabStyle="unspecified" id="WE4-ve-D5h" userLabel="Tabs" sceneMemberID="viewController">
                     <tabViewItems>
-                        <tabViewItem identifier="" id="WfF-N2-33X"/>
                         <tabViewItem id="PVc-rq-RpT"/>
+                        <tabViewItem id="jtS-a7-NeR"/>
                     </tabViewItems>
                     <viewControllerTransitionOptions key="transitionOptions" allowUserInteraction="YES"/>
                     <tabView key="tabView" id="hDK-4o-0io">
@@ -83,7 +83,7 @@
                     </tabView>
                     <connections>
                         <outlet property="tabView" destination="hDK-4o-0io" id="UQW-ZN-5zJ"/>
-                        <segue destination="9sZ-wq-ac3" kind="relationship" relationship="tabItems" id="Ws0-qm-9EL"/>
+                        <segue destination="mXn-cO-JXE" kind="relationship" relationship="tabItems" id="Ws0-qm-9EL"/>
                         <segue destination="BDP-oO-vlc" kind="relationship" relationship="tabItems" id="HvB-Ej-MML"/>
                     </connections>
                 </tabViewController>
@@ -91,126 +91,21 @@
             </objects>
             <point key="canvasLocation" x="1341" y="644"/>
         </scene>
-        <!--General-->
-        <scene sceneID="JAt-aB-scl">
-            <objects>
-                <viewController title="General" id="9sZ-wq-ac3" sceneMemberID="viewController">
-                    <view key="view" id="PVQ-LF-ko9">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="129"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="1000" verticalStackHuggingPriority="1000" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Akh-t3-iTA">
-                                <rect key="frame" x="55" y="20" width="340" height="89"/>
-                                <subviews>
-                                    <gridView horizontalHuggingPriority="1000" verticalHuggingPriority="750" xPlacement="trailing" yPlacement="center" rowAlignment="none" rowSpacing="12" columnSpacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="JzQ-g3-oPa">
-                                        <rect key="frame" x="0.0" y="34" width="340" height="55"/>
-                                        <rows>
-                                            <gridRow topPadding="4" id="w2e-yS-N58"/>
-                                            <gridRow id="tMU-SX-K2k"/>
-                                        </rows>
-                                        <columns>
-                                            <gridColumn id="4UN-nO-SSk"/>
-                                            <gridColumn xPlacement="fill" trailingPadding="6" id="n5O-0X-jtk"/>
-                                        </columns>
-                                        <gridCells>
-                                            <gridCell row="w2e-yS-N58" column="4UN-nO-SSk" id="r0x-dn-2Jd">
-                                                <textField key="contentView" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U1J-VS-1QU">
-                                                    <rect key="frame" x="-2" y="32" width="123" height="19"/>
-                                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="Hot Key:" id="wia-Lr-n1N">
-                                                        <font key="font" metaFont="system"/>
-                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                    </textFieldCell>
-                                                </textField>
-                                            </gridCell>
-                                            <gridCell row="w2e-yS-N58" column="n5O-0X-jtk" id="o7y-4p-VJI">
-                                                <customView key="contentView" translatesAutoresizingMaskIntoConstraints="NO" id="kiI-kz-wVH" customClass="MASShortcutView">
-                                                    <rect key="frame" x="134" y="32" width="200" height="19"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="19" id="O2O-2B-Am7"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="associatedUserDefaultsKey" value="globalShortcut"/>
-                                                    </userDefinedRuntimeAttributes>
-                                                </customView>
-                                            </gridCell>
-                                            <gridCell row="tMU-SX-K2k" column="4UN-nO-SSk" id="b0h-ge-WcR">
-                                                <textField key="contentView" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QBz-fO-cmM">
-                                                    <rect key="frame" x="-2" y="0.0" width="123" height="20"/>
-                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Save Recordings in:" id="tUm-I1-QEv">
-                                                        <font key="font" metaFont="system"/>
-                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                                    </textFieldCell>
-                                                </textField>
-                                            </gridCell>
-                                            <gridCell row="tMU-SX-K2k" column="n5O-0X-jtk" id="w3v-fT-ZXX">
-                                                <pathControl key="contentView" focusRingType="none" verticalHuggingPriority="750" verticalCompressionResistancePriority="1000" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHD-sJ-Gjw" customClass="PopUpButtonLikePathControl" customModule="SimulatorRecorder" customModuleProvider="target">
-                                                    <rect key="frame" x="131" y="-4" width="206" height="26"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="200" id="XPl-GS-YYD"/>
-                                                    </constraints>
-                                                    <pathCell key="cell" selectable="YES" editable="YES" focusRingType="none" alignment="left" pathStyle="popUp" id="b0C-ih-hyb">
-                                                        <font key="font" metaFont="system"/>
-                                                        <url key="url" string="file:///Applications/"/>
-                                                        <allowedTypes>
-                                                            <string>public.folder</string>
-                                                        </allowedTypes>
-                                                    </pathCell>
-                                                    <connections>
-                                                        <binding destination="0Aq-8m-Erw" name="value" keyPath="values.recordingsDir" id="T1F-82-Tfk">
-                                                            <dictionary key="options">
-                                                                <bool key="NSConditionallySetsEnabled" value="NO"/>
-                                                                <string key="NSValueTransformerName">PathFromFilePathOrURL</string>
-                                                            </dictionary>
-                                                        </binding>
-                                                    </connections>
-                                                </pathControl>
-                                            </gridCell>
-                                        </gridCells>
-                                    </gridView>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="68h-71-fti">
-                                        <rect key="frame" x="-2" y="-2" width="344" height="18"/>
-                                        <buttonCell key="cell" type="check" title="Reveal new recordings in Finder" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="k0g-Je-t6s">
-                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <binding destination="0Aq-8m-Erw" name="value" keyPath="values.revealInFinder" id="LQz-Pt-Bee"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <visibilityPriorities>
-                                    <integer value="1000"/>
-                                    <integer value="1000"/>
-                                </visibilityPriorities>
-                                <customSpacing>
-                                    <real value="3.4028234663852886e+38"/>
-                                    <real value="3.4028234663852886e+38"/>
-                                </customSpacing>
-                            </stackView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="Akh-t3-iTA" firstAttribute="top" secondItem="PVQ-LF-ko9" secondAttribute="top" constant="20" symbolic="YES" id="9GQ-99-CDE"/>
-                            <constraint firstItem="Akh-t3-iTA" firstAttribute="centerX" secondItem="PVQ-LF-ko9" secondAttribute="centerX" id="AFh-KX-cri"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Akh-t3-iTA" secondAttribute="trailing" constant="20" symbolic="YES" id="ftb-zk-5nO"/>
-                            <constraint firstAttribute="bottom" secondItem="Akh-t3-iTA" secondAttribute="bottom" constant="20" symbolic="YES" id="rci-wE-ALv"/>
-                            <constraint firstItem="Akh-t3-iTA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PVQ-LF-ko9" secondAttribute="leading" constant="20" symbolic="YES" id="w86-zW-w6o"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <customObject id="gbw-oy-3cY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <userDefaultsController id="0Aq-8m-Erw"/>
-            </objects>
-            <point key="canvasLocation" x="1922" y="696.5"/>
-        </scene>
         <!--Preferences-Naming-->
         <scene sceneID="tMW-2Q-Qvb">
             <objects>
                 <controllerPlaceholder storyboardName="Preferences-Naming" id="BDP-oO-vlc" sceneMemberID="viewController"/>
                 <customObject id="uJl-GI-7SK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341" y="1111"/>
+            <point key="canvasLocation" x="1341" y="965"/>
+        </scene>
+        <!--GeneralPreferences-->
+        <scene sceneID="H9u-2X-Cfm">
+            <objects>
+                <controllerPlaceholder storyboardName="GeneralPreferences" id="mXn-cO-JXE" sceneMemberID="viewController"/>
+                <customObject id="bcf-LR-sAE" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1174" y="965"/>
         </scene>
     </scenes>
 </document>
