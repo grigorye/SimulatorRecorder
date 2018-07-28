@@ -12,4 +12,4 @@ bundle exec pod install
     "${pkg:?}" \
     ${DEVELOPER_DIR:+DEVELOPER_DIR="${DEVELOPER_DIR}"} \
     "${@}" \
-    | bundle exec xcpretty
+    | ./xcpretty
