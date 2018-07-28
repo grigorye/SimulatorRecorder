@@ -1,0 +1,8 @@
+#! /bin/sh -xe
+
+if [ "${GE_DISABLE_XCPRETTY}" == "1" ]
+then
+    exec tee
+else
+    exec bundle exec xcpretty
+fi
