@@ -40,5 +40,5 @@ productName="${projectName:?}"
 
 productbuild \
     --product "${projectName:?}"/"${productDefinitionPlist:?}" \
-    --component "${installDir:?}"/Applications/"${productName:?}".app \
+    --component "${installDir:?}"/Applications/"${productName:?}".app /Applications \
     "${pkg:?}"
