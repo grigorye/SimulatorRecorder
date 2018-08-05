@@ -33,4 +33,4 @@ See 'Simulator Recorder' > Preferences for stuff like shanging hot key and etc.
 
 ## Build Requirements
 
-* Xcode 10
+* Xcode 9
