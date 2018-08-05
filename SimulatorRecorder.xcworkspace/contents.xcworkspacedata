@@ -4,16 +4,6 @@
    <FileRef
       location = "group:SimulatorRecorder/SimulatorRecorder.xcodeproj">
    </FileRef>
-   <Group
-      location = "container:"
-      name = "Modules">
-      <FileRef
-         location = "group:GETracing/GETracing.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:GEFoundation/GEFoundation.xcodeproj">
-      </FileRef>
-   </Group>
    <FileRef
       location = "group:XcodeConfiguration">
    </FileRef>
