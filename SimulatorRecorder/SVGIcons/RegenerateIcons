@@ -1,0 +1,22 @@
+#! /bin/sh -xe
+
+wd=$(dirname "$0")
+srcroot="${wd:?}/.."
+
+projectName="${1:?}"
+
+for suffix in ""
+do
+	AppIcon="AppIcon${suffix}"
+	svg="${wd:?}/${AppIcon:?}.svg"
+	xcassets="${srcroot:?}"/"${projectName:?}"/Resources/Assets.xcassets
+	AppIconSet="${xcassets:?}"/"${AppIcon:?}".appiconset
+	mkdir -p "${AppIconSet:?}"
+	for i in 16 32 128 256 512
+	do
+		svg2png -w $i "${svg:?}" > "${AppIconSet:?}"/"${AppIcon:?}"-${i}x${i}.png
+		svg2png -w $((i * 2)) "${svg:?}" > "${AppIconSet:?}"/"${AppIcon:?}"-${i}x${i}@2x.png
+	done
+	#cp "${wd:?}"/AppIcon-Contents.json "${AppIconSet:?}"/Contents.json
+	svg2png -w 1024 "${svg:?}" > "${AppIcon:?}"-1024x1024.png
+done
