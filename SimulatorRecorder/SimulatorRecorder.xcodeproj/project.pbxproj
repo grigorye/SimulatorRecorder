@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A1410D8B496F95FDEB502E7 /* ModuleExports-GEFoundation.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */; };
 		136DD1FF16F2CE76F88D74A7 /* RecordingNameToken.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
 		220EE71EFD4F0E4ADE2CA9DC /* RecordingNamingPreferencesViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */; };
 		3CB6CCC64CA5B5ECF55E93F1 /* RecordingNameTokenObject.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */; };
-		4495DD2877227BF72EAB6DD8 /* ModuleExports-GETracing.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A249202529C100320E48 /* ModuleExports-GETracing.swift */; };
 		47D102B183039B0794804977 /* Pods_SimulatorRecorderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3512DEBE40799817AF90B8 /* Pods_SimulatorRecorderUITests.framework */; };
 		58C6B781EF6D53352436AE4A /* SimulatorRecorderUITests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */; };
 		6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
@@ -23,18 +21,13 @@
 		A41426E97E58B9359254AFD1 /* Pods_SimulatorRecorderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315C6C4F57259EF88178C2D0 /* Pods_SimulatorRecorderTests.framework */; };
 		A4F9C272AE48785F5EF9B662 /* ViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
 		C213E69B8F1854FD7CC988D2 /* RecordingNameFieldDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */; };
+		C4088C58211764B2000CE9B8 /* ExportableImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4088C57211764B2000CE9B8 /* ExportableImports.swift */; };
 		C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */; };
 		C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */; };
 		C41152AA20291E8C00DDB293 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A920291E8C00DDB293 /* StatusItemController.swift */; };
 		C41152AC2029224000DDB293 /* StatusItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41152AB2029224000DDB293 /* StatusItem.xib */; };
 		C41152AE20292F7D00DDB293 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */; };
 		C41F4C362028B3200090E79B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41F4C352028B3200090E79B /* Defaults.plist */; };
-		C424A2442025254500320E48 /* GEFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2432025254500320E48 /* GEFoundation.framework */; };
-		C424A2452025254500320E48 /* GEFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2432025254500320E48 /* GEFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C424A2472025255E00320E48 /* GETracing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2462025255E00320E48 /* GETracing.framework */; };
-		C424A2482025255E00320E48 /* GETracing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C424A2462025255E00320E48 /* GETracing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C424A24B202529C100320E48 /* ModuleExports-GETracing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A249202529C100320E48 /* ModuleExports-GETracing.swift */; };
-		C424A24C202529C100320E48 /* ModuleExports-GEFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */; };
 		C424A24E2025A88B00320E48 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
 		C461E54C2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461E54B2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift */; };
 		C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
@@ -87,11 +80,9 @@
 				A4F9C272AE48785F5EF9B662 /* ViewController.swift in Embed Sources */,
 				6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */,
 				75058297C89597B48E8DAAEF /* main.swift in Embed Sources */,
-				4495DD2877227BF72EAB6DD8 /* ModuleExports-GETracing.swift in Embed Sources */,
 				C213E69B8F1854FD7CC988D2 /* RecordingNameFieldDelegate.swift in Embed Sources */,
 				220EE71EFD4F0E4ADE2CA9DC /* RecordingNamingPreferencesViewController.swift in Embed Sources */,
 				3CB6CCC64CA5B5ECF55E93F1 /* RecordingNameTokenObject.swift in Embed Sources */,
-				0A1410D8B496F95FDEB502E7 /* ModuleExports-GEFoundation.swift in Embed Sources */,
 				136DD1FF16F2CE76F88D74A7 /* RecordingNameToken.swift in Embed Sources */,
 			);
 			name = "Embed Sources";
@@ -114,8 +105,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C424A2452025254500320E48 /* GEFoundation.framework in Embed Frameworks */,
-				C424A2482025255E00320E48 /* GETracing.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,16 +136,13 @@
 		A156466C2104C53A00AC9CF1 /* XCBundleBrewPackages */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCBundleBrewPackages; sourceTree = "<group>"; };
 		A181382A20FF221A002CCD7C /* RecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingController.swift; sourceTree = "<group>"; };
 		A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameFormatTransformer.swift; sourceTree = "<group>"; };
+		C4088C57211764B2000CE9B8 /* ExportableImports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportableImports.swift; sourceTree = "<group>"; };
 		C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathFromFilePathOrURLTransformer.swift; sourceTree = "<group>"; };
 		C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsRegistration.swift; sourceTree = "<group>"; };
 		C41152A920291E8C00DDB293 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
 		C41152AB2029224000DDB293 /* StatusItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusItem.xib; sourceTree = "<group>"; };
 		C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		C41F4C352028B3200090E79B /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
-		C424A2432025254500320E48 /* GEFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GEFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C424A2462025255E00320E48 /* GETracing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GETracing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C424A249202529C100320E48 /* ModuleExports-GETracing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ModuleExports-GETracing.swift"; path = "../GETracing/GETracing/ModuleExports-GETracing.swift"; sourceTree = "<group>"; };
-		C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ModuleExports-GEFoundation.swift"; path = "../GEFoundation/GEFoundation/ModuleExports-GEFoundation.swift"; sourceTree = "<group>"; };
 		C424A24D2025A88B00320E48 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C461E54B2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalKeyboardShortcutMonitor.swift; sourceTree = "<group>"; };
 		C479DD9E202266BF00E0A11D /* SimulatorRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,7 +169,7 @@
 		C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameToken.swift; sourceTree = "<group>"; };
 		C4D56E8E210CA476003404FC /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
-		C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = GeneralPreferences.storyboard; path = /Volumes/Ginger/Users/eg/Workbench/SimulatorRecorder/SimulatorRecorder/SimulatorRecorder/Preferences/General/GeneralPreferences.storyboard; sourceTree = "<absolute>"; };
+		C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = GeneralPreferences.storyboard; path = SimulatorRecorder/Preferences/General/GeneralPreferences.storyboard; sourceTree = SOURCE_ROOT; };
 		C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Preferences-Naming.storyboard"; sourceTree = "<group>"; };
 		C4E43E992103CCD4007A6FAC /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimulatorRecorder.xcconfig; sourceTree = "<group>"; };
@@ -196,8 +182,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C424A2442025254500320E48 /* GEFoundation.framework in Frameworks */,
-				C424A2472025255E00320E48 /* GETracing.framework in Frameworks */,
 				91E28D141DF07BAC22B0DC8D /* Pods_SimulatorRecorder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,8 +221,6 @@
 		C424A2372025244600320E48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C424A24A202529C100320E48 /* ModuleExports-GEFoundation.swift */,
-				C424A249202529C100320E48 /* ModuleExports-GETracing.swift */,
 				2F340FE43ED3C354B4ACBF9A /* Pods_SimulatorRecorder.framework */,
 				315C6C4F57259EF88178C2D0 /* Pods_SimulatorRecorderTests.framework */,
 				7C3512DEBE40799817AF90B8 /* Pods_SimulatorRecorderUITests.framework */,
@@ -295,6 +277,7 @@
 		C46049D1210C6F8B00AED3FA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C4088C57211764B2000CE9B8 /* ExportableImports.swift */,
 				C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */,
 				C461E54B2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift */,
 				C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */,
@@ -320,8 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				C4FF30212107FDBA00999603 /* README.md */,
-				C424A2462025255E00320E48 /* GETracing.framework */,
-				C424A2432025254500320E48 /* GEFoundation.framework */,
 				C479DDA0202266BF00E0A11D /* SimulatorRecorder */,
 				C479DDB3202266C000E0A11D /* SimulatorRecorderTests */,
 				C479DDBE202266C000E0A11D /* SimulatorRecorderUITests */,
@@ -635,10 +616,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GEFoundation/GEFoundation.framework",
+				"${BUILT_PRODUCTS_DIR}/GETracing/GETracing.framework",
 				"${BUILT_PRODUCTS_DIR}/MASShortcut/MASShortcut.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GEFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GETracing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASShortcut.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,18 +694,17 @@
 				C424A24E2025A88B00320E48 /* main.swift in Sources */,
 				A181382B20FF221A002CCD7C /* RecordingController.swift in Sources */,
 				C461E54C2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift in Sources */,
-				C424A24B202529C100320E48 /* ModuleExports-GETracing.swift in Sources */,
 				C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */,
 				C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */,
 				C479DDE12023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift in Sources */,
 				A1A19F5C202A2498004170D8 /* RecordingNameFormatTransformer.swift in Sources */,
+				C4088C58211764B2000CE9B8 /* ExportableImports.swift in Sources */,
 				C4E43E9A2103CCD4007A6FAC /* UserNotifications.swift in Sources */,
 				C479DDE52023FEE800E0A11D /* RecordingNameTokenObject.swift in Sources */,
 				C41152AA20291E8C00DDB293 /* StatusItemController.swift in Sources */,
 				C41152AE20292F7D00DDB293 /* PreferencesWindowController.swift in Sources */,
 				C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */,
 				C4D56E94210CFA30003404FC /* GeneralPreferencesViewController.swift in Sources */,
-				C424A24C202529C100320E48 /* ModuleExports-GEFoundation.swift in Sources */,
 				C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
