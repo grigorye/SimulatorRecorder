@@ -1,4 +1,7 @@
-platform :osx, '10.9'
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/grigorye/podspecs.git'
+
+platform :osx, '10.10'
 
 project "SimulatorRecorder/SimulatorRecorder.xcodeproj"
 
@@ -6,6 +9,8 @@ target 'SimulatorRecorder' do
   use_frameworks!
 
   pod 'MASShortcut'
+  pod 'GETracing', '~> 0.1'
+  pod 'GEFoundation', '~> 0.1'
   
   target 'SimulatorRecorderTests' do
     inherit! :search_paths
