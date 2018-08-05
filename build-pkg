@@ -30,9 +30,15 @@ buildProject \
     DSTROOT="${installDir:?}" \
     "${@}"
 
-productDefinitionPlist=$(buildProject -showBuildSettings | awk '/.* PRODUCT_DEFINITION_PLIST = (.*)/ {print $3}')
+buildSetting() {
+    local name="${1:?}"; shift
+    buildProject -showBuildSettings | awk '/.* '"${name:?}"' = (.*)/ {print $3}'
+}
+
+productDefinitionPlist=$(buildSetting 'PRODUCT_DEFINITION_PLIST')
+productName="${projectName:?}"
 
 productbuild \
     --product "${projectName:?}"/"${productDefinitionPlist:?}" \
-    --root "${installDir:?}" \
+    --component "${installDir:?}"/Applications/"${productName:?}".app \
     "${pkg:?}"
