@@ -1,0 +1,23 @@
+#! /bin/sh -xe
+
+set -o pipefail
+
+formulaDir="build/Formula"
+formula="${formulaDir:?}/simulator-recorder.rb"
+pkg="build/SimulatorRecorder.pkg"
+
+test -d "${formulaDir:?}" || mkdir "${formulaDir:?}"
+
+cat > "${formula:?}" <<END
+cask 'simulator-recorder' do
+  version '$(defaults read "$PWD"/build/SimulatorRecorder.dst/Applications/SimulatorRecorder.app/Contents/Info CFBundleVersion)'
+  sha256 '$(shasum -a 256 "${pkg:?}" | cut -d ' ' -f 1)'
+
+  url 'https://gitlab.com/grigorye/SimulatorRecorder/-/jobs/${CI_JOB_ID:?}/artifacts/master/raw/build/SimulatorRecorder.pkg'
+  name 'Simulator Recorder'
+  homepage 'https://gitlab.com/grigorye/SimulatorRecorder'
+
+  pkg 'SimulatorRecorder.pkg', allow_untrusted: true
+  uninstall pkgutil: ['com.grigorye.SimulatorRecorder']
+end
+END

@@ -9,6 +9,7 @@ build_project:
   artifacts:
     paths:
       - build/*.pkg
+      - build/Formula/*.rb
   tags:
     - xcode-10
     - macos

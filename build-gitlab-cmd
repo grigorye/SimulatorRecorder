@@ -7,3 +7,5 @@ packageName="${1:?}"; shift
     "${buildDir:?}/${packageName:?}.pkg" \
     GE_DERIVED_DATA_PATH="${buildDir:?}"/DerivedData \
     DSTROOT="${buildDir:?}/${packageName:?}".dst
+
+./build-gitlab-homebrew-formula
