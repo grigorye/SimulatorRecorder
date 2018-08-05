@@ -13,7 +13,7 @@ cask 'simulator-recorder' do
   version '$(defaults read "$PWD"/build/SimulatorRecorder.dst/Applications/SimulatorRecorder.app/Contents/Info CFBundleVersion)'
   sha256 '$(shasum -a 256 "${pkg:?}" | cut -d ' ' -f 1)'
 
-  url 'https://gitlab.com/grigorye/SimulatorRecorder/-/jobs/${CI_JOB_ID:?}/artifacts/master/raw/build/SimulatorRecorder.pkg'
+  url 'https://gitlab.com/grigorye/SimulatorRecorder/-/jobs/${CI_JOB_ID:?}/artifacts/raw/build/SimulatorRecorder.pkg'
   name 'Simulator Recorder'
   homepage 'https://gitlab.com/grigorye/SimulatorRecorder'
 
