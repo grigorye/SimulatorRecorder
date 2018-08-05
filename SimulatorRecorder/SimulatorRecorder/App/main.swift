@@ -6,11 +6,11 @@
 //  Copyright © 2018 Grigory Entin. All rights reserved.
 //
 
+import GEFoundation
+import GETracing
 import AppKit
 
-loggers += [
-	defaultLogger
-]
+GETracing.logRecord = GEFoundation.defaultLogger
 
 x$(CommandLine.arguments)
 
