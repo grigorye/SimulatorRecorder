@@ -33,7 +33,7 @@ class StatusItemController : NSObject, NSMenuDelegate {
 			return
 		}
 		button.action = #selector(statusItemAction)
-		button.image = #imageLiteral(resourceName: "StartRecording")
+		button.image = #imageLiteral(resourceName: "MenuIcon")
 	}
 	
 	func activate() {
