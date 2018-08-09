@@ -20,7 +20,9 @@ extension NSStoryboard.Name {
 	static let preferences = NSStoryboard.Name(rawValue: "Preferences")
 }
 
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSResponder, NSApplicationDelegate {
+	
+	// MARK: -
 	
 	func instantiatePreferensesWindowController() -> NSWindowController {
 		
@@ -29,6 +31,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		return windowController
 	}
 	
+	// MARK: -
+	
 	@IBAction func showPreferences(_ sender: Any) {
 		
 		let preferencesWindowController = currentPreferencesWindowController ?? instantiatePreferensesWindowController()
@@ -36,6 +40,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		preferencesWindowController.showWindow(sender)
 	}
 	
+	@IBAction func startRecording(_: Any) {
+		recordingInteractor.toggleRecording(self)
+	}
+	
+	@IBAction func stopRecording(_: Any) {
+		recordingInteractor.toggleRecording(self)
+	}
+
 	func verifyTrustedAccessibility() {
 		
 		let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() : true] as CFDictionary
@@ -44,18 +56,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	func globalKeyboardShortcutReceived() {
 		
-		let application = NSApplication.shared
-		
-		guard let viewController = application.windows.first?.contentViewController as? ViewController else {
-			
-			assert(false)
-			return
-		}
-		
-		viewController.toggleRecording(self)
+		recordingInteractor.toggleRecording(self)
 	}
 	
 	func applicationDidFinishLaunching(_ notification: Notification) {
+		
+		NSApplication.shared.nextResponder = recordingInteractor
 		
 		verifyTrustedAccessibility()
 
@@ -74,5 +80,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		#endif
 		
 		statusItemController.activate()
+		statusItemController.dataSource = AppStatusItemControllerSource()
+	}
+}
+
+class AppStatusItemControllerSource : StatusItemControllerDataSource {
+	var stopRecordingEnabled: Bool {
+		return recordingInteractor.recordingController.recording
+	}
+	
+	var startRecordingEnabled: Bool {
+		return recordingInteractor.recordingController.readyToRecord
 	}
 }
