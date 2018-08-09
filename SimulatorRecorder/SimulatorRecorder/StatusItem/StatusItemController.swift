@@ -10,7 +10,14 @@ import AppKit
 
 let statusItemController = StatusItemController()
 
-class StatusItemController : NSObject {
+protocol StatusItemControllerDataSource {
+	var stopRecordingEnabled: Bool { get }
+	var startRecordingEnabled: Bool { get }
+}
+
+class StatusItemController : NSObject, NSMenuDelegate {
+	
+	var dataSource: StatusItemControllerDataSource!
 	
 	@IBOutlet var statusMenu: NSMenu!
 
@@ -38,5 +45,23 @@ class StatusItemController : NSObject {
 			return
 		}
 		_ = statusItem
+	}
+	
+	// MARK: - <NSMenuDelegate>
+	
+	@IBOutlet var startRecordingMenuItem: NSMenuItem!
+	@IBOutlet var stopRecordingMenuItem: NSMenuItem!
+
+    public func menuNeedsUpdate(_ menu: NSMenu) {
+		let startRecordingEnabled = dataSource.startRecordingEnabled
+		startRecordingMenuItem … {
+			$0.isHidden = !startRecordingEnabled
+			$0.isEnabled = startRecordingEnabled
+		}
+		let stopRecordingEnabled = dataSource.stopRecordingEnabled
+		stopRecordingMenuItem … {
+			$0.isHidden = !stopRecordingEnabled
+			$0.isEnabled = stopRecordingEnabled
+		}
 	}
 }
