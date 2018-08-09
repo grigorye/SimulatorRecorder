@@ -1,1 +1,5 @@
-./RegenerateIcons SimulatorRecorder
+#! /bin/sh -xe
+
+wd=$(dirname "$0")
+
+"${wd:?}"/RegenerateIcons SimulatorRecorder
