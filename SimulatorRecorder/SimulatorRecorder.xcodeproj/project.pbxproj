@@ -30,6 +30,7 @@
 		C41F4C362028B3200090E79B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41F4C352028B3200090E79B /* Defaults.plist */; };
 		C424A24E2025A88B00320E48 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
 		C461E54C2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461E54B2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift */; };
+		C46C530C211A6FF00041D8C6 /* RecordingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C530B211A6FF00041D8C6 /* RecordingInteractor.swift */; };
 		C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
 		C479DDA4202266BF00E0A11D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
 		C479DDA6202266BF00E0A11D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479DDA5202266BF00E0A11D /* Assets.xcassets */; };
@@ -145,6 +146,7 @@
 		C41F4C352028B3200090E79B /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		C424A24D2025A88B00320E48 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C461E54B2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalKeyboardShortcutMonitor.swift; sourceTree = "<group>"; };
+		C46C530B211A6FF00041D8C6 /* RecordingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingInteractor.swift; sourceTree = "<group>"; };
 		C479DD9E202266BF00E0A11D /* SimulatorRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C479DDA1202266BF00E0A11D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C479DDA3202266BF00E0A11D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			children = (
 				C4D56E8E210CA476003404FC /* MainView.storyboard */,
 				C479DDA3202266BF00E0A11D /* ViewController.swift */,
+				C46C530B211A6FF00041D8C6 /* RecordingInteractor.swift */,
 			);
 			path = MainWindow;
 			sourceTree = "<group>";
@@ -696,6 +699,7 @@
 				C461E54C2050FBAA0063D5C5 /* GlobalKeyboardShortcutMonitor.swift in Sources */,
 				C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */,
 				C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */,
+				C46C530C211A6FF00041D8C6 /* RecordingInteractor.swift in Sources */,
 				C479DDE12023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift in Sources */,
 				A1A19F5C202A2498004170D8 /* RecordingNameFormatTransformer.swift in Sources */,
 				C4088C58211764B2000CE9B8 /* ExportableImports.swift in Sources */,
