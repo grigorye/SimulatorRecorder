@@ -19,4 +19,7 @@ do
 	done
 	#cp "${wd:?}"/AppIcon-Contents.json "${AppIconSet:?}"/Contents.json
 	svg2png -w 1024 "${svg:?}" > "${AppIcon:?}"-1024x1024.png
+
+	menuIconSVG="${wd:?}/MenuIcon.svg"
+	svg2pdf -w 22 "${menuIconSVG:?}" > "${wd:?}/pdf/MenuIcon-22.pdf"
 done
