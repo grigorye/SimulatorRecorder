@@ -71,12 +71,22 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 		let keyboardShortcutMonitor = GlobalKeyboardShortcutMonitor(shortcut) {
             x$(self.globalKeyboardShortcutReceived())
 		}
+		
 		keyboardShortcutMonitor.activate()
 		#else
-		let defaultsKey = "globalShortcut"
-		MASShortcutBinder.shared()?.bindShortcut(withDefaultsKey: defaultsKey, toAction: {
-			self.globalKeyboardShortcutReceived()
-		})
+		
+		let defaultShortcut = MASShortcut(
+			keyCode: .init(defaultShortcutKeyCode),
+			modifierFlags: defaultShortcutModifierFlags.rawValue
+		)!
+		
+		MASShortcutBinder.shared()! … {
+			let defaultShortcuts = [defaultsKey: defaultShortcut]
+			$0.registerDefaultShortcuts(defaultShortcuts)
+			$0.bindShortcut(withDefaultsKey: defaultsKey) {
+				self.globalKeyboardShortcutReceived()
+			}
+		}
 		#endif
 		
 		statusItemController.activate()
@@ -84,7 +94,30 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 	}
 }
 
+let defaultsKey = "toggleRecordingShortcut"
+let defaults = UserDefaults.standard
+
 class AppStatusItemControllerSource : StatusItemControllerDataSource {
+	
+	var shortcut: MASShortcut? {
+		guard let shortcutData = defaults.data(forKey: defaultsKey) else {
+			return nil
+		}
+		let shortcut = try! NSKeyedUnarchiver.unarchivedObject(ofClass: MASShortcut.self, from: shortcutData)
+		return shortcut
+	}
+	
+	var keyEquivalent: String {
+		return shortcut?.keyCodeString ?? ""
+	}
+	
+	var keyEquivalentModifierMask: NSEvent.ModifierFlags {
+		guard let modifierFlags = shortcut?.modifierFlags else {
+			return .init()
+		}
+		return .init(rawValue: modifierFlags)
+	}
+	
 	var stopRecordingEnabled: Bool {
 		return recordingInteractor.recordingController.recording
 	}
