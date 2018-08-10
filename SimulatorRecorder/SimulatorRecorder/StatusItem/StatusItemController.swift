@@ -13,37 +13,41 @@ let statusItemController = StatusItemController()
 protocol StatusItemControllerDataSource {
 	var stopRecordingEnabled: Bool { get }
 	var startRecordingEnabled: Bool { get }
+	var keyEquivalent: String { get }
+	var keyEquivalentModifierMask: NSEvent.ModifierFlags { get }
 }
 
+extension Bundle {
+	open func loadNibNamed(_ nibName: NSNib.Name, owner: Any?, topLevelObjects: AutoreleasingUnsafeMutablePointer<NSArray?>? = nil, orThrow error: Error) throws {
+		if !loadNibNamed(nibName, owner: owner, topLevelObjects: topLevelObjects) {
+			throw error
+		}
+	}
+}
+
+enum AppError : Error {
+	case nibLoadingError
+}
+
+let nibLoadingError = AppError.nibLoadingError
+
 class StatusItemController : NSObject, NSMenuDelegate {
-	
 	var dataSource: StatusItemControllerDataSource!
 	
 	@IBOutlet var statusMenu: NSMenu!
 
-	@objc func statusItemAction() {
-		
-	}
-	
 	lazy var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength) … {
-		
 		$0.menu = statusMenu
 		guard let button = $0.button else {
 			assert(false)
 			return
 		}
-		button.action = #selector(statusItemAction)
 		button.image = #imageLiteral(resourceName: "MenuIcon")
 	}
 	
 	func activate() {
-		
 		let bundle = Bundle(for: type(of: self))
-		guard bundle.loadNibNamed(NSNib.Name("StatusItem"), owner: self, topLevelObjects: nil) else {
-			
-			assert(false)
-			return
-		}
+		try! bundle.loadNibNamed(NSNib.Name("StatusItem"), owner: self, topLevelObjects: nil, orThrow: nibLoadingError)
 		_ = statusItem
 	}
 	
@@ -57,11 +61,15 @@ class StatusItemController : NSObject, NSMenuDelegate {
 		startRecordingMenuItem … {
 			$0.isHidden = !startRecordingEnabled
 			$0.isEnabled = startRecordingEnabled
+			$0.keyEquivalent = dataSource.keyEquivalent
+			$0.keyEquivalentModifierMask = dataSource.keyEquivalentModifierMask
 		}
 		let stopRecordingEnabled = dataSource.stopRecordingEnabled
 		stopRecordingMenuItem … {
 			$0.isHidden = !stopRecordingEnabled
 			$0.isEnabled = stopRecordingEnabled
+			$0.keyEquivalent = dataSource.keyEquivalent
+			$0.keyEquivalentModifierMask = dataSource.keyEquivalentModifierMask
 		}
 	}
 }
