@@ -1,6 +1,7 @@
 #! /usr/bin/env -i /bin/sh -ex
 
 pkg="${1:?}"; shift
+dmg=$(echo "${pkg:?}" | sed 's/.pkg$/.dmg/')
 
 export "${@}"
 
@@ -42,3 +43,10 @@ productbuild \
     --product "${projectName:?}"/"${productDefinitionPlist:?}" \
     --component "${installDir:?}"/Applications/"${productName:?}".app /Applications \
     "${pkg:?}"
+
+hdiutil create \
+    -volname "${productName:?}" \
+    -srcfolder "${installDir:?}"/Applications \
+    -ov \
+    -format UDZO \
+    "${dmg:?}"
