@@ -65,16 +65,6 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 		
 		verifyTrustedAccessibility()
 
-		#if false
-        let shortcut = KeyboardShortcut(modifierFlags: [.command, .shift], keyCode: kVK_ANSI_7)
-        
-		let keyboardShortcutMonitor = GlobalKeyboardShortcutMonitor(shortcut) {
-            x$(self.globalKeyboardShortcutReceived())
-		}
-		
-		keyboardShortcutMonitor.activate()
-		#else
-		
 		let defaultShortcut = MASShortcut(
 			keyCode: .init(defaultShortcutKeyCode),
 			modifierFlags: defaultShortcutModifierFlags.rawValue
@@ -87,7 +77,6 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 				self.globalKeyboardShortcutReceived()
 			}
 		}
-		#endif
 		
 		statusItemController.activate()
 		statusItemController.dataSource = AppStatusItemControllerSource()
