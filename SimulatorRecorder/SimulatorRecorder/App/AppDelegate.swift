@@ -25,19 +25,22 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 	// MARK: -
 	
 	func instantiatePreferensesWindowController() -> NSWindowController {
-		
 		let windowController = NSStoryboard(name: .preferences, bundle: nil).instantiateInitialController() as! NSWindowController
 		
 		return windowController
 	}
 	
+	func showPreferencesWindow() {
+		let preferencesWindowController = currentPreferencesWindowController ?? instantiatePreferensesWindowController()
+		
+		preferencesWindowController.showWindow(self)
+	}
+	
 	// MARK: -
 	
 	@IBAction func showPreferences(_ sender: Any) {
-		
-		let preferencesWindowController = currentPreferencesWindowController ?? instantiatePreferensesWindowController()
-		
-		preferencesWindowController.showWindow(sender)
+		showPreferencesWindow()
+		NSApp.activate(ignoringOtherApps: true)
 	}
 	
 	@IBAction func startRecording(_: Any) {
