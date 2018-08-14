@@ -8,6 +8,10 @@
 
 import AppKit
 
+extension NSNib.Name {
+	static let statusItem = NSNib.Name(rawValue: "StatusItem")
+}
+
 let statusItemController = StatusItemController()
 
 protocol StatusItemControllerDataSource {
@@ -17,37 +21,25 @@ protocol StatusItemControllerDataSource {
 	var keyEquivalentModifierMask: NSEvent.ModifierFlags { get }
 }
 
-extension Bundle {
-	open func loadNibNamed(_ nibName: NSNib.Name, owner: Any?, topLevelObjects: AutoreleasingUnsafeMutablePointer<NSArray?>? = nil, orThrow error: Error) throws {
-		if !loadNibNamed(nibName, owner: owner, topLevelObjects: topLevelObjects) {
-			throw error
-		}
-	}
-}
-
-enum AppError : Error {
-	case nibLoadingError
-}
-
-let nibLoadingError = AppError.nibLoadingError
-
 class StatusItemController : NSObject, NSMenuDelegate {
 	var dataSource: StatusItemControllerDataSource!
 	
 	@IBOutlet var statusMenu: NSMenu!
 
-	lazy var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength) … {
-		$0.menu = statusMenu
-		guard let button = $0.button else {
-			assert(false)
-			return
+	lazy var statusItem: NSStatusItem = {
+		NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength) … {
+			$0.menu = statusMenu
+			guard let button = $0.button else {
+				assert(false)
+				return
+			}
+			button.image = #imageLiteral(resourceName: "MenuIcon")
 		}
-		button.image = #imageLiteral(resourceName: "MenuIcon")
-	}
-	
+	}()
+
 	func activate() {
 		let bundle = Bundle(for: type(of: self))
-		try! bundle.loadNibNamed(NSNib.Name("StatusItem"), owner: self, topLevelObjects: nil, orThrow: nibLoadingError)
+		try! throwify(bundle.loadNibNamed(.statusItem, owner: self, topLevelObjects: nil))
 		_ = statusItem
 	}
 	

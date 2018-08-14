@@ -77,10 +77,7 @@ import Foundation
     }
 	
 	func recorderExecutableURL() throws -> URL {
-		guard let recorderExecutableURL = Bundle(for: type(of: self)).url(forResource: "recordVideo", withExtension: "") else {
-			
-			throw RecordingError.missingRecorderExecutable
-		}
+		let recorderExecutableURL = try throwify(Bundle(for: type(of: self)).url(forResource: "recordVideo", withExtension: ""))
 		return recorderExecutableURL
 	}
 	
