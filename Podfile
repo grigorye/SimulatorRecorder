@@ -10,7 +10,7 @@ target 'SimulatorRecorder' do
 
   pod 'MASShortcut'
   pod 'GETracing', '~> 0.1'
-  pod 'GEFoundation', '~> 0.1'
+  pod 'GEFoundation', :git => 'https://github.com/grigorye/GEFoundation', :branch => 'master'
   
   target 'SimulatorRecorderTests' do
     inherit! :search_paths
