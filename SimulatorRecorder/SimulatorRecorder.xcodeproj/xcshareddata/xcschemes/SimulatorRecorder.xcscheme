@@ -87,12 +87,16 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-showRecordingDebugInfo YES"
+            argument = "-defaultLogKind nslog"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-defaultLogKind print"
             isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
+            argument = "-showRecordingDebugInfo YES"
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "-sourceLabelsEnabled YES"
