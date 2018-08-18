@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		136DD1FF16F2CE76F88D74A7 /* RecordingNameToken.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
+		1D9AC617087B369D761B32A7 /* PreferencesPaneViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4F760BE2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift */; };
 		207DC8BF51B6BE724650E300 /* RecordingNameFormatTransformer.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */; };
 		220EE71EFD4F0E4ADE2CA9DC /* RecordingNamingPreferencesViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */; };
 		247AEC1089C3476A85C95073 /* DefaultsRegistration.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */; };
@@ -66,6 +67,7 @@
 		C4E43E9A2103CCD4007A6FAC /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E43E992103CCD4007A6FAC /* UserNotifications.swift */; };
 		C4F760BB21284DC600CBDFF3 /* NSArrayControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F760BA21284DC600CBDFF3 /* NSArrayControllerExtensions.swift */; };
 		C4F760BD21284E9500CBDFF3 /* DeviceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F760BC21284E9500CBDFF3 /* DeviceRecorder.swift */; };
+		C4F760BF2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F760BE2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift */; };
 		D0904EC88BF689C0BDB13767 /* GeneralPreferencesViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */; };
 		D0CF358CD14989AB3C40FC0B /* SimulatorRecorderTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */; };
 		D65CCA006C1F9ED7EA06F463 /* Defaults.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C433AE25211E3D1E000A8501 /* Defaults.swift */; };
@@ -118,6 +120,7 @@
 				8A45121906C2023AAEDBC67E /* SimulatorController.swift in Embed Sources */,
 				321BEE2944190B362ABCB01D /* NSArrayControllerExtensions.swift in Embed Sources */,
 				57EDFB128C35B1312DD0587B /* DeviceRecorder.swift in Embed Sources */,
+				1D9AC617087B369D761B32A7 /* PreferencesPaneViewController.swift in Embed Sources */,
 			);
 			name = "Embed Sources";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +213,7 @@
 		C4E43E992103CCD4007A6FAC /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		C4F760BA21284DC600CBDFF3 /* NSArrayControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSArrayControllerExtensions.swift; sourceTree = "<group>"; };
 		C4F760BC21284E9500CBDFF3 /* DeviceRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRecorder.swift; sourceTree = "<group>"; };
+		C4F760BE2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesPaneViewController.swift; sourceTree = "<group>"; };
 		C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimulatorRecorder.xcconfig; sourceTree = "<group>"; };
 		C4FF30212107FDBA00999603 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C4FF3022210A68F200999603 /* ProductDefinition.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.info; path = ProductDefinition.plist; sourceTree = "<group>"; };
@@ -403,6 +407,7 @@
 			children = (
 				C4844F19202A5B7500FFB5BA /* Preferences.storyboard */,
 				C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */,
+				C4F760BE2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift */,
 				C4D56E92210CDBC7003404FC /* General */,
 				C46049D2210C6FC900AED3FA /* Naming */,
 			);
@@ -735,6 +740,7 @@
 				C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */,
 				C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */,
 				C424A24E2025A88B00320E48 /* main.swift in Sources */,
+				C4F760BF2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift in Sources */,
 				A181382B20FF221A002CCD7C /* RecordingController.swift in Sources */,
 				C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */,
 				C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */,
