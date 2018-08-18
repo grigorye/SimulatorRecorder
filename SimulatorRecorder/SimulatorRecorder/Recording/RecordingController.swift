@@ -6,10 +6,90 @@
 //  Copyright © 2018 Grigory Entin. All rights reserved.
 //
 
+import AppKit
 import Foundation
 
-@objc class RecordingController : NSObject {
+@objc public protocol ObjCRecordingController : class {
+	@objc var interrupting: Bool { get }
+	@objc var recording: Bool { get }
+	@objc var readyToRecord: Bool { get }
+}
+
+@objc class RecordingController : NSObject, ObjCRecordingController {
 	
+	func stopRecording() {
+		deviceRecorders.filter { $0.recording }.forEach {
+			$0.stopRecording()
+		}
+	}
+	
+	func startRecording(terminationHandler: @escaping (([Error?]) -> Void)) {
+		let devices = try! x$(SimulatorController().devices())
+		let bootedDevices = devices.filter { $0.state == .booted }
+		
+		let completionGroup = DispatchGroup()
+		let completionQueue = DispatchQueue(label: "recordingCompletion")
+		var errors: [Error?] = []
+		bootedDevices.forEach { device in
+			completionGroup.enter()
+			let deviceRecorder = DeviceRecorder()
+			deviceRecorders.append(deviceRecorder)
+			deviceRecorder.startRecording(device) { error in
+				completionQueue.async {
+					errors.append(error)
+					completionGroup.leave()
+				}
+			}
+		}
+		completionGroup.notify(queue: completionQueue) { [weak self] in
+			self?.deviceRecorders = []
+			terminationHandler(errors)
+		}
+	}
+	
+	// MARK: -
+	
+	override init() {
+		super.init()
+		
+		self.bind(
+			NSBindingName(rawValue: #keyPath(recording)),
+			to: deviceRecordersController,
+			withKeyPath: "arrangedObjects.@max.recording",
+			options: [
+				.nullPlaceholder: false
+			]
+		)
+		self.bind(
+			NSBindingName(rawValue: #keyPath(readyToRecord)),
+			to: deviceRecordersController,
+			withKeyPath: "arrangedObjects.@min.readyToRecord",
+			options: [
+				.nullPlaceholder: true
+			]
+		)
+		self.bind(
+			NSBindingName(rawValue: #keyPath(interrupting)),
+			to: deviceRecordersController,
+			withKeyPath: "arrangedObjects.@max.interrupting",
+			options: [
+				.nullPlaceholder: false
+			]
+		)
+	}
+	
+	@objc dynamic var deviceRecordersController = NSArrayController()
+	@objc dynamic var deviceRecorders: [DeviceRecorder] = [] {
+		didSet {
+			deviceRecordersController.content = deviceRecorders
+		}
+	}
+	@objc dynamic var recording: Bool = false
+	@objc dynamic var readyToRecord: Bool = false
+	@objc dynamic var interrupting: Bool = false
+}
+
+class DeviceRecorder : NSObject {
     @objc dynamic var process: Process?
     
     enum RecordingError : Error {
@@ -81,7 +161,7 @@ import Foundation
 		return recorderExecutableURL
 	}
 	
-	func startRecording(terminationHandler: @escaping ((Error?) -> Void)) {
+	func startRecording(_ device: SimulatorDeviceInfo, terminationHandler: @escaping (Error?) -> Void) {
 		do {
 			let recorderExecutableURL = try self.recorderExecutableURL()
 			
@@ -91,6 +171,11 @@ import Foundation
 					"APP_BUNDLE": Bundle.main.bundlePath
 				]
 				$0.environment = ProcessInfo().environment.merging(extraEnvironment, uniquingKeysWith: { $1 })
+				$0.arguments = [
+					device.udid,
+					device.name,
+					device.osVersion
+				]
 			}
 			process.terminationHandler = { (process) in
 				DispatchQueue.main.async {
