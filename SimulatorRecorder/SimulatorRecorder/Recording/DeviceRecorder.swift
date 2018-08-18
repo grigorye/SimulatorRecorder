@@ -39,7 +39,7 @@ class DeviceRecorder : NSObject {
 	@objc dynamic var interrupting: Bool = false
 	@objc dynamic var terminated: Bool = false
 	
-	func stopRecording() {
+	func stopRecording(completionHandler: @escaping (Error?) -> Void) {
 		guard let process = process else {
 			assert(false)
 			return
@@ -48,8 +48,13 @@ class DeviceRecorder : NSObject {
 		assert(!interrupting)
 		interrupting = true
 		process.interrupt()
-		process.waitUntilExit()
-		interrupting = false
+		DispatchQueue.global().async {
+			process.waitUntilExit()
+			DispatchQueue.main.async { [weak self] in
+				self?.interrupting = false
+				completionHandler(nil)
+			}
+		}
 	}
 	
 	func completeRecording(completionHandler: (Error?) -> Void) {

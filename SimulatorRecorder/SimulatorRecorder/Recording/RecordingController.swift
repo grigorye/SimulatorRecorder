@@ -17,9 +17,21 @@ import Foundation
 
 @objc class RecordingController : NSObject, ObjCRecordingController {
 	
-	func stopRecording() {
+	func stopRecording(completionHandler: @escaping ([Error?]) -> Void) {
+		var errors: [Error?] = []
+		let completionGroup = DispatchGroup()
+		let completionQueue = DispatchQueue(label: "stopRecording")
 		deviceRecorders.filter { $0.recording }.forEach {
-			$0.stopRecording()
+			completionGroup.enter()
+			$0.stopRecording { error in
+				completionQueue.async {
+					errors.append(error)
+					completionGroup.leave()
+				}
+			}
+		}
+		completionGroup.notify(queue: completionQueue) {
+			completionHandler(errors)
 		}
 	}
 	
@@ -28,7 +40,7 @@ import Foundation
 		let bootedDevices = devices.filter { $0.state == .booted }
 		
 		let completionGroup = DispatchGroup()
-		let completionQueue = DispatchQueue(label: "recordingCompletion")
+		let completionQueue = DispatchQueue(label: "recording")
 		var errors: [Error?] = []
 		bootedDevices.forEach { device in
 			completionGroup.enter()

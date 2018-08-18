@@ -15,7 +15,12 @@ class RecordingInteractor: NSResponder, GlobalActionResponder {
 	@objc dynamic var recordingController: RecordingController! = RecordingController()
 	
 	@IBAction func stopRecording(_ sender: Any) {
-		recordingController.stopRecording()
+		recordingController.stopRecording { errors in
+			let errors = errors.compactMap {$0}
+			if let error = errors.last {
+				_ = x$(error)
+			}
+		}
 	}
 	
 	@IBAction func toggleRecording(_ sender: Any) {
