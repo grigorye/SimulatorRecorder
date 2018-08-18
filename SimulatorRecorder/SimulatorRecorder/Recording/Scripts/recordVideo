@@ -1,5 +1,9 @@
 #! /bin/sh -e
 
+udid="${1:?}"; shift
+device="${1:?}"; shift
+version="${1:?}"; shift
+
 bn=$(basename "$0")
 wd=$(dirname "$0")
 
@@ -28,7 +32,7 @@ tmpdir=$(mktemp -d "${TMPDIR:?}"/"${bn:?}".XXXXX)
 rawVideo="${tmpdir:?}/simvideo.264"
 timestamp=$(timestamp)
 
-xcrun simctl io booted recordVideo --type='h264' "${rawVideo:?}"
+xcrun simctl io "${udid:?}" recordVideo --type='h264' "${rawVideo:?}"
 ls -l "${rawVideo:?}"
 
 #
@@ -38,14 +42,11 @@ revealInFinder=$(defaultFor boolean "revealInFinder")
 videoNameFormatEscaped=$(defaultFor string "videoNameFormat")
 videoNameFormat=$(echo "[\"${videoNameFormatEscaped:?}\"]" | python -c 'import json, sys; sys.stdout.write(json.load(sys.stdin)[0].encode("utf-8"))')
 
-simulatorName=$(simulatorName)
 timestampFormat="%Y-%m-%d_%H%M%S"
 timestamp=$(date +"${timestampFormat:?}")
 
 date=$(date -j -f "${timestampFormat:?}" "${timestamp:?}" +"%Y-%m-%d")
 time=$(date -j -f "${timestampFormat:?}" "${timestamp:?}" +"%H.%M.%S")
-device=$(echo ${simulatorName:?} | sed 's/^\(.*\) - \(.*\)$/\1/')
-version=$(echo ${simulatorName:?} | sed 's/^\(.*\) - \(.*\)$/\2/')
 
 videoName=$(eval echo "${videoNameFormat:?}")
 convertedVideo="${recordingsDir:?}/${videoName:?}.m4v"
