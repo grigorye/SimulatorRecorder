@@ -15,7 +15,7 @@ class RecordingNameTokenObject : NSObject {
 	public required init?(pasteboardPropertyList propertyList: Any, ofType type: NSPasteboard.PasteboardType) {
 		
 		guard type == .filenameToken else {
-			assert(false)
+			assert(false, "\(type)")
 			return nil
 		}
 		guard let data = propertyList as? Data else {
