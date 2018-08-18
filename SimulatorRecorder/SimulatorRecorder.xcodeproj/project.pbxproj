@@ -46,6 +46,7 @@
 		C4844F1B202A5BA100FFB5BA /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4844F19202A5B7500FFB5BA /* Preferences.storyboard */; };
 		C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */; };
 		C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
+		C4AC951A212757670070A911 /* SimulatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9519212757670070A911 /* SimulatorController.swift */; };
 		C4D56E8F210CA477003404FC /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E8E210CA476003404FC /* MainView.storyboard */; };
 		C4D56E94210CFA30003404FC /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */; };
 		C4D56E96210CFADF003404FC /* GeneralPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */; };
@@ -169,6 +170,7 @@
 		C4844F1A202A5B7600FFB5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
 		C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpButtonLikePathControl.swift; sourceTree = "<group>"; };
 		C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameToken.swift; sourceTree = "<group>"; };
+		C4AC9519212757670070A911 /* SimulatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorController.swift; sourceTree = "<group>"; };
 		C4D56E8E210CA476003404FC /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
 		C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = GeneralPreferences.storyboard; path = SimulatorRecorder/Preferences/General/GeneralPreferences.storyboard; sourceTree = SOURCE_ROOT; };
@@ -280,6 +282,7 @@
 		C46049D1210C6F8B00AED3FA /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C4AC9519212757670070A911 /* SimulatorController.swift */,
 				C4088C57211764B2000CE9B8 /* ExportableImports.swift */,
 				C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */,
 				C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */,
@@ -710,6 +713,7 @@
 				C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */,
 				C4D56E94210CFA30003404FC /* GeneralPreferencesViewController.swift in Sources */,
 				C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */,
+				C4AC951A212757670070A911 /* SimulatorController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
