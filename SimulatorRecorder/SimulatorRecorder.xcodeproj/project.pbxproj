@@ -63,7 +63,7 @@
 		C4D56E8F210CA477003404FC /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E8E210CA476003404FC /* MainView.storyboard */; };
 		C4D56E94210CFA30003404FC /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */; };
 		C4D56E96210CFADF003404FC /* GeneralPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */; };
-		C4E43E9821039C96007A6FAC /* Preferences-Naming.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */; };
+		C4E43E9821039C96007A6FAC /* RecordingNamingPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E43E9721039C91007A6FAC /* RecordingNamingPreferences.storyboard */; };
 		C4E43E9A2103CCD4007A6FAC /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E43E992103CCD4007A6FAC /* UserNotifications.swift */; };
 		C4F760BB21284DC600CBDFF3 /* NSArrayControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F760BA21284DC600CBDFF3 /* NSArrayControllerExtensions.swift */; };
 		C4F760BD21284E9500CBDFF3 /* DeviceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F760BC21284E9500CBDFF3 /* DeviceRecorder.swift */; };
@@ -209,7 +209,7 @@
 		C4D56E8E210CA476003404FC /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
 		C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = GeneralPreferences.storyboard; path = SimulatorRecorder/Preferences/General/GeneralPreferences.storyboard; sourceTree = SOURCE_ROOT; };
-		C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Preferences-Naming.storyboard"; sourceTree = "<group>"; };
+		C4E43E9721039C91007A6FAC /* RecordingNamingPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordingNamingPreferences.storyboard; sourceTree = "<group>"; };
 		C4E43E992103CCD4007A6FAC /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
 		C4F760BA21284DC600CBDFF3 /* NSArrayControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSArrayControllerExtensions.swift; sourceTree = "<group>"; };
 		C4F760BC21284E9500CBDFF3 /* DeviceRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRecorder.swift; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 		C46049D2210C6FC900AED3FA /* Naming */ = {
 			isa = PBXGroup;
 			children = (
-				C4E43E9721039C91007A6FAC /* Preferences-Naming.storyboard */,
+				C4E43E9721039C91007A6FAC /* RecordingNamingPreferences.storyboard */,
 				C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */,
 				C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */,
 				C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */,
@@ -596,7 +596,7 @@
 				C479DDDB20227A7900E0A11D /* timestamp in Resources */,
 				C4D56E8F210CA477003404FC /* MainView.storyboard in Resources */,
 				C479DDD720226D8200E0A11D /* simulatorName in Resources */,
-				C4E43E9821039C96007A6FAC /* Preferences-Naming.storyboard in Resources */,
+				C4E43E9821039C96007A6FAC /* RecordingNamingPreferences.storyboard in Resources */,
 				C479DDD820226D8200E0A11D /* recordVideo in Resources */,
 				A15646672104A64F00AC9CF1 /* prepareBrew in Resources */,
 				C4844F1B202A5BA100FFB5BA /* Preferences.storyboard in Resources */,
