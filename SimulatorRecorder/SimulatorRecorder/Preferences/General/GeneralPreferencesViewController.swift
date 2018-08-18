@@ -8,8 +8,15 @@
 
 import AppKit
 
-class GeneralPreferencesViewController : NSViewController {
-	
-	@IBOutlet var userDefaultsController: NSUserDefaultsController!
+extension TypedUserDefaults {
+	@NSManaged var revealInFinder: NSNumber?
+	@NSManaged var recordingsDir: String?
+}
 
+class GeneralPreferencesViewController : PreferencesPaneViewController {
+	override func resetDefaults() {
+		defaults.revealInFinder = nil
+		defaults.toggleRecordingShortcutData = nil
+		defaults.recordingsDir = nil
+	}
 }

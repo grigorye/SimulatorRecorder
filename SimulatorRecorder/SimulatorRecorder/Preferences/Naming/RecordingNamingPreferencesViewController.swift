@@ -8,20 +8,20 @@
 
 import Cocoa
 
-class RecordingNamingPreferencesViewController : NSViewController {
-	
-    @IBOutlet var userDefaultsController: NSUserDefaultsController!
+extension TypedUserDefaults {
+	@NSManaged var videoNameFormat: String?
+}
+
+class RecordingNamingPreferencesViewController : PreferencesPaneViewController {
     @IBOutlet var recordingNameField: NSTokenField!
 	@IBOutlet var recordingNameTokenGridView: NSGridView!
 	
 	let recordingNameFieldDelegate = RecordingNameFieldDelegate()
 
 	override func viewDidLoad() {
-		
 		super.viewDidLoad()
 		
 		recordingNameField … {
-			
 			$0.delegate = recordingNameFieldDelegate
 		}
 
@@ -44,5 +44,9 @@ class RecordingNamingPreferencesViewController : NSViewController {
 				}
 			])
 		}
+	}
+	
+	override func resetDefaults() {
+		defaults.videoNameFormat = nil
 	}
 }
