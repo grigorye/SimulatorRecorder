@@ -24,7 +24,7 @@ import Foundation
 	}
 	
 	func startRecording(terminationHandler: @escaping (([Error?]) -> Void)) {
-		let devices = try! x$(SimulatorController().devices())
+		let devices = try! (SimulatorController().devices())
 		let bootedDevices = devices.filter { $0.state == .booted }
 		
 		let completionGroup = DispatchGroup()
@@ -42,8 +42,10 @@ import Foundation
 			}
 		}
 		completionGroup.notify(queue: completionQueue) { [weak self] in
-			self?.deviceRecorders = []
 			terminationHandler(errors)
+			DispatchQueue.main.async {
+				self?.deviceRecorders = []
+			}
 		}
 	}
 	
@@ -55,7 +57,7 @@ import Foundation
 		self.bind(
 			NSBindingName(rawValue: #keyPath(recording)),
 			to: deviceRecordersController,
-			withKeyPath: "arrangedObjects.@max.recording",
+			withKeyPath: arrangedObjectsKeyPath(.max, \DeviceRecorder.recording),
 			options: [
 				.nullPlaceholder: false
 			]
@@ -63,7 +65,7 @@ import Foundation
 		self.bind(
 			NSBindingName(rawValue: #keyPath(readyToRecord)),
 			to: deviceRecordersController,
-			withKeyPath: "arrangedObjects.@min.readyToRecord",
+			withKeyPath: arrangedObjectsKeyPath(.min, \DeviceRecorder.readyToRecord),
 			options: [
 				.nullPlaceholder: true
 			]
@@ -71,7 +73,7 @@ import Foundation
 		self.bind(
 			NSBindingName(rawValue: #keyPath(interrupting)),
 			to: deviceRecordersController,
-			withKeyPath: "arrangedObjects.@max.interrupting",
+			withKeyPath: arrangedObjectsKeyPath(.max, \DeviceRecorder.interrupting),
 			options: [
 				.nullPlaceholder: false
 			]
