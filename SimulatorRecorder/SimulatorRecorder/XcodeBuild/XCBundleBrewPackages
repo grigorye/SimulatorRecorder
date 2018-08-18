@@ -22,7 +22,6 @@ export HOMEBREW_TEMP="${homebrewTempDir:?}"
 
 packages=(
     ffmpeg
-    jq
 )
 
 brew ls "${packages[@]}" >& /dev/null || brew install --force-bottle "${packages[@]}"
