@@ -40,9 +40,11 @@ class RecordingInteractor: NSResponder, GlobalActionResponder {
 	
 	@IBAction func newScreenRecording(_ sender: Any) {
 		sendUserNotification(for: .startedRecording)
-		recordingController.startRecording { (error) in
-			sendUserNotification(for: .recordingCompleted)
-			self.completeRecording(error)
+		recordingController.startRecording { (errors) in
+			DispatchQueue.main.async {
+				sendUserNotification(for: .recordingCompleted)
+				self.completeRecording(errors.compactMap {$0}.last)
+			}
 		}
 	}
 	
