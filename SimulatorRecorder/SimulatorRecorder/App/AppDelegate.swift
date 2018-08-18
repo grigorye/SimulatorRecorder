@@ -86,13 +86,16 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 	}
 }
 
-let defaultsKey = "toggleRecordingShortcut"
-let defaults = UserDefaults.standard
+extension TypedUserDefaults {
+	@NSManaged var toggleRecordingShortcutData: Data?
+}
+
+let defaultsKey = #keyPath(TypedUserDefaults.toggleRecordingShortcutData)
 
 class AppStatusItemControllerSource : StatusItemControllerDataSource {
 	
 	var shortcut: MASShortcut? {
-		guard let shortcutData = defaults.data(forKey: defaultsKey) else {
+		guard let shortcutData = defaults.toggleRecordingShortcutData else {
 			return nil
 		}
 		let shortcut = try! NSKeyedUnarchiver.unarchivedObject(ofClass: MASShortcut.self, from: shortcutData)
