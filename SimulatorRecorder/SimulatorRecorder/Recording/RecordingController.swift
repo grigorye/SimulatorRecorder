@@ -83,12 +83,12 @@ import Foundation
 	
 	// MARK: -
 	
-	@objc dynamic var deviceRecordersController: NSArrayController
-	@objc dynamic var deviceRecorders: [DeviceRecorder] = [] {
+	private var deviceRecorders: [DeviceRecorder] = [] {
 		didSet {
-			deviceRecordersController.content = deviceRecorders
+			deviceRecordersArrayController.content = deviceRecorders
 		}
 	}
+	private let deviceRecordersArrayController: NSArrayController
 
 	// MARK: -
 	
@@ -151,19 +151,19 @@ import Foundation
 	// MARK: -
 	
 	override init() {
-		self.deviceRecordersController = .init()
+		self.deviceRecordersArrayController = .init()
 		self.observableInterrupting = ObservableArrayPredicateValue(
-			self.deviceRecordersController,
+			self.deviceRecordersArrayController,
 			keyPath: arrangedObjectsKeyPath(.max, \DeviceRecorder.interrupting),
 			nullPlaceholder: false
 		)
 		self.observableEveryDeviceReadyToRecord = ObservableArrayPredicateValue(
-			self.deviceRecordersController,
+			self.deviceRecordersArrayController,
 			keyPath: arrangedObjectsKeyPath(.min, \DeviceRecorder.readyToRecord),
 			nullPlaceholder: true
 		)
 		self.observableAnyDeviceRecording = ObservableArrayPredicateValue(
-			self.deviceRecordersController,
+			self.deviceRecordersArrayController,
 			keyPath: arrangedObjectsKeyPath(.max, \DeviceRecorder.recording),
 			nullPlaceholder: false
 		)
