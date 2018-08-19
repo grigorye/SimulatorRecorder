@@ -25,7 +25,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                         <connections>
-                                            <binding destination="XfG-lQ-9wD" name="hidden" keyPath="recordingController.readyToRecord" id="Ubb-CP-2Mi">
+                                            <binding destination="XfG-lQ-9wD" name="hidden" keyPath="recordingState.readyToRecord" id="drI-fW-WWN">
                                                 <dictionary key="options">
                                                     <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                 </dictionary>
@@ -40,7 +40,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                         <connections>
-                                            <binding destination="XfG-lQ-9wD" name="hidden" keyPath="recordingController.recording" id="i8b-wq-4s0">
+                                            <binding destination="XfG-lQ-9wD" name="hidden" keyPath="recordingState.recording" id="K6P-c4-gqK">
                                                 <dictionary key="options">
                                                     <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                 </dictionary>
@@ -55,7 +55,7 @@
                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                         <connections>
-                                            <binding destination="XfG-lQ-9wD" name="hidden" keyPath="recordingController.interrupting" id="a1a-ob-cst">
+                                            <binding destination="XfG-lQ-9wD" name="hidden" keyPath="recordingState.interrupting" id="rHt-T2-fB0">
                                                 <dictionary key="options">
                                                     <string key="NSValueTransformerName">NSNegateBoolean</string>
                                                 </dictionary>
