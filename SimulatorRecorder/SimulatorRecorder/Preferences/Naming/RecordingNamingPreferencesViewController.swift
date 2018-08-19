@@ -31,19 +31,19 @@ class RecordingNamingPreferencesViewController : PreferencesPaneViewController {
 		}
 		
 		for token in knownRecordingNameTokens {
-			recordingNameTokenGridView.addRow(with: [
-				
-				NSTextField(labelWithString: token.title),
-				NSTokenField() … {
-					$0.isBordered = false
-					$0.isSelectable = true
-					$0.isEditable = false
-					$0.drawsBackground = false
-					$0.objectValue = [token].map(RecordingNameTokenObject.init)
-					$0.delegate = recordingNameFieldDelegate
-				}
-			])
+			let labelField = NSTextField(labelWithString: token.title)
+			let tokenField = NSTokenField() … {
+				$0.isBordered = false
+				$0.isSelectable = true
+				$0.isEditable = false
+				$0.drawsBackground = false
+				$0.objectValue = [token].map(RecordingNameTokenObject.init)
+				$0.delegate = recordingNameFieldDelegate
+			}
+			recordingNameTokenGridView.addRow(with: [labelField, tokenField])
 		}
+		recordingNameTokenGridView.column(at: 0).xPlacement = .leading
+		recordingNameTokenGridView.column(at: 1).xPlacement = .fill
 	}
 	
 	override func resetDefaults() {
