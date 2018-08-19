@@ -14,11 +14,16 @@ extension NSNib.Name {
 
 let statusItemController = StatusItemController()
 
+class ObservableIcon : NSObject {
+	@objc dynamic var value: NSImage? { return nil }
+}
+
 protocol StatusItemControllerDataSource {
 	var stopRecordingEnabled: Bool { get }
 	var startRecordingEnabled: Bool { get }
 	var keyEquivalent: String { get }
 	var keyEquivalentModifierMask: NSEvent.ModifierFlags { get }
+	var observableIcon: ObservableIcon { get }
 }
 
 class StatusItemController : NSObject, NSMenuDelegate {
@@ -29,11 +34,6 @@ class StatusItemController : NSObject, NSMenuDelegate {
 	lazy var statusItem: NSStatusItem = {
 		NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength) … {
 			$0.menu = statusMenu
-			guard let button = $0.button else {
-				assert(false)
-				return
-			}
-			button.image = #imageLiteral(resourceName: "MenuIcon")
 		}
 	}()
 
@@ -41,6 +41,7 @@ class StatusItemController : NSObject, NSMenuDelegate {
 		let bundle = Bundle(for: type(of: self))
 		try! throwify(bundle.loadNibNamed(.statusItem, owner: self, topLevelObjects: nil))
 		_ = statusItem
+		_ = statusItemIconBinding
 	}
 	
 	// MARK: - <NSMenuDelegate>
@@ -64,4 +65,12 @@ class StatusItemController : NSObject, NSMenuDelegate {
 			$0.keyEquivalentModifierMask = dataSource.keyEquivalentModifierMask
 		}
 	}
+	
+	// MARK: -
+	
+	private lazy var statusItemIconBinding: Any = {
+		dataSource.observableIcon.observe(\.value, options: .initial, changeHandler: { [weak self] (observableIcon, _)  in
+			self?.statusItem.button!.image = observableIcon.value
+		})
+	}()
 }

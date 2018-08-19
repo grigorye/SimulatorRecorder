@@ -81,8 +81,8 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 			}
 		}
 		
-		statusItemController.activate()
 		statusItemController.dataSource = AppStatusItemControllerSource()
+		statusItemController.activate()
 	}
 }
 
@@ -119,5 +119,21 @@ class AppStatusItemControllerSource : StatusItemControllerDataSource {
 	
 	var startRecordingEnabled: Bool {
 		return recordingInteractor.recordingController.readyToRecord
+	}
+	
+	var observableIcon: ObservableIcon = AppStatusIcon() … {
+		$0.recordingState = recordingInteractor.recordingController
+	}
+}
+
+class AppStatusIcon : ObservableIcon {
+	@objc dynamic var recordingState: ObservableRecordingState!
+
+	@objc dynamic class var keyPathsForValuesAffectingValue: Set<String> {
+		return [#keyPath(recordingState.recording)]
+	}
+	
+	@objc override dynamic var value: NSImage? {
+		return recordingState.recording ? #imageLiteral(resourceName: "MenuIconRecording") : #imageLiteral(resourceName: "MenuIcon")
 	}
 }
