@@ -9,13 +9,13 @@
 import AppKit
 import Foundation
 
-@objc public protocol ObjCRecordingController : class {
-	@objc var interrupting: Bool { get }
-	@objc var recording: Bool { get }
-	@objc var readyToRecord: Bool { get }
+@objc public class ObservableRecordingState : NSObject {
+	@objc dynamic var interrupting: Bool { return false }
+	@objc dynamic var recording: Bool { return false }
+	@objc dynamic var readyToRecord: Bool { return false }
 }
 
-@objc class RecordingController : NSObject, ObjCRecordingController {
+@objc class RecordingController : ObservableRecordingState {
 	
 	func stopRecording(completionHandler: @escaping ([Error?]) -> Void) {
 		var errors: [Error?] = []
@@ -96,7 +96,7 @@ import Foundation
 	
 	// MARK: -
 	
-	@objc dynamic var recording: Bool {
+	@objc override dynamic var recording: Bool {
 		return self.anyDeviceRecording || recordingInitiated
 	}
 	@objc private dynamic class var keyPathsForValuesAffectingRecording: Set<String> {
@@ -108,7 +108,7 @@ import Foundation
 	
 	// MARK: -
 	
-	@objc dynamic var readyToRecord: Bool {
+	@objc override dynamic var readyToRecord: Bool {
 		return self.everyDeviceReadyToRecord && !recordingInitiated
 	}
 	@objc private dynamic class var keyPathsForValuesAffectingReadyToRecord: Set<String> {
@@ -172,7 +172,7 @@ import Foundation
 	
 	// MARK: -
 	
-	@objc dynamic var interrupting: Bool {
+	@objc override dynamic var interrupting: Bool {
 		_ = interruptingBinding
 		return interruptingImp
 	}
