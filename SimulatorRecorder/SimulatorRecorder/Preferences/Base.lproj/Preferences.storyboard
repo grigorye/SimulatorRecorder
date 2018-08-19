@@ -94,13 +94,13 @@
             </objects>
             <point key="canvasLocation" x="1341" y="644"/>
         </scene>
-        <!--Preferences-Naming-->
+        <!--RecordingNamingPreferences-->
         <scene sceneID="tMW-2Q-Qvb">
             <objects>
-                <controllerPlaceholder storyboardName="Preferences-Naming" id="BDP-oO-vlc" sceneMemberID="viewController"/>
+                <controllerPlaceholder storyboardName="RecordingNamingPreferences" id="BDP-oO-vlc" sceneMemberID="viewController"/>
                 <customObject id="uJl-GI-7SK" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341" y="965"/>
+            <point key="canvasLocation" x="1366" y="965"/>
         </scene>
         <!--GeneralPreferences-->
         <scene sceneID="H9u-2X-Cfm">
