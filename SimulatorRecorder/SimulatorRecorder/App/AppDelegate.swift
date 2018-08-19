@@ -114,15 +114,15 @@ class AppStatusItemControllerSource : StatusItemControllerDataSource {
 	}
 	
 	var stopRecordingEnabled: Bool {
-		return recordingInteractor.recordingController.recording
+		return recordingInteractor.recordingState.recording
 	}
 	
 	var startRecordingEnabled: Bool {
-		return recordingInteractor.recordingController.readyToRecord
+		return recordingInteractor.recordingState.readyToRecord
 	}
 	
 	var observableIcon: ObservableIcon = AppStatusIcon() … {
-		$0.recordingState = recordingInteractor.recordingController
+		$0.recordingState = recordingInteractor.recordingState
 	}
 }
 

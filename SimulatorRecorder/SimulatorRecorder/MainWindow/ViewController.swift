@@ -9,7 +9,7 @@
 import Cocoa
 
 class ViewController: NSViewController {
-	@objc dynamic var recordingController: RecordingController {
-		return recordingInteractor.recordingController
+	@objc dynamic var recordingState: ObservableRecordingState {
+		return recordingInteractor.recordingState
 	}
 }

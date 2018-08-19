@@ -8,11 +8,15 @@
 
 import AppKit
 
-var recordingInteractor = RecordingInteractor()
+let recordingInteractor = RecordingInteractor()
 
 class RecordingInteractor: NSResponder, GlobalActionResponder {
 	
-	@objc dynamic var recordingController: RecordingController! = RecordingController()
+	private let recordingController = RecordingController()
+	
+	@objc dynamic var recordingState: ObservableRecordingState {
+		return recordingController.recordingState
+	}
 	
 	@IBAction func stopRecording(_ sender: Any) {
 		recordingController.stopRecording { errors in
@@ -24,7 +28,7 @@ class RecordingInteractor: NSResponder, GlobalActionResponder {
 	}
 	
 	@IBAction func toggleRecording(_ sender: Any) {
-		if recordingController.recording {
+		if recordingState.recording {
 			stopRecording(sender)
 		} else {
 			newScreenRecording(sender)
@@ -57,10 +61,10 @@ class RecordingInteractor: NSResponder, GlobalActionResponder {
 		switch menuItem.action {
 			
 		case #selector(stopRecording(_:))?:
-			return recordingController.recording
+			return recordingState.recording
 			
 		case #selector(newScreenRecording(_:))?:
-			return recordingController.readyToRecord
+			return recordingState.readyToRecord
 			
 		default:
 			return true
