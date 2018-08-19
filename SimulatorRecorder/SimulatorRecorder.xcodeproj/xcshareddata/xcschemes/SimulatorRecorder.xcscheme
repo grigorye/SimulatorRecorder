@@ -95,10 +95,6 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "-showRecordingDebugInfo YES"
-            isEnabled = "NO">
-         </CommandLineArgument>
-         <CommandLineArgument
             argument = "-sourceLabelsEnabled YES"
             isEnabled = "YES">
          </CommandLineArgument>
