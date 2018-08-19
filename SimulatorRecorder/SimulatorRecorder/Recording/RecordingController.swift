@@ -9,13 +9,7 @@
 import AppKit
 import Foundation
 
-@objc public class ObservableRecordingState : NSObject {
-	@objc dynamic var interrupting: Bool { return false }
-	@objc dynamic var recording: Bool { return false }
-	@objc dynamic var readyToRecord: Bool { return false }
-}
-
-@objc class RecordingController : ObservableRecordingState {
+@objc class RecordingController : NSObject {
 	
 	func stopRecording(completionHandler: @escaping ([Error?]) -> Void) {
 		var errors: [Error?] = []
@@ -83,89 +77,35 @@ import Foundation
 	
 	// MARK: -
 	
-	private var deviceRecorders: [DeviceRecorder] = [] {
-		didSet {
-			deviceRecordersArrayController.content = deviceRecorders
+	private var deviceRecorders: [DeviceRecorder] {
+		set {
+			recordingStateImp.deviceRecorders = newValue
+		}
+		get {
+			return recordingStateImp.deviceRecorders
 		}
 	}
-	private let deviceRecordersArrayController: NSArrayController
+	
+	private var recordingInitiated: Bool {
+		set {
+			recordingStateImp.recordingInitiated = newValue
+		}
+		get {
+			return recordingStateImp.recordingInitiated
+		}
+	}
+	
+	private var recording: Bool {
+		return recordingStateImp.recording
+	}
 
 	// MARK: -
 	
-	@objc private dynamic var recordingInitiated: Bool = false
+	private let recordingStateImp = RecordingControllerRecordingState()
 	
 	// MARK: -
 	
-	@objc override dynamic var recording: Bool {
-		return self.anyDeviceRecording || recordingInitiated
-	}
-	@objc private dynamic class var keyPathsForValuesAffectingRecording: Set<String> {
-		return [
-			#keyPath(anyDeviceRecording),
-			#keyPath(recordingInitiated)
-		]
-	}
-	
-	// MARK: -
-	
-	@objc override dynamic var readyToRecord: Bool {
-		return self.everyDeviceReadyToRecord && !recordingInitiated
-	}
-	@objc private dynamic class var keyPathsForValuesAffectingReadyToRecord: Set<String> {
-		return [
-			#keyPath(everyDeviceReadyToRecord),
-			#keyPath(recordingInitiated)
-		]
-	}
-	
-	// MARK: -
-	
-	@objc private dynamic var anyDeviceRecording: Bool {
-		return observableAnyDeviceRecording.value
-	}
-	@objc private dynamic class var keyPathsForValuesAffectingAnyDeviceRecording: Set<String> {
-		return [#keyPath(observableAnyDeviceRecording.value)]
-	}
-	@objc private dynamic var observableAnyDeviceRecording: ObservableBool
-	
-	// MARK: -
-	
-	@objc private dynamic var everyDeviceReadyToRecord: Bool {
-		return observableEveryDeviceReadyToRecord.value
-	}
-	@objc private dynamic class var keyPathsForValuesAffectingEveryDeviceReadyToRecord: Set<String> {
-		return [#keyPath(observableEveryDeviceReadyToRecord.value)]
-	}
-	@objc private dynamic var observableEveryDeviceReadyToRecord: ObservableBool
-	
-	// MARK: -
-	
-	@objc override dynamic var interrupting: Bool {
-		return observableInterrupting.value
-	}
-	@objc private dynamic class var keyPathsForValuesAffectingInterrupting: Set<String> {
-		return [#keyPath(observableInterrupting.value)]
-	}
-	@objc private dynamic var observableInterrupting: ObservableBool
-	
-	// MARK: -
-	
-	override init() {
-		self.deviceRecordersArrayController = .init()
-		self.observableInterrupting = ObservableArrayPredicateValue(
-			self.deviceRecordersArrayController,
-			keyPath: arrangedObjectsKeyPath(.max, \DeviceRecorder.interrupting),
-			nullPlaceholder: false
-		)
-		self.observableEveryDeviceReadyToRecord = ObservableArrayPredicateValue(
-			self.deviceRecordersArrayController,
-			keyPath: arrangedObjectsKeyPath(.min, \DeviceRecorder.readyToRecord),
-			nullPlaceholder: true
-		)
-		self.observableAnyDeviceRecording = ObservableArrayPredicateValue(
-			self.deviceRecordersArrayController,
-			keyPath: arrangedObjectsKeyPath(.max, \DeviceRecorder.recording),
-			nullPlaceholder: false
-		)
+	var recordingState: ObservableRecordingState {
+		return recordingStateImp
 	}
 }
