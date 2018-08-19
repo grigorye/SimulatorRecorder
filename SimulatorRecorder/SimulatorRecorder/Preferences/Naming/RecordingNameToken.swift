@@ -9,7 +9,6 @@
 import Foundation
 
 let knownRecordingNameTokens: [RecordingNameToken] = [
-    
     .date,
     .time,
     .version,
@@ -17,7 +16,6 @@ let knownRecordingNameTokens: [RecordingNameToken] = [
 ]
 
 enum RecordingNameToken : String, RawRepresentable {
-	
 	case date
 	case time
 	case version
@@ -27,7 +25,6 @@ enum RecordingNameToken : String, RawRepresentable {
 private let now = Date()
 
 extension RecordingNameToken {
-	
     var shellComponent: String {
         
         switch self {
@@ -43,10 +40,8 @@ extension RecordingNameToken {
         }
     }
     
-	var title : String {
-		
+	var title: String {
 		switch self {
-			
 		case .date:
 			return NSLocalizedString("Date", comment: "")
 		case .time:
@@ -59,9 +54,7 @@ extension RecordingNameToken {
 	}
 
 	var sampleString: String {
-		
 		switch self {
-			
 		case .date:
 			return DateFormatter.localizedString(from: now, dateStyle: .short, timeStyle: .none)
         case .time:
