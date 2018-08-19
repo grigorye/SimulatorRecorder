@@ -4,12 +4,12 @@ wd=$(dirname "$0")
 srcroot="${wd:?}/.."
 
 projectName="${1:?}"
+xcassets="${srcroot:?}"/"${projectName:?}"/Resources/Assets.xcassets
 
 for suffix in ""
 do
 	AppIcon="AppIcon${suffix}"
 	svg="${wd:?}/${AppIcon:?}.svg"
-	xcassets="${srcroot:?}"/"${projectName:?}"/Resources/Assets.xcassets
 	AppIconSet="${xcassets:?}"/"${AppIcon:?}".appiconset
 	mkdir -p "${AppIconSet:?}"
 	for i in 16 32 128 256 512
@@ -19,7 +19,16 @@ do
 	done
 	#cp "${wd:?}"/AppIcon-Contents.json "${AppIconSet:?}"/Contents.json
 	svg2png -w 1024 "${svg:?}" > "${AppIcon:?}"-1024x1024.png
+done
 
-	menuIconSVG="${wd:?}/MenuIcon.svg"
-	svg2pdf -w 22 "${menuIconSVG:?}" > "${wd:?}/pdf/MenuIcon-22.pdf"
+for i in "${wd:?}"/MenuIcons/*.svg
+do
+    imageName=$(basename "${i:?}" | sed 's/.svg$//')
+	imageset="${xcassets:?}/${imageName:?}.imageset"
+    for w in 22
+    do
+		pdfName="${imageName:?}-${w:?}.pdf"
+        outputI="${imageset:?}/${pdfName:?}"
+        svg2pdf -w 22 "${i:?}" "${outputI:?}"
+    done
 done
