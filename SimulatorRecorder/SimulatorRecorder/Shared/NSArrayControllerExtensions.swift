@@ -18,3 +18,44 @@ func arrangedObjectsKeyPath<T>(_ groupOp: KeyPathGroupOp = .nop, _ keyPath: Part
 	return [#keyPath(NSArrayController.arrangedObjects), groupOp.rawValue, keyPath._kvcKeyPathString!].joined(separator: ".")
 }
 
+class ObservableBool : NSObject {
+	@objc dynamic var value: Bool { return false }
+}
+
+class ObservableArrayPredicateValue : ObservableBool {
+	let arrayController: NSArrayController
+	let keyPath: String
+	let nullPlaceholder: Bool
+	
+	init(_ arrayController: NSArrayController, keyPath: String, nullPlaceholder: Bool) {
+		self.arrayController = arrayController
+		self.keyPath = keyPath
+		self.nullPlaceholder = nullPlaceholder
+	}
+	
+	@objc override dynamic var value: Bool {
+		_ = valueBinding
+		return valueImp
+	}
+	
+	@objc private dynamic class var keyPathsForValuesAffectingValue: Set<String> {
+		return [#keyPath(valueImp)]
+	}
+	
+	private lazy var valueBinding: Void = {
+		self.bind(
+			NSBindingName(rawValue: #keyPath(valueImp)),
+			to: arrayController,
+			withKeyPath: keyPath,
+			options: [
+				.nullPlaceholder: self.nullPlaceholder
+			]
+		)
+	}()
+	
+	@objc private dynamic var valueImp: Bool = false {
+		willSet {
+			_ = x$(newValue)
+		}
+	}
+}

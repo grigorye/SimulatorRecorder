@@ -83,7 +83,7 @@ import Foundation
 	
 	// MARK: -
 	
-	@objc dynamic var deviceRecordersController = NSArrayController()
+	@objc dynamic var deviceRecordersController: NSArrayController
 	@objc dynamic var deviceRecorders: [DeviceRecorder] = [] {
 		didSet {
 			deviceRecordersController.content = deviceRecorders
@@ -120,78 +120,52 @@ import Foundation
 	
 	// MARK: -
 	
-	@objc dynamic var anyDeviceRecording: Bool {
-		_ = self.anyDeviceRecordingBinding
-		return anyDeviceRecordingImp
+	@objc private dynamic var anyDeviceRecording: Bool {
+		return observableAnyDeviceRecording.value
 	}
 	@objc private dynamic class var keyPathsForValuesAffectingAnyDeviceRecording: Set<String> {
-		return [
-			#keyPath(anyDeviceRecordingImp)
-		]
+		return [#keyPath(observableAnyDeviceRecording.value)]
 	}
-	private lazy var anyDeviceRecordingBinding: Void = {
-		self.bind(
-			NSBindingName(rawValue: #keyPath(anyDeviceRecordingImp)),
-			to: deviceRecordersController,
-			withKeyPath: arrangedObjectsKeyPath(.max, \DeviceRecorder.recording),
-			options: [
-				.nullPlaceholder: false
-			]
-		)
-	}()
-	@objc private dynamic var anyDeviceRecordingImp: Bool = false {
-		willSet {
-			_ = x$(newValue)
-		}
-	}
-
+	@objc private dynamic var observableAnyDeviceRecording: ObservableBool
+	
 	// MARK: -
 	
-	@objc dynamic var everyDeviceReadyToRecord: Bool {
-		_ = everyDeviceReadyToRecordBinding
-		return everyDeviceReadyToRecordImp
+	@objc private dynamic var everyDeviceReadyToRecord: Bool {
+		return observableEveryDeviceReadyToRecord.value
 	}
 	@objc private dynamic class var keyPathsForValuesAffectingEveryDeviceReadyToRecord: Set<String> {
-		return [#keyPath(everyDeviceReadyToRecordImp)]
+		return [#keyPath(observableEveryDeviceReadyToRecord.value)]
 	}
-	private lazy var everyDeviceReadyToRecordBinding: Void = {
-		self.bind(
-			NSBindingName(rawValue: #keyPath(everyDeviceReadyToRecordImp)),
-			to: deviceRecordersController,
-			withKeyPath: arrangedObjectsKeyPath(.min, \DeviceRecorder.readyToRecord),
-			options: [
-				.nullPlaceholder: true
-			]
-		)
-	}()
-	@objc private dynamic var everyDeviceReadyToRecordImp: Bool = false {
-		willSet {
-			_ = x$(newValue)
-		}
-	}
+	@objc private dynamic var observableEveryDeviceReadyToRecord: ObservableBool
 	
 	// MARK: -
 	
 	@objc override dynamic var interrupting: Bool {
-		_ = interruptingBinding
-		return interruptingImp
+		return observableInterrupting.value
 	}
 	@objc private dynamic class var keyPathsForValuesAffectingInterrupting: Set<String> {
-		return [#keyPath(interruptingImp)]
+		return [#keyPath(observableInterrupting.value)]
 	}
-	private lazy var interruptingBinding: Void = {
-		self.bind(
-			NSBindingName(rawValue: #keyPath(interruptingImp)),
-			to: deviceRecordersController,
-			withKeyPath: arrangedObjectsKeyPath(.max, \DeviceRecorder.interrupting),
-			options: [
-				.nullPlaceholder: false
-			]
+	@objc private dynamic var observableInterrupting: ObservableBool
+	
+	// MARK: -
+	
+	override init() {
+		self.deviceRecordersController = .init()
+		self.observableInterrupting = ObservableArrayPredicateValue(
+			self.deviceRecordersController,
+			keyPath: arrangedObjectsKeyPath(.max, \DeviceRecorder.interrupting),
+			nullPlaceholder: false
 		)
-	}()
-	@objc private dynamic var interruptingImp: Bool = false {
-		willSet {
-			_ = x$(newValue)
-		}
+		self.observableEveryDeviceReadyToRecord = ObservableArrayPredicateValue(
+			self.deviceRecordersController,
+			keyPath: arrangedObjectsKeyPath(.min, \DeviceRecorder.readyToRecord),
+			nullPlaceholder: true
+		)
+		self.observableAnyDeviceRecording = ObservableArrayPredicateValue(
+			self.deviceRecordersController,
+			keyPath: arrangedObjectsKeyPath(.max, \DeviceRecorder.recording),
+			nullPlaceholder: false
+		)
 	}
 }
