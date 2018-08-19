@@ -21,7 +21,6 @@ See 'Simulator Recorder' > Preferences for stuff like shanging hot key and etc.
 ### Bundled
 
 * [FFmpeg](https://ffmpeg.org)
-* [jq](https://stedolan.github.io/jq)
 
 ### Frameworks
 
