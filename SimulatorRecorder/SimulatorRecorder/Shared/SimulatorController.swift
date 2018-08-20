@@ -26,6 +26,7 @@ struct SimulatorDevicesResponse : Decodable {
 		enum Availability: String, Decodable {
 			case available = "(available)"
 			case unavailableRunTimeProfileNotFound = " (unavailable, runtime profile not found)"
+			case unavailableDeviceTypeNotSupportedByRuntime = " (unavailable, device type not supported by runtime)"
 		}
 	}
 }
