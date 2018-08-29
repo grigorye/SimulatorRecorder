@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="9sZ-wq-ac3">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="9sZ-wq-ac3">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.13.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--General-->
@@ -11,14 +11,14 @@
             <objects>
                 <viewController title="General" id="9sZ-wq-ac3" customClass="GeneralPreferencesViewController" customModule="SimulatorRecorder" sceneMemberID="viewController">
                     <view key="view" id="PVQ-LF-ko9">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="121"/>
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="155"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="20" horizontalStackHuggingPriority="1000" verticalStackHuggingPriority="1000" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Akh-t3-iTA">
-                                <rect key="frame" x="56" y="20" width="339" height="81"/>
+                                <rect key="frame" x="56" y="20" width="339" height="115"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="trailing" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3zO-RT-5ev">
-                                        <rect key="frame" x="0.0" y="34" width="339" height="47"/>
+                                        <rect key="frame" x="0.0" y="68" width="339" height="47"/>
                                         <subviews>
                                             <stackView distribution="fill" orientation="horizontal" alignment="top" spacing="20" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="1000" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xlZ-qf-G6Z">
                                                 <rect key="frame" x="67" y="28" width="272" height="19"/>
@@ -104,7 +104,7 @@
                                         </customSpacing>
                                     </stackView>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="68h-71-fti">
-                                        <rect key="frame" x="-2" y="-2" width="343" height="18"/>
+                                        <rect key="frame" x="-2" y="32" width="343" height="18"/>
                                         <buttonCell key="cell" type="check" title="Reveal new recordings in Finder" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="k0g-Je-t6s">
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -113,12 +113,24 @@
                                             <binding destination="0Aq-8m-Erw" name="value" keyPath="values.revealInFinder" id="LQz-Pt-Bee"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2fy-az-VMr">
+                                        <rect key="frame" x="-2" y="-2" width="343" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Compress recordings" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="nax-n9-PDm">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <binding destination="0Aq-8m-Erw" name="value" keyPath="values.compressionEnabled" id="Vtq-5c-2OJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
