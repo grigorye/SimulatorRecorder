@@ -98,7 +98,7 @@ class AppStatusItemControllerSource : StatusItemControllerDataSource {
 		guard let shortcutData = defaults.toggleRecordingShortcutData else {
 			return nil
 		}
-		let shortcut = try! NSKeyedUnarchiver.unarchivedObject(ofClass: MASShortcut.self, from: shortcutData)
+		let shortcut = NSKeyedUnarchiver.unarchiveObject(with: shortcutData) as! MASShortcut
 		return shortcut
 	}
 	
