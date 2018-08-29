@@ -29,10 +29,23 @@ defaultFor() {
 
 tmpdir=$(mktemp -d "${TMPDIR:?}"/"${bn:?}".XXXXX)
 
-rawVideo="${tmpdir:?}/simvideo.264"
 timestamp=$(timestamp)
 
-xcrun simctl io "${udid:?}" recordVideo --type='h264' "${rawVideo:?}"
+compressionEnabled=$(defaultFor boolean "compressionEnabled")
+
+if [ "${compressionEnabled:?}" = 1 ]
+then
+	typeArg="--type=h264"
+	recordedExt="h264"
+	convertedExt="m4v"
+else
+	typeArg=
+	recordedExt="mp4"
+	convertedExt="mp4"
+fi
+rawVideo="${tmpdir:?}/simvideo.${recordedExt:?}"
+
+xcrun simctl io "${udid:?}" recordVideo ${typeArg} "${rawVideo:?}"
 ls -l "${rawVideo:?}"
 
 #
@@ -49,13 +62,18 @@ date=$(date -j -f "${timestampFormat:?}" "${timestamp:?}" +"%Y-%m-%d")
 time=$(date -j -f "${timestampFormat:?}" "${timestamp:?}" +"%H.%M.%S")
 
 videoName=$(eval echo "${videoNameFormat:?}")
-convertedVideo="${recordingsDir:?}/${videoName:?}.m4v"
+convertedVideo="${recordingsDir:?}/${videoName:?}.${convertedExt:?}"
 
 #
 
 mkdir -p "${recordingsDir:?}"
 
-ffmpeg -v -8 -i "${rawVideo:?}" "${convertedVideo:?}"
+if [ "${compressionEnabled:?}" = 1 ]
+then
+	ffmpeg -v -8 -i "${rawVideo:?}" "${convertedVideo:?}" -vf "fps=30"
+else
+	cp "${rawVideo:?}" "${convertedVideo:?}"
+fi
 
 if [ "${revealInFinder:?}" = 1 ]
 then

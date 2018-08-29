@@ -8,5 +8,7 @@
 	<true/>
 	<key>videoNameFormat</key>
 	<string>Recording ${date:?} at ${time:?} for ${device:?} - ${version:?}</string>
+	<key>compressionEnabled</key>
+	<false/>
 </dict>
 </plist>
