@@ -9,16 +9,19 @@
 import AppKit
 
 extension NSNib.Name {
+	
 	static let statusItem = NSNib.Name(rawValue: "StatusItem")
 }
 
 let statusItemController = StatusItemController()
 
 class ObservableIcon : NSObject {
+	
 	@objc dynamic var value: NSImage? { return nil }
 }
 
 protocol StatusItemControllerDataSource {
+	
 	var stopRecordingEnabled: Bool { get }
 	var startRecordingEnabled: Bool { get }
 	var keyEquivalent: String { get }
@@ -27,6 +30,7 @@ protocol StatusItemControllerDataSource {
 }
 
 class StatusItemController : NSObject, NSMenuDelegate {
+	
 	var dataSource: StatusItemControllerDataSource!
 	
 	@IBOutlet var statusMenu: NSMenu!
