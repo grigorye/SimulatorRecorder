@@ -10,7 +10,7 @@ import AppKit
 
 let recordingInteractor = RecordingInteractor()
 
-class RecordingInteractor: NSResponder, GlobalActionResponder {
+class RecordingInteractor: NSResponder, NSMenuItemValidation, GlobalActionResponder {
 	
 	private let recordingController = RecordingController()
 	
@@ -57,7 +57,9 @@ class RecordingInteractor: NSResponder, GlobalActionResponder {
 		}
 	}
 	
-	override func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
+	// MARK: - <NSMenuItemValidation>
+	
+	func validateMenuItem(_ menuItem: NSMenuItem) -> Bool {
 		switch menuItem.action {
 			
 		case #selector(stopRecording(_:))?:

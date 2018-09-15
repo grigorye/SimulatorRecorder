@@ -17,7 +17,7 @@ import MASShortcut
 
 extension NSStoryboard.Name {
 
-	static let preferences = NSStoryboard.Name(rawValue: "Preferences")
+	static let preferences = "Preferences"
 }
 
 class AppDelegate: NSResponder, NSApplicationDelegate {
