@@ -44,6 +44,8 @@
 		C41152AE20292F7D00DDB293 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */; };
 		C41F4C362028B3200090E79B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41F4C352028B3200090E79B /* Defaults.plist */; };
 		C424A24E2025A88B00320E48 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
+		C428604B214B3EA500825AB1 /* AppStatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428604A214B3EA500825AB1 /* AppStatusIcon.swift */; };
+		C428604D214B3EE100825AB1 /* AppStatusItemControllerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428604C214B3EE100825AB1 /* AppStatusItemControllerSource.swift */; };
 		C433AE26211E3D1E000A8501 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433AE25211E3D1E000A8501 /* Defaults.swift */; };
 		C43FFB592129CCE300F36526 /* RecordingControllerRecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FFB582129CCE300F36526 /* RecordingControllerRecordingState.swift */; };
 		C43FFB5B2129D15000F36526 /* ObservableRecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FFB5A2129D15000F36526 /* ObservableRecordingState.swift */; };
@@ -187,6 +189,8 @@
 		C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
 		C41F4C352028B3200090E79B /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		C424A24D2025A88B00320E48 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C428604A214B3EA500825AB1 /* AppStatusIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusIcon.swift; sourceTree = "<group>"; };
+		C428604C214B3EE100825AB1 /* AppStatusItemControllerSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusItemControllerSource.swift; sourceTree = "<group>"; };
 		C433AE25211E3D1E000A8501 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		C43FFB582129CCE300F36526 /* RecordingControllerRecordingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingControllerRecordingState.swift; sourceTree = "<group>"; };
 		C43FFB5A2129D15000F36526 /* ObservableRecordingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableRecordingState.swift; sourceTree = "<group>"; };
@@ -440,6 +444,8 @@
 				C479DDAB202266BF00E0A11D /* SimulatorRecorder.entitlements */,
 				C479DDAA202266BF00E0A11D /* Info.plist */,
 				C433AE25211E3D1E000A8501 /* Defaults.swift */,
+				C428604A214B3EA500825AB1 /* AppStatusIcon.swift */,
+				C428604C214B3EE100825AB1 /* AppStatusItemControllerSource.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -758,6 +764,7 @@
 				C46C530C211A6FF00041D8C6 /* RecordingInteractor.swift in Sources */,
 				C479DDE12023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift in Sources */,
 				A1A19F5C202A2498004170D8 /* RecordingNameFormatTransformer.swift in Sources */,
+				C428604D214B3EE100825AB1 /* AppStatusItemControllerSource.swift in Sources */,
 				C4F760BD21284E9500CBDFF3 /* DeviceRecorder.swift in Sources */,
 				C433AE26211E3D1E000A8501 /* Defaults.swift in Sources */,
 				C4088C58211764B2000CE9B8 /* ExportableImports.swift in Sources */,
@@ -767,6 +774,7 @@
 				C41152AA20291E8C00DDB293 /* StatusItemController.swift in Sources */,
 				C41152AE20292F7D00DDB293 /* PreferencesWindowController.swift in Sources */,
 				C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */,
+				C428604B214B3EA500825AB1 /* AppStatusIcon.swift in Sources */,
 				C4D56E94210CFA30003404FC /* GeneralPreferencesViewController.swift in Sources */,
 				C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */,
 				C4AC951A212757670070A911 /* SimulatorController.swift in Sources */,
