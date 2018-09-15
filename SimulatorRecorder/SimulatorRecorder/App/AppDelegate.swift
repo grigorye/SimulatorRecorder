@@ -50,6 +50,8 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 	@IBAction func stopRecording(_: Any) {
 		recordingInteractor.toggleRecording(self)
 	}
+	
+	// MARK: -
 
 	func verifyTrustedAccessibility() {
 		
@@ -62,6 +64,8 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 		recordingInteractor.toggleRecording(self)
 	}
 	
+	// MARK: - <NSApplicationDelegate>
+	
 	func applicationDidFinishLaunching(_ notification: Notification) {
 		
 		NSApplication.shared.nextResponder = recordingInteractor
@@ -73,6 +77,8 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 			modifierFlags: defaultShortcutModifierFlags.rawValue
 		)!
 		
+		let defaultsKey = #keyPath(TypedUserDefaults.toggleRecordingShortcutData)
+
 		MASShortcutBinder.shared()! … {
 			let defaultShortcuts = [defaultsKey: defaultShortcut]
 			$0.registerDefaultShortcuts(defaultShortcuts)
@@ -83,57 +89,5 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 		
 		statusItemController.dataSource = AppStatusItemControllerSource()
 		statusItemController.activate()
-	}
-}
-
-extension TypedUserDefaults {
-	@NSManaged var toggleRecordingShortcutData: Data?
-}
-
-let defaultsKey = #keyPath(TypedUserDefaults.toggleRecordingShortcutData)
-
-class AppStatusItemControllerSource : StatusItemControllerDataSource {
-	
-	var shortcut: MASShortcut? {
-		guard let shortcutData = defaults.toggleRecordingShortcutData else {
-			return nil
-		}
-		let shortcut = NSKeyedUnarchiver.unarchiveObject(with: shortcutData) as! MASShortcut
-		return shortcut
-	}
-	
-	var keyEquivalent: String {
-		return shortcut?.keyCodeString ?? ""
-	}
-	
-	var keyEquivalentModifierMask: NSEvent.ModifierFlags {
-		guard let modifierFlags = shortcut?.modifierFlags else {
-			return .init()
-		}
-		return .init(rawValue: modifierFlags)
-	}
-	
-	var stopRecordingEnabled: Bool {
-		return recordingInteractor.recordingState.recording
-	}
-	
-	var startRecordingEnabled: Bool {
-		return recordingInteractor.recordingState.readyToRecord
-	}
-	
-	var observableIcon: ObservableIcon = AppStatusIcon() … {
-		$0.recordingState = recordingInteractor.recordingState
-	}
-}
-
-class AppStatusIcon : ObservableIcon {
-	@objc dynamic var recordingState: ObservableRecordingState!
-
-	@objc dynamic class var keyPathsForValuesAffectingValue: Set<String> {
-		return [#keyPath(recordingState.recording)]
-	}
-	
-	@objc override dynamic var value: NSImage? {
-		return recordingState.recording ? #imageLiteral(resourceName: "MenuIconRecording") : #imageLiteral(resourceName: "MenuIcon")
 	}
 }
