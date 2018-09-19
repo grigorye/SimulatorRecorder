@@ -8,7 +8,6 @@
 
 import Cocoa
 import Carbon.HIToolbox
-import MASShortcut
 
 @objc protocol GlobalActionResponder {
 	
@@ -72,22 +71,13 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 		
 		verifyTrustedAccessibility()
 
-		let defaultShortcut = MASShortcut(
-			keyCode: .init(defaultShortcutKeyCode),
-			modifierFlags: defaultShortcutModifierFlags.rawValue
-		)!
-		
-		let defaultsKey = #keyPath(TypedUserDefaults.toggleRecordingShortcutData)
-
-		MASShortcutBinder.shared()! … {
-			let defaultShortcuts = [defaultsKey: defaultShortcut]
-			$0.registerDefaultShortcuts(defaultShortcuts)
-			$0.bindShortcut(withDefaultsKey: defaultsKey) {
-				self.globalKeyboardShortcutReceived()
-			}
-		}
+		shortcutBinding.enabled = true
 		
 		statusItemController.dataSource = AppStatusItemControllerSource()
 		statusItemController.activate()
 	}
+}
+
+let shortcutBinding = ShortcutBinding {
+	(NSApplication.shared.delegate as! AppDelegate).globalKeyboardShortcutReceived()
 }
