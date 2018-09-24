@@ -3,7 +3,7 @@
 wd=$(dirname "$0")
 srcroot="${wd:?}/.."
 
-projectName="${1:?}"
+projectName="${1:?}"; shift
 xcassets="${srcroot:?}"/"${projectName:?}"/Resources/Assets.xcassets
 
 for suffix in ""
@@ -30,5 +30,17 @@ do
 		pdfName="${imageName:?}-${w:?}.pdf"
         outputI="${imageset:?}/${pdfName:?}"
         svg2pdf -w 22 "${i:?}" "${outputI:?}"
+    done
+done
+
+for i in "${wd:?}"/AppIcon?*.svg
+do
+    imageName=$(basename "${i:?}" | sed 's/.svg$//')
+	imageset="${xcassets:?}/${imageName:?}.imageset"
+    for w in 256
+    do
+		pdfName="${imageName:?}-${w:?}.pdf"
+        outputI="${imageset:?}/${pdfName:?}"
+        svg2pdf -w ${w:?} "${i:?}" "${outputI:?}"
     done
 done

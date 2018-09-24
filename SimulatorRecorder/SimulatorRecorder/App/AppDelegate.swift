@@ -75,6 +75,9 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 		
 		statusItemController.dataSource = AppStatusItemControllerSource()
 		statusItemController.activate()
+		
+		dockTileController.dataSource = AppDockTileControllerDataSource()
+		dockTileController.activate()
 	}
 }
 
