@@ -48,6 +48,8 @@
 		C424A24E2025A88B00320E48 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
 		C428604B214B3EA500825AB1 /* AppStatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428604A214B3EA500825AB1 /* AppStatusIcon.swift */; };
 		C428604D214B3EE100825AB1 /* AppStatusItemControllerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428604C214B3EE100825AB1 /* AppStatusItemControllerSource.swift */; };
+		C43380DC21599FDB00A28F54 /* DockTileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43380D921599E8400A28F54 /* DockTileController.swift */; };
+		C43380DE2159A38400A28F54 /* AppDockTileIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43380DD2159A38400A28F54 /* AppDockTileIcon.swift */; };
 		C433AE26211E3D1E000A8501 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433AE25211E3D1E000A8501 /* Defaults.swift */; };
 		C43FFB592129CCE300F36526 /* RecordingControllerRecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FFB582129CCE300F36526 /* RecordingControllerRecordingState.swift */; };
 		C43FFB5B2129D15000F36526 /* ObservableRecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FFB5A2129D15000F36526 /* ObservableRecordingState.swift */; };
@@ -69,6 +71,7 @@
 		C497D2DF2152C4A900D2AE93 /* ShortcutBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C497D2DE2152C4A900D2AE93 /* ShortcutBinding.swift */; };
 		C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
 		C4AC951A212757670070A911 /* SimulatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9519212757670070A911 /* SimulatorController.swift */; };
+		C4C597D42159A6A0006F7640 /* AppDockTileControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C597D32159A6A0006F7640 /* AppDockTileControllerDataSource.swift */; };
 		C4D56E8F210CA477003404FC /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E8E210CA476003404FC /* MainView.storyboard */; };
 		C4D56E94210CFA30003404FC /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */; };
 		C4D56E96210CFADF003404FC /* GeneralPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */; };
@@ -198,6 +201,8 @@
 		C424A24D2025A88B00320E48 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C428604A214B3EA500825AB1 /* AppStatusIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusIcon.swift; sourceTree = "<group>"; };
 		C428604C214B3EE100825AB1 /* AppStatusItemControllerSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusItemControllerSource.swift; sourceTree = "<group>"; };
+		C43380D921599E8400A28F54 /* DockTileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockTileController.swift; sourceTree = "<group>"; };
+		C43380DD2159A38400A28F54 /* AppDockTileIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDockTileIcon.swift; sourceTree = "<group>"; };
 		C433AE25211E3D1E000A8501 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		C43FFB582129CCE300F36526 /* RecordingControllerRecordingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingControllerRecordingState.swift; sourceTree = "<group>"; };
 		C43FFB5A2129D15000F36526 /* ObservableRecordingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableRecordingState.swift; sourceTree = "<group>"; };
@@ -226,6 +231,7 @@
 		C497D2DE2152C4A900D2AE93 /* ShortcutBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutBinding.swift; sourceTree = "<group>"; };
 		C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameToken.swift; sourceTree = "<group>"; };
 		C4AC9519212757670070A911 /* SimulatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorController.swift; sourceTree = "<group>"; };
+		C4C597D32159A6A0006F7640 /* AppDockTileControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDockTileControllerDataSource.swift; sourceTree = "<group>"; };
 		C4D56E8E210CA476003404FC /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
 		C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = GeneralPreferences.storyboard; path = SimulatorRecorder/Preferences/General/GeneralPreferences.storyboard; sourceTree = SOURCE_ROOT; };
@@ -288,6 +294,14 @@
 				7C3512DEBE40799817AF90B8 /* Pods_SimulatorRecorderUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C43380DB21599ECC00A28F54 /* DockTile */ = {
+			isa = PBXGroup;
+			children = (
+				C43380D921599E8400A28F54 /* DockTileController.swift */,
+			);
+			path = DockTile;
 			sourceTree = "<group>";
 		};
 		C46049CC210C6E7200AED3FA /* MainWindow */ = {
@@ -396,6 +410,7 @@
 				C49AAE26210C71F000E6867C /* UserNotifications */,
 				C49AAE25210C719500E6867C /* Recording */,
 				C49AAE23210C710E00E6867C /* StatusItem */,
+				C43380DB21599ECC00A28F54 /* DockTile */,
 				C46049D1210C6F8B00AED3FA /* Shared */,
 				C46049CD210C6E8600AED3FA /* Resources */,
 				C46049D0210C6ED000AED3FA /* XcodeBuild */,
@@ -453,7 +468,9 @@
 				C479DDAA202266BF00E0A11D /* Info.plist */,
 				C433AE25211E3D1E000A8501 /* Defaults.swift */,
 				C428604A214B3EA500825AB1 /* AppStatusIcon.swift */,
+				C43380DD2159A38400A28F54 /* AppDockTileIcon.swift */,
 				C428604C214B3EE100825AB1 /* AppStatusItemControllerSource.swift */,
+				C4C597D32159A6A0006F7640 /* AppDockTileControllerDataSource.swift */,
 				C497D2DE2152C4A900D2AE93 /* ShortcutBinding.swift */,
 			);
 			path = App;
@@ -761,13 +778,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C479DDA4202266BF00E0A11D /* ViewController.swift in Sources */,
+				C43380DC21599FDB00A28F54 /* DockTileController.swift in Sources */,
 				C4F760BB21284DC600CBDFF3 /* NSArrayControllerExtensions.swift in Sources */,
+				C4C597D42159A6A0006F7640 /* AppDockTileControllerDataSource.swift in Sources */,
 				C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */,
 				C43FFB592129CCE300F36526 /* RecordingControllerRecordingState.swift in Sources */,
 				C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */,
 				C424A24E2025A88B00320E48 /* main.swift in Sources */,
 				C4F760BF2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift in Sources */,
 				A181382B20FF221A002CCD7C /* RecordingController.swift in Sources */,
+				C43380DE2159A38400A28F54 /* AppDockTileIcon.swift in Sources */,
 				C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */,
 				C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */,
 				C46C530C211A6FF00041D8C6 /* RecordingInteractor.swift in Sources */,
