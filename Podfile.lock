@@ -22,7 +22,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GEFoundation:
-    :commit: edb7e4ac6f174d0f530c9a631646014daa9ed0ff
+    :commit: 80ae6c89f539f98fb8bc88cdb22644526299a0aa
     :git: https://github.com/grigorye/GEFoundation
 
 SPEC CHECKSUMS:
