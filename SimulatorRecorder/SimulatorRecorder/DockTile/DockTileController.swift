@@ -28,7 +28,7 @@ class DockTileController : NSObject {
 	}
 	
 	private lazy var dockTileContentViewBinding: Any = {
-		dataSource.observableIcon.observe(\ObservableIcon.value, options: .initial, changeHandler: { [weak self] (observableIcon, _) in
+		dataSource.observableIcon.observe(\.value, options: .initial, changeHandler: { [weak self] (observableIcon, _) in
 			guard let self = self else {
 				return
 			}
