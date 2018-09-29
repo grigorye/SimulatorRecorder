@@ -23,14 +23,14 @@ class AppDelegate: NSResponder, NSApplicationDelegate {
 	
 	// MARK: -
 	
-	func instantiatePreferensesWindowController() -> NSWindowController {
+	func instantiatePreferencesWindowController() -> NSWindowController {
 		let windowController = NSStoryboard(name: .preferences, bundle: nil).instantiateInitialController() as! NSWindowController
 		
 		return windowController
 	}
 	
 	func showPreferencesWindow() {
-		let preferencesWindowController = currentPreferencesWindowController ?? instantiatePreferensesWindowController()
+		let preferencesWindowController = currentPreferencesWindowController ?? instantiatePreferencesWindowController()
 		
 		preferencesWindowController.showWindow(self)
 	}
