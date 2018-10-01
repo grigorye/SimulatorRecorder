@@ -10,7 +10,7 @@ import AppKit
 
 let recordingInteractor = RecordingInteractor()
 
-class RecordingInteractor: NSResponder, NSMenuItemValidation, GlobalActionResponder, RecordingStateController {
+class RecordingInteractor: NSResponder, NSMenuItemValidation, GlobalActionResponder {
 	
 	@objc private dynamic let recordingController = RecordingController()
 	
