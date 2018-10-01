@@ -105,7 +105,7 @@ import Foundation
 	
 	// MARK: -
 	
-	var recordingState: ObservableRecordingState {
+	@objc dynamic var recordingState: ObservableRecordingState {
 		return recordingStateImp
 	}
 }

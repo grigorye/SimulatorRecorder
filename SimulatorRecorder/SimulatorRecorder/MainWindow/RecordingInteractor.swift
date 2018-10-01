@@ -10,12 +10,17 @@ import AppKit
 
 let recordingInteractor = RecordingInteractor()
 
-class RecordingInteractor: NSResponder, NSMenuItemValidation, GlobalActionResponder {
+class RecordingInteractor: NSResponder, NSMenuItemValidation, GlobalActionResponder, RecordingStateController {
 	
-	private let recordingController = RecordingController()
+	@objc private dynamic let recordingController = RecordingController()
 	
 	@objc dynamic var recordingState: ObservableRecordingState {
 		return recordingController.recordingState
+	}
+	@objc dynamic class var keyPathsForValuesAffectingRecordingState: Set<String> {
+		return [
+			#keyPath(recordingController.recordingState)
+		]
 	}
 	
 	@IBAction func stopRecording(_ sender: Any) {
