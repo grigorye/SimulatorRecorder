@@ -72,6 +72,7 @@
 		C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
 		C4AC951A212757670070A911 /* SimulatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9519212757670070A911 /* SimulatorController.swift */; };
 		C4C597D42159A6A0006F7640 /* AppDockTileControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C597D32159A6A0006F7640 /* AppDockTileControllerDataSource.swift */; };
+		C4CC78CD2161841000300C65 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC78CC2161841000300C65 /* MainWindowController.swift */; };
 		C4D56E8F210CA477003404FC /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E8E210CA476003404FC /* MainView.storyboard */; };
 		C4D56E94210CFA30003404FC /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */; };
 		C4D56E96210CFADF003404FC /* GeneralPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */; };
@@ -232,6 +233,7 @@
 		C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameToken.swift; sourceTree = "<group>"; };
 		C4AC9519212757670070A911 /* SimulatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorController.swift; sourceTree = "<group>"; };
 		C4C597D32159A6A0006F7640 /* AppDockTileControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDockTileControllerDataSource.swift; sourceTree = "<group>"; };
+		C4CC78CC2161841000300C65 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		C4D56E8E210CA476003404FC /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
 		C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
 		C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = GeneralPreferences.storyboard; path = SimulatorRecorder/Preferences/General/GeneralPreferences.storyboard; sourceTree = SOURCE_ROOT; };
@@ -310,6 +312,7 @@
 				C4D56E8E210CA476003404FC /* MainView.storyboard */,
 				C479DDA3202266BF00E0A11D /* ViewController.swift */,
 				C46C530B211A6FF00041D8C6 /* RecordingInteractor.swift */,
+				C4CC78CC2161841000300C65 /* MainWindowController.swift */,
 			);
 			path = MainWindow;
 			sourceTree = "<group>";
@@ -785,6 +788,7 @@
 				C43FFB592129CCE300F36526 /* RecordingControllerRecordingState.swift in Sources */,
 				C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */,
 				C424A24E2025A88B00320E48 /* main.swift in Sources */,
+				C4CC78CD2161841000300C65 /* MainWindowController.swift in Sources */,
 				C4F760BF2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift in Sources */,
 				A181382B20FF221A002CCD7C /* RecordingController.swift in Sources */,
 				C43380DE2159A38400A28F54 /* AppDockTileIcon.swift in Sources */,
