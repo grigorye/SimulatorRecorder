@@ -14,6 +14,18 @@ class MainWindowController : NSWindowController {
 	override func windowDidLoad() {
 		super.windowDidLoad()
 		
+		setupWindowFrameAutosaveName()
+		setupWindowLevelBinding()
+	}
+	
+	// MARK: -
+	
+	private func setupWindowFrameAutosaveName() {
+		assert(windowFrameAutosaveName.isEmpty)
+		self.windowFrameAutosaveName = window!.frameAutosaveName
+	}
+	
+	private func setupWindowLevelBinding() {
 		let observation = recordingInteractor.observe(\RecordingInteractor.recordingState.readyToRecord, options: [.initial]) { [weak window] (r, v) in
 			window?.level = r.recordingState.readyToRecord ? .normal : .floating
 		}
@@ -21,6 +33,8 @@ class MainWindowController : NSWindowController {
 			_ = observation
 		}
 	}
+	
+	// MARK: -
 	
 	var scheduledForDeinit = ScheduledHandlers()
 	deinit {
