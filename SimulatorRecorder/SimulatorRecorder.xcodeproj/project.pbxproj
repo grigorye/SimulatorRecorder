@@ -519,11 +519,11 @@
 				C479DD9A202266BF00E0A11D /* Sources */,
 				C479DD9B202266BF00E0A11D /* Frameworks */,
 				C479DD9C202266BF00E0A11D /* Resources */,
-				C479DDE620241D9100E0A11D /* Embed Source Version into Bundle */,
 				C4FDFCB6202522710017DF19 /* Embed Frameworks */,
 				5035D22810B4C0D71550C940 /* Embed Sources */,
 				A156466B2104C4F300AC9CF1 /* Bundle Brew Packages */,
 				9092FBB183BA215ADAC86B47 /* [CP] Embed Pods Frameworks */,
+				010B30A392651A3EC212361A /* [CP-User] Embed Source Version into Bundle */,
 			);
 			buildRules = (
 			);
@@ -665,6 +665,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		010B30A392651A3EC212361A /* [CP-User] Embed Source Version into Bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP-User] Embed Source Version into Bundle";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT:?}\"/GEXcodeBuildPhases/Scripts/EmbedSourceVersionIntoBundle";
+			showEnvVarsInLog = 0;
+		};
 		5C7ABE08A5238A17F21DF06D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -756,21 +775,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C479DDE620241D9100E0A11D /* Embed Source Version into Bundle */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Source Version into Bundle";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-			shellPath = "/bin/sh -ex";
-			shellScript = "\"${GE_XCODE_BUILD_PHASES:?}\"/EmbedSourceVersionIntoBundle\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
