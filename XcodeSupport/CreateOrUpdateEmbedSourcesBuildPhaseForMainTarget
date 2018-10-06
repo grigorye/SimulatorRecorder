@@ -4,5 +4,5 @@ xcodeproj="${1:?}"
 
 wd=$(dirname "$0")
 
-target=$(basename ${xcodeproj:?}|sed 's/.xcodeproj//')
+target=$(basename "${xcodeproj:?}"|sed 's/.xcodeproj//')
 "${wd:?}"/CreateOrUpdateEmbedSourcesBuildPhase "${xcodeproj:?}" "${target:?}" 'Sources/$(TARGET_NAME)'
