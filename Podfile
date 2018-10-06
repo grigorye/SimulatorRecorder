@@ -11,6 +11,9 @@ target 'SimulatorRecorder' do
   pod 'MASShortcut'
   pod 'GETracing', '~> 0.1'
   pod 'GEFoundation', :git => 'https://github.com/grigorye/GEFoundation', :branch => 'master'
+
+  pod 'GEXcodeBuildPhases', :git => 'https://github.com/grigorye/GEXcodeBuildPhases', :branch => 'master'
+  script_phase :name => 'Embed Source Version into Bundle', :script => '"${PODS_ROOT:?}"/GEXcodeBuildPhases/Scripts/EmbedSourceVersionIntoBundle'
   
   target 'SimulatorRecorderTests' do
     inherit! :search_paths

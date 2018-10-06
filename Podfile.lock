@@ -2,11 +2,13 @@ PODS:
   - GEFoundation (0.1):
     - GETracing (~> 0.1)
   - GETracing (0.1)
+  - GEXcodeBuildPhases (0.0.1)
   - MASShortcut (2.3.6)
 
 DEPENDENCIES:
   - GEFoundation (from `https://github.com/grigorye/GEFoundation`, branch `master`)
   - GETracing (~> 0.1)
+  - GEXcodeBuildPhases (from `https://github.com/grigorye/GEXcodeBuildPhases`, branch `master`)
   - MASShortcut
 
 SPEC REPOS:
@@ -19,17 +21,24 @@ EXTERNAL SOURCES:
   GEFoundation:
     :branch: master
     :git: https://github.com/grigorye/GEFoundation
+  GEXcodeBuildPhases:
+    :branch: master
+    :git: https://github.com/grigorye/GEXcodeBuildPhases
 
 CHECKOUT OPTIONS:
   GEFoundation:
     :commit: 80ae6c89f539f98fb8bc88cdb22644526299a0aa
     :git: https://github.com/grigorye/GEFoundation
+  GEXcodeBuildPhases:
+    :commit: 99426725bcb6f816e4160970eaf8887b1857f598
+    :git: https://github.com/grigorye/GEXcodeBuildPhases
 
 SPEC CHECKSUMS:
   GEFoundation: 63c0f24b06c3a9c157cbb9f4f017716b6e63ed7d
   GETracing: 5cafee190348ed7a725dff6a3f43046f7c32ac89
+  GEXcodeBuildPhases: 2bc1c52b0359b4b85e317fdd8fa621888fee562a
   MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
 
-PODFILE CHECKSUM: ca75c4c0fe09eada9e78c4c83dd579ece8b90139
+PODFILE CHECKSUM: ec1f5c6cea8074964dca1f3ca1558903534ee91b
 
 COCOAPODS: 1.5.3
