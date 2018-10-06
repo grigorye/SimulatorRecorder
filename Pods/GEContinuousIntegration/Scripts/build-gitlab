@@ -1,15 +1,17 @@
-#! /bin/sh -xe
+#! /bin/sh -x
 
-set -o pipefail
+set -eu -o pipefail
 
 pkg="${1:?}"; shift
+
+dn=$(dirname "$0")
 
 bundle install
 bundle exec pod repo update
 bundle exec pod install
 
-./build-pkg \
+"$dn"/build-pkg \
     "${pkg:?}" \
     ${DEVELOPER_DIR:+DEVELOPER_DIR="${DEVELOPER_DIR}"} \
     "${@}" \
-    | ./xcpretty
+    | "$dn"/xcpretty

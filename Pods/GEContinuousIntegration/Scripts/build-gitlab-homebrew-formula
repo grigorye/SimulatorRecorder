@@ -1,0 +1,30 @@
+#! /bin/sh -x
+
+set -eu -o pipefail
+
+pkgName="${1:?}"; shift
+formulaName="${1:?}"; shift
+
+dmgName="${pkgName:?}"
+repoName="${pkgName:?}"
+appName="${pkgName:?}"
+targetName="${pkgName:?}"
+
+formulaDir="build/Formula"
+formula="$formulaDir/${formulaName:?}.rb"
+dmg="build/${dmgName:?}.dmg"
+
+test -d "${formulaDir:?}" || mkdir "${formulaDir:?}"
+
+cat > "${formula:?}" <<END
+cask '${formulaName:?}' do
+  version '$(defaults read "$PWD"/build/${targetName:?}.dst/Applications/${appName:?}.app/Contents/Info CFBundleVersion)'
+  sha256 '$(shasum -a 256 "${dmg:?}" | cut -d ' ' -f 1)'
+
+  url 'https://gitlab.com/grigorye/${repoName:?}/-/jobs/${CI_JOB_ID:?}/artifacts/raw/build/${dmgName:?}.dmg'
+  name '${appName:?}'
+  homepage 'https://gitlab.com/grigorye/${repoName:?}'
+
+  app '${appName:?}.app'
+end
+END

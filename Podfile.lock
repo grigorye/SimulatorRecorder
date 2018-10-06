@@ -1,4 +1,5 @@
 PODS:
+  - GEContinuousIntegration (0.1)
   - GEFoundation (0.1):
     - GETracing (~> 0.1)
   - GETracing (0.1)
@@ -6,9 +7,10 @@ PODS:
   - MASShortcut (2.3.6)
 
 DEPENDENCIES:
-  - GEFoundation (from `https://github.com/grigorye/GEFoundation`, branch `master`)
+  - GEContinuousIntegration (from `https://github.com/grigorye/GEContinuousIntegration`)
+  - GEFoundation (from `https://github.com/grigorye/GEFoundation`)
   - GETracing (~> 0.1)
-  - GEXcodeBuildPhases (from `https://github.com/grigorye/GEXcodeBuildPhases`, branch `master`)
+  - GEXcodeBuildPhases (from `https://github.com/grigorye/GEXcodeBuildPhases`)
   - MASShortcut
 
 SPEC REPOS:
@@ -18,14 +20,17 @@ SPEC REPOS:
     - GETracing
 
 EXTERNAL SOURCES:
+  GEContinuousIntegration:
+    :git: https://github.com/grigorye/GEContinuousIntegration
   GEFoundation:
-    :branch: master
     :git: https://github.com/grigorye/GEFoundation
   GEXcodeBuildPhases:
-    :branch: master
     :git: https://github.com/grigorye/GEXcodeBuildPhases
 
 CHECKOUT OPTIONS:
+  GEContinuousIntegration:
+    :commit: 1d484a8462b4dd245c381a0ab5d36a5940cbc761
+    :git: https://github.com/grigorye/GEContinuousIntegration
   GEFoundation:
     :commit: 80ae6c89f539f98fb8bc88cdb22644526299a0aa
     :git: https://github.com/grigorye/GEFoundation
@@ -34,11 +39,12 @@ CHECKOUT OPTIONS:
     :git: https://github.com/grigorye/GEXcodeBuildPhases
 
 SPEC CHECKSUMS:
+  GEContinuousIntegration: 7169e73e490730fd52a3a452fc85919c48f75567
   GEFoundation: 63c0f24b06c3a9c157cbb9f4f017716b6e63ed7d
   GETracing: 5cafee190348ed7a725dff6a3f43046f7c32ac89
   GEXcodeBuildPhases: 2bc1c52b0359b4b85e317fdd8fa621888fee562a
   MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
 
-PODFILE CHECKSUM: ec1f5c6cea8074964dca1f3ca1558903534ee91b
+PODFILE CHECKSUM: f665d8863c2cdb06c6d8e49c6e888672b5b93662
 
 COCOAPODS: 1.5.3

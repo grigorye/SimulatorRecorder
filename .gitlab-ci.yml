@@ -4,8 +4,9 @@ stages:
 build_project:
   stage: build
   script:
+    - formulaName="url-helper-app"
     - packageName="${CI_PROJECT_NAME:?}"
-    - ./build-gitlab-cmd "$PWD/build" "${packageName:?}"
+    - ./Pods/GEContinuousIntegration/Scripts/build-gitlab-cmd "$PWD/build" "${packageName:?}" "${formulaName:?}"
   artifacts:
     paths:
       - build/*.pkg

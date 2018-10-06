@@ -40,7 +40,7 @@ productDefinitionPlist=$(buildSetting 'PRODUCT_DEFINITION_PLIST')
 productName="${projectName:?}"
 
 productbuild \
-    --product "${projectName:?}"/"${productDefinitionPlist:?}" \
+    --product "${productDefinitionPlist:?}" \
     --component "${installDir:?}"/Applications/"${productName:?}".app /Applications \
     "${pkg:?}"
 

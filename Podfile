@@ -5,14 +5,16 @@ platform :osx, '10.10'
 
 project "SimulatorRecorder/SimulatorRecorder.xcodeproj"
 
+pod 'GEContinuousIntegration', :git => 'https://github.com/grigorye/GEContinuousIntegration'
+
 target 'SimulatorRecorder' do
   use_frameworks!
 
   pod 'MASShortcut'
   pod 'GETracing', '~> 0.1'
-  pod 'GEFoundation', :git => 'https://github.com/grigorye/GEFoundation', :branch => 'master'
+  pod 'GEFoundation', :git => 'https://github.com/grigorye/GEFoundation'
 
-  pod 'GEXcodeBuildPhases', :git => 'https://github.com/grigorye/GEXcodeBuildPhases', :branch => 'master'
+  pod 'GEXcodeBuildPhases', :git => 'https://github.com/grigorye/GEXcodeBuildPhases'
   script_phase :name => 'Embed Source Version into Bundle', :script => '"${PODS_ROOT:?}"/GEXcodeBuildPhases/Scripts/EmbedSourceVersionIntoBundle'
   
   target 'SimulatorRecorderTests' do

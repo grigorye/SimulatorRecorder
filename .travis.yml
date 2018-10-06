@@ -2,5 +2,6 @@ osx_image: xcode9.4
 language: swift
 script:
   - packageName="SimulatorRecorder"
+  - formulaName="url-helper-app"
   - export GE_DISABLE_XCPRETTY=1
-  - ./build-gitlab-cmd "$PWD/build" "${packageName:?}"
+  - ./Pods/GEContinuousIntegration/Scripts/build-gitlab-cmd "$PWD/build" "${packageName:?}" "${formulaName:?}"
