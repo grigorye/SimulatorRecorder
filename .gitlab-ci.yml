@@ -4,7 +4,7 @@ stages:
 build_project:
   stage: build
   script:
-    - formulaName="url-helper-app"
+    - formulaName="simulator-recorder"
     - packageName="${CI_PROJECT_NAME:?}"
     - ./Pods/GEContinuousIntegration/Scripts/build-gitlab-cmd "$PWD/build" "${packageName:?}" "${formulaName:?}"
   artifacts:
