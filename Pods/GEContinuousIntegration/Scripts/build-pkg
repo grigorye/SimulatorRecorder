@@ -37,10 +37,11 @@ buildSetting() {
 }
 
 productDefinitionPlist=$(buildSetting 'PRODUCT_DEFINITION_PLIST')
+srcroot=$(buildSetting 'SRCROOT')
 productName="${projectName:?}"
 
 productbuild \
-    --product "${productDefinitionPlist:?}" \
+    --product "${srcroot:?}/${productDefinitionPlist:?}" \
     --component "${installDir:?}"/Applications/"${productName:?}".app /Applications \
     "${pkg:?}"
 
