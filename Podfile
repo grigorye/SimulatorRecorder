@@ -11,6 +11,7 @@ target 'SimulatorRecorder' do
   use_frameworks!
 
   pod 'MASShortcut'
+  pod 'Fabric'
   pod 'GETracing', '~> 0.1'
   pod 'GEFoundation', :git => 'https://github.com/grigorye/GEFoundation'
 
