@@ -198,6 +198,9 @@
 		C41152A920291E8C00DDB293 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
 		C41152AB2029224000DDB293 /* StatusItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusItem.xib; sourceTree = "<group>"; };
 		C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		C4145B39217B229A00708B94 /* SimulatorRecorder-app.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SimulatorRecorder-app.xcconfig"; sourceTree = "<group>"; };
+		C4145B3A217B230E00708B94 /* SimulatorRecorder-app.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SimulatorRecorder-app.debug.xcconfig"; sourceTree = "<group>"; };
+		C4145B3B217B235B00708B94 /* SimulatorRecorder-app.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SimulatorRecorder-app.release.xcconfig"; sourceTree = "<group>"; };
 		C41F4C352028B3200090E79B /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		C424A24D2025A88B00320E48 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C428604A214B3EA500825AB1 /* AppStatusIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusIcon.swift; sourceTree = "<group>"; };
@@ -350,6 +353,9 @@
 			children = (
 				C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */,
 				A156466C2104C53A00AC9CF1 /* XCBundleBrewPackages */,
+				C4145B39217B229A00708B94 /* SimulatorRecorder-app.xcconfig */,
+				C4145B3A217B230E00708B94 /* SimulatorRecorder-app.debug.xcconfig */,
+				C4145B3B217B235B00708B94 /* SimulatorRecorder-app.release.xcconfig */,
 			);
 			path = XcodeBuild;
 			sourceTree = "<group>";
@@ -524,6 +530,7 @@
 				A156466B2104C4F300AC9CF1 /* Bundle Brew Packages */,
 				9092FBB183BA215ADAC86B47 /* [CP] Embed Pods Frameworks */,
 				010B30A392651A3EC212361A /* [CP-User] Embed Source Version into Bundle */,
+				68EF8BA0A614EE9EE99835B0 /* [CP-User] Integrate Fabric */,
 			);
 			buildRules = (
 			);
@@ -680,8 +687,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT:?}\"/GEXcodeBuildPhases/Scripts/EmbedSourceVersionIntoBundle";
+			shellPath = "/bin/sh -e";
+			shellScript = "\"${GE_XCODE_BUILD_PHASES:?}/EmbedSourceVersionIntoBundle\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5C7ABE08A5238A17F21DF06D /* [CP] Check Pods Manifest.lock */ = {
@@ -700,6 +707,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68EF8BA0A614EE9EE99835B0 /* [CP-User] Integrate Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[CP-User] Integrate Fabric";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh -e";
+			shellScript = "\"${GE_XCODE_BUILD_PHASES:?}/IntegrateFabric\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8B01974C4CDA9AD678D44D8A /* [CP] Check Pods Manifest.lock */ = {
@@ -988,7 +1014,7 @@
 		};
 		C479DDC5202266C000E0A11D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1515A1BA1BD6476C7E80257D /* Pods-SimulatorRecorder.debug.xcconfig */;
+			baseConfigurationReference = C4145B3A217B230E00708B94 /* SimulatorRecorder-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -1008,7 +1034,7 @@
 		};
 		C479DDC6202266C000E0A11D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98601D527893353C34E643D6 /* Pods-SimulatorRecorder.release.xcconfig */;
+			baseConfigurationReference = C4145B3B217B235B00708B94 /* SimulatorRecorder-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
