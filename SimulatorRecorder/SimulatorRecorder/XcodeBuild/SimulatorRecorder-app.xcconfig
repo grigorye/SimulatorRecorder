@@ -1,0 +1,9 @@
+//
+//  SimulatorRecorder-app.xcconfig
+//  SimulatorRecorder
+//
+//  Created by Grigory Entin on 20/10/2018.
+//  Copyright © 2018 Grigory Entin. All rights reserved.
+//
+
+CRASHLYTICS_ENABLED = YES
