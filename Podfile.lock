@@ -1,22 +1,28 @@
 PODS:
+  - Crashlytics (3.10.9):
+    - Fabric (~> 1.7.13)
   - Fabric (1.7.13)
   - GEContinuousIntegration (0.1)
   - GEFoundation (0.1):
     - GETracing (~> 0.1)
   - GETracing (0.1)
   - GEXcodeBuildPhases (0.0.1)
+  - GEXcodeScripts (0.1)
   - MASShortcut (2.3.6)
 
 DEPENDENCIES:
+  - Crashlytics
   - Fabric
   - GEContinuousIntegration (from `https://github.com/grigorye/GEContinuousIntegration`)
   - GEFoundation (from `https://github.com/grigorye/GEFoundation`)
   - GETracing (~> 0.1)
   - GEXcodeBuildPhases (from `https://github.com/grigorye/GEXcodeBuildPhases`)
+  - GEXcodeScripts (from `https://github.com/grigorye/GEXcodeScripts`)
   - MASShortcut
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Crashlytics
     - Fabric
     - MASShortcut
   https://github.com/grigorye/podspecs.git:
@@ -29,6 +35,8 @@ EXTERNAL SOURCES:
     :git: https://github.com/grigorye/GEFoundation
   GEXcodeBuildPhases:
     :git: https://github.com/grigorye/GEXcodeBuildPhases
+  GEXcodeScripts:
+    :git: https://github.com/grigorye/GEXcodeScripts
 
 CHECKOUT OPTIONS:
   GEContinuousIntegration:
@@ -38,17 +46,22 @@ CHECKOUT OPTIONS:
     :commit: 80ae6c89f539f98fb8bc88cdb22644526299a0aa
     :git: https://github.com/grigorye/GEFoundation
   GEXcodeBuildPhases:
-    :commit: 99426725bcb6f816e4160970eaf8887b1857f598
+    :commit: 4a59a9ec4a362c001d6fe724a7424f315ed22d7d
     :git: https://github.com/grigorye/GEXcodeBuildPhases
+  GEXcodeScripts:
+    :commit: 99786c9e9de47259793250096694c006bcd3f918
+    :git: https://github.com/grigorye/GEXcodeScripts
 
 SPEC CHECKSUMS:
+  Crashlytics: 55e24fc23989680285a21cb1146578d9d18e432c
   Fabric: 25d0963b691fc97be566392243ff0ecef5a68338
   GEContinuousIntegration: 7169e73e490730fd52a3a452fc85919c48f75567
   GEFoundation: 63c0f24b06c3a9c157cbb9f4f017716b6e63ed7d
   GETracing: 5cafee190348ed7a725dff6a3f43046f7c32ac89
-  GEXcodeBuildPhases: 2bc1c52b0359b4b85e317fdd8fa621888fee562a
+  GEXcodeBuildPhases: f1ecf1d0abf9017124662f540563dd8c15e2910e
+  GEXcodeScripts: b1dd6730407428e4ddd72db31fafb259c23799fd
   MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
 
-PODFILE CHECKSUM: 7735384a3769941a39807a3688c302ee8169df06
+PODFILE CHECKSUM: 950c3b46a6d2c07121b870c12842d055701ec8d4
 
 COCOAPODS: 1.5.3
