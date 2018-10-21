@@ -43,7 +43,7 @@ CHECKOUT OPTIONS:
     :commit: e0399b04b5ee113f9830dccadd398a364b71ffcf
     :git: https://github.com/grigorye/GEContinuousIntegration
   GEFoundation:
-    :commit: 80ae6c89f539f98fb8bc88cdb22644526299a0aa
+    :commit: 3c134bf3f81ff7979a741daeca27a9a15be95918
     :git: https://github.com/grigorye/GEFoundation
   GEXcodeBuildPhases:
     :commit: 4a59a9ec4a362c001d6fe724a7424f315ed22d7d
@@ -56,7 +56,7 @@ SPEC CHECKSUMS:
   Crashlytics: 55e24fc23989680285a21cb1146578d9d18e432c
   Fabric: 25d0963b691fc97be566392243ff0ecef5a68338
   GEContinuousIntegration: 7169e73e490730fd52a3a452fc85919c48f75567
-  GEFoundation: 63c0f24b06c3a9c157cbb9f4f017716b6e63ed7d
+  GEFoundation: f3b830c3822176a975dc3eead04507e45a283337
   GETracing: 5cafee190348ed7a725dff6a3f43046f7c32ac89
   GEXcodeBuildPhases: f1ecf1d0abf9017124662f540563dd8c15e2910e
   GEXcodeScripts: b1dd6730407428e4ddd72db31fafb259c23799fd
