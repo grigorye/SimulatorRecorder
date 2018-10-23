@@ -12,6 +12,7 @@ build_project:
       - build/*.pkg
       - build/*.dmg
       - build/Formula/*.rb
+      - *.log
   tags:
     - xcode-10
     - macos
