@@ -46,7 +46,7 @@ CHECKOUT OPTIONS:
     :commit: 3c134bf3f81ff7979a741daeca27a9a15be95918
     :git: https://github.com/grigorye/GEFoundation
   GEXcodeBuildPhases:
-    :commit: 4a59a9ec4a362c001d6fe724a7424f315ed22d7d
+    :commit: 728621f72bddcbc3df923df4913ff1c97dd762c9
     :git: https://github.com/grigorye/GEXcodeBuildPhases
   GEXcodeScripts:
     :commit: 99786c9e9de47259793250096694c006bcd3f918
