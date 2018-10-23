@@ -5,6 +5,7 @@ set -eu -o pipefail
 pkg="${1:?}"; shift
 
 dn=$(dirname "$0")
+bn=$(basename "$0")
 
 bundle install
 bundle exec pod repo update
@@ -14,4 +15,5 @@ bundle exec pod install
     "${pkg:?}" \
     ${DEVELOPER_DIR:+DEVELOPER_DIR="${DEVELOPER_DIR}"} \
     "${@}" \
+    | tee "${bn:?}.log" \
     | "$dn"/xcpretty

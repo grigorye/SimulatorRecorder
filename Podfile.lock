@@ -40,7 +40,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GEContinuousIntegration:
-    :commit: e0399b04b5ee113f9830dccadd398a364b71ffcf
+    :commit: 927fe8e13e98adf2afcf07bd9d6cad8388e4605d
     :git: https://github.com/grigorye/GEContinuousIntegration
   GEFoundation:
     :commit: 3c134bf3f81ff7979a741daeca27a9a15be95918
