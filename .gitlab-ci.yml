@@ -6,7 +6,7 @@ build_project:
   script:
     - formulaName="simulator-recorder"
     - packageName="${CI_PROJECT_NAME:?}"
-    - ./Pods/GEContinuousIntegration/Scripts/build-gitlab-cmd "$PWD/build" "${packageName:?}" "${formulaName:?}"
+    - ./Pods/GEContinuousIntegration/Scripts/build-gitlab-cmd "$PWD/build" "${packageName:?}" "${formulaName:?}" XC_FABRIC_BUILD_SECRET="${XC_FABRIC_BUILD_SECRET:?}"
   artifacts:
     paths:
       - build/*.pkg
