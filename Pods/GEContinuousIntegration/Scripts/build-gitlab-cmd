@@ -10,6 +10,7 @@ dn=$(dirname "$0")
 
 "$dn"/build-gitlab \
     "${buildDir:?}/${packageName:?}.pkg" \
+    "${buildDir:?}/${packageName:?}-build.log" \
     GE_DERIVED_DATA_PATH="${buildDir:?}"/DerivedData \
     DSTROOT="${buildDir:?}/${packageName:?}".dst
 

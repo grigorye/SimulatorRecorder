@@ -1,7 +1,7 @@
 PODS:
-  - Crashlytics (3.10.9):
-    - Fabric (~> 1.7.13)
-  - Fabric (1.7.13)
+  - Crashlytics (3.11.0):
+    - Fabric (~> 1.8.0)
+  - Fabric (1.8.0)
   - GEContinuousIntegration (0.1)
   - GEFoundation (0.1):
     - GETracing (~> 0.1)
@@ -40,7 +40,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GEContinuousIntegration:
-    :commit: 927fe8e13e98adf2afcf07bd9d6cad8388e4605d
+    :commit: 9d86dccc2a48be7d15ee59ce16135352025a4bb1
     :git: https://github.com/grigorye/GEContinuousIntegration
   GEFoundation:
     :commit: 3c134bf3f81ff7979a741daeca27a9a15be95918
@@ -53,8 +53,8 @@ CHECKOUT OPTIONS:
     :git: https://github.com/grigorye/GEXcodeScripts
 
 SPEC CHECKSUMS:
-  Crashlytics: 55e24fc23989680285a21cb1146578d9d18e432c
-  Fabric: 25d0963b691fc97be566392243ff0ecef5a68338
+  Crashlytics: 1448070c1d2731ab71ea7c3faf84ac0f69657287
+  Fabric: 4ac1cdfef3004ccd83ce0959b91eda8a6e37df72
   GEContinuousIntegration: 7169e73e490730fd52a3a452fc85919c48f75567
   GEFoundation: f3b830c3822176a975dc3eead04507e45a283337
   GETracing: 5cafee190348ed7a725dff6a3f43046f7c32ac89

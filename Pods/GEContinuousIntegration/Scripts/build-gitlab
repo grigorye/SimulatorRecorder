@@ -3,6 +3,7 @@
 set -eu -o pipefail
 
 pkg="${1:?}"; shift
+log="${1:?}"; shift
 
 dn=$(dirname "$0")
 bn=$(basename "$0")
@@ -15,5 +16,5 @@ bundle exec pod install
     "${pkg:?}" \
     ${DEVELOPER_DIR:+DEVELOPER_DIR="${DEVELOPER_DIR}"} \
     "${@}" \
-    | tee "${bn:?}.log" \
+    | tee "${log:?}" \
     | "$dn"/xcpretty
