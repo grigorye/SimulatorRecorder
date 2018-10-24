@@ -8,6 +8,8 @@ formulaName="${1:?}"; shift
 
 dn=$(dirname "$0")
 
+mkdir "${buildDir:?}"
+
 "$dn"/build-gitlab \
     "${buildDir:?}/${packageName:?}.pkg" \
     "${buildDir:?}/${packageName:?}-build.log" \
