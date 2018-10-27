@@ -44,6 +44,9 @@ target 'SimulatorRecorder' do
   pod 'GEAppConfig/Core', :git => 'https://github.com/grigorye/GEAppConfig'
   pod 'GEAppConfig/Crashlytics', :git => 'https://github.com/grigorye/GEAppConfig'
   pod 'GEAppConfig/Answers', :git => 'https://github.com/grigorye/GEAppConfig'
+  # pod 'GEAppConfig/Core', :path => '../GEAppConfig'
+  # pod 'GEAppConfig/Crashlytics', :path => '../GEAppConfig'
+  # pod 'GEAppConfig/Answers', :path => '../GEAppConfig'
   pod 'GEFoundation', :git => 'https://github.com/grigorye/GEFoundation'
   pod 'GETracing', :git => 'https://github.com/grigorye/GETracing'
 

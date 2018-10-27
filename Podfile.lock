@@ -1,6 +1,4 @@
 PODS:
-  - Answers (1.4.0):
-    - Fabric (~> 1.8.0)
   - Crashlytics (3.11.0):
     - Fabric (~> 1.8.0)
   - Fabric (1.8.0)
@@ -13,7 +11,7 @@ PODS:
     - JGProgressHUD
     - Watchdog
   - GEAppConfig/Answers (0.0.1):
-    - Answers
+    - Crashlytics
     - Fabric
     - FTLinearActivityIndicator
     - GEAppConfig/Analytics
@@ -65,7 +63,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Answers
     - Crashlytics
     - Fabric
     - MASShortcut
@@ -86,7 +83,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GEAppConfig:
-    :commit: dd6319cc8f9e57f7ae70af0e41648ee1dd2c33d0
+    :commit: d1f55b48f185818e0f1bf315646cc4e7372177ee
     :git: https://github.com/grigorye/GEAppConfig
   GEContinuousIntegration:
     :commit: 0ce3846208cf432d7a4e7ec2c9bbe87e7748f5b7
@@ -105,10 +102,9 @@ CHECKOUT OPTIONS:
     :git: https://github.com/grigorye/GEXcodeScripts
 
 SPEC CHECKSUMS:
-  Answers: e7317ccd30e7bf55c3bacfe28adbe2304b082e49
   Crashlytics: 1448070c1d2731ab71ea7c3faf84ac0f69657287
   Fabric: 4ac1cdfef3004ccd83ce0959b91eda8a6e37df72
-  GEAppConfig: 5be788523c489bf064a6764511b7bafdc25b8130
+  GEAppConfig: 0ff38c0731ed62443f6074574c2bac4d64457b5f
   GEContinuousIntegration: 7169e73e490730fd52a3a452fc85919c48f75567
   GEFoundation: f3b830c3822176a975dc3eead04507e45a283337
   GETracing: a59b549139e56b4d46f9674460cee7b7b7602615
@@ -116,6 +112,6 @@ SPEC CHECKSUMS:
   GEXcodeScripts: b1dd6730407428e4ddd72db31fafb259c23799fd
   MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
 
-PODFILE CHECKSUM: 43813247d03ebd9b9f7b63a384eb969d069779e5
+PODFILE CHECKSUM: 363b9922e2dcd19d25c4acb005dece86ebce0ad3
 
 COCOAPODS: 1.5.3
