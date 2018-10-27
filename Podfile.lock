@@ -1,9 +1,22 @@
 PODS:
+  - Answers (1.4.0):
+    - Fabric (~> 1.8.0)
   - Crashlytics (3.11.0):
     - Fabric (~> 1.8.0)
   - Fabric (1.8.0)
   - GEAppConfig/Analytics (0.0.1):
     - FTLinearActivityIndicator
+    - GEDebugKit
+    - GEFoundation
+    - GETracing
+    - GEUIKit
+    - JGProgressHUD
+    - Watchdog
+  - GEAppConfig/Answers (0.0.1):
+    - Answers
+    - Fabric
+    - FTLinearActivityIndicator
+    - GEAppConfig/Analytics
     - GEDebugKit
     - GEFoundation
     - GETracing
@@ -20,6 +33,7 @@ PODS:
     - Watchdog
   - GEAppConfig/Crashlytics (0.0.1):
     - Crashlytics
+    - Fabric
     - FTLinearActivityIndicator
     - GEAppConfig/Analytics
     - GEDebugKit
@@ -39,6 +53,7 @@ PODS:
 DEPENDENCIES:
   - Crashlytics
   - Fabric
+  - GEAppConfig/Answers (from `https://github.com/grigorye/GEAppConfig`)
   - GEAppConfig/Core (from `https://github.com/grigorye/GEAppConfig`)
   - GEAppConfig/Crashlytics (from `https://github.com/grigorye/GEAppConfig`)
   - GEContinuousIntegration (from `https://github.com/grigorye/GEContinuousIntegration`)
@@ -50,6 +65,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Answers
     - Crashlytics
     - Fabric
     - MASShortcut
@@ -70,7 +86,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   GEAppConfig:
-    :commit: 4b5b8a24a290e1e94d95e9fda42a013443b4285a
+    :commit: dd6319cc8f9e57f7ae70af0e41648ee1dd2c33d0
     :git: https://github.com/grigorye/GEAppConfig
   GEContinuousIntegration:
     :commit: 0ce3846208cf432d7a4e7ec2c9bbe87e7748f5b7
@@ -89,9 +105,10 @@ CHECKOUT OPTIONS:
     :git: https://github.com/grigorye/GEXcodeScripts
 
 SPEC CHECKSUMS:
+  Answers: e7317ccd30e7bf55c3bacfe28adbe2304b082e49
   Crashlytics: 1448070c1d2731ab71ea7c3faf84ac0f69657287
   Fabric: 4ac1cdfef3004ccd83ce0959b91eda8a6e37df72
-  GEAppConfig: 6dc1ab8f0f6b9075fe206b67f72396dc4f8ea914
+  GEAppConfig: 5be788523c489bf064a6764511b7bafdc25b8130
   GEContinuousIntegration: 7169e73e490730fd52a3a452fc85919c48f75567
   GEFoundation: f3b830c3822176a975dc3eead04507e45a283337
   GETracing: a59b549139e56b4d46f9674460cee7b7b7602615
@@ -99,6 +116,6 @@ SPEC CHECKSUMS:
   GEXcodeScripts: b1dd6730407428e4ddd72db31fafb259c23799fd
   MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
 
-PODFILE CHECKSUM: 44fc9903c5bc1d7825909f675f7363d3b52dae87
+PODFILE CHECKSUM: 43813247d03ebd9b9f7b63a384eb969d069779e5
 
 COCOAPODS: 1.5.3

@@ -40,9 +40,10 @@ target 'SimulatorRecorder' do
   pod 'MASShortcut'
   pod 'Fabric'
   pod 'Crashlytics'
-
+  
   pod 'GEAppConfig/Core', :git => 'https://github.com/grigorye/GEAppConfig'
   pod 'GEAppConfig/Crashlytics', :git => 'https://github.com/grigorye/GEAppConfig'
+  pod 'GEAppConfig/Answers', :git => 'https://github.com/grigorye/GEAppConfig'
   pod 'GEFoundation', :git => 'https://github.com/grigorye/GEFoundation'
   pod 'GETracing', :git => 'https://github.com/grigorye/GETracing'
 
