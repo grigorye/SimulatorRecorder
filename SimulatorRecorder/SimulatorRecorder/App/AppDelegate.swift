@@ -6,6 +6,7 @@
 //  Copyright © 2018 Grigory Entin. All rights reserved.
 //
 
+import GEAppConfig
 import Cocoa
 import Carbon.HIToolbox
 
@@ -20,6 +21,8 @@ extension NSStoryboard.Name {
 }
 
 class AppDelegate: NSResponder, NSApplicationDelegate {
+	
+	private let appDelegateBase = AppDelegateBase()
 	
 	// MARK: -
 	
