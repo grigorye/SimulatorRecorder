@@ -1,7 +1,9 @@
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/grigorye/podspecs.git'
 
-platform :osx, '10.10'
+use_frameworks!
+
+platform :osx, '10.13'
 
 project "SimulatorRecorder/SimulatorRecorder.xcodeproj"
 
@@ -38,8 +40,11 @@ target 'SimulatorRecorder' do
   pod 'MASShortcut'
   pod 'Fabric'
   pod 'Crashlytics'
-  pod 'GETracing', '~> 0.1'
+
+  pod 'GEAppConfig/Core', :git => 'https://github.com/grigorye/GEAppConfig'
+  pod 'GEAppConfig/Crashlytics', :git => 'https://github.com/grigorye/GEAppConfig'
   pod 'GEFoundation', :git => 'https://github.com/grigorye/GEFoundation'
+  pod 'GETracing', :git => 'https://github.com/grigorye/GETracing'
 
   pod 'GEXcodeScripts', :git => 'https://github.com/grigorye/GEXcodeScripts'
   inject_pod_dir_as_xcconfig_var('GE_XCODE_SCRIPTS_POD_ROOT', 'GEXcodeScripts')
@@ -68,8 +73,12 @@ post_install do |installer|
   end
 
   installer.pods_project.targets.each do |target|
+    if target.name == 'MASShortcut'
+      target.build_configurations.each do |configuration|
+        configuration.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.9'
+      end
+    end
     target.build_configurations.each do |configuration|
-      configuration.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.9'
       configuration.build_settings['OTHER_CFLAGS'] = '$(inherited) -Wno-comma'
       configuration.build_settings['CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF'] = 'NO'
     end

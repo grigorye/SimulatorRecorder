@@ -2,6 +2,32 @@ PODS:
   - Crashlytics (3.11.0):
     - Fabric (~> 1.8.0)
   - Fabric (1.8.0)
+  - GEAppConfig/Analytics (0.0.1):
+    - FTLinearActivityIndicator
+    - GEDebugKit
+    - GEFoundation
+    - GETracing
+    - GEUIKit
+    - JGProgressHUD
+    - Watchdog
+  - GEAppConfig/Core (0.0.1):
+    - FTLinearActivityIndicator
+    - GEDebugKit
+    - GEFoundation
+    - GETracing
+    - GEUIKit
+    - JGProgressHUD
+    - Watchdog
+  - GEAppConfig/Crashlytics (0.0.1):
+    - Crashlytics
+    - FTLinearActivityIndicator
+    - GEAppConfig/Analytics
+    - GEDebugKit
+    - GEFoundation
+    - GETracing
+    - GEUIKit
+    - JGProgressHUD
+    - Watchdog
   - GEContinuousIntegration (0.1)
   - GEFoundation (0.1):
     - GETracing (~> 0.1)
@@ -13,9 +39,11 @@ PODS:
 DEPENDENCIES:
   - Crashlytics
   - Fabric
+  - GEAppConfig/Core (from `https://github.com/grigorye/GEAppConfig`)
+  - GEAppConfig/Crashlytics (from `https://github.com/grigorye/GEAppConfig`)
   - GEContinuousIntegration (from `https://github.com/grigorye/GEContinuousIntegration`)
   - GEFoundation (from `https://github.com/grigorye/GEFoundation`)
-  - GETracing (~> 0.1)
+  - GETracing (from `https://github.com/grigorye/GETracing`)
   - GEXcodeBuildPhases (from `https://github.com/grigorye/GEXcodeBuildPhases`)
   - GEXcodeScripts (from `https://github.com/grigorye/GEXcodeScripts`)
   - MASShortcut
@@ -25,26 +53,34 @@ SPEC REPOS:
     - Crashlytics
     - Fabric
     - MASShortcut
-  https://github.com/grigorye/podspecs.git:
-    - GETracing
 
 EXTERNAL SOURCES:
+  GEAppConfig:
+    :git: https://github.com/grigorye/GEAppConfig
   GEContinuousIntegration:
     :git: https://github.com/grigorye/GEContinuousIntegration
   GEFoundation:
     :git: https://github.com/grigorye/GEFoundation
+  GETracing:
+    :git: https://github.com/grigorye/GETracing
   GEXcodeBuildPhases:
     :git: https://github.com/grigorye/GEXcodeBuildPhases
   GEXcodeScripts:
     :git: https://github.com/grigorye/GEXcodeScripts
 
 CHECKOUT OPTIONS:
+  GEAppConfig:
+    :commit: 4b5b8a24a290e1e94d95e9fda42a013443b4285a
+    :git: https://github.com/grigorye/GEAppConfig
   GEContinuousIntegration:
     :commit: 0ce3846208cf432d7a4e7ec2c9bbe87e7748f5b7
     :git: https://github.com/grigorye/GEContinuousIntegration
   GEFoundation:
     :commit: 3c134bf3f81ff7979a741daeca27a9a15be95918
     :git: https://github.com/grigorye/GEFoundation
+  GETracing:
+    :commit: fadef96e1d9a51caa310a285d99b4d8d6e031bf2
+    :git: https://github.com/grigorye/GETracing
   GEXcodeBuildPhases:
     :commit: 728621f72bddcbc3df923df4913ff1c97dd762c9
     :git: https://github.com/grigorye/GEXcodeBuildPhases
@@ -55,13 +91,14 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Crashlytics: 1448070c1d2731ab71ea7c3faf84ac0f69657287
   Fabric: 4ac1cdfef3004ccd83ce0959b91eda8a6e37df72
+  GEAppConfig: 6dc1ab8f0f6b9075fe206b67f72396dc4f8ea914
   GEContinuousIntegration: 7169e73e490730fd52a3a452fc85919c48f75567
   GEFoundation: f3b830c3822176a975dc3eead04507e45a283337
-  GETracing: 5cafee190348ed7a725dff6a3f43046f7c32ac89
+  GETracing: a59b549139e56b4d46f9674460cee7b7b7602615
   GEXcodeBuildPhases: f1ecf1d0abf9017124662f540563dd8c15e2910e
   GEXcodeScripts: b1dd6730407428e4ddd72db31fafb259c23799fd
   MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
 
-PODFILE CHECKSUM: 950c3b46a6d2c07121b870c12842d055701ec8d4
+PODFILE CHECKSUM: 44fc9903c5bc1d7825909f675f7363d3b52dae87
 
 COCOAPODS: 1.5.3
