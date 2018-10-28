@@ -14,7 +14,9 @@ struct SimulatorDevicesResponse : Decodable {
 	typealias OSVersion = String
 	struct DeviceInfo : Decodable {
 		let state: State
-		let availability: Availability
+		let availability: Availability?
+		let isAvailable: String?
+		let availabilityError: String?
 		let name: String
 		let udid: String
 		
@@ -33,7 +35,7 @@ struct SimulatorDevicesResponse : Decodable {
 
 struct SimulatorDeviceInfo {
 	let state: State
-	let availability: Availability
+	let isAvailable: Bool
 	let name: String
 	let udid: String
 	let osVersion: String
@@ -104,7 +106,20 @@ class SimulatorController {
 		
 		let devices = devicesResponse.devices.flatMap { (osVersion, responses) -> [SimulatorDeviceInfo] in
 			responses.map {
-				SimulatorDeviceInfo(state: $0.state, availability: $0.availability, name: $0.name, udid: $0.udid, osVersion: osVersion)
+				let isAvailable: Bool = { response in
+					if let isAvailable = response.isAvailable {
+						return isAvailable == "YES"
+					}
+					switch response.availability {
+					case .none:
+						fatalError()
+					case .available?:
+						return true
+					default:
+						return false
+					}
+				}($0)
+				return SimulatorDeviceInfo(state: $0.state, isAvailable: isAvailable, name: $0.name, udid: $0.udid, osVersion: osVersion)
 			}
 		}
 		return devices
