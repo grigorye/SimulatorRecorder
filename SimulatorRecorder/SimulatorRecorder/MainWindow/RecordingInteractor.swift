@@ -40,16 +40,12 @@ class RecordingInteractor: NSResponder, NSMenuItemValidation, GlobalActionRespon
 		}
 	}
 	
-	var window: NSWindow {
-		return NSApplication.shared.mainWindow!
-	}
-	
 	func completeRecording(_ error: Error?) {
 		guard let error = error else {
 			return
 		}
 		
-		presentError(error, modalFor: window, delegate: nil, didPresent: nil, contextInfo: nil)
+		presentError(error)
 	}
 	
 	@IBAction func newScreenRecording(_ sender: Any) {
