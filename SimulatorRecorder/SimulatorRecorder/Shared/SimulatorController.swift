@@ -15,7 +15,7 @@ struct SimulatorDevicesResponse : Decodable {
 	struct DeviceInfo : Decodable {
 		let state: State
 		let availability: Availability?
-		let isAvailable: String?
+		let isAvailable: Bool?
 		let availabilityError: String?
 		let name: String
 		let udid: String
@@ -27,7 +27,8 @@ struct SimulatorDevicesResponse : Decodable {
 		}
 		enum Availability: String, Decodable {
 			case available = "(available)"
-			case unavailableRunTimeProfileNotFound = " (unavailable, runtime profile not found)"
+			case unavailableRuntimeProfileNotFound = "(unavailable, runtime profile not found)"
+			case unavailableRunTimeProfileNotFoundXcode9 = " (unavailable, runtime profile not found)"
 			case unavailableDeviceTypeNotSupportedByRuntime = " (unavailable, device type not supported by runtime)"
 		}
 	}
@@ -108,7 +109,7 @@ class SimulatorController {
 			responses.map {
 				let isAvailable: Bool = { response in
 					if let isAvailable = response.isAvailable {
-						return isAvailable == "YES"
+						return isAvailable
 					}
 					switch response.availability {
 					case .none:
