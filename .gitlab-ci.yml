@@ -6,7 +6,8 @@ build_project:
   script:
     - formulaName="simulator-recorder"
     - packageName="${CI_PROJECT_NAME:?}"
-    - ./Pods/GEContinuousIntegration/Scripts/build-gitlab-cmd "$PWD/build" "${packageName:?}" "${formulaName:?}" XC_FABRIC_BUILD_SECRET="${XC_FABRIC_BUILD_SECRET:?}"
+    - signIdentity="3rd Party Mac Developer Installer: Grigorii Entin (465NA5BW7E)"
+    - ./Pods/GEContinuousIntegration/Scripts/build-gitlab-cmd "$PWD/build" "${packageName:?}" "${formulaName:?}" "${signIdentity:?}" XC_FABRIC_BUILD_SECRET="${XC_FABRIC_BUILD_SECRET:?}"
   artifacts:
     paths:
       - build/*.pkg
