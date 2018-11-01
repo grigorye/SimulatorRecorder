@@ -1,6 +1,8 @@
 #! /usr/bin/env -i /bin/sh -ex
 
 pkg="${1:?}"; shift
+signIdentity="${1:?}"; shift
+
 dmg=$(echo "${pkg:?}" | sed 's/.pkg$/.dmg/')
 
 export "${@}"
@@ -41,6 +43,7 @@ srcroot=$(buildSetting 'SRCROOT')
 productName="${projectName:?}"
 
 productbuild \
+    --sign "${signIdentity:?}" \
     --product "${srcroot:?}/${productDefinitionPlist:?}" \
     --component "${installDir:?}"/Applications/"${productName:?}".app /Applications \
     "${pkg:?}"

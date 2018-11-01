@@ -4,6 +4,7 @@ set -eu -o pipefail
 
 pkg="${1:?}"; shift
 log="${1:?}"; shift
+signIdentity="${1:?}"; shift
 
 dn=$(dirname "$0")
 bn=$(basename "$0")
@@ -14,6 +15,7 @@ bundle exec pod install
 
 "$dn"/build-pkg \
     "${pkg:?}" \
+    "${signIdentity:?}" \
     ${DEVELOPER_DIR:+DEVELOPER_DIR="${DEVELOPER_DIR}"} \
     "${@}" \
     | tee "${log:?}" \
