@@ -1,7 +1,7 @@
 PODS:
-  - Crashlytics (3.11.1):
-    - Fabric (~> 1.8.1)
-  - Fabric (1.8.1)
+  - Crashlytics (3.12.0):
+    - Fabric (~> 1.9.0)
+  - Fabric (1.9.0)
   - GEAppConfig/Analytics (0.0.1):
     - FTLinearActivityIndicator
     - GEDebugKit
@@ -40,78 +40,59 @@ PODS:
     - GEUIKit
     - JGProgressHUD
     - Watchdog
-  - GEContinuousIntegration (0.1)
+  - GEContinuousIntegration (0.1.1)
   - GEFoundation (0.1):
     - GETracing (~> 0.1)
-  - GETracing (0.1)
-  - GEXcodeBuildPhases (0.0.1)
+  - GETracing (0.1.1)
+  - GEXcodeBuildPhases (0.0.1):
+    - GEXcodeScripts
   - GEXcodeScripts (0.1)
   - MASShortcut (2.3.6)
+  - SimulatorRecorder (0.1)
 
 DEPENDENCIES:
   - Crashlytics
   - Fabric
-  - GEAppConfig/Answers (from `https://github.com/grigorye/GEAppConfig`)
-  - GEAppConfig/Core (from `https://github.com/grigorye/GEAppConfig`)
-  - GEAppConfig/Crashlytics (from `https://github.com/grigorye/GEAppConfig`)
-  - GEContinuousIntegration (from `https://github.com/grigorye/GEContinuousIntegration`)
-  - GEFoundation (from `https://github.com/grigorye/GEFoundation`)
-  - GETracing (from `https://github.com/grigorye/GETracing`)
-  - GEXcodeBuildPhases (from `https://github.com/grigorye/GEXcodeBuildPhases`)
-  - GEXcodeScripts (from `https://github.com/grigorye/GEXcodeScripts`)
+  - GEAppConfig/Answers
+  - GEAppConfig/Core
+  - GEAppConfig/Crashlytics
+  - GEContinuousIntegration
+  - GEFoundation
+  - GETracing
+  - GEXcodeBuildPhases
+  - GEXcodeScripts
   - MASShortcut
+  - SimulatorRecorder (from `.`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Crashlytics
     - Fabric
     - MASShortcut
+  https://github.com/grigorye/podspecs.git:
+    - GEAppConfig
+    - GEContinuousIntegration
+    - GEFoundation
+    - GETracing
+    - GEXcodeBuildPhases
+    - GEXcodeScripts
 
 EXTERNAL SOURCES:
-  GEAppConfig:
-    :git: https://github.com/grigorye/GEAppConfig
-  GEContinuousIntegration:
-    :git: https://github.com/grigorye/GEContinuousIntegration
-  GEFoundation:
-    :git: https://github.com/grigorye/GEFoundation
-  GETracing:
-    :git: https://github.com/grigorye/GETracing
-  GEXcodeBuildPhases:
-    :git: https://github.com/grigorye/GEXcodeBuildPhases
-  GEXcodeScripts:
-    :git: https://github.com/grigorye/GEXcodeScripts
-
-CHECKOUT OPTIONS:
-  GEAppConfig:
-    :commit: d1f55b48f185818e0f1bf315646cc4e7372177ee
-    :git: https://github.com/grigorye/GEAppConfig
-  GEContinuousIntegration:
-    :commit: 9b67fcb5c80b561df3b586638b4b986450b0a176
-    :git: https://github.com/grigorye/GEContinuousIntegration
-  GEFoundation:
-    :commit: 3c134bf3f81ff7979a741daeca27a9a15be95918
-    :git: https://github.com/grigorye/GEFoundation
-  GETracing:
-    :commit: c77d7eae4710b7d1fb7bdc848d5de1c1ff06c44d
-    :git: https://github.com/grigorye/GETracing
-  GEXcodeBuildPhases:
-    :commit: 728621f72bddcbc3df923df4913ff1c97dd762c9
-    :git: https://github.com/grigorye/GEXcodeBuildPhases
-  GEXcodeScripts:
-    :commit: 99786c9e9de47259793250096694c006bcd3f918
-    :git: https://github.com/grigorye/GEXcodeScripts
+  SimulatorRecorder:
+    :path: "."
 
 SPEC CHECKSUMS:
-  Crashlytics: ca7ab4bc304aa216bdc2e4c1a96389ee77252203
-  Fabric: 43ed7bac010f588f63ee23ab1a0276b296db5e17
-  GEAppConfig: 0ff38c0731ed62443f6074574c2bac4d64457b5f
-  GEContinuousIntegration: 7169e73e490730fd52a3a452fc85919c48f75567
-  GEFoundation: f3b830c3822176a975dc3eead04507e45a283337
-  GETracing: 56ee5bc6832ac4526c8eb9f19ef81713d77f64bc
-  GEXcodeBuildPhases: f1ecf1d0abf9017124662f540563dd8c15e2910e
-  GEXcodeScripts: b1dd6730407428e4ddd72db31fafb259c23799fd
+  Crashlytics: 07fb167b1694128c1c9a5a5cc319b0e9c3ca0933
+  Fabric: f988e33c97f08930a413e08123064d2e5f68d655
+  GEAppConfig: 3eb0911feba1d6f8b409b29dbb3de559f8096430
+  GEContinuousIntegration: c8be3f98da613a38102d75c071bc2f206392a494
+  GEFoundation: e035ccce3b81967d59ad05a64a87aad5c37702ac
+  GETracing: 10d925bf3e557093d9c9d36f28397a6e85000fed
+  GEXcodeBuildPhases: f84107cc49a9dd52e856b2dc4cf5eeb64320fc28
+  GEXcodeScripts: 889cb43332b054ff6994d3facb993d188d5965c8
   MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
+  SimulatorRecorder: cf6ec1457834dd303c51c972b33d94807ab96748
 
-PODFILE CHECKSUM: 363b9922e2dcd19d25c4acb005dece86ebce0ad3
+PODFILE CHECKSUM: 43ff16aabfdaaf843422a87d854884f9d7f16830
 
 COCOAPODS: 1.5.3

@@ -7,7 +7,7 @@ platform :osx, '10.13'
 
 project "SimulatorRecorder/SimulatorRecorder.xcodeproj"
 
-pod 'GEContinuousIntegration', :git => 'https://github.com/grigorye/GEContinuousIntegration'
+pod 'GEContinuousIntegration'#, :path => '../GEContinuousIntegration'
 
 ###
 
@@ -37,23 +37,21 @@ end
 target 'SimulatorRecorder' do
   use_frameworks!
 
+  # Embed sources
+  pod 'SimulatorRecorder', :path => '.'
+
   pod 'MASShortcut'
   pod 'Fabric'
   pod 'Crashlytics'
   
-  pod 'GEAppConfig/Core', :git => 'https://github.com/grigorye/GEAppConfig'
-  pod 'GEAppConfig/Crashlytics', :git => 'https://github.com/grigorye/GEAppConfig'
-  pod 'GEAppConfig/Answers', :git => 'https://github.com/grigorye/GEAppConfig'
-  # pod 'GEAppConfig/Core', :path => '../GEAppConfig'
-  # pod 'GEAppConfig/Crashlytics', :path => '../GEAppConfig'
-  # pod 'GEAppConfig/Answers', :path => '../GEAppConfig'
-  pod 'GEFoundation', :git => 'https://github.com/grigorye/GEFoundation'
-  pod 'GETracing', :git => 'https://github.com/grigorye/GETracing'
+  pod 'GEAppConfig', :subspecs => ['Core', 'Crashlytics', 'Answers']#, :path => '../GEAppConfig'
+  pod 'GEFoundation'#, :path => '../GEFoundation'
+  pod 'GETracing'#, :path => '../GETracing'
 
-  pod 'GEXcodeScripts', :git => 'https://github.com/grigorye/GEXcodeScripts'
+  pod 'GEXcodeScripts'#, :path => '../GEXcodeScripts'
   inject_pod_dir_as_xcconfig_var('GE_XCODE_SCRIPTS_POD_ROOT', 'GEXcodeScripts')
 
-  pod 'GEXcodeBuildPhases', :git => 'https://github.com/grigorye/GEXcodeBuildPhases'
+  pod 'GEXcodeBuildPhases'#, :path => '../GEXcodeBuildPhases'
   inject_pod_dir_as_xcconfig_var('GE_XCODE_BUILD_PHASES_POD_ROOT', 'GEXcodeBuildPhases')
   script_phase :name => 'Integrate Fabric', :shell_path => '/bin/sh -e', :script => <<~END
     "${GE_XCODE_BUILD_PHASES:?}/IntegrateFabric"
