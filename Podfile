@@ -62,6 +62,7 @@ target 'SimulatorRecorder' do
   
   target 'SimulatorRecorderTests' do
     inherit! :search_paths
+    pod 'SimulatorRecorder', :subspecs => ['Tests-Sources'], :path => '.'
   end
 
   target 'SimulatorRecorderUITests' do

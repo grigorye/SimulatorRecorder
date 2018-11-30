@@ -7,36 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		079CDAC1B3380AAE4AC2B92C /* RecordingControllerRecordingState.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C43FFB582129CCE300F36526 /* RecordingControllerRecordingState.swift */; };
-		136DD1FF16F2CE76F88D74A7 /* RecordingNameToken.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
-		1D9AC617087B369D761B32A7 /* PreferencesPaneViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4F760BE2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift */; };
-		207DC8BF51B6BE724650E300 /* RecordingNameFormatTransformer.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */; };
-		220EE71EFD4F0E4ADE2CA9DC /* RecordingNamingPreferencesViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */; };
-		247AEC1089C3476A85C95073 /* DefaultsRegistration.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */; };
-		2C6950316403F515AF536F92 /* ExportableImports.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4088C57211764B2000CE9B8 /* ExportableImports.swift */; };
-		2C89B9D4E8F4CA5B9243D179 /* StatusItemController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C41152A920291E8C00DDB293 /* StatusItemController.swift */; };
-		2EC8A8048C75251820B190FB /* AppStatusItemControllerSource.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C428604C214B3EE100825AB1 /* AppStatusItemControllerSource.swift */; };
-		321BEE2944190B362ABCB01D /* NSArrayControllerExtensions.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4F760BA21284DC600CBDFF3 /* NSArrayControllerExtensions.swift */; };
-		3CB6CCC64CA5B5ECF55E93F1 /* RecordingNameTokenObject.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */; };
 		5273596510B17FB09465CAC5 /* Pods_SimulatorRecorderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282BDF2415B3B404B7353207 /* Pods_SimulatorRecorderUITests.framework */; };
-		533DDF1D8FF1FE55CF8AFAB1 /* PopUpButtonLikePathControl.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */; };
-		57EDFB128C35B1312DD0587B /* DeviceRecorder.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4F760BC21284E9500CBDFF3 /* DeviceRecorder.swift */; };
-		58C6B781EF6D53352436AE4A /* SimulatorRecorderUITests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */; };
-		6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
 		695C2F947C551C4842788162 /* Pods_SimulatorRecorderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E48D5E4F890AEAEF8732FA99 /* Pods_SimulatorRecorderTests.framework */; };
-		75058297C89597B48E8DAAEF /* main.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
-		878CAF49F7477AC978A18A5E /* ObservableRecordingState.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C43FFB5A2129D15000F36526 /* ObservableRecordingState.swift */; };
-		8A45121906C2023AAEDBC67E /* SimulatorController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4AC9519212757670070A911 /* SimulatorController.swift */; };
-		8B5D57712E6336AC4671D082 /* UserNotifications.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4E43E992103CCD4007A6FAC /* UserNotifications.swift */; };
-		8D857B53B06AB50ECAB9175E /* RecordingInteractor.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C46C530B211A6FF00041D8C6 /* RecordingInteractor.swift */; };
 		A15646672104A64F00AC9CF1 /* prepareBrew in Resources */ = {isa = PBXBuildFile; fileRef = A15646662104A64F00AC9CF1 /* prepareBrew */; };
 		A181382B20FF221A002CCD7C /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A181382A20FF221A002CCD7C /* RecordingController.swift */; };
 		A1A19F5C202A2498004170D8 /* RecordingNameFormatTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */; };
-		A4F9C272AE48785F5EF9B662 /* ViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
-		B633ACA135CEA1315AB9568D /* AppStatusIcon.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C428604A214B3EA500825AB1 /* AppStatusIcon.swift */; };
-		BC20F9A2E0FD9F88176C1399 /* PathFromFilePathOrURLTransformer.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */; };
-		C07DDBA5A85F85BF617C97C6 /* RecordingController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = A181382A20FF221A002CCD7C /* RecordingController.swift */; };
-		C213E69B8F1854FD7CC988D2 /* RecordingNameFieldDelegate.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */; };
 		C4088C58211764B2000CE9B8 /* ExportableImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4088C57211764B2000CE9B8 /* ExportableImports.swift */; };
 		C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */; };
 		C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */; };
@@ -80,12 +55,7 @@
 		C4F760BB21284DC600CBDFF3 /* NSArrayControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F760BA21284DC600CBDFF3 /* NSArrayControllerExtensions.swift */; };
 		C4F760BD21284E9500CBDFF3 /* DeviceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F760BC21284E9500CBDFF3 /* DeviceRecorder.swift */; };
 		C4F760BF2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F760BE2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift */; };
-		D0904EC88BF689C0BDB13767 /* GeneralPreferencesViewController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */; };
-		D0CF358CD14989AB3C40FC0B /* SimulatorRecorderTests.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */; };
 		D301D1099B5E1E04593AFF7B /* Pods_SimulatorRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3CE1C027863F05243EBBA8E /* Pods_SimulatorRecorder.framework */; };
-		D3A9EEF9D3AB2739FEB24E83 /* ShortcutBinding.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C497D2DE2152C4A900D2AE93 /* ShortcutBinding.swift */; };
-		D65CCA006C1F9ED7EA06F463 /* Defaults.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C433AE25211E3D1E000A8501 /* Defaults.swift */; };
-		D8FBBFFE9501B75B0C23F8E3 /* PreferencesWindowController.swift in Embed Sources */ = {isa = PBXBuildFile; fileRef = C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,55 +76,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		5035D22810B4C0D71550C940 /* Embed Sources */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "Sources/$(TARGET_NAME)";
-			dstSubfolderSpec = 7;
-			files = (
-				A4F9C272AE48785F5EF9B662 /* ViewController.swift in Embed Sources */,
-				6729B28E2A7C26C5DBB9903D /* AppDelegate.swift in Embed Sources */,
-				75058297C89597B48E8DAAEF /* main.swift in Embed Sources */,
-				C213E69B8F1854FD7CC988D2 /* RecordingNameFieldDelegate.swift in Embed Sources */,
-				220EE71EFD4F0E4ADE2CA9DC /* RecordingNamingPreferencesViewController.swift in Embed Sources */,
-				3CB6CCC64CA5B5ECF55E93F1 /* RecordingNameTokenObject.swift in Embed Sources */,
-				136DD1FF16F2CE76F88D74A7 /* RecordingNameToken.swift in Embed Sources */,
-				BC20F9A2E0FD9F88176C1399 /* PathFromFilePathOrURLTransformer.swift in Embed Sources */,
-				C07DDBA5A85F85BF617C97C6 /* RecordingController.swift in Embed Sources */,
-				533DDF1D8FF1FE55CF8AFAB1 /* PopUpButtonLikePathControl.swift in Embed Sources */,
-				8D857B53B06AB50ECAB9175E /* RecordingInteractor.swift in Embed Sources */,
-				207DC8BF51B6BE724650E300 /* RecordingNameFormatTransformer.swift in Embed Sources */,
-				D65CCA006C1F9ED7EA06F463 /* Defaults.swift in Embed Sources */,
-				2C6950316403F515AF536F92 /* ExportableImports.swift in Embed Sources */,
-				8B5D57712E6336AC4671D082 /* UserNotifications.swift in Embed Sources */,
-				2C89B9D4E8F4CA5B9243D179 /* StatusItemController.swift in Embed Sources */,
-				D8FBBFFE9501B75B0C23F8E3 /* PreferencesWindowController.swift in Embed Sources */,
-				D0904EC88BF689C0BDB13767 /* GeneralPreferencesViewController.swift in Embed Sources */,
-				247AEC1089C3476A85C95073 /* DefaultsRegistration.swift in Embed Sources */,
-				8A45121906C2023AAEDBC67E /* SimulatorController.swift in Embed Sources */,
-				321BEE2944190B362ABCB01D /* NSArrayControllerExtensions.swift in Embed Sources */,
-				57EDFB128C35B1312DD0587B /* DeviceRecorder.swift in Embed Sources */,
-				1D9AC617087B369D761B32A7 /* PreferencesPaneViewController.swift in Embed Sources */,
-				079CDAC1B3380AAE4AC2B92C /* RecordingControllerRecordingState.swift in Embed Sources */,
-				878CAF49F7477AC978A18A5E /* ObservableRecordingState.swift in Embed Sources */,
-				2EC8A8048C75251820B190FB /* AppStatusItemControllerSource.swift in Embed Sources */,
-				D3A9EEF9D3AB2739FEB24E83 /* ShortcutBinding.swift in Embed Sources */,
-				B633ACA135CEA1315AB9568D /* AppStatusIcon.swift in Embed Sources */,
-			);
-			name = "Embed Sources";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		78D777791D9839579BD31EC4 /* Embed Sources */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "Sources/$(TARGET_NAME)";
-			dstSubfolderSpec = 7;
-			files = (
-				D0CF358CD14989AB3C40FC0B /* SimulatorRecorderTests.swift in Embed Sources */,
-			);
-			name = "Embed Sources";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C4FDFCB6202522710017DF19 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,17 +84,6 @@
 			files = (
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E48B8222079AB804F68CD8A3 /* Embed Sources */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "Sources/$(TARGET_NAME)";
-			dstSubfolderSpec = 7;
-			files = (
-				58C6B781EF6D53352436AE4A /* SimulatorRecorderUITests.swift in Embed Sources */,
-			);
-			name = "Embed Sources";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -526,7 +436,6 @@
 				C479DD9B202266BF00E0A11D /* Frameworks */,
 				C479DD9C202266BF00E0A11D /* Resources */,
 				C4FDFCB6202522710017DF19 /* Embed Frameworks */,
-				5035D22810B4C0D71550C940 /* Embed Sources */,
 				A156466B2104C4F300AC9CF1 /* Bundle Brew Packages */,
 				010B30A392651A3EC212361A /* [CP-User] Embed Source Version into Bundle */,
 				68EF8BA0A614EE9EE99835B0 /* [CP-User] Integrate Fabric */,
@@ -550,7 +459,7 @@
 				C479DDAC202266C000E0A11D /* Sources */,
 				C479DDAD202266C000E0A11D /* Frameworks */,
 				C479DDAE202266C000E0A11D /* Resources */,
-				78D777791D9839579BD31EC4 /* Embed Sources */,
+				0E623AF57F7E43F793AE9892 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -570,7 +479,6 @@
 				C479DDB7202266C000E0A11D /* Sources */,
 				C479DDB8202266C000E0A11D /* Frameworks */,
 				C479DDB9202266C000E0A11D /* Resources */,
-				E48B8222079AB804F68CD8A3 /* Embed Sources */,
 			);
 			buildRules = (
 			);
@@ -718,6 +626,28 @@
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		0E623AF57F7E43F793AE9892 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SimulatorRecorder-Tests-Sources/SimulatorRecorderTests-Sources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimulatorRecorderTests-Sources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5C7ABE08A5238A17F21DF06D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -819,6 +749,7 @@
 				"${SRCROOT}/../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/GEAppConfig/GEAppConfig-Sources.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SimulatorRecorder/SimulatorRecorder-Sources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/SimulatorRecorder/SimulatorRecorderTests-Sources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
@@ -826,6 +757,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GEAppConfig-Sources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimulatorRecorder-Sources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimulatorRecorderTests-Sources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

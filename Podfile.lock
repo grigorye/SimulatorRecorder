@@ -48,7 +48,9 @@ PODS:
     - GEXcodeScripts
   - GEXcodeScripts (0.1)
   - MASShortcut (2.3.6)
-  - SimulatorRecorder (0.1)
+  - SimulatorRecorder (0.1):
+    - SimulatorRecorder/Tests-Sources (= 0.1)
+  - SimulatorRecorder/Tests-Sources (0.1)
 
 DEPENDENCIES:
   - Crashlytics
@@ -63,6 +65,7 @@ DEPENDENCIES:
   - GEXcodeScripts
   - MASShortcut
   - SimulatorRecorder (from `.`)
+  - SimulatorRecorder/Tests-Sources (from `.`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -91,8 +94,8 @@ SPEC CHECKSUMS:
   GEXcodeBuildPhases: f84107cc49a9dd52e856b2dc4cf5eeb64320fc28
   GEXcodeScripts: 889cb43332b054ff6994d3facb993d188d5965c8
   MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
-  SimulatorRecorder: cf6ec1457834dd303c51c972b33d94807ab96748
+  SimulatorRecorder: e5a02a7d155c6064c359da43f95d2b8ca5b8318d
 
-PODFILE CHECKSUM: 43ff16aabfdaaf843422a87d854884f9d7f16830
+PODFILE CHECKSUM: 172a4a2c920177e5ae3e2384debf30550f117935
 
 COCOAPODS: 1.5.3
