@@ -6,5 +6,6 @@ before_install:
 script:
   - packageName="SimulatorRecorder"
   - formulaName="simulator-recorder"
+  - "signIdentity='Developer ID Installer: Grigorii Entin (465NA5BW7E)'"
   - export GE_DISABLE_XCPRETTY=1
-  - ./Pods/GEContinuousIntegration/Scripts/build-gitlab-cmd "$PWD/build" "${packageName:?}" "${formulaName:?}"
+  - ./Pods/GEContinuousIntegration/Scripts/build-gitlab-cmd "$PWD/build" "${packageName:?}" "${formulaName:?}" "${signIdentity:?}"
