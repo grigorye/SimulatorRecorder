@@ -16,6 +16,13 @@ Record (compressed) Simulator video with a keypress.
 See 'Simulator Recorder' > Preferences for stuff like shanging hot key and etc.
  
 
+## Installing with Homebrew
+
+```
+brew tap grigorye/tools
+brew cask install simulator-recorder
+```
+
 ## Third Parties Used
 
 ### Bundled
