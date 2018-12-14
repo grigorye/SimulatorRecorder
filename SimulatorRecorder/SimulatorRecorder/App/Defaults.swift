@@ -9,5 +9,5 @@
 import AppKit.NSEvent
 import Carbon.HIToolbox.Events
 
-let defaultShortcutKeyCode: UInt16 = .init(kVK_ANSI_5)
+let defaultShortcutKeyCode: UInt16 = .init(kVK_ANSI_7)
 let defaultShortcutModifierFlags: NSEvent.ModifierFlags = [.command, .shift]
