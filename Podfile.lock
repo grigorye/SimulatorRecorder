@@ -91,7 +91,7 @@ SPEC CHECKSUMS:
   GEContinuousIntegration: c8be3f98da613a38102d75c071bc2f206392a494
   GEFoundation: e035ccce3b81967d59ad05a64a87aad5c37702ac
   GETracing: 10d925bf3e557093d9c9d36f28397a6e85000fed
-  GEXcodeBuildPhases: f84107cc49a9dd52e856b2dc4cf5eeb64320fc28
+  GEXcodeBuildPhases: a574d19bbb0c7b4ff6a25ee119e358618e2e4276
   GEXcodeScripts: 889cb43332b054ff6994d3facb993d188d5965c8
   MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
   SimulatorRecorder: e5a02a7d155c6064c359da43f95d2b8ca5b8318d
