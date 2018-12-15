@@ -16,7 +16,6 @@ mkdir "${buildDir:?}"
     "${buildDir:?}/${packageName:?}-build.log" \
     "${signIdentity:?}" \
     GE_DERIVED_DATA_PATH="${buildDir:?}"/DerivedData \
-    DSTROOT="${buildDir:?}/${packageName:?}".dst \
     "${@}"
 
-"$dn"/build-gitlab-homebrew-formula "${packageName:?}" "${formulaName:?}"
+"$dn"/build-gitlab-homebrew-formula "${packageName:?}" "${formulaName:?}" "${@}"

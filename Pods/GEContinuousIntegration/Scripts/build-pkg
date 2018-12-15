@@ -1,24 +1,29 @@
 #! /usr/bin/env -i /bin/sh -ex
+# shellcheck disable=SC2096
 
 pkg="${1:?}"; shift
 signIdentity="${1:?}"; shift
 
-dmg=$(echo "${pkg:?}" | sed 's/.pkg$/.dmg/')
+dmg=${pkg//.pkg/.dmg}
 
 export "${@}"
 
 bn=$(basename "$0")
+dn=$(dirname "$0")
 
 eval "$(/usr/libexec/path_helper)"
 
 workspaces=(*.xcworkspace)
 workspace="${workspaces[0]}"
 projectName="${workspace%.*}"
+productName="${projectName:?}"
 
 tmpdir=$(mktemp -d "${TMPDIR:-/tmp}/${bn:?}.XXXXX")
 
-installDir="${DSTROOT:-${tmpdir:?}/Install}"
 derivedDataPath="${GE_DERIVED_DATA_PATH:-${tmpdir:?}/DerivedData}"
+archivePath="${derivedDataPath:?}/${projectName:?}.xcarchive"
+exportedProductPath="${derivedDataPath:?}/${projectName:?}-export"
+exportOptionsPlist="${dn:?}/developer-id-exportOptions.plist"
 
 buildProject() {
     xcodebuild \
@@ -29,28 +34,26 @@ buildProject() {
 
 buildProject \
     -derivedDataPath "${derivedDataPath:?}" \
-    install \
-    DSTROOT="${installDir:?}" \
+    archive \
+    -archivePath "${archivePath:?}" \
     "${@}"
 
-buildSetting() {
-    local name="${1:?}"; shift
-    buildProject -showBuildSettings | awk '/.* '"${name:?}"' = (.*)/ {print $3}'
-}
+xcodebuild \
+    -exportArchive \
+    -archivePath "${archivePath:?}" \
+    -exportOptionsPlist "${exportOptionsPlist:?}" \
+    -exportPath "${exportedProductPath:?}"
 
-productDefinitionPlist=$(buildSetting 'PRODUCT_DEFINITION_PLIST')
-srcroot=$(buildSetting 'SRCROOT')
-productName="${projectName:?}"
+dmgSrcFolder="${tmpdir:?}/dmg-src"
+mkdir "${dmgSrcFolder:?}"
 
-productbuild \
-    --sign "${signIdentity:?}" \
-    --product "${srcroot:?}/${productDefinitionPlist:?}" \
-    --component "${installDir:?}"/Applications/"${productName:?}".app /Applications \
-    "${pkg:?}"
+app="${projectName:?}.app"
+
+cp -pR "${exportedProductPath:?}/${app:?}" "${dmgSrcFolder:?}"
 
 hdiutil create \
     -volname "${productName:?}" \
-    -srcfolder "${installDir:?}"/Applications \
+    -srcfolder "${dmgSrcFolder:?}" \
     -ov \
     -format UDZO \
     "${dmg:?}"
