@@ -85,6 +85,7 @@ end
 
 dry_run = false
 verbose = false
+debug = false
 
 OptionParser.new do |parser|
 	parser.banner = <<END
@@ -126,20 +127,22 @@ binaries = executables + dylibs
 # or shared library to use the executable-relative paths determined in
 # the first pass
 binaries.each do |binary|
-	puts "binary: #{binary}"
+	puts "binary: #{binary}" if debug
 	deps = get_dependencies(binary)
 	deps.each do |dep|
 		# do not try to look for copies of system libraries inside the bundle
 		next if is_system_lib(dep)
 
 		if (install_name_needs_fixup?(dep))
-			puts "dep: #{dep}"
+			puts "dep: #{dep}" if debug
 			binary_path = File.dirname(binary)
 			rel_path = Pathname.new(dep).relative_path_from(Pathname.new(binary_path)).to_s
-			puts "binary_path: #{binary_path}"
-			puts "dep: #{dep}"
-			puts "rel_path: #{rel_path}"
-
+			if (debug)
+				puts "binary_path: #{binary_path}"
+				puts "dep: #{dep}"
+				puts "rel_path: #{rel_path}"
+			end
+	
 			# @loader_path is replaced at runtime with the path to the binary
 			# see http://www.mikeash.com/pyblog/friday-qa-2009-11-06-linking-and-install-names.html
 			# for an explanation.
