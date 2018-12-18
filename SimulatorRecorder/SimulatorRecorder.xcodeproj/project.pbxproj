@@ -712,7 +712,7 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/$(TARGET_NAME)/XCBundleBrewPackages",
+				"$(SRCROOT)/$(TARGET_NAME)/XcodeBuild/XCBundleBrewPackages",
 			);
 			name = "Bundle Brew Packages";
 			outputPaths = (
