@@ -6,6 +6,8 @@
 #  Created by Grigory Entin on 22/07/2018.
 #  Copyright © 2018 Grigory Entin. All rights reserved.
 
+dn=$(dirname "$0")
+
 homebrewDir="${CONFIGURATION_BUILD_DIR:?}/${TARGET_NAME:?}-homebrew"
 bundledHomebrewDir="${CONFIGURATION_BUILD_DIR:?}"/"${GE_HOMEBREW_FOLDER_PATH:?}"
 
@@ -25,6 +27,9 @@ packages=(
 )
 
 brew ls "${packages[@]}" >& /dev/null || brew install --force-bottle "${packages[@]}"
+
+chmod -R +w "${homebrewDir:?}"
+"${dn:?}"/update-homebrew-bundle-lib-names.rb -v "${homebrewDir:?}"
 
 test -d "${bundledHomebrewDir:?}" || mkdir "${bundledHomebrewDir:?}"
 
