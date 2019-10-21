@@ -589,15 +589,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
 			name = "[CP-User] Embed Source Version into Bundle";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/sh -e";
 			shellScript = "\"${GE_XCODE_BUILD_PHASES:?}/EmbedSourceVersionIntoBundle\"\n";
@@ -608,17 +600,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GEFoundation/GEFoundation.framework",
 				"${BUILT_PRODUCTS_DIR}/GETracing/GETracing.framework",
 				"${BUILT_PRODUCTS_DIR}/MASShortcut/MASShortcut.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GEFoundation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GETracing.framework",
@@ -626,7 +614,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0E623AF57F7E43F793AE9892 /* [CP] Copy Pods Resources */ = {
@@ -634,21 +622,17 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SimulatorRecorder-Tests-Sources/SimulatorRecorderTests-Sources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimulatorRecorderTests-Sources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5C7ABE08A5238A17F21DF06D /* [CP] Check Pods Manifest.lock */ = {
@@ -674,15 +658,7 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
 			name = "[CP-User] Integrate Fabric";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = "/bin/sh -e";
 			shellScript = "\"${GE_XCODE_BUILD_PHASES:?}/IntegrateFabric\"\n";
@@ -746,17 +722,13 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${SRCROOT}/../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/GEAppConfig/GEAppConfig-Sources.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SimulatorRecorder/SimulatorRecorder-Sources.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/SimulatorRecorder/SimulatorRecorderTests-Sources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GEAppConfig-Sources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimulatorRecorder-Sources.bundle",
@@ -764,7 +736,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -985,7 +957,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 465NA5BW7E;
+				DEVELOPMENT_TEAM = 898SX5RV3X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = SimulatorRecorder/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -1006,7 +978,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 465NA5BW7E;
+				DEVELOPMENT_TEAM = 898SX5RV3X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = SimulatorRecorder/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
