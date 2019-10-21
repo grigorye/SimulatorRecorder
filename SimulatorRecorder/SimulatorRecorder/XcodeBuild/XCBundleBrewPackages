@@ -26,7 +26,9 @@ packages=(
     ffmpeg
 )
 
-brew ls "${packages[@]}" >& /dev/null || brew install --force-bottle "${packages[@]}"
+deps=($(brew deps -n --union "${packages[@]}")) # Expand deps as --force-bottle below applies just to (ffmpeg) formula
+
+brew ls "${packages[@]}" >& /dev/null || brew install --force-bottle "${deps[@]}" "${packages[@]}"
 
 chmod -R +w "${homebrewDir:?}"
 "${dn:?}"/update-homebrew-bundle-lib-names.rb -v "${homebrewDir:?}"
@@ -46,6 +48,6 @@ do
         --include '**/bin/*' \
         --exclude='**/*' \
         --delete \
-        "${homebrewDir:?}/${i:?}" \
+        "${src}" \
         "${bundledHomebrewDir:?}"/
 done
