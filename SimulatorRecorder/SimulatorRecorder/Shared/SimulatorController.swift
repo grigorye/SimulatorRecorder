@@ -24,6 +24,7 @@ struct SimulatorDevicesResponse : Decodable {
 			case shutdown = "Shutdown"
 			case booted = "Booted"
 			case shuttingDown = "Shutting Down"
+			case creating = "Creating"
 		}
 		enum Availability: String, Decodable {
 			case available = "(available)"
