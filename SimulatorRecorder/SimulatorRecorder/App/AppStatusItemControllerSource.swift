@@ -30,7 +30,7 @@ class AppStatusItemControllerSource : StatusItemControllerDataSource {
 		guard let modifierFlags = shortcut?.modifierFlags else {
 			return .init()
 		}
-		return .init(rawValue: modifierFlags)
+		return modifierFlags
 	}
 	
 	var stopRecordingEnabled: Bool {

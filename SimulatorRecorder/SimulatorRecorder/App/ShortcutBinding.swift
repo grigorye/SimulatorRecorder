@@ -11,7 +11,7 @@ import Foundation
 
 private let defaultShortcut: MASShortcut = MASShortcut(
 	keyCode: .init(defaultShortcutKeyCode),
-	modifierFlags: defaultShortcutModifierFlags.rawValue
+	modifierFlags: defaultShortcutModifierFlags
 )
 
 private let defaultsKey = #keyPath(TypedUserDefaults.toggleRecordingShortcutData)
