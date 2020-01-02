@@ -35,7 +35,7 @@ compressionEnabled=$(defaultFor boolean "compressionEnabled")
 
 if [ "${compressionEnabled:?}" = 1 ]
 then
-	typeArg="--type=h264"
+	typeArg="--codec=h264"
 	recordedExt="h264"
 	convertedExt="m4v"
 else
