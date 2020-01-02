@@ -1,0 +1,41 @@
+#! /bin/bash -ex
+
+#  XCRsyncPreprocessedBrewPackages
+#  SimulatorRecorder
+#
+#  Created by Grigory Entin on 22/07/2018.
+#  Copyright © 2018 Grigory Entin. All rights reserved.
+
+dn=$(dirname "$0")
+
+homebrewDir="${CONFIGURATION_BUILD_DIR:?}/${TARGET_NAME:?}-homebrew"
+bundledHomebrewDir="${CONFIGURATION_BUILD_DIR:?}"/"${GE_HOMEBREW_FOLDER_PATH:?}"
+
+test -d "${bundledHomebrewDir:?}" || mkdir "${bundledHomebrewDir:?}"
+
+for i in bin lib Cellar
+do
+    src="${homebrewDir:?}/${i:?}"
+	rsync \
+        -rtl \
+        --exclude '**/man/' \
+        --exclude '**/doc/' \
+        --exclude '**/include/' \
+        --include '**/' \
+        --include '**/*.dylib' \
+        --include '**/bin/*' \
+        --exclude='**/*' \
+        --delete \
+        "${src}" \
+        "${bundledHomebrewDir:?}"/
+done
+
+for i in opt
+do
+    src="${homebrewDir:?}/${i:?}/"
+    dst="${bundledHomebrewDir:?}/${i:?}/"
+	rsync \
+        -rtl \
+        "${src}" \
+        "${dst}"
+done

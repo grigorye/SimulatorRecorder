@@ -1,0 +1,14 @@
+#! /bin/bash -ex
+
+#  XCPreprocessBrewPackages
+#  SimulatorRecorder
+#
+#  Created by Grigory Entin on 22/07/2018.
+#  Copyright © 2018 Grigory Entin. All rights reserved.
+
+dn=$(dirname "$0")
+
+homebrewDir="${CONFIGURATION_BUILD_DIR:?}/${TARGET_NAME:?}-homebrew"
+
+chmod -R +w "${homebrewDir:?}"
+"${dn:?}"/update-homebrew-bundle-lib-names.rb -v "${homebrewDir:?}"

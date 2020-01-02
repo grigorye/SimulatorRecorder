@@ -1,0 +1,32 @@
+#! /bin/bash -ex
+
+#  XCInstallBrewPackages
+#  SimulatorRecorder
+#
+#  Created by Grigory Entin on 22/07/2018.
+#  Copyright © 2018 Grigory Entin. All rights reserved.
+
+dn=$(dirname "$0")
+
+homebrewDir="${CONFIGURATION_BUILD_DIR:?}/${TARGET_NAME:?}-homebrew"
+bundledHomebrewDir="${CONFIGURATION_BUILD_DIR:?}"/"${GE_HOMEBREW_FOLDER_PATH:?}"
+
+(test -d "${homebrewDir:?}" || mkdir "${homebrewDir:?}") && curl -s -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C "${homebrewDir:?}"
+
+export PATH="${PATH+${PATH:?}:}${homebrewDir:?}/bin"
+export HOMEBREW_NO_AUTO_UPDATE=1
+
+# Workaround for
+# - "HOMEBREW_PREFIX is in the Homebrew temporary directory"
+# - Homebrew postinstall failing due to "too long unix socket path (xxx given but 104bytes max)"
+homebrewTempDir="${TMPDIR:-/tmp}/homebrew"
+export HOMEBREW_TEMP="${homebrewTempDir:?}"
+
+packages=(
+    ffmpeg
+)
+
+brew tap homebrew/core
+deps=($(brew deps -n --union "${packages[@]}")) # Expand deps as --force-bottle below applies just to (ffmpeg) formula
+
+brew ls "${packages[@]}" >& /dev/null || brew install --force-bottle "${deps[@]}" "${packages[@]}"

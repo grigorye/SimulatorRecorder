@@ -8,46 +8,6 @@
 
 dn=$(dirname "$0")
 
-homebrewDir="${CONFIGURATION_BUILD_DIR:?}/${TARGET_NAME:?}-homebrew"
-bundledHomebrewDir="${CONFIGURATION_BUILD_DIR:?}"/"${GE_HOMEBREW_FOLDER_PATH:?}"
-
-(test -d "${homebrewDir:?}" || mkdir "${homebrewDir:?}") && curl -s -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C "${homebrewDir:?}"
-
-export PATH="${PATH+${PATH:?}:}${homebrewDir:?}/bin"
-export HOMEBREW_NO_AUTO_UPDATE=1
-
-# Workaround for
-# - "HOMEBREW_PREFIX is in the Homebrew temporary directory"
-# - Homebrew postinstall failing due to "too long unix socket path (xxx given but 104bytes max)"
-homebrewTempDir="${TMPDIR:-/tmp}/homebrew"
-export HOMEBREW_TEMP="${homebrewTempDir:?}"
-
-packages=(
-    ffmpeg
-)
-
-deps=($(brew deps -n --union "${packages[@]}")) # Expand deps as --force-bottle below applies just to (ffmpeg) formula
-
-brew ls "${packages[@]}" >& /dev/null || brew install --force-bottle "${deps[@]}" "${packages[@]}"
-
-chmod -R +w "${homebrewDir:?}"
-"${dn:?}"/update-homebrew-bundle-lib-names.rb -v "${homebrewDir:?}"
-
-test -d "${bundledHomebrewDir:?}" || mkdir "${bundledHomebrewDir:?}"
-
-for i in bin lib opt Cellar
-do
-	src="${homebrewDir:?}/${i:?}"
-    rsync \
-        -rtl \
-        --exclude '**/man/' \
-        --exclude '**/doc/' \
-        --exclude '**/include/' \
-        --include '**/' \
-        --include '**/*.dylib' \
-        --include '**/bin/*' \
-        --exclude='**/*' \
-        --delete \
-        "${src}" \
-        "${bundledHomebrewDir:?}"/
-done
+"$dn/XCInstallBrewPackages"
+"$dn/XCPreprocessBrewPackages"
+"$dn/XCRsyncPreprocessedBrewPackages"
