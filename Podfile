@@ -34,12 +34,7 @@ end
 
 ###
 
-target 'SimulatorRecorder' do
-  use_frameworks!
-
-  # Embed sources
-  pod 'SimulatorRecorder', :path => '.'
-
+def app_pods
   pod 'MASShortcut'
   pod 'Fabric'
   pod 'Crashlytics'
@@ -47,7 +42,16 @@ target 'SimulatorRecorder' do
   pod 'GEAppConfig', :subspecs => ['Core', 'Crashlytics', 'Answers']#, :path => '../GEAppConfig'
   pod 'GEFoundation'#, :path => '../GEFoundation'
   pod 'GETracing'#, :path => '../GETracing'
+end
 
+target 'SimulatorRecorder' do
+  use_frameworks!
+
+  app_pods
+
+  # Embed sources
+  pod 'SimulatorRecorder', :path => '.'
+  
   pod 'GEXcodeScripts'#, :path => '../GEXcodeScripts'
   inject_pod_dir_as_xcconfig_var('GE_XCODE_SCRIPTS_POD_ROOT', 'GEXcodeScripts')
 
@@ -63,10 +67,12 @@ target 'SimulatorRecorder' do
   target 'SimulatorRecorderTests' do
     inherit! :search_paths
     pod 'SimulatorRecorder', :subspecs => ['Tests-Sources'], :path => '.'
+    app_pods
   end
 
   target 'SimulatorRecorderUITests' do
     inherit! :search_paths
+    app_pods
   end
 end
 
