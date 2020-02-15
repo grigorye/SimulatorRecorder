@@ -17,7 +17,7 @@ import Carbon.HIToolbox
 
 extension NSStoryboard.Name {
 
-	static let preferences = "Preferences"
+	static let preferences = Self("Preferences")
 }
 
 class AppDelegate: NSResponder, NSApplicationDelegate {

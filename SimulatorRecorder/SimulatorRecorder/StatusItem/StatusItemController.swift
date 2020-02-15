@@ -10,7 +10,7 @@ import AppKit
 
 extension NSNib.Name {
 	
-	static let statusItem = "StatusItem"
+	static let statusItem = Self("StatusItem")
 }
 
 let statusItemController = StatusItemController()
