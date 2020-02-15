@@ -3,445 +3,452 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5273596510B17FB09465CAC5 /* Pods_SimulatorRecorderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 282BDF2415B3B404B7353207 /* Pods_SimulatorRecorderUITests.framework */; };
-		695C2F947C551C4842788162 /* Pods_SimulatorRecorderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E48D5E4F890AEAEF8732FA99 /* Pods_SimulatorRecorderTests.framework */; };
-		A15646672104A64F00AC9CF1 /* prepareBrew in Resources */ = {isa = PBXBuildFile; fileRef = A15646662104A64F00AC9CF1 /* prepareBrew */; };
-		A181382B20FF221A002CCD7C /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A181382A20FF221A002CCD7C /* RecordingController.swift */; };
-		A1A19F5C202A2498004170D8 /* RecordingNameFormatTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */; };
-		C4088C58211764B2000CE9B8 /* ExportableImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4088C57211764B2000CE9B8 /* ExportableImports.swift */; };
-		C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */; };
-		C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */; };
-		C41152AA20291E8C00DDB293 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152A920291E8C00DDB293 /* StatusItemController.swift */; };
-		C41152AC2029224000DDB293 /* StatusItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41152AB2029224000DDB293 /* StatusItem.xib */; };
-		C41152AE20292F7D00DDB293 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */; };
-		C41F4C362028B3200090E79B /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C41F4C352028B3200090E79B /* Defaults.plist */; };
-		C424A24E2025A88B00320E48 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424A24D2025A88B00320E48 /* main.swift */; };
-		C428604B214B3EA500825AB1 /* AppStatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428604A214B3EA500825AB1 /* AppStatusIcon.swift */; };
-		C428604D214B3EE100825AB1 /* AppStatusItemControllerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C428604C214B3EE100825AB1 /* AppStatusItemControllerSource.swift */; };
-		C43380DC21599FDB00A28F54 /* DockTileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43380D921599E8400A28F54 /* DockTileController.swift */; };
-		C43380DE2159A38400A28F54 /* AppDockTileIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43380DD2159A38400A28F54 /* AppDockTileIcon.swift */; };
-		C433AE26211E3D1E000A8501 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C433AE25211E3D1E000A8501 /* Defaults.swift */; };
-		C43FFB592129CCE300F36526 /* RecordingControllerRecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FFB582129CCE300F36526 /* RecordingControllerRecordingState.swift */; };
-		C43FFB5B2129D15000F36526 /* ObservableRecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43FFB5A2129D15000F36526 /* ObservableRecordingState.swift */; };
-		C46C530C211A6FF00041D8C6 /* RecordingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46C530B211A6FF00041D8C6 /* RecordingInteractor.swift */; };
-		C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDA1202266BF00E0A11D /* AppDelegate.swift */; };
-		C479DDA4202266BF00E0A11D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDA3202266BF00E0A11D /* ViewController.swift */; };
-		C479DDA6202266BF00E0A11D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C479DDA5202266BF00E0A11D /* Assets.xcassets */; };
-		C479DDA9202266BF00E0A11D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C479DDA7202266BF00E0A11D /* Main.storyboard */; };
-		C479DDB5202266C000E0A11D /* SimulatorRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */; };
-		C479DDC0202266C000E0A11D /* SimulatorRecorderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */; };
-		C479DDD720226D8200E0A11D /* simulatorName in Resources */ = {isa = PBXBuildFile; fileRef = C479DDCE20226B2300E0A11D /* simulatorName */; };
-		C479DDD820226D8200E0A11D /* recordVideo in Resources */ = {isa = PBXBuildFile; fileRef = C479DDCF20226B2400E0A11D /* recordVideo */; };
-		C479DDDB20227A7900E0A11D /* timestamp in Resources */ = {isa = PBXBuildFile; fileRef = C479DDDA20227A7900E0A11D /* timestamp */; };
-		C479DDE12023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */; };
-		C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */; };
-		C479DDE52023FEE800E0A11D /* RecordingNameTokenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */; };
-		C4844F1B202A5BA100FFB5BA /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4844F19202A5B7500FFB5BA /* Preferences.storyboard */; };
-		C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */; };
-		C497D2DF2152C4A900D2AE93 /* ShortcutBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C497D2DE2152C4A900D2AE93 /* ShortcutBinding.swift */; };
-		C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */; };
-		C4AC951A212757670070A911 /* SimulatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AC9519212757670070A911 /* SimulatorController.swift */; };
-		C4C597D42159A6A0006F7640 /* AppDockTileControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C597D32159A6A0006F7640 /* AppDockTileControllerDataSource.swift */; };
-		C4CC78CD2161841000300C65 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CC78CC2161841000300C65 /* MainWindowController.swift */; };
-		C4D56E8F210CA477003404FC /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E8E210CA476003404FC /* MainView.storyboard */; };
-		C4D56E94210CFA30003404FC /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */; };
-		C4D56E96210CFADF003404FC /* GeneralPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */; };
-		C4E43E9821039C96007A6FAC /* RecordingNamingPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4E43E9721039C91007A6FAC /* RecordingNamingPreferences.storyboard */; };
-		C4E43E9A2103CCD4007A6FAC /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E43E992103CCD4007A6FAC /* UserNotifications.swift */; };
-		C4F760BB21284DC600CBDFF3 /* NSArrayControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F760BA21284DC600CBDFF3 /* NSArrayControllerExtensions.swift */; };
-		C4F760BD21284E9500CBDFF3 /* DeviceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F760BC21284E9500CBDFF3 /* DeviceRecorder.swift */; };
-		C4F760BF2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F760BE2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift */; };
-		D301D1099B5E1E04593AFF7B /* Pods_SimulatorRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3CE1C027863F05243EBBA8E /* Pods_SimulatorRecorder.framework */; };
+		06CC3A466FEF796A168E5927 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3753734A008BB748D37F91A /* AppDelegate.swift */; };
+		084A2BBF1AE65E967F93655A /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F5D3D993308C8932C58AF7 /* GeneralPreferencesViewController.swift */; };
+		0B7D3EB7A5CCB31591AF6925 /* RecordingNameTokenObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C02496148402443E218C6 /* RecordingNameTokenObject.swift */; };
+		0CF2CB54094BD6786593DA24 /* Pods_SimulatorRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E431F3A1C7909A7F57DD2BC /* Pods_SimulatorRecorder.framework */; };
+		16E3A9EE75B793A05CA4C170 /* RecordingNamingPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70F403BC9495120C3E2EF54A /* RecordingNamingPreferences.storyboard */; };
+		16ECE62479398A943E1B7CA2 /* Pods_SimulatorRecorderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1D37A8330CD8CC9C840D4E /* Pods_SimulatorRecorderTests.framework */; };
+		1CC4EC03389A891ABD1E8E9B /* ExportableImports.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A84657805B20009459310E /* ExportableImports.swift */; };
+		20AE6D073034FE91A66901D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D6537E949042C51EB8834 /* ViewController.swift */; };
+		25EA289776F22996C15210E2 /* RecordingNameFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D5CAF89FBD8F3A4AB011E3 /* RecordingNameFieldDelegate.swift */; };
+		2A7F3910270FBABAD6E59F40 /* RecordingControllerRecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EB5F62A439C5D28DB15A36 /* RecordingControllerRecordingState.swift */; };
+		2E498DDC11F30B52144A0975 /* UserNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C1F39CC7EBB8C2209BCB33 /* UserNotifications.swift */; };
+		316D22F223B2F93A8BD23A50 /* NSArrayControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F2330B4868A99D5764E029 /* NSArrayControllerExtensions.swift */; };
+		3A9166C0218A2828BE893853 /* ProductDefinition.plist in Resources */ = {isa = PBXBuildFile; fileRef = 298541DB68532F603B75E425 /* ProductDefinition.plist */; };
+		3C48E8F2F8BA1751AE01D0BA /* MainView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6655131176F12A21946AC750 /* MainView.storyboard */; };
+		40DAD4B139334D68E7CF75E5 /* DefaultsRegistration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662D26538122D704A9671FA0 /* DefaultsRegistration.swift */; };
+		413F81FB16EDC2D815F0F2EC /* StatusItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 632D2125B29F3C85E1F491ED /* StatusItem.xib */; };
+		4D44DD7C27AADA234E93541C /* AppDockTileIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC34DDE7690A428F908728A9 /* AppDockTileIcon.swift */; };
+		587CA8983E567C941E1B67EA /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 536A0B81A7F40312624C35EB /* Preferences.storyboard */; };
+		6F8E83B45B7A099448F9758E /* PreferencesPaneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEAE60BF3892A94AAAA69DA /* PreferencesPaneViewController.swift */; };
+		8945ADD4B8B29DBE549723CA /* SimulatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59214A2386337992FE7FEEAF /* SimulatorController.swift */; };
+		8CD1FBC0118D680012BEF12B /* Pods_SimulatorRecorderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ED04698864D950404B54B18 /* Pods_SimulatorRecorderUITests.framework */; };
+		8DC896FCC9C2F6B28B1831A8 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB41CA0AB9F46BA164DAA8B /* Defaults.swift */; };
+		8E70CF54EBFAF0C6C4FC376F /* ObservableRecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69C3B97CAAA01CDDFF4000D /* ObservableRecordingState.swift */; };
+		9DAB9B562199D21BDC19EC42 /* SimulatorRecorderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC802362CD0C533A7B836AA2 /* SimulatorRecorderTests.swift */; };
+		A5D0C56A1EA6278C0E89DDF9 /* SimulatorRecorderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0202AFDDC3A19A11522591F8 /* SimulatorRecorderUITests.swift */; };
+		ADB8914192A108E461213852 /* AppDockTileControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5335B44A16CCE323B5DE345B /* AppDockTileControllerDataSource.swift */; };
+		B3EB1AE1FB8470646C195341 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2F0B6B93EC8B5499D645B4 /* main.swift */; };
+		B615A0E377CF98C4E1D1921D /* AppStatusIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC8AA564FF6D23C31073216 /* AppStatusIcon.swift */; };
+		B8CF1DDFF768E1D7F922F6FE /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98A67E67FCFFDD0E48C0367F /* Defaults.plist */; };
+		BA91B3007A61C33EFB551E4F /* GeneralPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C685F9E5A6EBA9017E0E538 /* GeneralPreferences.storyboard */; };
+		BEFD76D85F609F9D420D79C7 /* DockTileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EEF54B5BF03D8396F2D7D1 /* DockTileController.swift */; };
+		C2690FF13E2E7EEBE4288BE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54C4DE6B0828C9CC32434AD2 /* Main.storyboard */; };
+		C8D0BC3478381E2A8B729CC0 /* StatusItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBD30397A49550FCAE37662 /* StatusItemController.swift */; };
+		CBE03C86A2F30E2BCDF44D44 /* RecordingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10E7D6608BBED226A755316 /* RecordingController.swift */; };
+		D0A2A740EF1E8972D299CE83 /* PreferencesWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF7F6AE05C8508AEEB2EFF0 /* PreferencesWindowController.swift */; };
+		D246E27C058031A135268EEC /* PopUpButtonLikePathControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3AE8B47C4C7F622499D134 /* PopUpButtonLikePathControl.swift */; };
+		D4BE173DC04987992DFA5D88 /* ShortcutBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DBA59CF0326250178B68737 /* ShortcutBinding.swift */; };
+		D750291FB0E4011F8C2660A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74E9CB320A16621D8EAE1F8E /* Assets.xcassets */; };
+		D96B9EBE616B740323F36815 /* AppStatusItemControllerSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D3A7E09E4BA6673BBC88B /* AppStatusItemControllerSource.swift */; };
+		DBFE5239402565CA9F5B47E4 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9762611DF4C5D4BD1BD1B8 /* MainWindowController.swift */; };
+		DCAF506A54A694596B806229 /* DeviceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD735D6738084F4272C9E58 /* DeviceRecorder.swift */; };
+		EEFDC23C8F7BC96DF2A4E047 /* RecordingInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C3CBEC21E71DE5F6DFD22 /* RecordingInteractor.swift */; };
+		F1C8A6380CB79C921A056D1D /* RecordingNameFormatTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646551AB81750C11A7C03599 /* RecordingNameFormatTransformer.swift */; };
+		F26A7721E298889ED6584A43 /* RecordingNamingPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C005FC63230EC0293DFF032 /* RecordingNamingPreferencesViewController.swift */; };
+		F58DD24ADC8100F9DEEB9E13 /* RecordingNameToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F74391743323D25B0AA718 /* RecordingNameToken.swift */; };
+		F92B7CA51D09D4D743C74E17 /* PathFromFilePathOrURLTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21349537A76F50C1D3460559 /* PathFromFilePathOrURLTransformer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C479DDB1202266C000E0A11D /* PBXContainerItemProxy */ = {
+		B7084B56CB8A4F589834C863 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C479DD96202266BF00E0A11D /* Project object */;
+			containerPortal = 5DAFC0E1BF95724458CC1CAA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C479DD9D202266BF00E0A11D;
-			remoteInfo = SimulatorRecorder;
-		};
-		C479DDBC202266C000E0A11D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C479DD96202266BF00E0A11D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C479DD9D202266BF00E0A11D;
+			remoteGlobalIDString = E2B23963DFF32C0DBC3391AE;
 			remoteInfo = SimulatorRecorder;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		C4FDFCB6202522710017DF19 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		02B441F4AAAFDCE081177DD7 /* Pods-SimulatorRecorderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderUITests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SimulatorRecorderUITests/Pods-SimulatorRecorderUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		044F0AAEFC02A70981C0ADFD /* Pods-SimulatorRecorderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests.debug.xcconfig"; sourceTree = "<group>"; };
-		0D4094339B1CD273E69F71F1 /* Pods-SimulatorRecorderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderUITests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SimulatorRecorderUITests/Pods-SimulatorRecorderUITests.release.xcconfig"; sourceTree = "<group>"; };
-		1515A1BA1BD6476C7E80257D /* Pods-SimulatorRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorder.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder.debug.xcconfig"; sourceTree = "<group>"; };
-		1F98DE4A8B3D256F0A1EB7E3 /* Pods-SimulatorRecorderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests.release.xcconfig"; sourceTree = "<group>"; };
-		282BDF2415B3B404B7353207 /* Pods_SimulatorRecorderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimulatorRecorderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		98601D527893353C34E643D6 /* Pods-SimulatorRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorder.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder.release.xcconfig"; sourceTree = "<group>"; };
-		A15646662104A64F00AC9CF1 /* prepareBrew */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = prepareBrew; sourceTree = "<group>"; };
-		A156466C2104C53A00AC9CF1 /* XCBundleBrewPackages */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCBundleBrewPackages; sourceTree = "<group>"; };
-		A181382A20FF221A002CCD7C /* RecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingController.swift; sourceTree = "<group>"; };
-		A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameFormatTransformer.swift; sourceTree = "<group>"; };
-		A3CE1C027863F05243EBBA8E /* Pods_SimulatorRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimulatorRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4088C57211764B2000CE9B8 /* ExportableImports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportableImports.swift; sourceTree = "<group>"; };
-		C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathFromFilePathOrURLTransformer.swift; sourceTree = "<group>"; };
-		C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsRegistration.swift; sourceTree = "<group>"; };
-		C41152A920291E8C00DDB293 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
-		C41152AB2029224000DDB293 /* StatusItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusItem.xib; sourceTree = "<group>"; };
-		C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
-		C4145B39217B229A00708B94 /* SimulatorRecorder-app.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SimulatorRecorder-app.xcconfig"; sourceTree = "<group>"; };
-		C4145B3A217B230E00708B94 /* SimulatorRecorder-app.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SimulatorRecorder-app.debug.xcconfig"; sourceTree = "<group>"; };
-		C4145B3B217B235B00708B94 /* SimulatorRecorder-app.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SimulatorRecorder-app.release.xcconfig"; sourceTree = "<group>"; };
-		C41F4C352028B3200090E79B /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
-		C424A24D2025A88B00320E48 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		C428604A214B3EA500825AB1 /* AppStatusIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusIcon.swift; sourceTree = "<group>"; };
-		C428604C214B3EE100825AB1 /* AppStatusItemControllerSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusItemControllerSource.swift; sourceTree = "<group>"; };
-		C43380D921599E8400A28F54 /* DockTileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockTileController.swift; sourceTree = "<group>"; };
-		C43380DD2159A38400A28F54 /* AppDockTileIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDockTileIcon.swift; sourceTree = "<group>"; };
-		C433AE25211E3D1E000A8501 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
-		C43FFB582129CCE300F36526 /* RecordingControllerRecordingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingControllerRecordingState.swift; sourceTree = "<group>"; };
-		C43FFB5A2129D15000F36526 /* ObservableRecordingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableRecordingState.swift; sourceTree = "<group>"; };
-		C46C530B211A6FF00041D8C6 /* RecordingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingInteractor.swift; sourceTree = "<group>"; };
-		C479DD9E202266BF00E0A11D /* SimulatorRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C479DDA1202266BF00E0A11D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C479DDA3202266BF00E0A11D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C479DDA5202266BF00E0A11D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C479DDA8202266BF00E0A11D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C479DDAA202266BF00E0A11D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C479DDAB202266BF00E0A11D /* SimulatorRecorder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimulatorRecorder.entitlements; sourceTree = "<group>"; };
-		C479DDB0202266C000E0A11D /* SimulatorRecorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorRecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorRecorderTests.swift; sourceTree = "<group>"; };
-		C479DDB6202266C000E0A11D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C479DDBB202266C000E0A11D /* SimulatorRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorRecorderUITests.swift; sourceTree = "<group>"; };
-		C479DDC1202266C000E0A11D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C479DDCE20226B2300E0A11D /* simulatorName */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = simulatorName; sourceTree = "<group>"; };
-		C479DDCF20226B2400E0A11D /* recordVideo */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = recordVideo; sourceTree = "<group>"; };
-		C479DDDA20227A7900E0A11D /* timestamp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = timestamp; sourceTree = "<group>"; };
-		C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNamingPreferencesViewController.swift; sourceTree = "<group>"; };
-		C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameFieldDelegate.swift; sourceTree = "<group>"; };
-		C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameTokenObject.swift; sourceTree = "<group>"; };
-		C4844F1A202A5B7600FFB5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
-		C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpButtonLikePathControl.swift; sourceTree = "<group>"; };
-		C497D2DE2152C4A900D2AE93 /* ShortcutBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutBinding.swift; sourceTree = "<group>"; };
-		C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameToken.swift; sourceTree = "<group>"; };
-		C4AC9519212757670070A911 /* SimulatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorController.swift; sourceTree = "<group>"; };
-		C4C597D32159A6A0006F7640 /* AppDockTileControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDockTileControllerDataSource.swift; sourceTree = "<group>"; };
-		C4CC78CC2161841000300C65 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
-		C4D56E8E210CA476003404FC /* MainView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
-		C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
-		C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = GeneralPreferences.storyboard; path = SimulatorRecorder/Preferences/General/GeneralPreferences.storyboard; sourceTree = SOURCE_ROOT; };
-		C4E43E9721039C91007A6FAC /* RecordingNamingPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordingNamingPreferences.storyboard; sourceTree = "<group>"; };
-		C4E43E992103CCD4007A6FAC /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
-		C4F760BA21284DC600CBDFF3 /* NSArrayControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSArrayControllerExtensions.swift; sourceTree = "<group>"; };
-		C4F760BC21284E9500CBDFF3 /* DeviceRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRecorder.swift; sourceTree = "<group>"; };
-		C4F760BE2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesPaneViewController.swift; sourceTree = "<group>"; };
-		C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimulatorRecorder.xcconfig; sourceTree = "<group>"; };
-		C4FF30212107FDBA00999603 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		C4FF3022210A68F200999603 /* ProductDefinition.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.info; path = ProductDefinition.plist; sourceTree = "<group>"; };
-		E48D5E4F890AEAEF8732FA99 /* Pods_SimulatorRecorderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimulatorRecorderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0202AFDDC3A19A11522591F8 /* SimulatorRecorderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorRecorderUITests.swift; sourceTree = "<group>"; };
+		09110ECE250AEDB011A869A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0DBA59CF0326250178B68737 /* ShortcutBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutBinding.swift; sourceTree = "<group>"; };
+		10ECF15C8D125553044AC1D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1AEE2D8268E3FA2A04A5CE9A /* Pods-SimulatorRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorder.release.xcconfig"; path = "Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder.release.xcconfig"; sourceTree = "<group>"; };
+		1DD735D6738084F4272C9E58 /* DeviceRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRecorder.swift; sourceTree = "<group>"; };
+		21349537A76F50C1D3460559 /* PathFromFilePathOrURLTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathFromFilePathOrURLTransformer.swift; sourceTree = "<group>"; };
+		298541DB68532F603B75E425 /* ProductDefinition.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = ProductDefinition.plist; sourceTree = "<group>"; };
+		2D1D37A8330CD8CC9C840D4E /* Pods_SimulatorRecorderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimulatorRecorderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		310C3CBEC21E71DE5F6DFD22 /* RecordingInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingInteractor.swift; sourceTree = "<group>"; };
+		35EEF54B5BF03D8396F2D7D1 /* DockTileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockTileController.swift; sourceTree = "<group>"; };
+		3AEB2FC8F7E8F6A4ED5117B9 /* Pods-SimulatorRecorderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimulatorRecorderUITests/Pods-SimulatorRecorderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3B29DAEFF354D20CD5585915 /* SimulatorRecorder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimulatorRecorder.entitlements; sourceTree = "<group>"; };
+		3E431F3A1C7909A7F57DD2BC /* Pods_SimulatorRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimulatorRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		455C03A73E5731375EFAD28A /* prepareBrew */ = {isa = PBXFileReference; path = prepareBrew; sourceTree = "<group>"; };
+		4EEAE60BF3892A94AAAA69DA /* PreferencesPaneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesPaneViewController.swift; sourceTree = "<group>"; };
+		5335B44A16CCE323B5DE345B /* AppDockTileControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDockTileControllerDataSource.swift; sourceTree = "<group>"; };
+		59214A2386337992FE7FEEAF /* SimulatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorController.swift; sourceTree = "<group>"; };
+		5A57D75A312E146CF12212F2 /* SimulatorRecorderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorRecorderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C685F9E5A6EBA9017E0E538 /* GeneralPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeneralPreferences.storyboard; sourceTree = "<group>"; };
+		5E5122614A98D498CB6291FA /* simulatorName */ = {isa = PBXFileReference; path = simulatorName; sourceTree = "<group>"; };
+		60F74391743323D25B0AA718 /* RecordingNameToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameToken.swift; sourceTree = "<group>"; };
+		632D2125B29F3C85E1F491ED /* StatusItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatusItem.xib; sourceTree = "<group>"; };
+		63C874060098E769E5E2CE5D /* SimulatorRecorder-app.release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SimulatorRecorder-app.release.xcconfig"; sourceTree = "<group>"; };
+		646551AB81750C11A7C03599 /* RecordingNameFormatTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameFormatTransformer.swift; sourceTree = "<group>"; };
+		662D26538122D704A9671FA0 /* DefaultsRegistration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsRegistration.swift; sourceTree = "<group>"; };
+		6655131176F12A21946AC750 /* MainView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainView.storyboard; sourceTree = "<group>"; };
+		70F403BC9495120C3E2EF54A /* RecordingNamingPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecordingNamingPreferences.storyboard; sourceTree = "<group>"; };
+		74E9CB320A16621D8EAE1F8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74EB5F62A439C5D28DB15A36 /* RecordingControllerRecordingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingControllerRecordingState.swift; sourceTree = "<group>"; };
+		76C1F39CC7EBB8C2209BCB33 /* UserNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotifications.swift; sourceTree = "<group>"; };
+		7C2D3A7E09E4BA6673BBC88B /* AppStatusItemControllerSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusItemControllerSource.swift; sourceTree = "<group>"; };
+		86D5CAF89FBD8F3A4AB011E3 /* RecordingNameFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameFieldDelegate.swift; sourceTree = "<group>"; };
+		87F2330B4868A99D5764E029 /* NSArrayControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSArrayControllerExtensions.swift; sourceTree = "<group>"; };
+		8B504F34663EA86BEEB3A8FD /* Pods-SimulatorRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorder.debug.xcconfig"; path = "Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder.debug.xcconfig"; sourceTree = "<group>"; };
+		8CF7F6AE05C8508AEEB2EFF0 /* PreferencesWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesWindowController.swift; sourceTree = "<group>"; };
+		8ED04698864D950404B54B18 /* Pods_SimulatorRecorderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimulatorRecorderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A1145A1AE62B3A9AFA4757 /* Pods-SimulatorRecorderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderUITests.release.xcconfig"; path = "Target Support Files/Pods-SimulatorRecorderUITests/Pods-SimulatorRecorderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		950D58D2FCA20EB013A0352B /* recordVideo */ = {isa = PBXFileReference; path = recordVideo; sourceTree = "<group>"; };
+		97A1537A660314143C0B1E1A /* SimulatorRecorderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimulatorRecorderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		98A67E67FCFFDD0E48C0367F /* Defaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Defaults.plist; sourceTree = "<group>"; };
+		9C005FC63230EC0293DFF032 /* RecordingNamingPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNamingPreferencesViewController.swift; sourceTree = "<group>"; };
+		9D77BCA1645D28E4A2D927CE /* SimulatorRecorder.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = SimulatorRecorder.xcconfig; sourceTree = "<group>"; };
+		9EBD30397A49550FCAE37662 /* StatusItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItemController.swift; sourceTree = "<group>"; };
+		A10E7D6608BBED226A755316 /* RecordingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingController.swift; sourceTree = "<group>"; };
+		A69C3B97CAAA01CDDFF4000D /* ObservableRecordingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableRecordingState.swift; sourceTree = "<group>"; };
+		AA3AE8B47C4C7F622499D134 /* PopUpButtonLikePathControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpButtonLikePathControl.swift; sourceTree = "<group>"; };
+		AFC8AA564FF6D23C31073216 /* AppStatusIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStatusIcon.swift; sourceTree = "<group>"; };
+		B3753734A008BB748D37F91A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC35A539DDE75102979115E3 /* Pods-SimulatorRecorderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderTests.release.xcconfig"; path = "Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests.release.xcconfig"; sourceTree = "<group>"; };
+		CBE986AEDE73C44FAE1E129C /* timestamp */ = {isa = PBXFileReference; path = timestamp; sourceTree = "<group>"; };
+		CC1F4F889B53DF1050923E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CC34DDE7690A428F908728A9 /* AppDockTileIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDockTileIcon.swift; sourceTree = "<group>"; };
+		CDB41CA0AB9F46BA164DAA8B /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		CFAF0006A60A39BD9642FC6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Preferences.storyboard; sourceTree = "<group>"; };
+		D00D6537E949042C51EB8834 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4F5D3D993308C8932C58AF7 /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
+		D6211D59B388354ACF70E7DF /* SimulatorRecorder-app.debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "SimulatorRecorder-app.debug.xcconfig"; sourceTree = "<group>"; };
+		DC4C02496148402443E218C6 /* RecordingNameTokenObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingNameTokenObject.swift; sourceTree = "<group>"; };
+		DC802362CD0C533A7B836AA2 /* SimulatorRecorderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulatorRecorderTests.swift; sourceTree = "<group>"; };
+		E4A84657805B20009459310E /* ExportableImports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportableImports.swift; sourceTree = "<group>"; };
+		ECA9A34C9E739D426A388FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		EF2F0B6B93EC8B5499D645B4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F101F25BBC8C43E5FD1A85D3 /* SimulatorRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimulatorRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8E475D250458B1BFE6DEA83 /* Pods-SimulatorRecorderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimulatorRecorderTests.debug.xcconfig"; path = "Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC9762611DF4C5D4BD1BD1B8 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C479DD9B202266BF00E0A11D /* Frameworks */ = {
+		1EC5F65F7A7BB461E7A429EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D301D1099B5E1E04593AFF7B /* Pods_SimulatorRecorder.framework in Frameworks */,
+				8CD1FBC0118D680012BEF12B /* Pods_SimulatorRecorderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C479DDAD202266C000E0A11D /* Frameworks */ = {
+		271436B184D7C9C8BD4909B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				695C2F947C551C4842788162 /* Pods_SimulatorRecorderTests.framework in Frameworks */,
+				16ECE62479398A943E1B7CA2 /* Pods_SimulatorRecorderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C479DDB8202266C000E0A11D /* Frameworks */ = {
+		BAAF962937BD98BA66B097BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5273596510B17FB09465CAC5 /* Pods_SimulatorRecorderUITests.framework in Frameworks */,
+				0CF2CB54094BD6786593DA24 /* Pods_SimulatorRecorder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25BD78D9430139BCFEC9ABEA /* Pods */ = {
+		29BB01DA0BE1B28F5F4CAA5E /* Naming */ = {
 			isa = PBXGroup;
 			children = (
-				1515A1BA1BD6476C7E80257D /* Pods-SimulatorRecorder.debug.xcconfig */,
-				98601D527893353C34E643D6 /* Pods-SimulatorRecorder.release.xcconfig */,
-				044F0AAEFC02A70981C0ADFD /* Pods-SimulatorRecorderTests.debug.xcconfig */,
-				1F98DE4A8B3D256F0A1EB7E3 /* Pods-SimulatorRecorderTests.release.xcconfig */,
-				02B441F4AAAFDCE081177DD7 /* Pods-SimulatorRecorderUITests.debug.xcconfig */,
-				0D4094339B1CD273E69F71F1 /* Pods-SimulatorRecorderUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C424A2372025244600320E48 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A3CE1C027863F05243EBBA8E /* Pods_SimulatorRecorder.framework */,
-				E48D5E4F890AEAEF8732FA99 /* Pods_SimulatorRecorderTests.framework */,
-				282BDF2415B3B404B7353207 /* Pods_SimulatorRecorderUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C43380DB21599ECC00A28F54 /* DockTile */ = {
-			isa = PBXGroup;
-			children = (
-				C43380D921599E8400A28F54 /* DockTileController.swift */,
-			);
-			path = DockTile;
-			sourceTree = "<group>";
-		};
-		C46049CC210C6E7200AED3FA /* MainWindow */ = {
-			isa = PBXGroup;
-			children = (
-				C4D56E8E210CA476003404FC /* MainView.storyboard */,
-				C479DDA3202266BF00E0A11D /* ViewController.swift */,
-				C46C530B211A6FF00041D8C6 /* RecordingInteractor.swift */,
-				C4CC78CC2161841000300C65 /* MainWindowController.swift */,
-			);
-			path = MainWindow;
-			sourceTree = "<group>";
-		};
-		C46049CD210C6E8600AED3FA /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C41F4C352028B3200090E79B /* Defaults.plist */,
-				C479DDA5202266BF00E0A11D /* Assets.xcassets */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		C46049CE210C6E9900AED3FA /* Scripts */ = {
-			isa = PBXGroup;
-			children = (
-				A15646662104A64F00AC9CF1 /* prepareBrew */,
-				C479DDCE20226B2300E0A11D /* simulatorName */,
-				C479DDCF20226B2400E0A11D /* recordVideo */,
-				C479DDDA20227A7900E0A11D /* timestamp */,
-			);
-			path = Scripts;
-			sourceTree = "<group>";
-		};
-		C46049CF210C6EBC00AED3FA /* Distribution */ = {
-			isa = PBXGroup;
-			children = (
-				C4FF3022210A68F200999603 /* ProductDefinition.plist */,
-			);
-			path = Distribution;
-			sourceTree = "<group>";
-		};
-		C46049D0210C6ED000AED3FA /* XcodeBuild */ = {
-			isa = PBXGroup;
-			children = (
-				C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */,
-				A156466C2104C53A00AC9CF1 /* XCBundleBrewPackages */,
-				C4145B39217B229A00708B94 /* SimulatorRecorder-app.xcconfig */,
-				C4145B3A217B230E00708B94 /* SimulatorRecorder-app.debug.xcconfig */,
-				C4145B3B217B235B00708B94 /* SimulatorRecorder-app.release.xcconfig */,
-			);
-			path = XcodeBuild;
-			sourceTree = "<group>";
-		};
-		C46049D1210C6F8B00AED3FA /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				C4AC9519212757670070A911 /* SimulatorController.swift */,
-				C4088C57211764B2000CE9B8 /* ExportableImports.swift */,
-				C41152A720290B1D00DDB293 /* DefaultsRegistration.swift */,
-				C4844F1C202A722100FFB5BA /* PopUpButtonLikePathControl.swift */,
-				C41152A52028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift */,
-				C4F760BA21284DC600CBDFF3 /* NSArrayControllerExtensions.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		C46049D2210C6FC900AED3FA /* Naming */ = {
-			isa = PBXGroup;
-			children = (
-				C4E43E9721039C91007A6FAC /* RecordingNamingPreferences.storyboard */,
-				C479DDE02023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift */,
-				C479DDE22023ECE100E0A11D /* RecordingNameFieldDelegate.swift */,
-				C479DDE42023FEE800E0A11D /* RecordingNameTokenObject.swift */,
-				C4AC52F7202662C2005A0FCD /* RecordingNameToken.swift */,
-				A1A19F5B202A2498004170D8 /* RecordingNameFormatTransformer.swift */,
+				86D5CAF89FBD8F3A4AB011E3 /* RecordingNameFieldDelegate.swift */,
+				646551AB81750C11A7C03599 /* RecordingNameFormatTransformer.swift */,
+				60F74391743323D25B0AA718 /* RecordingNameToken.swift */,
+				DC4C02496148402443E218C6 /* RecordingNameTokenObject.swift */,
+				70F403BC9495120C3E2EF54A /* RecordingNamingPreferences.storyboard */,
+				9C005FC63230EC0293DFF032 /* RecordingNamingPreferencesViewController.swift */,
 			);
 			path = Naming;
 			sourceTree = "<group>";
 		};
-		C479DD95202266BF00E0A11D = {
+		33A3B81F119B1CE616622EC8 /* Recording */ = {
 			isa = PBXGroup;
 			children = (
-				C4FF30212107FDBA00999603 /* README.md */,
-				C479DDA0202266BF00E0A11D /* SimulatorRecorder */,
-				C479DDB3202266C000E0A11D /* SimulatorRecorderTests */,
-				C479DDBE202266C000E0A11D /* SimulatorRecorderUITests */,
-				C424A2372025244600320E48 /* Frameworks */,
-				C479DD9F202266BF00E0A11D /* Products */,
-				25BD78D9430139BCFEC9ABEA /* Pods */,
-			);
-			sourceTree = "<group>";
-			usesTabs = 1;
-		};
-		C479DD9F202266BF00E0A11D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C479DD9E202266BF00E0A11D /* SimulatorRecorder.app */,
-				C479DDB0202266C000E0A11D /* SimulatorRecorderTests.xctest */,
-				C479DDBB202266C000E0A11D /* SimulatorRecorderUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C479DDA0202266BF00E0A11D /* SimulatorRecorder */ = {
-			isa = PBXGroup;
-			children = (
-				C49AAE24210C717C00E6867C /* App */,
-				C46049CC210C6E7200AED3FA /* MainWindow */,
-				C49AAE22210C70D200E6867C /* Preferences */,
-				C49AAE26210C71F000E6867C /* UserNotifications */,
-				C49AAE25210C719500E6867C /* Recording */,
-				C49AAE23210C710E00E6867C /* StatusItem */,
-				C43380DB21599ECC00A28F54 /* DockTile */,
-				C46049D1210C6F8B00AED3FA /* Shared */,
-				C46049CD210C6E8600AED3FA /* Resources */,
-				C46049D0210C6ED000AED3FA /* XcodeBuild */,
-				C46049CF210C6EBC00AED3FA /* Distribution */,
-			);
-			path = SimulatorRecorder;
-			sourceTree = "<group>";
-		};
-		C479DDB3202266C000E0A11D /* SimulatorRecorderTests */ = {
-			isa = PBXGroup;
-			children = (
-				C479DDB4202266C000E0A11D /* SimulatorRecorderTests.swift */,
-				C479DDB6202266C000E0A11D /* Info.plist */,
-			);
-			path = SimulatorRecorderTests;
-			sourceTree = "<group>";
-		};
-		C479DDBE202266C000E0A11D /* SimulatorRecorderUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C479DDBF202266C000E0A11D /* SimulatorRecorderUITests.swift */,
-				C479DDC1202266C000E0A11D /* Info.plist */,
-			);
-			path = SimulatorRecorderUITests;
-			sourceTree = "<group>";
-		};
-		C49AAE22210C70D200E6867C /* Preferences */ = {
-			isa = PBXGroup;
-			children = (
-				C4844F19202A5B7500FFB5BA /* Preferences.storyboard */,
-				C41152AD20292F7D00DDB293 /* PreferencesWindowController.swift */,
-				C4F760BE2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift */,
-				C4D56E92210CDBC7003404FC /* General */,
-				C46049D2210C6FC900AED3FA /* Naming */,
-			);
-			path = Preferences;
-			sourceTree = "<group>";
-		};
-		C49AAE23210C710E00E6867C /* StatusItem */ = {
-			isa = PBXGroup;
-			children = (
-				C41152A920291E8C00DDB293 /* StatusItemController.swift */,
-				C41152AB2029224000DDB293 /* StatusItem.xib */,
-			);
-			path = StatusItem;
-			sourceTree = "<group>";
-		};
-		C49AAE24210C717C00E6867C /* App */ = {
-			isa = PBXGroup;
-			children = (
-				C479DDA1202266BF00E0A11D /* AppDelegate.swift */,
-				C424A24D2025A88B00320E48 /* main.swift */,
-				C479DDA7202266BF00E0A11D /* Main.storyboard */,
-				C479DDAB202266BF00E0A11D /* SimulatorRecorder.entitlements */,
-				C479DDAA202266BF00E0A11D /* Info.plist */,
-				C433AE25211E3D1E000A8501 /* Defaults.swift */,
-				C428604A214B3EA500825AB1 /* AppStatusIcon.swift */,
-				C43380DD2159A38400A28F54 /* AppDockTileIcon.swift */,
-				C428604C214B3EE100825AB1 /* AppStatusItemControllerSource.swift */,
-				C4C597D32159A6A0006F7640 /* AppDockTileControllerDataSource.swift */,
-				C497D2DE2152C4A900D2AE93 /* ShortcutBinding.swift */,
-			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		C49AAE25210C719500E6867C /* Recording */ = {
-			isa = PBXGroup;
-			children = (
-				C46049CE210C6E9900AED3FA /* Scripts */,
-				A181382A20FF221A002CCD7C /* RecordingController.swift */,
-				C43FFB582129CCE300F36526 /* RecordingControllerRecordingState.swift */,
-				C43FFB5A2129D15000F36526 /* ObservableRecordingState.swift */,
-				C4F760BC21284E9500CBDFF3 /* DeviceRecorder.swift */,
+				1DD735D6738084F4272C9E58 /* DeviceRecorder.swift */,
+				A69C3B97CAAA01CDDFF4000D /* ObservableRecordingState.swift */,
+				A10E7D6608BBED226A755316 /* RecordingController.swift */,
+				74EB5F62A439C5D28DB15A36 /* RecordingControllerRecordingState.swift */,
+				63DFF8A0A80CFBD926429927 /* Scripts */,
 			);
 			path = Recording;
 			sourceTree = "<group>";
 		};
-		C49AAE26210C71F000E6867C /* UserNotifications */ = {
+		369EDF7905D9BD8BDA6843F1 = {
 			isa = PBXGroup;
 			children = (
-				C4E43E992103CCD4007A6FAC /* UserNotifications.swift */,
+				CB6685BD963D7BBB0528FC91 /* SimulatorRecorder */,
+				8B5806C28427C7495798FCAF /* SimulatorRecorderTests */,
+				CB02D93A6309D36B1BAEDF4B /* SimulatorRecorderUITests */,
+				7B15CE8A93F492EBA5598BAC /* XcodeBuild */,
+				758B538217A5C55B2AE61E24 /* Products */,
+				C16C278786199C7E241756AB /* Pods */,
+				54D165263FD4111B09285721 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3E2FF6DB7392C5D85A223506 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				5C685F9E5A6EBA9017E0E538 /* GeneralPreferences.storyboard */,
+				D4F5D3D993308C8932C58AF7 /* GeneralPreferencesViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		463DB1783979CEEF45AFEC1B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				662D26538122D704A9671FA0 /* DefaultsRegistration.swift */,
+				E4A84657805B20009459310E /* ExportableImports.swift */,
+				87F2330B4868A99D5764E029 /* NSArrayControllerExtensions.swift */,
+				21349537A76F50C1D3460559 /* PathFromFilePathOrURLTransformer.swift */,
+				AA3AE8B47C4C7F622499D134 /* PopUpButtonLikePathControl.swift */,
+				59214A2386337992FE7FEEAF /* SimulatorController.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		49342C0B355972FCB4E5B588 /* UserNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				76C1F39CC7EBB8C2209BCB33 /* UserNotifications.swift */,
 			);
 			path = UserNotifications;
 			sourceTree = "<group>";
 		};
-		C4D56E92210CDBC7003404FC /* General */ = {
+		53BD81C40A283E5E519248D6 /* DockTile */ = {
 			isa = PBXGroup;
 			children = (
-				C4D56E95210CFAC6003404FC /* GeneralPreferences.storyboard */,
-				C4D56E93210CFA30003404FC /* GeneralPreferencesViewController.swift */,
+				35EEF54B5BF03D8396F2D7D1 /* DockTileController.swift */,
 			);
-			path = General;
+			path = DockTile;
+			sourceTree = "<group>";
+		};
+		54D165263FD4111B09285721 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E431F3A1C7909A7F57DD2BC /* Pods_SimulatorRecorder.framework */,
+				2D1D37A8330CD8CC9C840D4E /* Pods_SimulatorRecorderTests.framework */,
+				8ED04698864D950404B54B18 /* Pods_SimulatorRecorderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B9C6E9DDEA51F08CA55B472 /* Distribution */ = {
+			isa = PBXGroup;
+			children = (
+				298541DB68532F603B75E425 /* ProductDefinition.plist */,
+			);
+			path = Distribution;
+			sourceTree = "<group>";
+		};
+		607B189AD0AD33C54216E573 /* MainWindow */ = {
+			isa = PBXGroup;
+			children = (
+				6655131176F12A21946AC750 /* MainView.storyboard */,
+				FC9762611DF4C5D4BD1BD1B8 /* MainWindowController.swift */,
+				310C3CBEC21E71DE5F6DFD22 /* RecordingInteractor.swift */,
+				D00D6537E949042C51EB8834 /* ViewController.swift */,
+			);
+			path = MainWindow;
+			sourceTree = "<group>";
+		};
+		63DFF8A0A80CFBD926429927 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				455C03A73E5731375EFAD28A /* prepareBrew */,
+				950D58D2FCA20EB013A0352B /* recordVideo */,
+				5E5122614A98D498CB6291FA /* simulatorName */,
+				CBE986AEDE73C44FAE1E129C /* timestamp */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		758B538217A5C55B2AE61E24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F101F25BBC8C43E5FD1A85D3 /* SimulatorRecorder.app */,
+				97A1537A660314143C0B1E1A /* SimulatorRecorderTests.xctest */,
+				5A57D75A312E146CF12212F2 /* SimulatorRecorderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		780D2D0E78711387415F2300 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				74E9CB320A16621D8EAE1F8E /* Assets.xcassets */,
+				98A67E67FCFFDD0E48C0367F /* Defaults.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7B15CE8A93F492EBA5598BAC /* XcodeBuild */ = {
+			isa = PBXGroup;
+			children = (
+				D6211D59B388354ACF70E7DF /* SimulatorRecorder-app.debug.xcconfig */,
+				63C874060098E769E5E2CE5D /* SimulatorRecorder-app.release.xcconfig */,
+				9D77BCA1645D28E4A2D927CE /* SimulatorRecorder.xcconfig */,
+			);
+			path = XcodeBuild;
+			sourceTree = "<group>";
+		};
+		8B5806C28427C7495798FCAF /* SimulatorRecorderTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECA9A34C9E739D426A388FE4 /* Info.plist */,
+				DC802362CD0C533A7B836AA2 /* SimulatorRecorderTests.swift */,
+			);
+			path = SimulatorRecorderTests;
+			sourceTree = "<group>";
+		};
+		C16C278786199C7E241756AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B504F34663EA86BEEB3A8FD /* Pods-SimulatorRecorder.debug.xcconfig */,
+				1AEE2D8268E3FA2A04A5CE9A /* Pods-SimulatorRecorder.release.xcconfig */,
+				F8E475D250458B1BFE6DEA83 /* Pods-SimulatorRecorderTests.debug.xcconfig */,
+				BC35A539DDE75102979115E3 /* Pods-SimulatorRecorderTests.release.xcconfig */,
+				3AEB2FC8F7E8F6A4ED5117B9 /* Pods-SimulatorRecorderUITests.debug.xcconfig */,
+				92A1145A1AE62B3A9AFA4757 /* Pods-SimulatorRecorderUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
+		C5357E10D5FF2F89FC523C96 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				536A0B81A7F40312624C35EB /* Preferences.storyboard */,
+				4EEAE60BF3892A94AAAA69DA /* PreferencesPaneViewController.swift */,
+				8CF7F6AE05C8508AEEB2EFF0 /* PreferencesWindowController.swift */,
+				3E2FF6DB7392C5D85A223506 /* General */,
+				29BB01DA0BE1B28F5F4CAA5E /* Naming */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		CB02D93A6309D36B1BAEDF4B /* SimulatorRecorderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				10ECF15C8D125553044AC1D4 /* Info.plist */,
+				0202AFDDC3A19A11522591F8 /* SimulatorRecorderUITests.swift */,
+			);
+			path = SimulatorRecorderUITests;
+			sourceTree = "<group>";
+		};
+		CB6685BD963D7BBB0528FC91 /* SimulatorRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				EB61543915D20175B03183EC /* App */,
+				5B9C6E9DDEA51F08CA55B472 /* Distribution */,
+				53BD81C40A283E5E519248D6 /* DockTile */,
+				607B189AD0AD33C54216E573 /* MainWindow */,
+				C5357E10D5FF2F89FC523C96 /* Preferences */,
+				33A3B81F119B1CE616622EC8 /* Recording */,
+				780D2D0E78711387415F2300 /* Resources */,
+				463DB1783979CEEF45AFEC1B /* Shared */,
+				E125D589269C654D0E38A081 /* StatusItem */,
+				49342C0B355972FCB4E5B588 /* UserNotifications */,
+			);
+			path = SimulatorRecorder;
+			sourceTree = "<group>";
+		};
+		E125D589269C654D0E38A081 /* StatusItem */ = {
+			isa = PBXGroup;
+			children = (
+				632D2125B29F3C85E1F491ED /* StatusItem.xib */,
+				9EBD30397A49550FCAE37662 /* StatusItemController.swift */,
+			);
+			path = StatusItem;
+			sourceTree = "<group>";
+		};
+		EB61543915D20175B03183EC /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B3753734A008BB748D37F91A /* AppDelegate.swift */,
+				5335B44A16CCE323B5DE345B /* AppDockTileControllerDataSource.swift */,
+				CC34DDE7690A428F908728A9 /* AppDockTileIcon.swift */,
+				AFC8AA564FF6D23C31073216 /* AppStatusIcon.swift */,
+				7C2D3A7E09E4BA6673BBC88B /* AppStatusItemControllerSource.swift */,
+				CDB41CA0AB9F46BA164DAA8B /* Defaults.swift */,
+				CC1F4F889B53DF1050923E1A /* Info.plist */,
+				54C4DE6B0828C9CC32434AD2 /* Main.storyboard */,
+				EF2F0B6B93EC8B5499D645B4 /* main.swift */,
+				0DBA59CF0326250178B68737 /* ShortcutBinding.swift */,
+				3B29DAEFF354D20CD5585915 /* SimulatorRecorder.entitlements */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C479DD9D202266BF00E0A11D /* SimulatorRecorder */ = {
+		4E3B9DC768A45618DBBEE523 /* SimulatorRecorderUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C479DDC4202266C000E0A11D /* Build configuration list for PBXNativeTarget "SimulatorRecorder" */;
+			buildConfigurationList = E732F27142BBFC9EA4EB6FF1 /* Build configuration list for PBXNativeTarget "SimulatorRecorderUITests" */;
 			buildPhases = (
-				B45A96996E87D8C860B48DE9 /* [CP] Check Pods Manifest.lock */,
-				C479DD9A202266BF00E0A11D /* Sources */,
-				C479DD9B202266BF00E0A11D /* Frameworks */,
-				C479DD9C202266BF00E0A11D /* Resources */,
-				C4FDFCB6202522710017DF19 /* Embed Frameworks */,
-				A156466B2104C4F300AC9CF1 /* Prepare Brew Packages */,
-				C4BA82BC23BDB80C00F91966 /* Rsync Brew Packages into Bundle */,
-				010B30A392651A3EC212361A /* [CP-User] Embed Source Version into Bundle */,
-				68EF8BA0A614EE9EE99835B0 /* [CP-User] Integrate Fabric */,
-				0B5F6EBA762BAEED96633759 /* [CP] Embed Pods Frameworks */,
-				C684F2D5A038EE71F984772A /* [CP] Copy Pods Resources */,
+				12836CA6AC452D1170E99AED /* [CP] Check Pods Manifest.lock */,
+				61F1E83A2BCBEBC6ED397CF1 /* Sources */,
+				1EC5F65F7A7BB461E7A429EA /* Frameworks */,
+				DA65827AA50C33AC07F8CF73 /* [CP] Embed Pods Frameworks */,
+				B750F2D3F9C584EC9B04ACE8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				15F0ABBBB45331683C40D1CF /* PBXTargetDependency */,
+			);
+			name = SimulatorRecorderUITests;
+			productName = SimulatorRecorderUITests;
+			productReference = 5A57D75A312E146CF12212F2 /* SimulatorRecorderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		71852B40D99791B6ECECFF03 /* SimulatorRecorderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2AE2645EE5D55551629A14DB /* Build configuration list for PBXNativeTarget "SimulatorRecorderTests" */;
+			buildPhases = (
+				BBE0675B7307749D3491C57F /* [CP] Check Pods Manifest.lock */,
+				BE877DB2C1FECA05BB2EE54C /* Sources */,
+				271436B184D7C9C8BD4909B6 /* Frameworks */,
+				16F58AFBEB83F7530C850144 /* [CP] Embed Pods Frameworks */,
+				A67605C8A3632BCC624C2381 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimulatorRecorderTests;
+			productName = SimulatorRecorderTests;
+			productReference = 97A1537A660314143C0B1E1A /* SimulatorRecorderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E2B23963DFF32C0DBC3391AE /* SimulatorRecorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61AAD11CED17C23AE1359202 /* Build configuration list for PBXNativeTarget "SimulatorRecorder" */;
+			buildPhases = (
+				7A02020FA8DC5B76054896E8 /* [CP] Check Pods Manifest.lock */,
+				84084C88EF85DF5F0CB99468 /* Sources */,
+				A81CBA20C776ADC27D3DFF9C /* Resources */,
+				BAAF962937BD98BA66B097BE /* Frameworks */,
+				562317C2BE15B2EF1A72F5A4 /* [CP] Embed Pods Frameworks */,
+				ED6DDE109332AF705A155523 /* [CP] Copy Pods Resources */,
+				7FBA6FDF8778CBFCC85D126E /* [CP-User] Integrate Fabric */,
+				E1DCE1DC4AB8DB2A87A82A77 /* [CP-User] Embed Source Version into Bundle */,
 			);
 			buildRules = (
 			);
@@ -449,232 +456,82 @@
 			);
 			name = SimulatorRecorder;
 			productName = SimulatorRecorder;
-			productReference = C479DD9E202266BF00E0A11D /* SimulatorRecorder.app */;
+			productReference = F101F25BBC8C43E5FD1A85D3 /* SimulatorRecorder.app */;
 			productType = "com.apple.product-type.application";
-		};
-		C479DDAF202266C000E0A11D /* SimulatorRecorderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C479DDC7202266C000E0A11D /* Build configuration list for PBXNativeTarget "SimulatorRecorderTests" */;
-			buildPhases = (
-				5C7ABE08A5238A17F21DF06D /* [CP] Check Pods Manifest.lock */,
-				C479DDAC202266C000E0A11D /* Sources */,
-				C479DDAD202266C000E0A11D /* Frameworks */,
-				C479DDAE202266C000E0A11D /* Resources */,
-				0E623AF57F7E43F793AE9892 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C479DDB2202266C000E0A11D /* PBXTargetDependency */,
-			);
-			name = SimulatorRecorderTests;
-			productName = SimulatorRecorderTests;
-			productReference = C479DDB0202266C000E0A11D /* SimulatorRecorderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C479DDBA202266C000E0A11D /* SimulatorRecorderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C479DDCA202266C000E0A11D /* Build configuration list for PBXNativeTarget "SimulatorRecorderUITests" */;
-			buildPhases = (
-				8B01974C4CDA9AD678D44D8A /* [CP] Check Pods Manifest.lock */,
-				C479DDB7202266C000E0A11D /* Sources */,
-				C479DDB8202266C000E0A11D /* Frameworks */,
-				C479DDB9202266C000E0A11D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C479DDBD202266C000E0A11D /* PBXTargetDependency */,
-			);
-			name = SimulatorRecorderUITests;
-			productName = SimulatorRecorderUITests;
-			productReference = C479DDBB202266C000E0A11D /* SimulatorRecorderUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C479DD96202266BF00E0A11D /* Project object */ = {
+		5DAFC0E1BF95724458CC1CAA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Grigory Entin";
+				LastUpgradeCheck = 1020;
 				TargetAttributes = {
-					C479DD9D202266BF00E0A11D = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.HardenedRuntime = {
-								enabled = 1;
-							};
-							com.apple.Sandbox = {
-								enabled = 0;
-							};
-						};
+					4E3B9DC768A45618DBBEE523 = {
+						DevelopmentTeam = 898SX5RV3X;
+						TestTargetID = E2B23963DFF32C0DBC3391AE;
 					};
-					C479DDAF202266C000E0A11D = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C479DD9D202266BF00E0A11D;
+					71852B40D99791B6ECECFF03 = {
+						DevelopmentTeam = 898SX5RV3X;
 					};
-					C479DDBA202266C000E0A11D = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C479DD9D202266BF00E0A11D;
+					E2B23963DFF32C0DBC3391AE = {
+						DevelopmentTeam = 898SX5RV3X;
 					};
 				};
 			};
-			buildConfigurationList = C479DD99202266BF00E0A11D /* Build configuration list for PBXProject "SimulatorRecorder" */;
-			compatibilityVersion = "Xcode 8.0";
+			buildConfigurationList = 6A73F93E4F1A27FDCF90FA9E /* Build configuration list for PBXProject "SimulatorRecorder" */;
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
-			mainGroup = C479DD95202266BF00E0A11D;
-			productRefGroup = C479DD9F202266BF00E0A11D /* Products */;
+			mainGroup = 369EDF7905D9BD8BDA6843F1;
+			productRefGroup = 758B538217A5C55B2AE61E24 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C479DD9D202266BF00E0A11D /* SimulatorRecorder */,
-				C479DDAF202266C000E0A11D /* SimulatorRecorderTests */,
-				C479DDBA202266C000E0A11D /* SimulatorRecorderUITests */,
+				E2B23963DFF32C0DBC3391AE /* SimulatorRecorder */,
+				71852B40D99791B6ECECFF03 /* SimulatorRecorderTests */,
+				4E3B9DC768A45618DBBEE523 /* SimulatorRecorderUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C479DD9C202266BF00E0A11D /* Resources */ = {
+		A81CBA20C776ADC27D3DFF9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4D56E96210CFADF003404FC /* GeneralPreferences.storyboard in Resources */,
-				C479DDA6202266BF00E0A11D /* Assets.xcassets in Resources */,
-				C479DDA9202266BF00E0A11D /* Main.storyboard in Resources */,
-				C41F4C362028B3200090E79B /* Defaults.plist in Resources */,
-				C41152AC2029224000DDB293 /* StatusItem.xib in Resources */,
-				C479DDDB20227A7900E0A11D /* timestamp in Resources */,
-				C4D56E8F210CA477003404FC /* MainView.storyboard in Resources */,
-				C479DDD720226D8200E0A11D /* simulatorName in Resources */,
-				C4E43E9821039C96007A6FAC /* RecordingNamingPreferences.storyboard in Resources */,
-				C479DDD820226D8200E0A11D /* recordVideo in Resources */,
-				A15646672104A64F00AC9CF1 /* prepareBrew in Resources */,
-				C4844F1B202A5BA100FFB5BA /* Preferences.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C479DDAE202266C000E0A11D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C479DDB9202266C000E0A11D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				D750291FB0E4011F8C2660A5 /* Assets.xcassets in Resources */,
+				B8CF1DDFF768E1D7F922F6FE /* Defaults.plist in Resources */,
+				BA91B3007A61C33EFB551E4F /* GeneralPreferences.storyboard in Resources */,
+				C2690FF13E2E7EEBE4288BE0 /* Main.storyboard in Resources */,
+				3C48E8F2F8BA1751AE01D0BA /* MainView.storyboard in Resources */,
+				587CA8983E567C941E1B67EA /* Preferences.storyboard in Resources */,
+				3A9166C0218A2828BE893853 /* ProductDefinition.plist in Resources */,
+				16E3A9EE75B793A05CA4C170 /* RecordingNamingPreferences.storyboard in Resources */,
+				413F81FB16EDC2D815F0F2EC /* StatusItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		010B30A392651A3EC212361A /* [CP-User] Embed Source Version into Bundle */ = {
+		12836CA6AC452D1170E99AED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			name = "[CP-User] Embed Source Version into Bundle";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "/bin/sh -e";
-			shellScript = "\"${GE_XCODE_BUILD_PHASES:?}/EmbedSourceVersionIntoBundle\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0B5F6EBA762BAEED96633759 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/GEFoundation/GEFoundation.framework",
-				"${BUILT_PRODUCTS_DIR}/GETracing/GETracing.framework",
-				"${BUILT_PRODUCTS_DIR}/MASShortcut/MASShortcut.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GEFoundation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GETracing.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MASShortcut.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0E623AF57F7E43F793AE9892 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/SimulatorRecorder-Tests-Sources/SimulatorRecorderTests-Sources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimulatorRecorderTests-Sources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5C7ABE08A5238A17F21DF06D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SimulatorRecorderTests-checkManifestLockResult.txt",
+			outputFileListPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		68EF8BA0A614EE9EE99835B0 /* [CP-User] Integrate Fabric */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "[CP-User] Integrate Fabric";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "/bin/sh -e";
-			shellScript = "\"${GE_XCODE_BUILD_PHASES:?}/IntegrateFabric\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8B01974C4CDA9AD678D44D8A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SimulatorRecorderUITests-checkManifestLockResult.txt",
 			);
@@ -683,7 +540,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A156466B2104C4F300AC9CF1 /* Prepare Brew Packages */ = {
+		16F58AFBEB83F7530C850144 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		562317C2BE15B2EF1A72F5A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A02020FA8DC5B76054896E8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -691,28 +582,12 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/$(TARGET_NAME)/XcodeBuild/XCInstallBrewPackages",
-				"$(SRCROOT)/$(TARGET_NAME)/XcodeBuild/XCPreprocessBrewPackages",
-			);
-			name = "Prepare Brew Packages";
-			outputPaths = (
-				"$(CONFIGURATION_BUILD_DIR)/$(TARGET_NAME)-homebrew",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "/bin/sh -e";
-			shellScript = "\"${SRCROOT:?}\"/\"${TARGET_NAME:?}\"/XcodeBuild/XCInstallBrewPackages\n\"${SRCROOT:?}\"/\"${TARGET_NAME:?}\"/XcodeBuild/XCPreprocessBrewPackages\n";
-			showEnvVarsInLog = 0;
-		};
-		B45A96996E87D8C860B48DE9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-SimulatorRecorder-checkManifestLockResult.txt",
 			);
@@ -721,7 +596,51 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C4BA82BC23BDB80C00F91966 /* Rsync Brew Packages into Bundle */ = {
+		7FBA6FDF8778CBFCC85D126E /* [CP-User] Integrate Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Integrate Fabric";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh -e";
+			shellScript = "\"${GE_XCODE_BUILD_PHASES:?}/IntegrateFabric\"\n";
+		};
+		A67605C8A3632BCC624C2381 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderTests/Pods-SimulatorRecorderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B750F2D3F9C584EC9B04ACE8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderUITests/Pods-SimulatorRecorderUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderUITests/Pods-SimulatorRecorderUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderUITests/Pods-SimulatorRecorderUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBE0675B7307749D3491C57F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -729,36 +648,58 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/$(TARGET_NAME)/XcodeBuild/XCRsyncPreprocessedBrewPackages",
-				"$(CONFIGURATION_BUILD_DIR)/$(TARGET_NAME)-homebrew",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Rsync Brew Packages into Bundle";
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(CONFIGURATION_BUILD_DIR)/$(GE_HOMEBREW_FOLDER_PATH)",
+				"$(DERIVED_FILE_DIR)/Pods-SimulatorRecorderTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = "/bin/sh -xe";
-			shellScript = "\"${SRCROOT:?}\"/\"${TARGET_NAME:?}\"/XcodeBuild/XCRsyncPreprocessedBrewPackages\n";
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C684F2D5A038EE71F984772A /* [CP] Copy Pods Resources */ = {
+		DA65827AA50C33AC07F8CF73 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/GEAppConfig/GEAppConfig-Sources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/SimulatorRecorder/SimulatorRecorder-Sources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/SimulatorRecorder/SimulatorRecorderTests-Sources.bundle",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderUITests/Pods-SimulatorRecorderUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderUITests/Pods-SimulatorRecorderUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorderUITests/Pods-SimulatorRecorderUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1DCE1DC4AB8DB2A87A82A77 /* [CP-User] Embed Source Version into Bundle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] Embed Source Version into Bundle";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh -e";
+			shellScript = "\"${GE_XCODE_BUILD_PHASES:?}/EmbedSourceVersionIntoBundle\"\n";
+		};
+		ED6DDE109332AF705A155523 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GEAppConfig-Sources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimulatorRecorder-Sources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimulatorRecorderTests-Sources.bundle",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -768,99 +709,124 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C479DD9A202266BF00E0A11D /* Sources */ = {
+		61F1E83A2BCBEBC6ED397CF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C479DDA4202266BF00E0A11D /* ViewController.swift in Sources */,
-				C43380DC21599FDB00A28F54 /* DockTileController.swift in Sources */,
-				C4F760BB21284DC600CBDFF3 /* NSArrayControllerExtensions.swift in Sources */,
-				C4C597D42159A6A0006F7640 /* AppDockTileControllerDataSource.swift in Sources */,
-				C41152A62028F78300DDB293 /* PathFromFilePathOrURLTransformer.swift in Sources */,
-				C43FFB592129CCE300F36526 /* RecordingControllerRecordingState.swift in Sources */,
-				C479DDA2202266BF00E0A11D /* AppDelegate.swift in Sources */,
-				C424A24E2025A88B00320E48 /* main.swift in Sources */,
-				C4CC78CD2161841000300C65 /* MainWindowController.swift in Sources */,
-				C4F760BF2128E3FF00CBDFF3 /* PreferencesPaneViewController.swift in Sources */,
-				A181382B20FF221A002CCD7C /* RecordingController.swift in Sources */,
-				C43380DE2159A38400A28F54 /* AppDockTileIcon.swift in Sources */,
-				C4844F1D202A722100FFB5BA /* PopUpButtonLikePathControl.swift in Sources */,
-				C479DDE32023ECE100E0A11D /* RecordingNameFieldDelegate.swift in Sources */,
-				C46C530C211A6FF00041D8C6 /* RecordingInteractor.swift in Sources */,
-				C479DDE12023EA8E00E0A11D /* RecordingNamingPreferencesViewController.swift in Sources */,
-				A1A19F5C202A2498004170D8 /* RecordingNameFormatTransformer.swift in Sources */,
-				C428604D214B3EE100825AB1 /* AppStatusItemControllerSource.swift in Sources */,
-				C4F760BD21284E9500CBDFF3 /* DeviceRecorder.swift in Sources */,
-				C433AE26211E3D1E000A8501 /* Defaults.swift in Sources */,
-				C4088C58211764B2000CE9B8 /* ExportableImports.swift in Sources */,
-				C4E43E9A2103CCD4007A6FAC /* UserNotifications.swift in Sources */,
-				C43FFB5B2129D15000F36526 /* ObservableRecordingState.swift in Sources */,
-				C497D2DF2152C4A900D2AE93 /* ShortcutBinding.swift in Sources */,
-				C479DDE52023FEE800E0A11D /* RecordingNameTokenObject.swift in Sources */,
-				C41152AA20291E8C00DDB293 /* StatusItemController.swift in Sources */,
-				C41152AE20292F7D00DDB293 /* PreferencesWindowController.swift in Sources */,
-				C4AC52F8202662C2005A0FCD /* RecordingNameToken.swift in Sources */,
-				C428604B214B3EA500825AB1 /* AppStatusIcon.swift in Sources */,
-				C4D56E94210CFA30003404FC /* GeneralPreferencesViewController.swift in Sources */,
-				C41152A820290B1D00DDB293 /* DefaultsRegistration.swift in Sources */,
-				C4AC951A212757670070A911 /* SimulatorController.swift in Sources */,
+				A5D0C56A1EA6278C0E89DDF9 /* SimulatorRecorderUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C479DDAC202266C000E0A11D /* Sources */ = {
+		84084C88EF85DF5F0CB99468 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C479DDB5202266C000E0A11D /* SimulatorRecorderTests.swift in Sources */,
+				06CC3A466FEF796A168E5927 /* AppDelegate.swift in Sources */,
+				ADB8914192A108E461213852 /* AppDockTileControllerDataSource.swift in Sources */,
+				4D44DD7C27AADA234E93541C /* AppDockTileIcon.swift in Sources */,
+				B615A0E377CF98C4E1D1921D /* AppStatusIcon.swift in Sources */,
+				D96B9EBE616B740323F36815 /* AppStatusItemControllerSource.swift in Sources */,
+				8DC896FCC9C2F6B28B1831A8 /* Defaults.swift in Sources */,
+				40DAD4B139334D68E7CF75E5 /* DefaultsRegistration.swift in Sources */,
+				DCAF506A54A694596B806229 /* DeviceRecorder.swift in Sources */,
+				BEFD76D85F609F9D420D79C7 /* DockTileController.swift in Sources */,
+				1CC4EC03389A891ABD1E8E9B /* ExportableImports.swift in Sources */,
+				084A2BBF1AE65E967F93655A /* GeneralPreferencesViewController.swift in Sources */,
+				DBFE5239402565CA9F5B47E4 /* MainWindowController.swift in Sources */,
+				316D22F223B2F93A8BD23A50 /* NSArrayControllerExtensions.swift in Sources */,
+				8E70CF54EBFAF0C6C4FC376F /* ObservableRecordingState.swift in Sources */,
+				F92B7CA51D09D4D743C74E17 /* PathFromFilePathOrURLTransformer.swift in Sources */,
+				D246E27C058031A135268EEC /* PopUpButtonLikePathControl.swift in Sources */,
+				6F8E83B45B7A099448F9758E /* PreferencesPaneViewController.swift in Sources */,
+				D0A2A740EF1E8972D299CE83 /* PreferencesWindowController.swift in Sources */,
+				CBE03C86A2F30E2BCDF44D44 /* RecordingController.swift in Sources */,
+				2A7F3910270FBABAD6E59F40 /* RecordingControllerRecordingState.swift in Sources */,
+				EEFDC23C8F7BC96DF2A4E047 /* RecordingInteractor.swift in Sources */,
+				25EA289776F22996C15210E2 /* RecordingNameFieldDelegate.swift in Sources */,
+				F1C8A6380CB79C921A056D1D /* RecordingNameFormatTransformer.swift in Sources */,
+				F58DD24ADC8100F9DEEB9E13 /* RecordingNameToken.swift in Sources */,
+				0B7D3EB7A5CCB31591AF6925 /* RecordingNameTokenObject.swift in Sources */,
+				F26A7721E298889ED6584A43 /* RecordingNamingPreferencesViewController.swift in Sources */,
+				D4BE173DC04987992DFA5D88 /* ShortcutBinding.swift in Sources */,
+				8945ADD4B8B29DBE549723CA /* SimulatorController.swift in Sources */,
+				C8D0BC3478381E2A8B729CC0 /* StatusItemController.swift in Sources */,
+				2E498DDC11F30B52144A0975 /* UserNotifications.swift in Sources */,
+				20AE6D073034FE91A66901D9 /* ViewController.swift in Sources */,
+				B3EB1AE1FB8470646C195341 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C479DDB7202266C000E0A11D /* Sources */ = {
+		BE877DB2C1FECA05BB2EE54C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C479DDC0202266C000E0A11D /* SimulatorRecorderUITests.swift in Sources */,
+				9DAB9B562199D21BDC19EC42 /* SimulatorRecorderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C479DDB2202266C000E0A11D /* PBXTargetDependency */ = {
+		15F0ABBBB45331683C40D1CF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C479DD9D202266BF00E0A11D /* SimulatorRecorder */;
-			targetProxy = C479DDB1202266C000E0A11D /* PBXContainerItemProxy */;
-		};
-		C479DDBD202266C000E0A11D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C479DD9D202266BF00E0A11D /* SimulatorRecorder */;
-			targetProxy = C479DDBC202266C000E0A11D /* PBXContainerItemProxy */;
+			target = E2B23963DFF32C0DBC3391AE /* SimulatorRecorder */;
+			targetProxy = B7084B56CB8A4F589834C863 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C479DDA7202266BF00E0A11D /* Main.storyboard */ = {
+		536A0B81A7F40312624C35EB /* Preferences.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				C479DDA8202266BF00E0A11D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		C4844F19202A5B7500FFB5BA /* Preferences.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4844F1A202A5B7600FFB5BA /* Base */,
+				CFAF0006A60A39BD9642FC6A /* Base */,
 			);
 			name = Preferences.storyboard;
+			sourceTree = "<group>";
+		};
+		54C4DE6B0828C9CC32434AD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09110ECE250AEDB011A869A1 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		C479DDC2202266C000E0A11D /* Debug */ = {
+		2BACCA7297A600525A223186 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */;
+			baseConfigurationReference = BC35A539DDE75102979115E3 /* Pods-SimulatorRecorderTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SimulatorRecorderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		72FBE47DB1FC84230EA5F352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C874060098E769E5E2CE5D /* SimulatorRecorder-app.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SimulatorRecorder/App/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorder;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7FA5C8A0F3520C6084F872E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D77BCA1645D28E4A2D927CE /* SimulatorRecorder.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -890,9 +856,9 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 898SX5RV3X;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -900,8 +866,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -909,20 +875,84 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				GE_XCODE_BUILD_PHASES = "$(SRCROOT)/../XcodeBuildPhases";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		C479DDC3202266C000E0A11D /* Release */ = {
+		9B16F08E6EC5BEAE39DD8BDE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4FF30202106605F00999603 /* SimulatorRecorder.xcconfig */;
+			baseConfigurationReference = 3AEB2FC8F7E8F6A4ED5117B9 /* Pods-SimulatorRecorderUITests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SimulatorRecorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = SimulatorRecorder;
+			};
+			name = Debug;
+		};
+		B9338E695B73E18F720E6A9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6211D59B388354ACF70E7DF /* SimulatorRecorder-app.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = SimulatorRecorder/App/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorder;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D2A780B1C721C32250F863A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92A1145A1AE62B3A9AFA4757 /* Pods-SimulatorRecorderUITests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SimulatorRecorderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = SimulatorRecorder;
+			};
+			name = Release;
+		};
+		DE93031A5CC27E5CA66D438F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8E475D250458B1BFE6DEA83 /* Pods-SimulatorRecorderTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SimulatorRecorderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E39835816AC427280AB18184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D77BCA1645D28E4A2D927CE /* SimulatorRecorder.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -952,9 +982,9 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 898SX5RV3X;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -965,162 +995,54 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				GE_XCODE_BUILD_PHASES = "$(SRCROOT)/../XcodeBuildPhases";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		C479DDC5202266C000E0A11D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4145B3A217B230E00708B94 /* SimulatorRecorder-app.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 898SX5RV3X;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = SimulatorRecorder/App/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorder;
-				PRODUCT_DEFINITION_PLIST = "$(TARGET_NAME)/Distribution/ProductDefinition.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		C479DDC6202266C000E0A11D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4145B3B217B235B00708B94 /* SimulatorRecorder-app.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 898SX5RV3X;
-				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = SimulatorRecorder/App/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorder;
-				PRODUCT_DEFINITION_PLIST = "$(TARGET_NAME)/Distribution/ProductDefinition.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-			};
-			name = Release;
-		};
-		C479DDC8202266C000E0A11D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 044F0AAEFC02A70981C0ADFD /* Pods-SimulatorRecorderTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 465NA5BW7E;
-				INFOPLIST_FILE = SimulatorRecorderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimulatorRecorder.app/Contents/MacOS/SimulatorRecorder";
-			};
-			name = Debug;
-		};
-		C479DDC9202266C000E0A11D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1F98DE4A8B3D256F0A1EB7E3 /* Pods-SimulatorRecorderTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 465NA5BW7E;
-				INFOPLIST_FILE = SimulatorRecorderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SimulatorRecorder.app/Contents/MacOS/SimulatorRecorder";
-			};
-			name = Release;
-		};
-		C479DDCB202266C000E0A11D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02B441F4AAAFDCE081177DD7 /* Pods-SimulatorRecorderUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 465NA5BW7E;
-				INFOPLIST_FILE = SimulatorRecorderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = SimulatorRecorder;
-			};
-			name = Debug;
-		};
-		C479DDCC202266C000E0A11D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D4094339B1CD273E69F71F1 /* Pods-SimulatorRecorderUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 465NA5BW7E;
-				INFOPLIST_FILE = SimulatorRecorderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.grigorye.SimulatorRecorderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = SimulatorRecorder;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C479DD99202266BF00E0A11D /* Build configuration list for PBXProject "SimulatorRecorder" */ = {
+		2AE2645EE5D55551629A14DB /* Build configuration list for PBXNativeTarget "SimulatorRecorderTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C479DDC2202266C000E0A11D /* Debug */,
-				C479DDC3202266C000E0A11D /* Release */,
+				DE93031A5CC27E5CA66D438F /* Debug */,
+				2BACCA7297A600525A223186 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
-		C479DDC4202266C000E0A11D /* Build configuration list for PBXNativeTarget "SimulatorRecorder" */ = {
+		61AAD11CED17C23AE1359202 /* Build configuration list for PBXNativeTarget "SimulatorRecorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C479DDC5202266C000E0A11D /* Debug */,
-				C479DDC6202266C000E0A11D /* Release */,
+				B9338E695B73E18F720E6A9C /* Debug */,
+				72FBE47DB1FC84230EA5F352 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
-		C479DDC7202266C000E0A11D /* Build configuration list for PBXNativeTarget "SimulatorRecorderTests" */ = {
+		6A73F93E4F1A27FDCF90FA9E /* Build configuration list for PBXProject "SimulatorRecorder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C479DDC8202266C000E0A11D /* Debug */,
-				C479DDC9202266C000E0A11D /* Release */,
+				7FA5C8A0F3520C6084F872E9 /* Debug */,
+				E39835816AC427280AB18184 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		C479DDCA202266C000E0A11D /* Build configuration list for PBXNativeTarget "SimulatorRecorderUITests" */ = {
+		E732F27142BBFC9EA4EB6FF1 /* Build configuration list for PBXNativeTarget "SimulatorRecorderUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C479DDCB202266C000E0A11D /* Debug */,
-				C479DDCC202266C000E0A11D /* Release */,
+				9B16F08E6EC5BEAE39DD8BDE /* Debug */,
+				D2A780B1C721C32250F863A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "";
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C479DD96202266BF00E0A11D /* Project object */;
+	rootObject = 5DAFC0E1BF95724458CC1CAA /* Project object */;
 }
