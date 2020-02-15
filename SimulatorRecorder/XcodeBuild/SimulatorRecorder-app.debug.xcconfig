@@ -6,5 +6,5 @@
 //  Copyright © 2018 Grigory Entin. All rights reserved.
 //
 
-#include "../../../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder.debug.xcconfig"
+#include "../../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder.debug.xcconfig"
 #include "SimulatorRecorder-app.xcconfig"

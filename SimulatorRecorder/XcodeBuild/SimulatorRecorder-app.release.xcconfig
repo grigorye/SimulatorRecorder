@@ -1,10 +1,10 @@
 //
-//  SimulatorRecorder-app.release.xcconfig
 //  SimulatorRecorder
+//  SimulatorRecorder-app.release.xcconfig
 //
 //  Created by Grigory Entin on 20/10/2018.
 //  Copyright © 2018 Grigory Entin. All rights reserved.
 //
 
-#include "../../../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder.release.xcconfig"
+#include "../../Pods/Target Support Files/Pods-SimulatorRecorder/Pods-SimulatorRecorder.release.xcconfig"
 #include "SimulatorRecorder-app.xcconfig"
