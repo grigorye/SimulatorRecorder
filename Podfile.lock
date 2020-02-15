@@ -40,7 +40,7 @@ PODS:
     - GEUIKit
     - JGProgressHUD
     - Watchdog
-  - GEContinuousIntegration (0.1.3)
+  - GEContinuousIntegration (0.1.4)
   - GEFoundation (0.1.1):
     - GETracing (~> 0.1)
   - GETracing (0.1.2)
@@ -88,7 +88,7 @@ SPEC CHECKSUMS:
   Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   GEAppConfig: 9f4ac5a10f210376fdde2eac3f78097c02a90cbc
-  GEContinuousIntegration: e3bd2ef1ae39d232a8525cb098b016f79437f59e
+  GEContinuousIntegration: cf34074a2e5e907195763903915a37d68479de3e
   GEFoundation: 39c91037bcb7439f9345586985124e0ce53e0b70
   GETracing: 241966698cc91e5f29a8fc19c5a2197a83801802
   GEXcodeBuildPhases: a574d19bbb0c7b4ff6a25ee119e358618e2e4276

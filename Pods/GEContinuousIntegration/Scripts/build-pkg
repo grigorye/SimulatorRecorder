@@ -23,7 +23,9 @@ tmpdir=$(mktemp -d "${TMPDIR:-/tmp}/${bn:?}.XXXXX")
 derivedDataPath="${GE_DERIVED_DATA_PATH:-${tmpdir:?}/DerivedData}"
 archivePath="${derivedDataPath:?}/${projectName:?}.xcarchive"
 exportedProductPath="${derivedDataPath:?}/${projectName:?}-export"
-exportOptionsPlist="${dn:?}/developer-id-exportOptions.plist"
+
+exportMethod=$( (echo "$signIdentity" | grep -Eq '^[a-zA-Z]* Developer') && echo 'development' || echo 'developer-id' )
+exportOptionsPlist="${dn:?}/${exportMethod}-exportOptions.plist"
 
 buildProject() {
     xcodebuild \
