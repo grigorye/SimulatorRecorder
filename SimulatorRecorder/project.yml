@@ -1,0 +1,48 @@
+name: SimulatorRecorder
+settings:
+  DEVELOPMENT_TEAM: 898SX5RV3X
+options:
+  bundleIdPrefix: com.grigorye
+targets:
+  SimulatorRecorder:
+    type: application
+    platform: macOS
+    deploymentTarget: "10.13"
+    sources: [SimulatorRecorder]
+    scheme:
+      commandLineArguments:
+        "-traceEnabled YES": true
+        "-defaultLogKind nslog": false
+        "-defaultLogKind print": true
+        "-sourceLabelsEnabled YES": true
+    configFiles:
+      Debug: XcodeBuild/SimulatorRecorder-app.debug.xcconfig
+      Release: XcodeBuild/SimulatorRecorder-app.release.xcconfig
+    settings:
+      base:
+        INFOPLIST_PREPROCESS: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.grigorye.SimulatorRecorder
+      configs:
+        debug:
+          ENABLE_TESTABILITY: YES
+  SimulatorRecorderTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources: [SimulatorRecorderTests]
+    scheme:
+      testTargets:
+        - SimulatorRecorderTests
+  SimulatorRecorderUITests:
+    type: bundle.ui-testing
+    platform: macOS
+    sources: [SimulatorRecorderUITests]
+    dependencies:
+      - target: SimulatorRecorder
+    scheme:
+      testTargets:
+        - SimulatorRecorderUITests
+configFiles:
+  Debug: XcodeBuild/SimulatorRecorder.xcconfig
+  Release: XcodeBuild/SimulatorRecorder.xcconfig
+options:
+  postGenCommand: bundle exec pod install
