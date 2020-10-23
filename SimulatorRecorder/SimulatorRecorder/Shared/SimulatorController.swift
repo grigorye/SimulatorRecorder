@@ -97,8 +97,8 @@ class SimulatorController {
 			$0.standardOutput = pipe
 		}
 		process.launch()
-		process.waitUntilExit()
 		let data = pipe.fileHandleForReading.readDataToEndOfFile()
+		process.waitUntilExit()
 		let devicesResponse = try JSONDecoder().decode(SimulatorDevicesResponse.self, from: data)
 		return devicesResponse
 	}
