@@ -10,3 +10,4 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 GE_HOMEBREW_FOLDER_PATH = $(CONTENTS_FOLDER_PATH)/homebrew
+GE_HOST_HOMEBREW_DIR = $(CONFIGURATION_BUILD_DIR)/$(TARGET_NAME)-homebrew

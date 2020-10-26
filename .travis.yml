@@ -1,6 +1,7 @@
 osx_image: xcode9.4
 language: swift
 before_install:
+  - brew install ffmpeg
   - bundle install
   - bundle exec pod repo update
 script:
@@ -8,4 +9,4 @@ script:
   - formulaName="simulator-recorder"
   - "signIdentity='Developer ID Installer: Grigorii Entin (465NA5BW7E)'"
   - export GE_DISABLE_XCPRETTY=1
-  - ./Pods/GEContinuousIntegration/Scripts/build-gitlab-cmd "$PWD/build" "${packageName:?}" "${formulaName:?}" "${signIdentity:?}"
+  - ./Pods/GEContinuousIntegration/Scripts/build-gitlab-cmd "$PWD/build" "${packageName:?}" "${formulaName:?}" "${signIdentity:?}" GE_HOST_HOMEBREW_DIR=/usr/local/Homebrew
