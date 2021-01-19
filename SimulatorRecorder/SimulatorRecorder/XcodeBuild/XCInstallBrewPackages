@@ -6,6 +6,8 @@
 #  Created by Grigory Entin on 22/07/2018.
 #  Copyright © 2018 Grigory Entin. All rights reserved.
 
+exit 0
+
 dn=$(dirname "$0")
 
 homebrewDir="${CONFIGURATION_BUILD_DIR:?}/${TARGET_NAME:?}-homebrew"
