@@ -41,10 +41,8 @@ target 'SimulatorRecorder' do
   pod 'SimulatorRecorder', :path => '.'
 
   pod 'MASShortcut'
-  pod 'Fabric'
-  pod 'Crashlytics'
   
-  pod 'GEAppConfig', :subspecs => ['Core', 'Crashlytics', 'Answers']#, :path => '../GEAppConfig'
+  pod 'GEAppConfig', :subspecs => ['Core']#, :path => '../GEAppConfig'
   pod 'GEFoundation'#, :path => '../GEFoundation'
   pod 'GETracing'#, :path => '../GETracing'
 
