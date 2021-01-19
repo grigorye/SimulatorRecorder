@@ -1,39 +1,6 @@
 PODS:
-  - Crashlytics (3.14.0):
-    - Fabric (~> 1.10.2)
-  - Fabric (1.10.2)
-  - GEAppConfig/Analytics (0.0.1):
-    - FTLinearActivityIndicator
-    - GEDebugKit
-    - GEFoundation
-    - GETracing
-    - GEUIKit
-    - JGProgressHUD
-    - Watchdog
-  - GEAppConfig/Answers (0.0.1):
-    - Crashlytics
-    - Fabric
-    - FTLinearActivityIndicator
-    - GEAppConfig/Analytics
-    - GEDebugKit
-    - GEFoundation
-    - GETracing
-    - GEUIKit
-    - JGProgressHUD
-    - Watchdog
   - GEAppConfig/Core (0.0.1):
     - FTLinearActivityIndicator
-    - GEDebugKit
-    - GEFoundation
-    - GETracing
-    - GEUIKit
-    - JGProgressHUD
-    - Watchdog
-  - GEAppConfig/Crashlytics (0.0.1):
-    - Crashlytics
-    - Fabric
-    - FTLinearActivityIndicator
-    - GEAppConfig/Analytics
     - GEDebugKit
     - GEFoundation
     - GETracing
@@ -53,11 +20,7 @@ PODS:
   - SimulatorRecorder/Tests-Sources (0.1)
 
 DEPENDENCIES:
-  - Crashlytics
-  - Fabric
-  - GEAppConfig/Answers
   - GEAppConfig/Core
-  - GEAppConfig/Crashlytics
   - GEContinuousIntegration
   - GEFoundation
   - GETracing
@@ -76,8 +39,6 @@ SPEC REPOS:
     - GEXcodeBuildPhases
     - GEXcodeScripts
   trunk:
-    - Crashlytics
-    - Fabric
     - MASShortcut
 
 EXTERNAL SOURCES:
@@ -85,8 +46,6 @@ EXTERNAL SOURCES:
     :path: "."
 
 SPEC CHECKSUMS:
-  Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
-  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
   GEAppConfig: 9f4ac5a10f210376fdde2eac3f78097c02a90cbc
   GEContinuousIntegration: cf34074a2e5e907195763903915a37d68479de3e
   GEFoundation: 39c91037bcb7439f9345586985124e0ce53e0b70
@@ -96,6 +55,6 @@ SPEC CHECKSUMS:
   MASShortcut: d9e4909e878661cc42877cc9d6efbe638273ab57
   SimulatorRecorder: 93ebbf2887bbb84dff73756472ac920a62c8946c
 
-PODFILE CHECKSUM: 7c2bace2b981ce38812a373caa05ddc4724d0ed0
+PODFILE CHECKSUM: 602534836d1a05d4a55ccd3586e237a5782e0ade
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1
