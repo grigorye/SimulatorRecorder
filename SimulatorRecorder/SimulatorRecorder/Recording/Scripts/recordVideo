@@ -7,8 +7,6 @@ version="${1:?}"; shift
 bn=$(basename "$0")
 wd=$(dirname "$0")
 
-. "${wd:?}"/prepareBrew
-
 PATH="$PATH":"${wd:?}"
 domain="com.grigorye.SimulatorRecorder"
 registrationDomain="${wd:?}/Defaults"
@@ -67,6 +65,10 @@ convertedVideo="${recordingsDir:?}/${videoName:?}.${convertedExt:?}"
 #
 
 mkdir -p "${recordingsDir:?}"
+
+ffmpeg() {
+    sh -lc 'ffmpeg "$@"' ffmpeg "$@"
+}
 
 if [ "${compressionEnabled:?}" = 1 ]
 then
